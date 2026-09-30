@@ -1,0 +1,55 @@
+--- a/submodules/LiteNetwork/src/LiteNetwork/Server/LiteServer.cs
++++ b/submodules/LiteNetwork/src/LiteNetwork/Server/LiteServer.cs
+@@ -33,7 +33,9 @@
+ 
+         public LiteServerOptions Options { get; }
+ 
+-        public IEnumerable<TUser> ConnectedUsers => _connectedUsers.Values;
++        public ICollection<TUser> ConnectedUsers => _connectedUsers.Values;
++
++        IEnumerable<TUser> ILiteServer<TUser>.ConnectedUsers => ConnectedUsers;
+ 
+         /// <summary>
+         /// Creates a new <see cref="LiteServer{TUser}"/> instance with a server configuration.
+@@ -141,6 +143,11 @@
+ 
+         public void DisconnectUser(Guid userId)
+         {
++            DisconnectUser(userId, false);
++        }
++
++        public void DisconnectUser(Guid userId, bool silent)
++        {
+             if (!_connectedUsers.TryRemove(userId, out TUser user))
+             {
+                 _logger?.LogError($"Cannot find user with id '{userId}'.");
+@@ -148,7 +155,9 @@
+             }
+ 
+             _logger?.LogTrace($"User with id '{userId}' disconnected.");
+-            user.OnDisconnected();
++            if (!silent)
++                user.OnDisconnected();
++            OnClientDisconnected(user);
+             user.Dispose();
+         }
+ 
+@@ -222,6 +231,10 @@
+         /// </summary>
+         protected virtual void OnAfterStop() { }
+ 
++        protected virtual void OnClientConnected(TUser user) { }
++
++        protected virtual void OnClientDisconnected(TUser user) { }
++
+         /// <summary>
+         /// Called when an error occurs on the server.
+         /// </summary>
+@@ -256,6 +269,7 @@
+             user.Initialize(e.AcceptSocket);
+             _logger?.LogInformation($"New user connected from '{user.Socket.RemoteEndPoint}' with id '{user.Id}'.");
+             user.OnConnected();
++            OnClientConnected(user);
+             _receiver.StartReceiving(user);
+         }
+ 

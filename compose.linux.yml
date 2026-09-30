@@ -1,0 +1,79 @@
+name: imgeneus-local
+
+x-database: &database
+  Database__Host: mysql
+  Database__Port: "3306"
+  Database__Username: imgeneus
+  Database__Password: ${MYSQL_PASSWORD:?Set MYSQL_PASSWORD}
+  Database__Database: shaiya
+  Database__SslMode: Preferred
+  UsersDatabase__Host: mysql
+  UsersDatabase__Port: "3306"
+  UsersDatabase__Username: imgeneus
+  UsersDatabase__Password: ${MYSQL_PASSWORD:?Set MYSQL_PASSWORD}
+  UsersDatabase__Database: shaiya-users
+  UsersDatabase__SslMode: Preferred
+
+services:
+  mysql:
+    image: mysql:8.0
+    command: ["--lower-case-table-names=1"]
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:?Set MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: shaiya
+      MYSQL_USER: imgeneus
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD:?Set MYSQL_PASSWORD}
+    volumes:
+      - mysql-data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD-SHELL", "MYSQL_PWD=\"$$MYSQL_ROOT_PASSWORD\" mysql -uroot -e 'SELECT 1' >/dev/null 2>&1"]
+      interval: 5s
+      timeout: 5s
+      retries: 30
+    restart: unless-stopped
+
+  login:
+    build:
+      context: .
+      dockerfile: deploy/Linux.Dockerfile
+      args:
+        SERVER: Login
+    environment:
+      <<: *database
+      ASPNETCORE_URLS: http://0.0.0.0:80
+      TcpServer__Host: login
+    ports:
+      - "${GAME_BIND_IP:-127.0.0.1}:30800:30800"
+      - "127.0.0.1:7000:80"
+    depends_on:
+      mysql:
+        condition: service_healthy
+    restart: unless-stopped
+
+  world:
+    build:
+      context: .
+      dockerfile: deploy/Linux.Dockerfile
+      args:
+        SERVER: World
+    environment:
+      <<: *database
+      ASPNETCORE_URLS: http://0.0.0.0:80
+      TcpServer__Host: world
+      WorldServer__Host: ${WORLD_ADVERTISED_IPV4:-127.0.0.1}
+      InterServer__Endpoint: http://login/inter_server
+    ports:
+      - "${GAME_BIND_IP:-127.0.0.1}:30810:30810"
+      - "127.0.0.1:7001:80"
+    depends_on:
+      mysql:
+        condition: service_healthy
+      login:
+        condition: service_started
+    volumes:
+      - world-logs:/app/world_logs
+    restart: unless-stopped
+
+volumes:
+  mysql-data:
+  world-logs:

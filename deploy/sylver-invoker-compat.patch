@@ -1,0 +1,52 @@
+--- a/submodules/Sylver.HandlerInvoker/src/Sylver.HandlerInvoker/Internal/HandlerActionInvoker.cs
++++ b/submodules/Sylver.HandlerInvoker/src/Sylver.HandlerInvoker/Internal/HandlerActionInvoker.cs
+@@ -4,6 +4,7 @@
+ using System.Linq;
+ using System.Reflection;
+ using System.Threading.Tasks;
++using Microsoft.Extensions.DependencyInjection;
+ 
+ namespace Sylver.HandlerInvoker.Internal
+ {
+@@ -66,7 +67,40 @@
+         /// <inheritdoc />
+         public Task InvokeAsync(object handlerAction, params object[] args)
+         {
+-            throw new NotImplementedException();
++            return InvokeAsyncCore(null, handlerAction, args);
++        }
++
++        public Task InvokeAsync(IServiceScope scope, object handlerAction, params object[] args)
++        {
++            if (scope == null)
++                throw new ArgumentNullException(nameof(scope));
++
++            return InvokeAsyncCore(scope.ServiceProvider, handlerAction, args);
++        }
++
++        private async Task InvokeAsyncCore(IServiceProvider serviceProvider, object handlerAction, object[] args)
++        {
++            var handlerActionInvoker = _invokerCache.GetCachedHandlerAction(handlerAction);
++            if (handlerActionInvoker == null)
++                throw new HandlerActionNotFoundException(handlerAction);
++
++            var targetHandler = serviceProvider == null
++                ? handlerActionInvoker.HandlerFactory(handlerActionInvoker.HandlerType)
++                : ActivatorUtilities.CreateInstance(serviceProvider, handlerActionInvoker.HandlerType);
++            if (targetHandler == null)
++                throw new HandlerTargetCreationFailedException(handlerActionInvoker.HandlerType);
++
++            try
++            {
++                var parameters = PrepareParameters(args, handlerActionInvoker.HandlerExecutor);
++                var result = handlerActionInvoker.HandlerExecutor.Execute(targetHandler, parameters);
++                if (result is Task task)
++                    await task.ConfigureAwait(false);
++            }
++            finally
++            {
++                handlerActionInvoker.HandlerReleaser(targetHandler);
++            }
+         }
+ 
+         /// <summary>
