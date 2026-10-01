@@ -1,32 +1,30 @@
-# Implementação posterior à extração
+# Implementation after extraction
 
-Etapa B aguardando a conclusão documentada de A7. O código experimental
-preservado nesta branch serve como histórico/bancada e não altera essa ordem.
+Phase B waits for documented A7 completion. Preserved experimental code
+serves as history/test-bench infrastructure and does not change the work order.
 
-Cada requisito futuro deve ter ID, domínio, fontes do cliente, contratos
-de dados e pacotes, precondições, comportamento observável, persistência,
-cenários de teste e status. Lacunas devem identificar se o cliente não
-possui a informação ou se a extração ainda não a revelou.
+Each future requirement needs an ID/domain, client sources, data/packet
+contracts, preconditions, observable behavior, persistence, test scenarios,
+and status. Distinguish absent client information from incomplete extraction.
 
-| Ordem | Entrega | Dependência |
+| Order | Deliverable | Dependency |
 | --- | --- | --- |
-| B0 | Perfil EP4.5 e fronteiras com EP8 | Especificação consolidada |
-| B1 | Schema, migrações e importadores dos catálogos | IDs e relações extraídos |
-| B2 | Login/World, personagens e ciclos de sessão | Protocolo e estados validados |
-| B3 | Mapas, presença, movimento e entidades | Catálogos de mapas/recursos/entidades |
-| B4 | Atributos, itens/equipamento e armazenamento | Itens, slots, limites e formatos |
-| B5 | Skills/buffs, combate, PvE e quests | Dados e decisões documentadas para lacunas |
-| B6 | Economia, social e PvP | Fluxos e sistemas presentes no cliente |
-| B7 | Matriz integral e testes repetidos | Todos os recursos encontrados |
-| B8 | Operação Linux e entrega | Cobertura demonstrada e limitações publicadas |
+| B0 | EP4.5 profile and EP8 boundaries | Consolidated specification |
+| B1 | Schema, migrations, catalog importers | Extracted IDs/relationships |
+| B2 | Login/World, characters, session cycles | Validated protocol/states |
+| B3 | Maps, presence, movement, entities | Map/asset/entity catalogs |
+| B4 | Stats, items/equipment, storage | Items, slots, limits, formats |
+| B5 | Skills/buffs, combat/PvE, quests | Data and documented gap policies |
+| B6 | Economy, social, PvP | Client flows/systems |
+| B7 | Complete coverage and repeated tests | All discovered features |
+| B8 | Linux operations and delivery | Demonstrated coverage and limitations |
 
-A base existente divide rede/criptografia em `Imgeneus.Network`, persistência
-em `Imgeneus.Database`, definições em `Imgeneus.GameDefinitions`, lógica em
-`Imgeneus.Game` e handlers/serializers em `Imgeneus.World`/`Imgeneus.Login`.
-Comparar esses módulos com as especificações; não tratar seus seeds ou
-formatos EP8 como dados do cliente alvo.
+Existing boundaries: networking/encryption in `Imgeneus.Network`, persistence
+in `Imgeneus.Database`, definitions in `Imgeneus.GameDefinitions`, gameplay
+in `Imgeneus.Game`, handlers/serializers in `Imgeneus.World`/`Imgeneus.Login`.
+Compare these modules with specifications. Their seeds and EP8 formats are
+not source data from this client.
 
-Decisões de drop, respawn, AI ou fórmulas sem evidência no cliente devem
-ficar em documentos próprios de políticas, com testes e configuração,
-explicitamente separadas do catálogo extraído. Cobrir o comportamento
-observável não significa recuperar o código do servidor original.
+Drop/respawn/AI/formula policies without client evidence belong in separate
+policy documents with configuration/tests. Observable compatibility does
+not recover original server code.

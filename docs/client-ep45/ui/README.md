@@ -1,25 +1,22 @@
-# Interface e matriz de ações
+# UI and action matrix
 
-Inventariar telas acessíveis e telas referenciadas por recursos/funções que
-ainda não conseguimos abrir. Registrar IDs de imagens/textos, atalhos,
-controle acionado, estado inicial/final e condições de acesso.
+Inventory accessible screens and screens referenced by assets/functions
+that remain inaccessible. Record image/text IDs, shortcuts, controls,
+initial/final states, and access conditions.
 
-Formato da matriz futura em `actions.csv`:
+Planned `actions.csv` columns:
 
 ```text
 action_id,screen_id,control_id,initial_state,local_effect,c2s_opcodes,s2c_opcodes,final_state,evidence_id,status,backend_requirement
 ```
 
-Listas de opcodes em uma célula precisam de uma convenção documentada.
-Uma ação local deve indicar isso; uma ação não validada deve permanecer
-pendente, mesmo que os recursos gráficos tenham sido extraídos.
+Document the convention for opcode lists in cells. Identify entirely local
+actions explicitly. Extracted graphics alone do not validate an interaction.
 
-Primeiro documentar a navegação de autenticação/seleção/mundo/logout e a
-reentrada. Expandir para todos os painéis e menus encontrados no inventário:
-inventário, equipamento, skills, NPCs/quests, lojas, chat, social/PvP,
-configurações e recursos adicionais.
+Document authentication/selection/world/logout/reentry first, then every
+panel/menu found: inventory/equipment, skills, NPCs/quests, shops, chat,
+social/PvP, settings, and additional features.
 
-Cada fluxo deve incluir sucesso, cancelamento, erro e repetição. Screenshots
-e registros devem apontar para a baseline e evitar dados de conta. Relacionar
-interface aos catálogos e ao contrato de protocolo; aparência não comprova
-implementação da regra de servidor.
+Include success, cancellation, error, and repetition. Link screenshots/tests
+to the baseline without account data. Connect UI to catalogs and protocol
+contracts; appearance does not demonstrate a server rule.

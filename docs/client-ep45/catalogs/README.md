@@ -1,52 +1,46 @@
-# Catálogos e manifestos
+# Catalogs and manifests
 
-`loose-files.json` identifica os arquivos soltos da instalação. Ele não
-contém configurações, dumps ou executáveis: somente metadados e hashes.
-Não representa a extração do SAF nem prova compatibilidade de formatos.
+`loose-files.json` identifies the installation's loose files through metadata
+and hashes only. It contains no settings contents, dumps, or executable bytes
+and does not represent the internal SAF inventory.
 
-Após A0/A1, `loose-files.current.json` registra a configuração atual;
-o manifesto anterior foi preservado. Só `CONFIG.INI` mudou. O índice interno
-completo tem 23.570 registros e fica no cache devido ao tamanho (~20 MB),
-com caminho/hash em `extraction-report.json`.
+`loose-files.current.json` records A0/A1 configuration; the prior manifest is
+preserved. Only `CONFIG.INI` changed. The full internal index contains 23,570
+records and stays in cache (~20 MB), indexed by `extraction-report.json`.
 
-As saídas atuais incluem `baseline-evidence.json`, `extraction-report.json`,
-`data-sources.json`, `map-files.json` e `asset-summary.json`. Esses catálogos
-identificam fontes e recursos; não são tabelas de registros de gameplay.
+Current outputs: `baseline-evidence.json`, `extraction-report.json`,
+`data-sources.json`, `map-files.json`, and `asset-summary.json`. They identify
+sources/assets rather than decoded gameplay records.
 
-Gerar novamente na raiz do projeto, usando apenas Python 3:
+Reproduce from the repository root:
 
 ```bash
-python3 tools/ep45-client/inventory.py --client-dir '/caminho/para/RebirthEvolution' --baseline-id rebirth-evolution-ep45-98c7dd3a --output docs/client-ep45/catalogs/loose-files.json
+python3 tools/ep45-client/inventory.py --client-dir '/path/to/RebirthEvolution' --baseline-id rebirth-evolution-ep45-98c7dd3a --output docs/client-ep45/catalogs/loose-files.current.json
 ```
 
-A ferramenta lê arquivos em blocos e recusa saída dentro do cliente.
-Detecta alterações de tamanho/data durante o hash e registra symlinks
-ignorados. A data de geração muda entre execuções; IDs, caminhos e hashes
-devem permanecer iguais quando os arquivos da amostra não mudarem.
+The tool streams hashes, refuses output inside the client, detects source
+size/date changes, and records skipped symlinks. Generation dates vary; IDs,
+paths, and hashes must remain identical for unchanged sources.
 
-## Entregas previstas
-
-| Arquivo | Conteúdo |
+| Planned output | Contents |
 | --- | --- |
-| `archive-files.jsonl` | Uma linha por entrada SAH, com ordinal, caminho original/normalizado, offset, tamanho, versão e hash do conteúdo |
-| `extraction-report.json` | Contagens declaradas/lidas/extraídas, erros, duplicatas, distribuição de formatos e integridade |
-| `items.jsonl` | Itens com chave original `(type,typeId)` e relações |
-| `skills.jsonl` | Skills/níveis/buffs e seus vínculos |
-| `mobs.jsonl` / `npcs.jsonl` | Entidades, recursos e dados presentes no cliente |
-| `quests.jsonl` | Etapas, textos, requisitos e recompensas exibidas |
-| `maps.jsonl` | Mapas e relações com recursos/regiões/portais/posicionamentos presentes |
-| `assets.jsonl` | Modelos, texturas, animações, áudio, efeitos, interface e fontes |
-| `strings.jsonl` | Textos, encoding, idioma, IDs e usos |
+| `archive-files.jsonl` | Original SAH ordinals/paths, offsets, lengths, versions, content hashes |
+| `extraction-report.json` | Declared/read/extracted counts, errors, duplicates, distributions, integrity |
+| `items.jsonl` | Original `(type,typeId)` and relationships |
+| `skills.jsonl` | Skill/level/buff definitions and links |
+| `mobs.jsonl` / `npcs.jsonl` | Entities, assets, and available client data |
+| `quests.jsonl` | Stages, text, requirements, displayed rewards |
+| `maps.jsonl` | Maps and included region/portal/position/asset relationships |
+| `assets.jsonl` | Models, textures, animations, audio, effects, UI, fonts |
+| `strings.jsonl` | Original text, encoding/language, IDs, usages |
 
-Criar catálogos adicionais conforme o inventário revelar novos sistemas.
-Não criar arquivos vazios para aparentar que a extração foi concluída.
+Add catalogs as new systems are discovered. Do not create empty placeholders
+to imply completed extraction. Each normalized record must reference its raw
+record, manifest, schema, and evidence under `../schemas/provenance.schema.json`.
+Preserve original numbers/units/missing values/unknown fields. Do not fill
+missing values with EP8 defaults. Distinguish raw and derived values.
 
-Cada linha normalizada deve referenciar o registro original, o manifesto,
-o schema e uma evidência conforme `../schemas/provenance.schema.json`.
-Manter números originais, unidades, valores ausentes e campos desconhecidos;
-não preencher ausências com defaults de EP8. Separar dado bruto de derivado.
-
-As exportações devem ter ordenação determinística e versão de schema.
-JSONL grande pode ficar no cache, com contagem/hash/caminho e instrução de
-geração versionados. Os relatórios devem identificar referências quebradas,
-IDs duplicados, entidades sem recursos e recursos sem entidade.
+Structured records must be deterministic and schema-versioned. Large JSONL
+exports may stay in cache with versioned counts/hashes/paths and reproduction
+instructions. Report broken references, duplicate IDs, missing assets, and
+assets without entity links. English metadata must not alter original client text.

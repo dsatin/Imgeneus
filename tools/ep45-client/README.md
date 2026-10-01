@@ -1,8 +1,7 @@
-# Inventário e extração do cliente
+# Client inventory and extraction
 
-Ferramentas Python 3 sem dependências externas, SDK .NET ou Docker.
-Executar na raiz do repositório. Os arquivos do cliente são somente fonte
-de leitura; o cache e os relatórios ficam separados.
+Python 3 tools without external packages, .NET SDK, or Docker. Run from the
+repository root. Client files are read-only sources; cache/reports are separate.
 
 ```bash
 EP45_CLIENT_DIR='/home/dsatin/Games/Heroic/Prefixes/Shaiya EP 4.5/drive_c/RebirthEvolution'
@@ -17,51 +16,48 @@ python3 tools/ep45-client/archive.py extract --client-dir "$EP45_CACHE/originals
 python3 tools/ep45-client/discover.py --manifest "$EP45_CACHE/archive-files.jsonl" --extraction-report docs/client-ep45/catalogs/extraction-report.json --output-dir docs/client-ep45/catalogs
 ```
 
-`baseline.py` aceita `--original-game` para preservar/conferir uma cópia
-pré-patch e `--heroic-config` com `--game-id` para registrar somente opções
-permitidas do runner. As configurações completas e argumentos potencialmente
-sensíveis não são publicados. Sem esses parâmetros, a identificação continua
-funcionando; a evidência registra somente as informações disponíveis.
+`baseline.py` accepts `--original-game` for a pre-patch executable and
+`--heroic-config` with `--game-id` for allowlisted runner options only.
+Complete settings and potentially sensitive launch arguments are not published.
+These optional arguments are not required to identify the available sample.
 
-`archive.py inventory` lê o índice, valida e calcula hashes das faixas sem
-extrair os conteúdos. O modo `extract` também compara cada arquivo de saída
-com a sua faixa no SAF. Ambos verificam o hash completo SAH/SAF antes/depois.
-Assinatura/contagens de índice cifrado não suportadas geram erro explícito.
+`archive.py inventory` indexes, validates, and hashes source intervals without
+extracting. `extract` also compares each output with its SAF interval. Both
+verify complete SAH/SAF hashes before/after. Unsupported encrypted indexes
+produce explicit signature/count errors.
 
-## Cache e retomada
+## Cache and resume
 
-| Caminho no cache | Conteúdo |
+| Cache path | Contents |
 | --- | --- |
-| `originals/` | Amostra congelada e executável original quando disponível |
-| `extracted/tree/` | Árvore principal com nomes/case preservados |
-| `extracted/duplicates/<ordinal>/` | Entradas repetidas, sem substituir a primeira |
-| `extracted/supplemental/<ordinal>/` | Registros após a árvore, separados da fonte ativa |
-| `archive-files.jsonl` | Todas as entradas, origem, offsets, hashes, classificação e resultado |
-| `archive-folders.json` | Árvore/contagens originais das pastas |
-| `unreferenced-ranges.jsonl` | Intervalos do SAF que não pertencem às entradas catalogadas |
+| `originals/` | Frozen sample and original executable, when available |
+| `extracted/tree/` | Main tree with original names/case |
+| `extracted/duplicates/<ordinal>/` | Repeated entries, preserving the first |
+| `extracted/supplemental/<ordinal>/` | Post-tree records, separate from active sources |
+| `archive-files.jsonl` | Every entry, origin, offsets, hashes, classification, outcome |
+| `archive-files.v1.jsonl` | Previous manifest before English status migration |
+| `archive-folders.json` | Original folder tree/counts |
+| `unreferenced-ranges.jsonl` | SAF intervals outside cataloged entries |
 
-O cache não entra no Git nem no build Docker. O manifesto completo tem
-aproximadamente 20 MB e fica no cache; seu caminho/hash e os resumos são
-versionados em `docs/client-ep45/catalogs/`.
+Cache is excluded from Git and Docker builds. The full manifest is about
+20 MB; its hash/path and summaries are versioned in `docs/client-ep45/catalogs/`.
 
-Reexecutar o mesmo comando `extract` para retomar: arquivos existentes são
-lidos e conferidos, sem substituição. Conteúdo divergente gera erro e mantém
-o arquivo existente. Interrupções deixam o manifesto `.pending`, sem
-promovê-lo a resultado válido; saídas temporárias não são entradas concluídas.
+Rerun `extract` to resume. Existing outputs are read/verified without replacement.
+Divergent content causes an error and remains intact. Interrupted runs retain
+`.pending` manifests without promoting them; temporary files are not completed entries.
 
-As datas dos arquivos originais estão no manifesto externo. Os arquivos
-extraídos têm as datas da extração; não há timestamp por entrada no layout
-SAH identificado. Campos sem semântica comprovada permanecem desconhecidos.
+Original dates are in the external manifest. Extracted files carry extraction
+dates; the observed SAH layout has no entry timestamps. Unproven fields retain
+unknown semantics. All maintained metadata/prose use English; original client
+text and bytes remain evidence in their original language.
 
-## Testes
+## Tests
 
 ```bash
 python3 tools/ep45-client/test_archive.py
 ```
 
-Cobrem truncamento, contagens/ranges inválidos, UTF-8 inválido, duplicatas,
-case, intervalos aninhados, paths externos, conflitos arquivo/pasta,
-symlinks, conteúdo corrompido, retomada e incompatibilidade de baseline.
-
-Essas ferramentas extraem arquivos e identificam containers. Ainda não
-descriptografam SData nem decodificam registros de itens, skills ou mobs.
+Coverage: truncation, invalid counts/ranges/UTF-8, duplicate/case collisions,
+nested intervals, traversal, file/folder conflicts, symlinks, corrupt outputs,
+resume, and baseline mismatch. These tools currently identify/extract files;
+SData decryption and record readers are the next task.

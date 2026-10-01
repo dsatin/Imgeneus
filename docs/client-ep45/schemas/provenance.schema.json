@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "urn:imgeneus:client-ep45:provenance:1",
-  "title": "Evidência de referência do cliente EP4.5",
+  "$id": "urn:imgeneus:client-ep45:provenance:2",
+  "title": "EP4.5 client reference evidence",
   "type": "object",
   "additionalProperties": false,
   "required": ["id", "domain", "baseline_id", "status", "sources", "method", "reproduction", "observed_at", "unknowns"],
@@ -10,7 +10,7 @@
     "domain": { "type": "string", "minLength": 1 },
     "baseline_id": { "type": "string", "minLength": 1 },
     "status": {
-      "enum": ["inventariado", "extraido", "decodificado", "validado_estaticamente", "validado_em_execucao", "inferido", "desconhecido", "nao_aplicavel_com_evidencia"]
+      "enum": ["inventoried", "extracted", "decoded", "statically_validated", "runtime_validated", "inferred", "unknown", "not_applicable_with_evidence"]
     },
     "sources": {
       "type": "array", "minItems": 1,
@@ -46,7 +46,7 @@
   },
   "allOf": [
     {
-      "if": { "properties": { "status": { "const": "validado_em_execucao" } } },
+      "if": { "properties": { "status": { "const": "runtime_validated" } } },
       "then": {
         "required": ["validation"],
         "properties": {

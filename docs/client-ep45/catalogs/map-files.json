@@ -1,14 +1,14 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "baseline_id": "rebirth-evolution-ep45-98c7dd3a",
-  "generated_at_utc": "2026-10-01T22:03:55.270622+00:00",
+  "generated_at_utc": "2026-10-01T22:33:15.581475+00:00",
   "tool": {
     "path": "tools/ep45-client/discover.py",
-    "version": "1.0.0",
-    "sha256": "849a0d2b48375707eba4f3d30fe166968e5bd2cb9af6669082f34d650984f3e3"
+    "version": "2.0.0",
+    "sha256": "1cdff5483ea4b77ff5146e7460eacf501f2bcaacef14db3b0a6a396b0d277650"
   },
-  "archive_manifest_sha256": "09240d9b290aded79f66f40991e62cca19aca5eab90792d1f1f8b584fe847a29",
-  "status": "inventariado",
+  "archive_manifest_sha256": "141493242b496dde8119fb30b45e84fe078b04ddbf957d2226ac1c92a28902cf",
+  "status": "inventoried",
   "gameplay_records_decoded": 0,
   "files": [
     {
@@ -22,8 +22,8 @@
       "extracted_path": "tree/world/0.wld",
       "sha256": "5fd276e3df24a140eb6d972cb2de2ad25b27ce3f9cf2e61605795500f1ddc147",
       "filename_numeric_id_candidate": 0,
-      "id_status": "inferido_do_nome",
-      "layout_status": "desconhecido"
+      "id_status": "inferred_from_filename",
+      "layout_status": "unknown"
     },
     {
       "id": "tree-022396",
@@ -36,8 +36,8 @@
       "extracted_path": "tree/world/10.wld",
       "sha256": "ccca71e714848597bd6c87065b2d18fda2508d2797c41dfe2dce3318c8b262ba",
       "filename_numeric_id_candidate": 10,
-      "id_status": "inferido_do_nome",
-      "layout_status": "desconhecido"
+      "id_status": "inferred_from_filename",
+      "layout_status": "unknown"
     },
     {
       "id": "tree-022398",
@@ -50,8 +50,8 @@
       "extracted_path": "tree/world/100.wld",
       "sha256": "b95314334563e8e11233b813929234a9e6ff500107686b34c7fc3f1be8dba5cc",
       "filename_numeric_id_candidate": 100,
-      "id_status": "inferido_do_nome",
-      "layout_status": "desconhecido"
+      "id_status": "inferred_from_filename",
+      "layout_status": "unknown"
     },
     {
       "id": "tree-022400",
@@ -64,8 +64,8 @@
       "extracted_path": "tree/world/101.wld",
       "sha256": "4bb4c79b149bce0bd742e55755ed191d16ffe5f2e0d75e2836deb2ab27a76f8d",
       "filename_numeric_id_candidate": 101,
-      "id_status": "inferido_do_nome",
-      "layout_status": "desconhecido"
+      "id_status": "inferred_from_filename",
+      "layout_status": "unknown"
     },
     {
       "id": "tree-022402",
@@ -78,8 +78,8 @@
       "extracted_path": "tree/world/102.wld",
       "sha256": "2bc964a161e35e97226bd6bfc9deb93acafebfa81a1a2f41df8048c1f42d83de",
       "filename_numeric_id_candidate": 102,
-      "id_status": "inferido_do_nome",
-      "layout_status": "desconhecido"
+      "id_status": "inferred_from_filename",
+      "layout_status": "unknown"
     },
     {
       "id": "tree-022404",
@@ -92,8 +92,8 @@
       "extracted_path": "tree/world/103.wld",
       "sha256": "853c963e93c5e53e2c07de4eee35f3cd1459a94cd534512ad9cf2c6e71894ce1",
       "filename_numeric_id_candidate": 103,
-      "id_status": "inferido_do_nome",
-      "layout_status": "desconhecido"
+      "id_status": "inferred_from_filename",
+      "layout_status": "unknown"
     },
     {
       "id": "tree-022406",
@@ -106,8 +106,8 @@
       "extracted_path": "tree/world/104.wld",
       "sha256": "c5d90032e703905d6343fabac9a76411a0e9857311b299516544c34d8f13efa3",
       "filename_numeric_id_candidate": 104,
-      "id_status": "inferido_do_nome",
-      "layout_status": "desconhecido"
+      "id_status": "inferred_from_filename",
+      "layout_status": "unknown"
     },
     {
       "id": "tree-022408",
@@ -120,8 +120,8 @@
       "extracted_path": "tree/world/105.wld",
       "sha256": "44bf52d813958c83c87c62efe10c83655397f860ea54776e0f7f9a099b2604cf",
       "filename_numeric_id_candidate": 105,
-      "id_status": "inferido_do_nome",
-      "layout_status": "desconhecido"
+      "id_status": "inferred_from_filename",
+      "layout_status": "unknown"
     },
     {
       "id": "tree-022409",
@@ -134,8 +134,8 @@
       "extracted_path": "tree/world/106.wld",
       "sha256": "e57283730c61cec2352260a0f673be89b1373a3c41deaafdee7e85efebd1c6b7",
       "filename_numeric_id_candidate": 106,
-      "id_status": "inferido_do_nome",
-      "layout_status": "desconhecido"
+      "id_status": "inferred_from_filename",
+      "layout_status": "unknown"
     },
     {
       "id": "tree-022410",
@@ -148,8 +148,8 @@
       "extracted_path": "tree/world/107.wld",
       "sha256": "1e8e1d3ea4f67a5422ea32292b0bbd3eeb101aeeaca8e27382ac3823fa7fba17",
       "filename_numeric_id_candidate": 107,
-      "id_status": "inferido_do_nome",
-      "layout_status": "desconhecido"
+      "id_status": "inferred_from_filename",
+      "layout_status": "unknown"
     },
     {
       "id": "tree-022412",
@@ -162,8 +162,8 @@
       "extracted_path": "tree/world/108.wld",
       "sha256": "efc842a394fadbc912bf70dfcdd6bb85e1e0ae5a6c6aca89531b15b5899d660e",
       "filename_numeric_id_candidate": 108,
-      "id_status": "inferido_do_nome",
-      "layout_status": "desconhecido"
+      "id_status": "inferred_from_filename",
+      "layout_status": "unknown"
     },
     {
       "id": "tree-022413",
@@ -176,8 +176,8 @@
       "extracted_path": "tree/world/11.wld",
       "sha256": "c865df125a9aa9dc2bc1ef941961259eed796302e3d606e987e54508fd5d74be",
       "filename_numeric_id_candidate": 11,
-      "id_status": "inferido_do_nome",
-      "layout_status": "desconhecido"
+      "id_status": "inferred_from_filename",
+      "layout_status": "unknown"
     },
     {
       "id": "tree-022414",
@@ -190,8 +190,8 @@
       "extracted_path": "tree/world/12.wld",
       "sha256": "e24dd14c59b3973455f5d5386e5d659c32f51391234a58de837e42400363c753",
       "filename_numeric_id_candidate": 12,
-      "id_status": "inferido_do_nome",
-      "layout_status": "desconhecido"
+      "id_status": "inferred_from_filename",
+      "layout_status": "unknown"
     },
     {
       "id": "tree-022415",
@@ -204,8 +204,8 @@
       "extracted_path": "tree/world/13.wld",
       "sha256": "9c25acc4b895719fdfc3bc9ee5a1b0fe5797033289c2845a72768c9542ea03a1",
       "filename_numeric_id_candidate": 13,
-      "id_status": "inferido_do_nome",
-      "layout_status": "desconhecido"
+      "id_status": "inferred_from_filename",
+      "layout_status": "unknown"
     },
     {
       "id": "tree-022416",
@@ -218,8 +218,8 @@
       "extracted_path": "tree/world/14.wld",
       "sha256": "72a9e2b0d9ac5ddff84a179814fefca50299c5e7554b1e746d704528e6a802e1",
       "filename_numeric_id_candidate": 14,
-      "id_status": "inferido_do_nome",
-      "layout_status": "desconhecido"
+      "id_status": "inferred_from_filename",
+      "layout_status": "unknown"
     },
     {
       "id": "tree-022417",
@@ -232,8 +232,8 @@
       "extracted_path": "tree/world/15.wld",
       "sha256": "e61388225775bd44bc10abb535f7075e4e975b8dc19ecb1276442d7dc54c60f5",
       "filename_numeric_id_candidate": 15,
-      "id_status": "inferido_do_nome",
-      "layout_status": "desconhecido"
+      "id_status": "inferred_from_filename",
+      "layout_status": "unknown"
     },
     {
       "id": "tree-022418",
@@ -246,8 +246,8 @@
       "extracted_path": "tree/world/16.wld",
       "sha256": "4db8d666206c859268404425186472b833f8fa7ab8a4b7bace9bbfc3ba724473",
       "filename_numeric_id_candidate": 16,
-      "id_status": "inferido_do_nome",
-      "layout_status": "desconhecido"
+      "id_status": "inferred_from_filename",
+      "layout_status": "unknown"
     },
     {
       "id": "tree-022419",
@@ -260,8 +260,8 @@
       "extracted_path": "tree/world/17.wld",
       "sha256": "186b3cdc32dcce97b4eaefa1ead55cdfb6c1e73246f95eecb490416c29056ad1",
       "filename_numeric_id_candidate": 17,
-      "id_status": "inferido_do_nome",
-      "layout_status": "desconhecido"
+      "id_status": "inferred_from_filename",
+      "layout_status": "unknown"
     },
     {
       "id": "tree-022421",
@@ -274,8 +274,8 @@
       "extracted_path": "tree/world/18.wld",
       "sha256": "dca11c71ae02265cbc55656b9ed446e1bc2deaa7b3b3acf74025cdf70a5885d1",
       "filename_numeric_id_candidate": 18,
-      "id_status": "inferido_do_nome",
-      "layout_status": "desconhecido"
+      "id_status": "inferred_from_filename",
+      "layout_status": "unknown"
     },
     {
       "id": "tree-022424",
@@ -288,8 +288,8 @@
       "extracted_path": "tree/world/21.wld",
       "sha256": "48d55266ecdf57e7325fc8624e370440a6947879a4ef755bfd45c0ff6bbd1b8b",
       "filename_numeric_id_candidate": 21,
-      "id_status": "inferido_do_nome",
-      "layout_status": "desconhecido"
+      "id_status": "inferred_from_filename",
+      "layout_status": "unknown"
     },
     {
       "id": "tree-022425",
@@ -302,8 +302,8 @@
       "extracted_path": "tree/world/22.wld",
       "sha256": "acc0942dc3f01e2dbd4bebb41ae2b1c6e712b7547e2cac99a853c2f992e65d2f",
       "filename_numeric_id_candidate": 22,
-      "id_status": "inferido_do_nome",
-      "layout_status": "desconhecido"
+      "id_status": "inferred_from_filename",
+      "layout_status": "unknown"
     },
     {
       "id": "tree-022426",
@@ -316,8 +316,8 @@
       "extracted_path": "tree/world/23.wld",
       "sha256": "80185cb40b4b3a0c8542ac1b5afc01ff4afbc8fb5d7ea91fa18e012749bff92a",
       "filename_numeric_id_candidate": 23,
-      "id_status": "inferido_do_nome",
-      "layout_status": "desconhecido"
+      "id_status": "inferred_from_filename",
+      "layout_status": "unknown"
     },
     {
       "id": "tree-022427",
@@ -330,8 +330,8 @@
       "extracted_path": "tree/world/24.wld",
       "sha256": "bc0390f414ab47ac35711c0decffed4055fb6e882b471acab673a55092deddb0",
       "filename_numeric_id_candidate": 24,
-      "id_status": "inferido_do_nome",
-      "layout_status": "desconhecido"
+      "id_status": "inferred_from_filename",
+      "layout_status": "unknown"
     },
     {
       "id": "tree-022428",
@@ -344,8 +344,8 @@
       "extracted_path": "tree/world/25.wld",
       "sha256": "59b8040d4a49979a5c59c483195e38efc4a9791ab263f8c7ff8cb00e9a4b89c8",
       "filename_numeric_id_candidate": 25,
-      "id_status": "inferido_do_nome",
-      "layout_status": "desconhecido"
+      "id_status": "inferred_from_filename",
+      "layout_status": "unknown"
     },
     {
       "id": "tree-022429",
@@ -358,8 +358,8 @@
       "extracted_path": "tree/world/26.wld",
       "sha256": "09653a75d48393d0b2789b92333fd721340174019fdce8ee6bb9cada4d3ee32d",
       "filename_numeric_id_candidate": 26,
-      "id_status": "inferido_do_nome",
-      "layout_status": "desconhecido"
+      "id_status": "inferred_from_filename",
+      "layout_status": "unknown"
     },
     {
       "id": "tree-022430",
@@ -372,8 +372,8 @@
       "extracted_path": "tree/world/27.wld",
       "sha256": "c4c8e21b1cff3ddf834871d8be8ec3e7b32a61b9000773418fcdb033ab31343d",
       "filename_numeric_id_candidate": 27,
-      "id_status": "inferido_do_nome",
-      "layout_status": "desconhecido"
+      "id_status": "inferred_from_filename",
+      "layout_status": "unknown"
     },
     {
       "id": "tree-022432",
@@ -386,8 +386,8 @@
       "extracted_path": "tree/world/3.wld",
       "sha256": "2a3c561c621c56b14d21103ab2c76b05d0d12e38cb5969c93f39f18709bf74d4",
       "filename_numeric_id_candidate": 3,
-      "id_status": "inferido_do_nome",
-      "layout_status": "desconhecido"
+      "id_status": "inferred_from_filename",
+      "layout_status": "unknown"
     },
     {
       "id": "tree-022434",
@@ -400,8 +400,8 @@
       "extracted_path": "tree/world/30.wld",
       "sha256": "133e6db9ff60cc00d23caec3a09b7df9e170e1812a514f7df25018356f1d86e7",
       "filename_numeric_id_candidate": 30,
-      "id_status": "inferido_do_nome",
-      "layout_status": "desconhecido"
+      "id_status": "inferred_from_filename",
+      "layout_status": "unknown"
     },
     {
       "id": "tree-022435",
@@ -414,8 +414,8 @@
       "extracted_path": "tree/world/31.wld",
       "sha256": "f54bf852a7a712c5825b399a3b567a313e4b1a2a6775e1f7cf4731db73ad5306",
       "filename_numeric_id_candidate": 31,
-      "id_status": "inferido_do_nome",
-      "layout_status": "desconhecido"
+      "id_status": "inferred_from_filename",
+      "layout_status": "unknown"
     },
     {
       "id": "tree-022436",
@@ -428,8 +428,8 @@
       "extracted_path": "tree/world/32.wld",
       "sha256": "102f4a49ab582f1990c16171f720bebc782c311772765f9fe09855eaba200dc0",
       "filename_numeric_id_candidate": 32,
-      "id_status": "inferido_do_nome",
-      "layout_status": "desconhecido"
+      "id_status": "inferred_from_filename",
+      "layout_status": "unknown"
     },
     {
       "id": "tree-022437",
@@ -442,8 +442,8 @@
       "extracted_path": "tree/world/33.wld",
       "sha256": "0f52119b31183647abd169ea42617d47100c3dce5afaf6cbe4d65b5fd34708f6",
       "filename_numeric_id_candidate": 33,
-      "id_status": "inferido_do_nome",
-      "layout_status": "desconhecido"
+      "id_status": "inferred_from_filename",
+      "layout_status": "unknown"
     },
     {
       "id": "tree-022438",
@@ -456,8 +456,8 @@
       "extracted_path": "tree/world/34.wld",
       "sha256": "6bb347c8a838179702a7660c00053e546e1e9ae09da25a575569df3e779c6b80",
       "filename_numeric_id_candidate": 34,
-      "id_status": "inferido_do_nome",
-      "layout_status": "desconhecido"
+      "id_status": "inferred_from_filename",
+      "layout_status": "unknown"
     },
     {
       "id": "tree-022441",
@@ -470,8 +470,8 @@
       "extracted_path": "tree/world/37.wld",
       "sha256": "c96b86531282ef62e5979d6fccd6aa307db60899d440d8e589e201db61cc5edd",
       "filename_numeric_id_candidate": 37,
-      "id_status": "inferido_do_nome",
-      "layout_status": "desconhecido"
+      "id_status": "inferred_from_filename",
+      "layout_status": "unknown"
     },
     {
       "id": "tree-022442",
@@ -484,8 +484,8 @@
       "extracted_path": "tree/world/38.wld",
       "sha256": "065a83c1687d84e85f9bc6341f81321bec1a61ac61e71898bdb492217217b269",
       "filename_numeric_id_candidate": 38,
-      "id_status": "inferido_do_nome",
-      "layout_status": "desconhecido"
+      "id_status": "inferred_from_filename",
+      "layout_status": "unknown"
     },
     {
       "id": "tree-022443",
@@ -498,8 +498,8 @@
       "extracted_path": "tree/world/39.wld",
       "sha256": "b1badd53c47a15f79d47b4eb7d0dbfa2d5052c0d0b957101c7408b59dcf6da28",
       "filename_numeric_id_candidate": 39,
-      "id_status": "inferido_do_nome",
-      "layout_status": "desconhecido"
+      "id_status": "inferred_from_filename",
+      "layout_status": "unknown"
     },
     {
       "id": "tree-022444",
@@ -512,8 +512,8 @@
       "extracted_path": "tree/world/4.wld",
       "sha256": "3fe039ed8a0e3065b242f8c7bf7b0a45c002ea66e1b7bf01d9a862ec1c0abc96",
       "filename_numeric_id_candidate": 4,
-      "id_status": "inferido_do_nome",
-      "layout_status": "desconhecido"
+      "id_status": "inferred_from_filename",
+      "layout_status": "unknown"
     },
     {
       "id": "tree-022445",
@@ -526,8 +526,8 @@
       "extracted_path": "tree/world/40.wld",
       "sha256": "284729b78dc4c030926148828ab37d1b6691959186bad91e7e6ce2e454fd2802",
       "filename_numeric_id_candidate": 40,
-      "id_status": "inferido_do_nome",
-      "layout_status": "desconhecido"
+      "id_status": "inferred_from_filename",
+      "layout_status": "unknown"
     },
     {
       "id": "tree-022446",
@@ -540,8 +540,8 @@
       "extracted_path": "tree/world/41.wld",
       "sha256": "6ad27f5cbbcc011294c7daf0b000e0e7d3935e83ae2ce8226f80be0c396c5516",
       "filename_numeric_id_candidate": 41,
-      "id_status": "inferido_do_nome",
-      "layout_status": "desconhecido"
+      "id_status": "inferred_from_filename",
+      "layout_status": "unknown"
     },
     {
       "id": "tree-022449",
@@ -554,8 +554,8 @@
       "extracted_path": "tree/world/43.wld",
       "sha256": "1bc1d83a0f5e1b716fe5afc1aaa04fd3f22c023f97a1343b45a0d9c6f6688b24",
       "filename_numeric_id_candidate": 43,
-      "id_status": "inferido_do_nome",
-      "layout_status": "desconhecido"
+      "id_status": "inferred_from_filename",
+      "layout_status": "unknown"
     },
     {
       "id": "tree-022451",
@@ -568,8 +568,8 @@
       "extracted_path": "tree/world/44.wld",
       "sha256": "f6a374821a23834604e4306491d6f054d45eeca5e27e4aac9db5b196a2e5f021",
       "filename_numeric_id_candidate": 44,
-      "id_status": "inferido_do_nome",
-      "layout_status": "desconhecido"
+      "id_status": "inferred_from_filename",
+      "layout_status": "unknown"
     },
     {
       "id": "tree-022452",
@@ -582,8 +582,8 @@
       "extracted_path": "tree/world/45.wld",
       "sha256": "df66daf154bffe416325a4d769595942b84e7722fca3cc55b0443b963c80eaf3",
       "filename_numeric_id_candidate": 45,
-      "id_status": "inferido_do_nome",
-      "layout_status": "desconhecido"
+      "id_status": "inferred_from_filename",
+      "layout_status": "unknown"
     },
     {
       "id": "tree-022453",
@@ -596,8 +596,8 @@
       "extracted_path": "tree/world/46.wld",
       "sha256": "396ec84007be1d7fd7de177358c4fa92525306467cba0102d38e60a8eede1f7d",
       "filename_numeric_id_candidate": 46,
-      "id_status": "inferido_do_nome",
-      "layout_status": "desconhecido"
+      "id_status": "inferred_from_filename",
+      "layout_status": "unknown"
     },
     {
       "id": "tree-022455",
@@ -610,8 +610,8 @@
       "extracted_path": "tree/world/47.wld",
       "sha256": "480db9a59004b20e8db7f108be6fd3159d9c5538ebb45f1a32a870501513f3d5",
       "filename_numeric_id_candidate": 47,
-      "id_status": "inferido_do_nome",
-      "layout_status": "desconhecido"
+      "id_status": "inferred_from_filename",
+      "layout_status": "unknown"
     },
     {
       "id": "tree-022457",
@@ -624,8 +624,8 @@
       "extracted_path": "tree/world/48.wld",
       "sha256": "eb8aaa617c14072ff993e81a0b7f32aa78be8c7086fd8bd0e72e9f19bad24822",
       "filename_numeric_id_candidate": 48,
-      "id_status": "inferido_do_nome",
-      "layout_status": "desconhecido"
+      "id_status": "inferred_from_filename",
+      "layout_status": "unknown"
     },
     {
       "id": "tree-022459",
@@ -638,8 +638,8 @@
       "extracted_path": "tree/world/49.wld",
       "sha256": "14b9beac785ee81b4bbf226444c66d524e8b14f69776437617f85d4ccb6ad04a",
       "filename_numeric_id_candidate": 49,
-      "id_status": "inferido_do_nome",
-      "layout_status": "desconhecido"
+      "id_status": "inferred_from_filename",
+      "layout_status": "unknown"
     },
     {
       "id": "tree-022461",
@@ -652,8 +652,8 @@
       "extracted_path": "tree/world/5.wld",
       "sha256": "13685c30a531ec9f88b0ceb7a77e5bc64b9107c61eaf6e94257605069c5ad9a8",
       "filename_numeric_id_candidate": 5,
-      "id_status": "inferido_do_nome",
-      "layout_status": "desconhecido"
+      "id_status": "inferred_from_filename",
+      "layout_status": "unknown"
     },
     {
       "id": "tree-022463",
@@ -666,8 +666,8 @@
       "extracted_path": "tree/world/50.wld",
       "sha256": "f41f952363a4850dd1d6810c50628b12c0c9377f8389ec12b4fe39df947bd463",
       "filename_numeric_id_candidate": 50,
-      "id_status": "inferido_do_nome",
-      "layout_status": "desconhecido"
+      "id_status": "inferred_from_filename",
+      "layout_status": "unknown"
     },
     {
       "id": "tree-022464",
@@ -680,8 +680,8 @@
       "extracted_path": "tree/world/51.wld",
       "sha256": "e8a567c166d15c8239f854066fc3cbe0c8c74a58e1be9fc9a0c00588c2648764",
       "filename_numeric_id_candidate": 51,
-      "id_status": "inferido_do_nome",
-      "layout_status": "desconhecido"
+      "id_status": "inferred_from_filename",
+      "layout_status": "unknown"
     },
     {
       "id": "tree-022465",
@@ -694,8 +694,8 @@
       "extracted_path": "tree/world/52.wld",
       "sha256": "066b6ab1525ecbbe2900e5b9ec6917c93119f5f26d84009039291ba4dc2496db",
       "filename_numeric_id_candidate": 52,
-      "id_status": "inferido_do_nome",
-      "layout_status": "desconhecido"
+      "id_status": "inferred_from_filename",
+      "layout_status": "unknown"
     },
     {
       "id": "tree-022467",
@@ -708,8 +708,8 @@
       "extracted_path": "tree/world/53.wld",
       "sha256": "b03339641e2a1425a48979cedec7431d802e3969330517b3b3f66262c5627bcb",
       "filename_numeric_id_candidate": 53,
-      "id_status": "inferido_do_nome",
-      "layout_status": "desconhecido"
+      "id_status": "inferred_from_filename",
+      "layout_status": "unknown"
     },
     {
       "id": "tree-022469",
@@ -722,8 +722,8 @@
       "extracted_path": "tree/world/54.wld",
       "sha256": "43a064ffadf9691e47bf135b9b7c969776e6e745e3e65c1aba639d54458e0030",
       "filename_numeric_id_candidate": 54,
-      "id_status": "inferido_do_nome",
-      "layout_status": "desconhecido"
+      "id_status": "inferred_from_filename",
+      "layout_status": "unknown"
     },
     {
       "id": "tree-022471",
@@ -736,8 +736,8 @@
       "extracted_path": "tree/world/55.wld",
       "sha256": "f2d851ac8928b9b7342315bb3e6b0012d9d728d9d1bc54bda4234c224fb518eb",
       "filename_numeric_id_candidate": 55,
-      "id_status": "inferido_do_nome",
-      "layout_status": "desconhecido"
+      "id_status": "inferred_from_filename",
+      "layout_status": "unknown"
     },
     {
       "id": "tree-022473",
@@ -750,8 +750,8 @@
       "extracted_path": "tree/world/56.wld",
       "sha256": "a70b211a779e98d9856b6e71b3d7cd7e35bab9726ba757a888566a2e7af1a8ee",
       "filename_numeric_id_candidate": 56,
-      "id_status": "inferido_do_nome",
-      "layout_status": "desconhecido"
+      "id_status": "inferred_from_filename",
+      "layout_status": "unknown"
     },
     {
       "id": "tree-022475",
@@ -764,8 +764,8 @@
       "extracted_path": "tree/world/57.wld",
       "sha256": "6b558e6325968cb0155c3f737e25401de5cd41696036f412dc63043312af61ff",
       "filename_numeric_id_candidate": 57,
-      "id_status": "inferido_do_nome",
-      "layout_status": "desconhecido"
+      "id_status": "inferred_from_filename",
+      "layout_status": "unknown"
     },
     {
       "id": "tree-022477",
@@ -778,8 +778,8 @@
       "extracted_path": "tree/world/58.wld",
       "sha256": "6ba0beb29cd6853d086a8533f5d7c9018e36f86ca10996e9e3eafcb132378cb0",
       "filename_numeric_id_candidate": 58,
-      "id_status": "inferido_do_nome",
-      "layout_status": "desconhecido"
+      "id_status": "inferred_from_filename",
+      "layout_status": "unknown"
     },
     {
       "id": "tree-022478",
@@ -792,8 +792,8 @@
       "extracted_path": "tree/world/59.wld",
       "sha256": "0f52119b31183647abd169ea42617d47100c3dce5afaf6cbe4d65b5fd34708f6",
       "filename_numeric_id_candidate": 59,
-      "id_status": "inferido_do_nome",
-      "layout_status": "desconhecido"
+      "id_status": "inferred_from_filename",
+      "layout_status": "unknown"
     },
     {
       "id": "tree-022479",
@@ -806,8 +806,8 @@
       "extracted_path": "tree/world/6.wld",
       "sha256": "f80b62adab9530333c9a5961a3d03c69249aaa7b96414ce417a23efa1d5490b4",
       "filename_numeric_id_candidate": 6,
-      "id_status": "inferido_do_nome",
-      "layout_status": "desconhecido"
+      "id_status": "inferred_from_filename",
+      "layout_status": "unknown"
     },
     {
       "id": "tree-022480",
@@ -820,8 +820,8 @@
       "extracted_path": "tree/world/61.wld",
       "sha256": "c96b86531282ef62e5979d6fccd6aa307db60899d440d8e589e201db61cc5edd",
       "filename_numeric_id_candidate": 61,
-      "id_status": "inferido_do_nome",
-      "layout_status": "desconhecido"
+      "id_status": "inferred_from_filename",
+      "layout_status": "unknown"
     },
     {
       "id": "tree-022481",
@@ -834,8 +834,8 @@
       "extracted_path": "tree/world/62.wld",
       "sha256": "6bb347c8a838179702a7660c00053e546e1e9ae09da25a575569df3e779c6b80",
       "filename_numeric_id_candidate": 62,
-      "id_status": "inferido_do_nome",
-      "layout_status": "desconhecido"
+      "id_status": "inferred_from_filename",
+      "layout_status": "unknown"
     },
     {
       "id": "tree-022482",
@@ -848,8 +848,8 @@
       "extracted_path": "tree/world/63.wld",
       "sha256": "652093886a8391b73b904d8a28e5167b6fe80c5fd25f4eec60e72d15271bfdde",
       "filename_numeric_id_candidate": 63,
-      "id_status": "inferido_do_nome",
-      "layout_status": "desconhecido"
+      "id_status": "inferred_from_filename",
+      "layout_status": "unknown"
     },
     {
       "id": "tree-022484",
@@ -862,8 +862,8 @@
       "extracted_path": "tree/world/64.wld",
       "sha256": "c71c1761cc1ffac4317429c6139d8e47d805e36d7b7f9b1e25f6f09292a5e7c0",
       "filename_numeric_id_candidate": 64,
-      "id_status": "inferido_do_nome",
-      "layout_status": "desconhecido"
+      "id_status": "inferred_from_filename",
+      "layout_status": "unknown"
     },
     {
       "id": "tree-022485",
@@ -876,8 +876,8 @@
       "extracted_path": "tree/world/65.wld",
       "sha256": "baa7187ca8ed73c811b8528f5b3eed9e7d6baaffebf0bfb41171cfff75251b0d",
       "filename_numeric_id_candidate": 65,
-      "id_status": "inferido_do_nome",
-      "layout_status": "desconhecido"
+      "id_status": "inferred_from_filename",
+      "layout_status": "unknown"
     },
     {
       "id": "tree-022486",
@@ -890,8 +890,8 @@
       "extracted_path": "tree/world/66.wld",
       "sha256": "9bd92ac4e16e5f6ecab05c40726fc66ee0db944ebdc679806f560e2ae2b64565",
       "filename_numeric_id_candidate": 66,
-      "id_status": "inferido_do_nome",
-      "layout_status": "desconhecido"
+      "id_status": "inferred_from_filename",
+      "layout_status": "unknown"
     },
     {
       "id": "tree-022488",
@@ -904,8 +904,8 @@
       "extracted_path": "tree/world/67.wld",
       "sha256": "819551aa6a6b24fe9db33ba19dc76904bb8246c6f3a509d335cb8128c55832a3",
       "filename_numeric_id_candidate": 67,
-      "id_status": "inferido_do_nome",
-      "layout_status": "desconhecido"
+      "id_status": "inferred_from_filename",
+      "layout_status": "unknown"
     },
     {
       "id": "tree-022490",
@@ -918,8 +918,8 @@
       "extracted_path": "tree/world/68.wld",
       "sha256": "9895a3438f89071689cb22bd6dd7b48c6ddb08c3dee4bed30a9eb2eaffc07e16",
       "filename_numeric_id_candidate": 68,
-      "id_status": "inferido_do_nome",
-      "layout_status": "desconhecido"
+      "id_status": "inferred_from_filename",
+      "layout_status": "unknown"
     },
     {
       "id": "tree-022492",
@@ -932,8 +932,8 @@
       "extracted_path": "tree/world/69.wld",
       "sha256": "b9a3b246ef4be5521128fb0e1b8ca76e39d51fd75a490759bc4f2941249c3941",
       "filename_numeric_id_candidate": 69,
-      "id_status": "inferido_do_nome",
-      "layout_status": "desconhecido"
+      "id_status": "inferred_from_filename",
+      "layout_status": "unknown"
     },
     {
       "id": "tree-022494",
@@ -946,8 +946,8 @@
       "extracted_path": "tree/world/7.wld",
       "sha256": "d6a8949653fb8386c796b2f8245797bf06289e6a4474d7180978bfdd52a737d3",
       "filename_numeric_id_candidate": 7,
-      "id_status": "inferido_do_nome",
-      "layout_status": "desconhecido"
+      "id_status": "inferred_from_filename",
+      "layout_status": "unknown"
     },
     {
       "id": "tree-022496",
@@ -960,8 +960,8 @@
       "extracted_path": "tree/world/70.wld",
       "sha256": "24e87ea15dd410f4ffa8cb7b383b127a7e816946d049de0216654eab5951a566",
       "filename_numeric_id_candidate": 70,
-      "id_status": "inferido_do_nome",
-      "layout_status": "desconhecido"
+      "id_status": "inferred_from_filename",
+      "layout_status": "unknown"
     },
     {
       "id": "tree-022497",
@@ -974,8 +974,8 @@
       "extracted_path": "tree/world/8.wld",
       "sha256": "bec2c0f7cffb0cba13066b96eda926c5c6bbd0ada079ab4e2596d9ad7874bec4",
       "filename_numeric_id_candidate": 8,
-      "id_status": "inferido_do_nome",
-      "layout_status": "desconhecido"
+      "id_status": "inferred_from_filename",
+      "layout_status": "unknown"
     },
     {
       "id": "tree-022498",
@@ -988,8 +988,8 @@
       "extracted_path": "tree/world/9.wld",
       "sha256": "02871baf4a8ae27f48e9dfe0be65840373dad62bcf1c7f8b2b1d21c299006db1",
       "filename_numeric_id_candidate": 9,
-      "id_status": "inferido_do_nome",
-      "layout_status": "desconhecido"
+      "id_status": "inferred_from_filename",
+      "layout_status": "unknown"
     },
     {
       "id": "tree-022499",
@@ -1002,8 +1002,8 @@
       "extracted_path": "tree/world/login.wld",
       "sha256": "f5508581e39ab01db155432de44fd5eebba240bd49a3d491f4564fbb45f03365",
       "filename_numeric_id_candidate": null,
-      "id_status": "inferido_do_nome",
-      "layout_status": "desconhecido"
+      "id_status": "inferred_from_filename",
+      "layout_status": "unknown"
     },
     {
       "id": "tree-022500",
@@ -1016,8 +1016,8 @@
       "extracted_path": "tree/world/Login2.wld",
       "sha256": "2675ed63a35d40196d979fc807d79d0c1b08b5dead7e227bafdf8b7d36ba43ac",
       "filename_numeric_id_candidate": null,
-      "id_status": "inferido_do_nome",
-      "layout_status": "desconhecido"
+      "id_status": "inferred_from_filename",
+      "layout_status": "unknown"
     },
     {
       "id": "tree-022501",
@@ -1030,8 +1030,8 @@
       "extracted_path": "tree/world/login3.wld",
       "sha256": "52afef93ca2d23846a79424c28940db0b6a88935c5283f36226afb3cfb1bc9b7",
       "filename_numeric_id_candidate": null,
-      "id_status": "inferido_do_nome",
-      "layout_status": "desconhecido"
+      "id_status": "inferred_from_filename",
+      "layout_status": "unknown"
     },
     {
       "id": "tree-022503",
@@ -1044,8 +1044,8 @@
       "extracted_path": "tree/world/select_a.wld",
       "sha256": "fd9ffcbdc8b0a70e219530ecc48167fce5c42f8fc3e187a429f251f17a4e0fec",
       "filename_numeric_id_candidate": null,
-      "id_status": "inferido_do_nome",
-      "layout_status": "desconhecido"
+      "id_status": "inferred_from_filename",
+      "layout_status": "unknown"
     },
     {
       "id": "tree-022504",
@@ -1058,8 +1058,8 @@
       "extracted_path": "tree/world/select_b.wld",
       "sha256": "1533ede5b4a7bd0c38890788effd0c3a4a82ecde871587c974657629fb76bb86",
       "filename_numeric_id_candidate": null,
-      "id_status": "inferido_do_nome",
-      "layout_status": "desconhecido"
+      "id_status": "inferred_from_filename",
+      "layout_status": "unknown"
     },
     {
       "id": "tree-022505",
@@ -1072,8 +1072,8 @@
       "extracted_path": "tree/world/strip.wld",
       "sha256": "aec79ec62f1f6a65b87822de06f25ee5aa4422e5745551fc5b8abb4362cc9212",
       "filename_numeric_id_candidate": null,
-      "id_status": "inferido_do_nome",
-      "layout_status": "desconhecido"
+      "id_status": "inferred_from_filename",
+      "layout_status": "unknown"
     },
     {
       "id": "tree-022506",
@@ -1086,8 +1086,8 @@
       "extracted_path": "tree/world/TacticsZone.zon",
       "sha256": "ef57aed15ded73590aaf77baa07fc9a9bdb1051bbc8694aa7274ff621e9d85fa",
       "filename_numeric_id_candidate": null,
-      "id_status": "inferido_do_nome",
-      "layout_status": "desconhecido"
+      "id_status": "inferred_from_filename",
+      "layout_status": "unknown"
     },
     {
       "id": "tree-022507",
@@ -1100,8 +1100,8 @@
       "extracted_path": "tree/world/60.wld",
       "sha256": "9302161e55ad22082fc4aaeef93ddcafabd8ead53e5595ad6f7e5987991a5077",
       "filename_numeric_id_candidate": 60,
-      "id_status": "inferido_do_nome",
-      "layout_status": "desconhecido"
+      "id_status": "inferred_from_filename",
+      "layout_status": "unknown"
     },
     {
       "id": "tree-022508",
@@ -1114,8 +1114,8 @@
       "extracted_path": "tree/world/1.wld",
       "sha256": "95c5223dffc6d208a771aa9c1d60c0fb6ec9399c8440a246690ab02f13548713",
       "filename_numeric_id_candidate": 1,
-      "id_status": "inferido_do_nome",
-      "layout_status": "desconhecido"
+      "id_status": "inferred_from_filename",
+      "layout_status": "unknown"
     },
     {
       "id": "tree-022510",
@@ -1128,8 +1128,8 @@
       "extracted_path": "tree/world/19.wld",
       "sha256": "adbebc3f1ff465e9c04fbc51631fa13086dece3dd2cb5a5f41c073c41dd5b5ab",
       "filename_numeric_id_candidate": 19,
-      "id_status": "inferido_do_nome",
-      "layout_status": "desconhecido"
+      "id_status": "inferred_from_filename",
+      "layout_status": "unknown"
     },
     {
       "id": "tree-022511",
@@ -1142,8 +1142,8 @@
       "extracted_path": "tree/world/2.wld",
       "sha256": "a9c28836f3e0956afdce88942d7f86246f2bf32b85c51aadb96fae7949b6ccf6",
       "filename_numeric_id_candidate": 2,
-      "id_status": "inferido_do_nome",
-      "layout_status": "desconhecido"
+      "id_status": "inferred_from_filename",
+      "layout_status": "unknown"
     },
     {
       "id": "tree-022512",
@@ -1156,8 +1156,8 @@
       "extracted_path": "tree/world/20.wld",
       "sha256": "b90b39a2c2da609e7a12d83be57427a7323539394e1bc6176d66637fd62ab59c",
       "filename_numeric_id_candidate": 20,
-      "id_status": "inferido_do_nome",
-      "layout_status": "desconhecido"
+      "id_status": "inferred_from_filename",
+      "layout_status": "unknown"
     },
     {
       "id": "tree-022514",
@@ -1170,8 +1170,8 @@
       "extracted_path": "tree/world/28.wld",
       "sha256": "ea3635dda3379094a73633782f3bff1082ceb03a5ea92f494a85d88ab30ceff0",
       "filename_numeric_id_candidate": 28,
-      "id_status": "inferido_do_nome",
-      "layout_status": "desconhecido"
+      "id_status": "inferred_from_filename",
+      "layout_status": "unknown"
     },
     {
       "id": "tree-022515",
@@ -1184,8 +1184,8 @@
       "extracted_path": "tree/world/29.wld",
       "sha256": "c3e3a446c6c9133dfe2ebbcb6b3097ff5c097a2f0ef73ab6b769eda905ff2b68",
       "filename_numeric_id_candidate": 29,
-      "id_status": "inferido_do_nome",
-      "layout_status": "desconhecido"
+      "id_status": "inferred_from_filename",
+      "layout_status": "unknown"
     },
     {
       "id": "tree-022516",
@@ -1198,8 +1198,8 @@
       "extracted_path": "tree/world/35.wld",
       "sha256": "fb1a22df83b0b47fff4bf6cac07830ce2d5418cb88f7fef3b100bb71d8045215",
       "filename_numeric_id_candidate": 35,
-      "id_status": "inferido_do_nome",
-      "layout_status": "desconhecido"
+      "id_status": "inferred_from_filename",
+      "layout_status": "unknown"
     },
     {
       "id": "tree-022517",
@@ -1212,8 +1212,8 @@
       "extracted_path": "tree/world/36.wld",
       "sha256": "1a06b80995d34e880b85ecd197a2506aee2b479c7fc3ccc3f91e3af3f8410244",
       "filename_numeric_id_candidate": 36,
-      "id_status": "inferido_do_nome",
-      "layout_status": "desconhecido"
+      "id_status": "inferred_from_filename",
+      "layout_status": "unknown"
     },
     {
       "id": "tree-022518",
@@ -1226,8 +1226,8 @@
       "extracted_path": "tree/world/42.wld",
       "sha256": "177283316cc57d46a02097815dbbacabdff9322e30b90fbd6d7b2b52c5affb32",
       "filename_numeric_id_candidate": 42,
-      "id_status": "inferido_do_nome",
-      "layout_status": "desconhecido"
+      "id_status": "inferred_from_filename",
+      "layout_status": "unknown"
     }
   ],
   "wld_files": 86,

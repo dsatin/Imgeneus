@@ -1,38 +1,33 @@
-# Validação e critérios de saída
+# Validation and exit criteria
 
-Relatar separadamente: arquivos inventariados, extraídos, formatos
-decodificados, entidades catalogadas, telas/ações identificadas, opcodes
-mapeados, cenários executados e cenários aceitos pelo cliente.
-Cada percentual deve declarar seu denominador e incluir erros/pendências.
+Report separately: inventoried/extracted files, decoded formats, cataloged
+entities, identified screens/actions, mapped opcodes, executed scenarios,
+and scenarios accepted by the client. State denominators and include errors.
 
-## Integridade da extração
+## Extraction integrity
 
-- Reconciliar contagem declarada no SAH com todas as entradas efetivas.
-- Validar limites de cada intervalo no SAF e tamanhos realmente lidos.
-- Conferir hashes da amostra e dos arquivos extraídos, duplicatas e colisões.
-- Validar contagens de registros, offsets, consumo dos arquivos e relações.
-- Reproduzir as saídas com as mesmas ferramentas e parâmetros.
+- Reconcile declared SAH counts with all actual entries.
+- Validate SAF interval bounds and actual bytes read.
+- Verify source/output hashes, duplicates, and case/path collisions.
+- Check record counts/offsets, full file consumption, and relationships.
+- Reproduce outputs using the same tools and parameters.
 
-## Cobertura de comportamento
+## Behavior coverage
 
-Criar `compatibility-matrix.csv` com recurso/ação, especificação de dados/UI/
-protocolo, evidência, implementação, cenário e resultado. Hoje a primeira
-entrada e o logout foram observados; a reentrada falhou e os demais sistemas
-não foram validados integralmente.
+Create `compatibility-matrix.csv` linking feature/action, data/UI/protocol
+specification, evidence, implementation, scenario, and outcome. First entry
+and logout were observed; reentry failed. Other systems remain unvalidated.
 
-Os cenários básicos devem incluir mesma e outra personagem após logout,
-logout repetido, desconexão/reconexão e reinício do cliente. Depois cobrir
-ações de inventário, equipamentos, NPCs/portais, combate/skills/quests,
-economia/social/PvP e todos os recursos adicionais encontrados.
+Basic scenarios include same/different characters after logout, repeated
+logout, disconnect/reconnect, and restart. Then exercise inventory/equipment,
+NPCs/portals, combat/skills/quests, economy/social/PvP, and every new feature.
 
-## Passagem para implementação
+## Implementation gate
 
-O futuro `phase-a-report.md` deve demonstrar cada critério A7 do AGENTS.md,
-listar lacunas bloqueantes e distinguir informações que o cliente não
-contém. Não iniciar B com um formato necessário ainda desconhecido. Não
-exigir recuperar dados de servidor ausentes da amostra; documentar essas
-ausências e quais decisões próprias serão necessárias.
+`phase-a-report.md` must demonstrate every A7 criterion in AGENTS.md, identify
+blocking gaps, and distinguish data absent from the client. Do not start B
+while required binary formats remain unknown. Document unavailable server
+rules and required implementation decisions rather than demanding their recovery.
 
-O novo writer de seleção não tem resultado de build ou runtime no snapshot.
-Os checks anteriores do inventário/desconexão passaram em uma imagem
-anterior; isso não valida automaticamente o código adicional preparado.
+The additional selection writer has no build/runtime result. Earlier inventory
+and disconnection checks passed on a prior image; they do not validate that writer.

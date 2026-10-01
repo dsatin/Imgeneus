@@ -1,371 +1,349 @@
-# Imgeneus: compatibilidade com o cliente EP 4.5
+# Imgeneus: EP 4.5 client compatibility
 
-## Objetivo e ordem obrigatória do trabalho
+## Objective and mandatory work order
 
-Construir um backend compatível com o cliente EP 4.5 instalado localmente,
-usando exclusivamente esse cliente como fonte de especificação. Primeiro
-inventariar, extrair, analisar e documentar o que o cliente contém e espera.
-Somente depois da conclusão verificável dessa etapa iniciar a implementação
-do backend. O plano abrange dados, interface, recursos gráficos/sonoros,
-protocolo e estados da sessão; entrar no mapa não significa compatibilidade
-completa.
+Build a backend compatible with the locally installed EP 4.5 client, using
+that client exclusively as the specification source. Inventory, extract,
+analyze, and document its contents and expectations first. Start backend
+implementation only after verifiable completion of this work. Coverage
+includes data, UI, graphics, audio, protocol, and session states. Entering a
+map alone does not demonstrate complete compatibility.
 
-Antes de trabalhar, ler `docs/client-ep45/README.md`, `progress.md`,
-`baseline.md` e as referências do domínio afetado. Atualizar o progresso e
-registrar evidências ao concluir cada tarefa. A etapa ativa consta de
-`docs/client-ep45/progress.md`; atualmente é **A — extração e documentação**.
+Before working, read `docs/client-ep45/README.md`, `progress.md`, `baseline.md`,
+and the references for the affected domain. Update progress and record
+evidence after each task. The active phase is recorded in `progress.md`;
+it is currently **A — extraction and documentation**.
 
-### O que conta como fonte
+### Language and branch policy
 
-- Executável, DLLs, arquivos soltos, arquivos internos de `data.sah/data.saf`,
-  textos, imagens, sons, interface e comportamento do cliente alvo.
-- Análise estática, depuração e tráfego do próprio cliente em testes com
-  nosso servidor ou uma bancada local. Uma captura após descriptografia
-  também é evidência do cliente.
-- Parsec, ferramentas de análise e o código existente podem servir de
-  infraestrutura. Não são prova de que um formato ou regra é EP 4.5.
-- Pacotes, SQL, dados, fórmulas ou documentação de outros episódios e de
-  servidores de terceiros não devem preencher lacunas como se fossem dados
-  extraídos desse cliente. Documentação técnica de ferramentas pode ser
-  consultada para utilizá-las.
+All maintained code, comments, documentation, schema labels, tool messages,
+and commit messages must use global English. Preserve original client
+strings, filenames, and raw bytes verbatim as source data; identify their
+encoding and language separately. Do not translate evidence in place.
 
-O rótulo "EP 4.5" e a marca Rebirth Evolution identificam a instalação de
-teste, mas não provam uniformidade com todos os clientes desse episódio.
-Toda conclusão deve identificar o hash do cliente analisado.
+Create commits only on `develop/ep45-compatibility` or its derived branches.
+Preserve `master` and `develop/linux-server`. Never force-push or rewrite
+the base of this initiative. Commit existing work before starting the next
+extraction task; do not create an empty commit for work already committed.
 
-Regras exclusivas do servidor podem não estar presentes no cliente: por
-exemplo, taxas de drop, respawn, algumas fórmulas e validações. Quando não
-houver evidência, marcar como desconhecido. Na etapa B, uma política própria
-deve ser documentada como decisão de implementação, sem atribuí-la ao
-servidor original. Compatibilidade completa significa cobrir o contrato e
-os comportamentos observáveis desse cliente; não prometer recuperar regras
-internas que ele não revela.
+### Accepted sources
 
-## Estado inicial a preservar
+- The target executable, DLLs, loose files, `data.sah/data.saf` entries,
+  text, images, sounds, UI, and observed client behavior.
+- Static analysis, debugging, and the client's traffic against our server
+  or a local test bench. Buffers captured after decryption are evidence.
+- Parsec, analysis tools, and existing code may provide infrastructure.
+  They do not prove that a format or rule belongs to this EP 4.5 client.
+- Do not fill gaps with packets, SQL, data, formulas, or documentation from
+  other episodes or third-party servers and present them as client data.
+  Technical tool documentation may be consulted to operate those tools.
+
+The EP 4.5 label and Rebirth Evolution branding identify the test installation;
+they do not prove uniformity across all clients of that episode. Every
+conclusion must identify the analyzed client hash.
+
+Server-only rules may be absent: drop rates, respawn, some formulas, and
+validation rules, for example. Mark unsupported conclusions as `unknown`.
+During phase B, document any policy we choose as an implementation decision,
+without attributing it to the original server. Complete compatibility means
+covering this client's observable contract and behavior, not recovering
+internal rules that it does not reveal.
+
+## Initial state to preserve
 
 - Fork: `https://github.com/dsatin/Imgeneus`.
-- Trabalhar em `develop/ep45-compatibility` e branches derivadas. Preservar
-  `master` e `develop/linux-server`; não fazer force push nem reescrever a
-  base para esta iniciativa.
-- Base Linux: `63e0248ab148481dabe8394a34edd06720525b09`; upstream original:
-  `0ce355594d521c3a06a08f24d0a9b60ebc8a459f`.
-- O backend existente nasceu para EP8. Seus serializers, limites, seeds e
-  regras são candidatos a reutilização, sujeitos à comparação com EP 4.5.
-- Login, criação de personagem, primeira entrada no mapa e logout já foram
-  observados com o cliente EP 4.5. A segunda entrada após logout falhou.
-- O snapshot inclui uma alteração adicional no pacote de seleção de
-  personagens que ainda não foi compilada nem validada com o cliente.
-  Não apresentá-la como correção concluída.
-- Não reinicializar bancos, volumes ou contas para executar o inventário.
-  Durante a etapa A, preservar o servidor como bancada; mudanças nele se
-  limitam à instrumentação necessária para coletar evidências.
+- Working branch: `develop/ep45-compatibility` and derived branches.
+- Linux base: `63e0248ab148481dabe8394a34edd06720525b09`.
+  Original upstream: `0ce355594d521c3a06a08f24d0a9b60ebc8a459f`.
+- The existing backend targets EP8. Its serializers, limits, seeds, and
+  rules are reuse candidates subject to comparison with the target client.
+- Login, character creation, first map entry, and logout were observed.
+  The second entry after logout failed.
+- The snapshot includes an additional character-selection packet change
+  that has not been compiled or validated. Do not report it as a completed fix.
+- Do not reset databases, volumes, or accounts for the inventory. Keep the
+  server as a test bench during phase A; limit server changes to instrumentation
+  required to collect evidence.
 
-Cliente local de referência:
+Local reference client:
 
 ```text
 /home/dsatin/Games/Heroic/Prefixes/Shaiya EP 4.5/drive_c/RebirthEvolution
 ```
 
-Aceitar o caminho por parâmetro ou configuração local, sem torná-lo uma
-dependência obrigatória das ferramentas. Os hashes conhecidos e a alteração
-local do IP estão em `docs/client-ep45/baseline.md`.
+Accept its path through parameters or local configuration. Do not make this
+specific path a required tool dependency. Known hashes and the local IP patch
+are recorded in `docs/client-ep45/baseline.md`.
 
-## Organização da referência
+## Reference organization
 
-Toda especificação duradoura fica em `docs/client-ep45/`:
+Keep durable specifications in `docs/client-ep45/`:
 
-| Caminho | Conteúdo esperado |
+| Path | Contents |
 | --- | --- |
-| `README.md` | Índice, convenções e instruções de reprodução |
-| `progress.md` | Etapa ativa, tarefas, critérios de saída e pendências |
-| `baseline.md` | Versão analisada, hashes, ambiente e limites do snapshot |
-| `catalogs/` | Manifestos de arquivos e tabelas normalizadas em JSON/CSV |
-| `schemas/` | Esquemas dos dados e das evidências; formatos binários |
-| `domains/` | Referências de itens, skills, mobs, NPCs, mapas e outros domínios |
-| `ui/` | Telas, controles, estados, textos, recursos e fluxos de interação |
-| `protocol/` | Pacotes C→S/S→C, criptografia e máquinas de estados |
-| `analysis/` | Análise do executável, funções, offsets e hipóteses |
-| `validation/` | Relatórios de integridade, cobertura e sessões de teste |
-| `backend/` | Requisitos derivados, lacunas e sequência da etapa B |
-| `templates/` | Modelo uniforme para documentar cada domínio |
+| `README.md` | Index, conventions, reproduction instructions |
+| `progress.md` | Active phase, tasks, exit criteria, pending work |
+| `baseline.md` | Analyzed version, hashes, environment, snapshot limits |
+| `catalogs/` | File manifests and normalized JSON/CSV tables |
+| `schemas/` | Data/evidence schemas and binary formats |
+| `domains/` | Items, skills, mobs, NPCs, maps, and additional domains |
+| `ui/` | Screens, controls, states, strings, resources, interaction flows |
+| `protocol/` | C→S/S→C packets, encryption, state machines |
+| `analysis/` | Executable analysis, functions, offsets, hypotheses |
+| `validation/` | Integrity, coverage, and test-session reports |
+| `backend/` | Derived requirements, gaps, phase B dependencies |
+| `templates/` | Uniform domain documentation template |
 
-Criar ferramentas reproduzíveis em `tools/ep45-client/` quando começar a
-extração. Reservar `.client-ep45-cache/` para originais, arquivos extraídos,
-disassembly completo, dumps, capturas e exportações volumosas. Essa pasta
-fica fora de Git e do contexto Docker. Versionar manifestos, schemas,
-documentação, scripts e evidências pequenas e sanitizadas. Não commitar
-`game.exe`, `data.saf`, dumps de memória, credenciais ou configurações locais.
-Exportações enormes devem ter índice e hash na referência, sem inflar Git.
+Implement reproducible tools in `tools/ep45-client/`. Reserve
+`.client-ep45-cache/` for originals, extracted files, full disassembly, dumps,
+captures, and large exports. Exclude it from Git and the Docker context.
+Version manifests, schemas, documentation, scripts, and small sanitized
+evidence. Never commit `game.exe`, `data.saf`, memory dumps, credentials,
+or local settings. Index large exports by path, count, and hash.
 
-### Padrão de evidência
+### Evidence standard
 
-Cada registro, campo, formato, fluxo ou requisito deve conter:
+Each record, field, format, flow, or requirement must identify:
 
-1. ID estável e domínio; ID original do cliente, sem renumerá-lo.
-2. Hash da baseline e caminho da fonte; offset/tamanho quando aplicável.
-3. Ferramenta, versão/commit, parâmetros, comando de reprodução e data.
-4. Valores originais, representação normalizada e relações por IDs.
-5. Status: `inventariado`, `extraido`, `decodificado`,
-   `validado_estaticamente`, `validado_em_execucao`, `inferido`,
-   `desconhecido` ou `nao_aplicavel_com_evidencia`.
-6. Método de validação, evidência verificável, campos desconhecidos e
-   implicações para o backend. Hipóteses devem ser identificadas como tais.
+1. A stable ID and domain; preserve original client IDs without renumbering.
+2. Baseline hash and source path; offset/length where applicable.
+3. Tool version/commit, parameters, reproduction command, and observation date.
+4. Original values, normalized representation, and relationships by ID.
+5. Status: `inventoried`, `extracted`, `decoded`, `statically_validated`,
+   `runtime_validated`, `inferred`, `unknown`, or `not_applicable_with_evidence`.
+6. Validation method, verifiable evidence, unknown fields, and backend
+   implications. Label hypotheses explicitly.
 
-Não confundir número de arquivos extraídos com número de formatos
-decodificados, nem contagem de entidades com contagem de interações
-validadas. Publicar esses indicadores separadamente.
+Report extracted file counts, decoded format counts, cataloged entity counts,
+and validated interaction counts separately. They measure different coverage.
 
-## Etapa A — extrair e documentar o cliente
+## Phase A — extract and document the client
 
-### A0. Congelar e identificar a amostra
+### A0. Freeze and identify the sample
 
-1. Registrar commit do projeto, commits dos submódulos, SO, Wine/Proton,
-   argumentos de execução, portas e configurações relevantes sem segredos.
-2. Inventariar recursivamente os arquivos soltos e gerar SHA-256 em streaming,
-   incluindo executáveis, DLLs, INIs e o par SAH/SAF. Preservar datas originais.
-3. Registrar separadamente o executável original e o com IP local alterado,
-   os bytes modificados e a finalidade do patch. Analisar uma cópia; abrir
-   os arquivos do cliente somente para leitura.
-4. Anotar tamanho, PE timestamp, arquitetura, idioma e números declarados
-   de versão. Não inferir o episódio apenas do nome de uma pasta ou INI.
-5. Documentar como reproduzir login e primeiro acesso já observados, e como
-   reproduzir a falha da segunda entrada após logout.
+1. Record project/submodule commits, OS, Wine/Proton, launch arguments,
+   ports, and relevant settings without secrets.
+2. Recursively inventory loose files and stream SHA-256, including executables,
+   DLLs, INIs, and SAH/SAF. Preserve original dates.
+3. Record original and locally patched executables separately, changed bytes,
+   and patch purpose. Analyze copies; open client sources read-only.
+4. Record size, PE timestamp, architecture, language, and declared versions.
+   Do not infer the episode from a directory name or INI.
+5. Document reproduction of observed login/first entry and failed reentry.
 
-Saída: manifesto externo, baseline identificada e lista explícita de testes
-anteriores. O manifesto externo não representa o inventário interno do SAF.
+Deliver an external manifest, identified baseline, and explicit historical
+test list. The external manifest is not the SAF's internal inventory.
 
-### A1. Indexar e extrair todo o arquivo de dados
+### A1. Index and extract the entire data archive
 
-1. Ler o índice SAH sem alterar o SAF. Registrar assinatura, versão, contagem
-   declarada, árvore completa e cada entrada: caminho original, caminho
-   normalizado, ordinal, offset, tamanho, versão e duplicidades.
-2. Conferir quantidade de entradas, limites de cada intervalo no SAF,
-   intervalos sobrepostos e colisões de nomes/case. Preservar entradas
-   duplicadas; não depender apenas de um dicionário que possa descartá-las.
-3. Extrair cada entrada para cache preservando sua árvore. Rejeitar caminhos
-   absolutos ou com travessia fora da pasta de saída. Não achatar pastas:
-   arquivos com o mesmo nome podem pertencer a domínios distintos.
-4. Ler por blocos/arquivos, conferir bytes realmente lidos, calcular hash de
-   cada conteúdo e verificar o resultado extraído contra o intervalo no SAF.
-5. Produzir distribuição por diretório, extensão, assinatura real e tamanho;
-   classificar todos os arquivos, inclusive os sem extensão ou desconhecidos.
-6. Registrar erros individualmente e permitir retomada. Uma falha de parser
-   não pode desaparecer silenciosamente do relatório.
+1. Read SAH without modifying SAF. Record signature, version, declared count,
+   full tree, original/normalized paths, ordinals, offsets, lengths, and duplicates.
+2. Check counts, interval bounds/overlaps, path collisions, and case collisions.
+   Preserve duplicates; do not lose entries through dictionary replacement.
+3. Extract to cache with the tree intact. Reject absolute and traversal paths.
+   Identical filenames may belong to different domains; do not flatten folders.
+4. Read in blocks, verify actual byte counts, hash each content, and compare
+   extracted files with the original SAF interval.
+5. Report directory, extension, actual signature, and size distributions.
+   Classify every entry, including extensionless and unidentified files.
+6. Record errors per entry and support resume. Parser failures remain in
+   report denominators and must not disappear silently.
 
-Parsec já oferece `Data.FileIndex`, `GetFileBuffer` e `ExtractAll`, mas é
-necessário verificar preservação de caminhos, duplicatas e tratamento de
-erros. O enum `Episode.EP4` não comprova suporte ao EP 4.5: na revisão atual,
-`Item.Type` usa o leitor EP5 como fallback. Validar os bytes antes de usá-lo.
+Parsec provides `Data.FileIndex`, `GetFileBuffer`, and `ExtractAll`; verify
+path preservation, duplicates, and error handling before reuse. `Episode.EP4`
+is not proof of EP 4.5 support: `Item.Type` currently falls back to the EP5
+reader. Validate the actual bytes.
 
-Saída: `catalogs/archive-files.jsonl`, resumo de contagens, hashes por arquivo,
-manifesto da extração e relatório de arquivos ainda opacos.
+Deliver `archive-files.jsonl`, count summaries, content hashes, an extraction
+manifest, and an opaque-file report. Large manifests may remain in cache
+with a versioned index and hash.
 
-### A2. Descobrir formatos e construir leitores
+### A2. Discover formats and implement readers
 
-1. Agrupar amostras por assinatura/estrutura, não somente por extensão.
-2. Para SData e tabelas, determinar criptografia/compressão, cabeçalhos,
-   endianness, codificação, contagens, tamanhos fixos/variáveis e sentinelas.
-3. Comparar com leitores do Parsec e confirmar cada campo contra os bytes e
-   as rotinas de leitura do cliente. Criar adaptadores no projeto; manter
-   modificações de submódulos explícitas e reproduzíveis quando necessárias.
-4. Preservar offsets e bytes dos campos desconhecidos. Não consumir bytes
-   extras apenas para fazer um parser "passar" nem atribuir nomes arbitrários.
-5. Exportar uma representação bruta e outra normalizada, com esquema, IDs,
-   unidades, enumerações e relações. JSON/JSONL é a fonte estruturada; CSV
-   pode ser uma visão tabular, sem perda de listas e relações.
-6. Validar registros iniciais/finais, consumo completo do arquivo, contagens,
-   valores extremos, referências e amostras de cada variante. Para formatos
-   adequados, conferir leitura→escrita→leitura em cópias no cache.
-7. Cobrir truncamento, contagens inválidas e variações de layout com testes
-   significativos. Fixar versão das ferramentas e garantir saída determinística.
+1. Group samples by signature/structure, not extension alone.
+2. Determine SData/table encryption, compression, headers, endianness, encoding,
+   counts, fixed/variable lengths, and sentinels.
+3. Compare Parsec readers and confirm fields against bytes and client loading
+   routines. Implement project adapters; keep any submodule changes explicit
+   and reproducible.
+4. Preserve unknown field bytes and offsets. Do not skip extra bytes just to
+   make a parser succeed or assign arbitrary semantic names.
+5. Export raw and normalized representations with schemas, IDs, units, enums,
+   and relationships. JSON/JSONL is authoritative; CSV must preserve lists
+   and relationships if provided as a tabular view.
+6. Validate first/last records, complete consumption, counts, extreme values,
+   references, and samples of every variant. Where suitable, verify
+   read→write→read using cache copies.
+7. Test truncation, invalid counts, and layout variants. Pin tool versions
+   and produce deterministic structured content.
 
-Saída: schemas por formato, leitores reproduzíveis, catálogo de campos,
-fixtures pequenas e relatórios de decodificação.
+Deliver per-format schemas, reproducible readers, field catalogs, small
+fixtures, and decoding reports.
 
-### A3. Catalogar todos os domínios de conteúdo
+### A3. Catalog every content domain
 
-Investigar os grupos abaixo e tudo mais descoberto no índice. Os nomes de
-arquivos são candidatos; verificar se existem nesta amostra antes de afirmar
-que determinado recurso está presente.
+Investigate these groups and every additional group discovered in the index.
+Candidate filenames must be verified in the sample before claiming presence.
 
-| Domínio | Dados e relações a documentar |
+| Domain | Data and relationships |
 | --- | --- |
-| Personagens | Facções, raças, classes, modos, sexo, cabelo/rosto/altura, slots, animações, modelos, progressão visível e limites |
-| Itens | Chave `(type,typeId)`, nomes, descrições, categorias, ícones, modelos, slots, requisitos, atributos, empilhamento, uso, gemas, craft, enchant e durabilidade quando presentes |
-| Skills e buffs | IDs/níveis, textos, ícones, alvos, custos, alcance, tempos, efeitos, requisitos, relações e representação na barra de atalhos |
-| Mobs | IDs, textos, aparência, animações, sons, indicadores de nível/atributos/AI quando presentes; separar aparência de regra autoritativa |
-| NPCs | IDs, tipos, facção, aparência, diálogos, lojas, serviços, teleporte e vínculos com quests |
-| Quests | IDs, textos, etapas, pré-requisitos, objetivos, NPCs/mobs/itens, recompensas exibidas e flags de acompanhamento |
-| Mapas | IDs, nomes, dimensões, origem/eixos/unidades, terreno, colisão, regiões, água, céu, música, objetos e condições visíveis de acesso |
-| Entidades dos mapas | Posicionamentos, portais, destinos, NPCs, mobs/spawns e áreas, quando efetivamente incluídos no cliente; não inventar SVMAP ausente |
-| Economia | Lojas, preços visíveis, moeda, troca, banco, warehouse, correio, leilão e cash shop somente quando identificados |
-| Social e PvP | Chat, amigos, party/raid, guilda, duelos, ranks, mortes, bênção, guerra/eventos e suas telas/estados |
-| Recursos visuais | Texturas, modelos, esqueletos, efeitos, animações, vestimentas, armas, montarias, emblemas e ligações com entidades |
-| Interface e idioma | Layouts, painéis, ícones, tooltips, fontes, strings, mensagens de erro, traduções, teclas e controles |
-| Áudio | Música, ambiente, efeitos, vozes e seus vínculos com mapas/ações/entidades |
-| Configuração e extras | Rede, resoluções, opções, updater, arquivos auxiliares e categorias novas encontradas |
+| Characters | Factions, races, classes, modes, sex, hair/face/height, slots, animations, models, visible progression, limits |
+| Items | `(type,typeId)`, names/descriptions, categories, icons/models, slots, requirements, stats, stacks, use, gems, craft, enchant, durability where present |
+| Skills/buffs | IDs/levels, text/icons, targets, costs, range, timings, effects, requirements, relationships, quickbar representation |
+| Mobs | IDs/text, appearance, animations/audio, available level/stat/AI indicators; distinguish appearance from authoritative rules |
+| NPCs | IDs/types, faction, appearance, dialogue, shops/services, teleports, quest links |
+| Quests | IDs/text, stages, prerequisites, objectives, NPC/mob/item links, displayed rewards, tracking flags |
+| Maps | IDs/names, dimensions, origins/axes/units, terrain/collision, regions, water/sky/music, objects, visible access conditions |
+| Map entities | Included positions, portals/destinations, NPCs, mobs/spawns, areas; do not invent missing SVMAP files |
+| Economy | Shops, displayed prices, currency, trade, bank/warehouse, mail, auction, cash shop only where identified |
+| Social/PvP | Chat, friends, party/raid, guilds, duels, ranks, kills, blessing, wars/events, screens/states |
+| Visual assets | Textures, models, skeletons, effects, animations, clothing, weapons, mounts, emblems, entity links |
+| UI/language | Layouts, panels, icons, tooltips, fonts, strings/errors, translations, keys/controls |
+| Audio | Music, ambient/effect/voice audio, map/action/entity links |
+| Configuration/extras | Networking, resolution/options, updater, auxiliary files, newly discovered categories |
 
-Para cada domínio gerar catálogo, dicionário de campos, referências entre
-entidades, relatório de integridade e lista de informações ausentes. Marcar
-features ausentes como tal apenas com evidência da análise, nunca pela falta
-de suporte no servidor atual. Usar `templates/domain.md`.
+For each domain produce a catalog, field dictionary, cross-references,
+integrity report, and missing-information list. Mark absence only with
+analysis evidence, never because the existing server lacks support.
+Use `templates/domain.md`.
 
-### A4. Mapear interface e todas as ações expostas
+### A4. Map the UI and all exposed actions
 
-1. Catalogar recursos de UI e strings, identificando painéis também por
-   referências do executável, não apenas pelas telas acessíveis hoje.
-2. Para cada tela, registrar entrada/saída, botões, atalhos, estados,
-   permissões/requisitos aparentes, IDs de recursos e mensagens.
-3. Montar uma árvore de navegação completa e uma tabela
-   `ação → estado inicial → efeito local/pacote → resposta esperada → estado final`.
-4. Distinguir ações inteiramente locais de ações que dependem do servidor.
-   Capturar screenshots e testes controlados quando úteis; registrar telas
-   inacessíveis como pendência, com seus recursos/funções encontrados.
-5. Incluir login, escolha de servidor/facção, criação/seleção/exclusão/rename,
-   entrada, logout, reentrada, inventário/equipamento, skills, interação com
-   NPC, combate, quests, chat/social, lojas e toda feature adicional encontrada.
-6. Exercitar sucesso, cancelamento, erro, limites e transições repetidas.
-   Não limitar o mapeamento ao caminho feliz.
+1. Catalog UI resources/strings and executable panel references, including
+   screens that cannot currently be opened.
+2. Record each screen's entry/exit, buttons/shortcuts, states, apparent
+   permissions/requirements, resource IDs, and messages.
+3. Build the complete navigation tree and an action table:
+   `action → initial state → local effect/packet → expected response → final state`.
+4. Distinguish local actions from server-dependent actions. Record controlled
+   tests/screenshots where useful; list inaccessible screens and known resources.
+5. Include login, server/faction choice, character create/select/delete/rename,
+   entry/logout/reentry, inventory/equipment, skills, NPCs, combat, quests,
+   chat/social, shops, and every additional feature discovered.
+6. Exercise success, cancellation, errors, limits, and repeated transitions.
 
-Saída: índice de telas e ações, fluxos, matriz UI/dados/pacotes e lista de
-features visíveis que exigem resposta do backend.
+Deliver screen/action indexes, flows, a UI/data/packet matrix, and visible
+features requiring backend responses.
 
-### A5. Mapear o protocolo pelo executável
+### A5. Map the protocol through the executable
 
-1. Identificar seções PE, imports, strings, referências cruzadas, tabelas de
-   dispatch, rotinas de socket, builders C→S e leitores S→C. Registrar RVA e
-   offset de arquivo; distinguir endereço virtual de offset e anotar a base.
-2. Enumerar os opcodes encontrados em ambas as direções. Não assumir que a
-   enumeração `PacketType` do EP8 é a enumeração completa desse cliente.
-3. Para cada pacote registrar direção, opcode, condição de envio/aceitação,
-   campos, tipos/tamanhos, ordem, encoding, contagens, alinhamento, flags,
-   variantes, exemplos e rotina responsável.
-4. Documentar framing, tamanho máximo, conexões Login/World, endereços,
-   handshake, derivação de chaves, AES/XOR e exata condição de cada transição.
-5. Construir máquinas de estados para autenticação, seleção, mundo, logout,
-   retorno à seleção, reentrada, desconexão e reconexão. Registrar quais
-   estados e caches são mantidos ou limpos no cliente.
-6. Marcar efeitos de pacotes sobre a UI e ligar o protocolo aos catálogos de
-   IDs, enums e limites. Preservar desconhecidos como campos `unknown_*`.
-7. Documentar recursos opcionais/variantes do próprio cliente com suas
-   condições; não misturar layouts de outros episódios.
+1. Identify PE sections/imports, strings/xrefs, dispatch tables, socket routines,
+   C→S builders, and S→C readers. Record RVA, file offset, and image base;
+   distinguish virtual addresses from file offsets.
+2. Enumerate opcodes in both directions. The EP8 `PacketType` enum is not
+   necessarily this client's complete opcode catalog.
+3. Record direction/opcode, sending/acceptance conditions, fields/types/lengths,
+   order, encoding, counts, alignment, flags, variants, examples, and routines.
+4. Document framing, maximum length, Login/World connections, addresses,
+   handshake, key derivation, AES/XOR, and exact transition conditions.
+5. Model authentication, selection, world, logout, return to selection,
+   reentry, disconnection/reconnection, and retained/cleared client caches.
+6. Link packet UI effects to catalog IDs/enums/limits. Use `unknown_*` fields
+   for unresolved bytes.
+7. Document the client's own optional features/variants and conditions;
+   do not mix layouts from other episodes.
 
-Saída: catálogo de opcodes C→S/S→C, especificações binárias, mapa de funções
-e máquinas de estados. O inventário estático deve incluir casos não
-alcançáveis no servidor atual.
+Deliver C→S/S→C opcode catalogs, binary specifications, function maps, and
+state machines, including cases unreachable on the current server.
 
-### A6. Validar comportamento em execução
+### A6. Validate runtime behavior
 
-1. Usar o cliente com a bancada local. Capturar somente as conexões de teste;
-   associar cada sessão à baseline, configuração e cenário executado.
-2. Quando houver criptografia, observar os buffers após descriptografia e
-   antes da criptografia por instrumentação/depuração. PCAP de bytes
-   cifrados, isoladamente, não confirma o layout dos campos.
-3. Correlacionar ação da UI, ordem dos pacotes, estados e resultado. Analisar
-   separadamente o que o cliente enviou, o que a bancada respondeu e o que
-   o cliente aceitou. Uma resposta nossa não prova comportamento original.
-4. Usar respostas mínimas com layouts já documentados para tornar telas
-   acessíveis. Instrumentação e simuladores isolados são permitidos nesta
-   etapa; isso não antecipa a implementação das regras do backend.
-5. Validar primeiro ciclos de sessão repetidos: login → seleção → mapa →
-   logout → seleção → mesma/outra personagem; desconexão/reconexão; restart
-   do cliente. Depois validar os fluxos de cada domínio.
-6. Registrar limites, contagens, campos opcionais, rejeições, erros e crashes
-   com endereço, cenário e hipótese. Nunca transformar uma hipótese em
-   confirmação apenas porque o cliente não fechou.
-7. Guardar capturas brutas/dumps no cache e publicar somente registros
-   sanitizados, sem senhas, tokens ou material de chaves de sessões reais.
+1. Capture only controlled test connections and link each session to the
+   baseline, configuration, and scenario.
+2. For encrypted traffic, observe buffers after decryption and before
+   encryption through instrumentation/debugging. Encrypted PCAP alone
+   cannot validate field layouts.
+3. Correlate UI actions, packet ordering, states, and results. Separate what
+   the client sent, what the bench returned, and what the client accepted.
+   Our response is not proof of original server behavior.
+4. Use minimal responses with documented layouts to expose screens.
+   Isolated simulators/instrumentation are allowed, not gameplay implementation.
+5. Validate repeated session cycles first: login→selection→map→logout→selection
+   →same/different character, disconnect/reconnect, and client restart.
+   Then exercise each domain's flows.
+6. Record limits/counts, optional fields, rejections/errors/crashes, addresses,
+   scenarios, and hypotheses. Absence of a crash does not prove a hypothesis.
+7. Store raw captures/dumps in cache. Publish sanitized evidence only,
+   without passwords, tokens, or real session key material.
 
-Saída: fixtures sanitizadas, rastros de cenários, comparação estático/runtime
-e cobertura das interações. Lacunas que dependem de features ainda ausentes
-devem ter contrato estático e teste previsto explicitamente documentados.
+Deliver sanitized fixtures, scenario traces, static/runtime comparisons,
+and interaction coverage. Unreachable feature gaps need explicit static
+contracts and planned tests.
 
-### A7. Consolidar a especificação e liberar a etapa B
+### A7. Consolidate the specification and release phase B
 
-A etapa A só termina quando houver relatório em
-`validation/phase-a-report.md` comprovando:
+Phase A ends only when `validation/phase-a-report.md` demonstrates:
 
-- Todos os arquivos soltos e todas as entradas SAH/SAF estão inventariados,
-  classificados e com resultado de extração registrado. Contagens e hashes
-  reconciliados; falhas não desaparecem do denominador.
-- Todos os formatos de dados necessários ao backend estão decodificados,
-  com esquemas e relações validados. Recursos opacos sem relevância para o
-  backend permanecem catalogados com motivo e pendência explícitos.
-- Todos os domínios e todas as telas/ações encontrados possuem referência,
-  status e evidência. Não usar uma lista fixa para ocultar novas descobertas.
-- Todos os opcodes e builders/readers encontrados têm entrada, direção,
-  layout ou pendência. Os contratos necessários à sessão e aos domínios
-  implementáveis não podem ter lacunas binárias bloqueantes.
-- Existe matriz de cobertura e testes previstos para cada interação. Os
-  ciclos básicos de sessão foram analisados em execução; demais validações
-  pendentes estão separadas das confirmações, com justificativa.
-- Estão registrados os dados não disponíveis no cliente e as decisões que
-  o backend precisará tomar; nenhuma regra EP8 foi tratada como evidência EP4.5.
-- Ferramentas e comandos reproduzem manifestos, catálogos e relatórios a
-  partir da amostra identificada. Requisitos do backend apontam para suas
-  evidências e estão organizados em dependências.
+- Every loose file and SAH/SAF entry is inventoried/classified with an extraction
+  outcome. Counts/hashes reconcile; failures remain in denominators.
+- All backend-required data formats are decoded with validated schemas and
+  relationships. Other opaque assets remain cataloged with reasons/pending work.
+- Every discovered domain/screen/action has a reference, status, and evidence.
+  A fixed feature list must not hide new discoveries.
+- Every discovered opcode/builder/reader has an entry, direction, layout or
+  explicit gap. Required session/domain contracts have no blocking binary gaps.
+- Every interaction has coverage and planned tests. Basic session cycles were
+  analyzed at runtime; pending validations are separate with justification.
+- Unavailable client data and required backend decisions are recorded.
+  No EP8 rule has been treated as target-client evidence.
+- Tools/commands reproduce manifests/catalogs/reports from the identified
+  sample. Backend requirements cite evidence and have ordered dependencies.
 
-Não exigir recuperar dados que o cliente comprovadamente não contém, nem
-declarar o mapeamento completo com formatos necessários ainda ilegíveis.
-Se aparecer uma lacuna bloqueante, voltar à tarefa de extração/análise
-correspondente. Registrar a conclusão dos critérios e mudar a etapa ativa
-para B; não depender de uma aprovação informal para executar o plano já
-autorizado.
+Do not demand recovery of data demonstrably absent from the client, or claim
+completion while required formats remain unreadable. Return to extraction
+or analysis for blocking gaps. Record completed criteria and switch progress
+to B without requiring informal approval for this already authorized plan.
 
-## Etapa B — implementar o backend a partir da referência
+## Phase B — implement from the reference
 
-Somente depois de A7. Toda alteração deve citar IDs de especificações em
-`docs/client-ep45/`, incluir critérios observáveis e atualizar a matriz de
-compatibilidade. Não copiar um serializer EP8 apenas por semelhança.
+Start only after A7. Each change must cite specification IDs, provide
+observable acceptance criteria, and update compatibility coverage. Similarity
+alone does not justify copying an EP8 serializer.
 
-1. **B0 — perfil e fronteiras:** separar dados e protocolo EP4.5 do legado
-   EP8; definir interfaces, versionamento dos catálogos, armazenamento,
-   configurações e testes. Evitar flags históricas espalhadas por regras.
-2. **B1 — bancos e importadores:** derivar schema de contas/personagens e
-   definições dos catálogos; manter IDs; criar migrações, importação idempotente,
-   integridade referencial e separação entre definições e estado dos jogadores.
-   Seeds existentes não são fonte de verdade. Testar em banco isolado.
-3. **B2 — rede e sessão:** framing, criptografia, autenticação, anúncio de
-   World, facção, personagens, sincronização inicial, heartbeat, logout,
-   reentrada, reconexão e limpeza de recursos. Cobrir ciclos repetidos antes
-   de ampliar gameplay.
-4. **B3 — mundo:** mapas, coordenadas, colisão quando especificada, presença,
-   visibilidade, movimentação, portais, NPCs e mobs. Importar spawns somente
-   quando houver dados extraídos; decisões próprias ficam documentadas.
-5. **B4 — personagem e inventário:** atributos/progressão, equipamentos,
-   itens, gemas, craft/enchant, durabilidade, consumíveis, banco/warehouse e
-   persistência, seguindo os formatos e limites identificados.
-6. **B5 — combate e PvE:** skills/buffs, alvos, danos/custos/tempos, AI,
-   morte/revive, quests, recompensas e drops. Separar parâmetros do cliente
-   de políticas autoritativas escolhidas para preencher ausências.
-7. **B6 — economia/social/PvP:** lojas/trocas, demais sistemas comerciais
-   presentes, chat, amigos, party/raid, guilda, duelo, ranks, bênção e eventos,
-   conforme dependências e recursos efetivamente encontrados.
-8. **B7 — compatibilidade integral:** percorrer todas as ações da matriz,
-   incluindo features adicionais descobertas, erros, cancelamentos, limites,
-   duas ou mais conexões, persistência e sessões prolongadas. Tratar perdas
-   de sincronismo e crashes como falhas de compatibilidade.
-9. **B8 — entrega:** documentar instalação Linux, perfil do cliente,
-   migrações/importação, operação e cobertura final. Publicar limitations
-   explícitas; marcar completo apenas quando a matriz observável estiver
-   coberta e as decisões de regras ausentes estiverem documentadas/testadas.
+1. **B0 — profile and boundaries:** isolate EP4.5 data/protocol from EP8;
+   define interfaces, catalog versions, storage, configuration, and tests.
+   Avoid historical flags scattered across gameplay rules.
+2. **B1 — databases/importers:** derive account/character/definition schemas
+   from catalogs; preserve IDs; implement migrations, idempotent import,
+   referential integrity, and definition/player-state separation. Existing
+   seeds are not authoritative. Test with isolated databases.
+3. **B2 — networking/session:** framing, encryption, authentication, World
+   announcement, faction/characters, initial sync, heartbeat, logout/reentry,
+   reconnection, cleanup. Cover repeated cycles before expanding gameplay.
+4. **B3 — world:** maps/coordinates, specified collision, presence/visibility,
+   movement, portals, NPCs/mobs. Import spawns only from extracted data;
+   document our own decisions separately.
+5. **B4 — character/inventory:** stats/progression, equipment/items, gems,
+   craft/enchant, durability, consumables, bank/warehouse, persistence,
+   following identified formats and limits.
+6. **B5 — combat/PvE:** skills/buffs, targets, damage/costs/timings, AI,
+   death/revival, quests/rewards/drops. Separate client parameters from
+   authoritative policies chosen to fill unavailable rules.
+7. **B6 — economy/social/PvP:** shops/trade and other discovered commerce,
+   chat/friends, party/raid, guilds, duels/ranks, blessing/events, following
+   dependencies and actual client features.
+8. **B7 — full compatibility:** exercise every matrix action, new features,
+   errors/cancellation/limits, two or more connections, persistence, and
+   prolonged sessions. Desynchronization and crashes are compatibility failures.
+9. **B8 — delivery:** document Linux setup, client profile, migrations/import,
+   operations, and final coverage. Publish limitations. Claim completion
+   only with covered observable behavior and documented/tested policy decisions.
 
-Validação: testes de layouts com fixtures extraídas, testes das transições e
-da persistência, integração em ambiente isolado e cenários com o cliente
-real. Comparar também com EP8 se uma mudança afetar infraestrutura comum.
+Validate binary layouts with extracted fixtures, session transitions,
+persistence, isolated integration, and the actual client. Compare EP8 too
+when common infrastructure is affected.
 
-## Disciplina de execução e entrega
+## Execution and delivery discipline
 
-- O snapshot e o plano iniciais já foram registrados. Executar a etapa A
-  conforme a tarefa atual e atualizar o progresso; não preencher catálogos
-  com dados fictícios.
-- Manter mudanças pequenas por formato/domínio. Registrar comandos,
-  contagens, incertezas e próximos passos; usar buscas com `rg`.
-- Manter segredos em `.env` e arquivos locais ignorados. As ferramentas de
-  extração devem funcionar sem credenciais do banco ou acesso à Internet.
-- Não sobrescrever cliente, banco ou arquivos de referência brutos. Produzir
-  novas saídas em diretórios próprios e verificar integridade.
-- Testar de acordo com o risco: integridade de extração, limites do parser,
-  contratos binários e estados importam mais que testes que repetem o código.
-- Este plano não solicita agentes paralelos nem aprovações adicionais para
-  tarefas reversíveis; respeitar as permissões efetivas do ambiente.
+- The initial snapshot and plan are committed. Execute the current phase A
+  task and update progress; never fill catalogs with fictional records.
+- Keep changes focused by format/domain. Record commands, counts, uncertainty,
+  and next steps. Use `rg` for searches.
+- Keep secrets in `.env` and ignored local files. Extraction tools must work
+  without database credentials or Internet access.
+- Never overwrite the client, database, or raw reference files. Write new
+  outputs in separate directories and verify integrity.
+- Test according to risk: extraction integrity, parser bounds, binary contracts,
+  and state transitions matter more than tests that mirror implementation.
+- This plan does not request parallel agents or extra approval for reversible
+  work. Respect the environment's effective permissions.

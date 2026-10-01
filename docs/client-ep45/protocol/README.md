@@ -1,64 +1,63 @@
-# Protocolo: evidências iniciais
+# Protocol: initial evidence
 
-Esta referência é parcial. O catálogo completo C→S/S→C ainda precisa ser
-derivado do executável. Os nomes abaixo seguem o código existente por
-conveniência; o layout EP8 não deve ser presumido compatível.
+This reference is partial. The complete C→S/S→C catalog must be derived from
+the executable. Names below follow existing code for convenience; EP8 layouts
+are not presumed compatible.
 
-| Opcode | Uso observado/analisado | Estado |
+| Opcode | Observed/analyzed use | Status |
 | --- | --- | --- |
-| `0xA301` | Handshake World | Recebido nas sessões locais; especificação completa pendente |
-| `0x0101` | Lista de personagens S→C | Leitor em `0x57C790`; writer novo ainda não validado |
-| `0x0104` | Seleção de personagem | Primeira seleção/entrada observadas; repetição pendente |
-| `0x0105` | Detalhes do personagem S→C | Enviado na primeira entrada; todos os campos ainda precisam de auditoria |
-| `0x0106` | Inventário inicial S→C | Registro de 34 bytes identificado; primeira entrada confirmada |
-| `0x0107` | Logout | Fluxo recebido/respondido; retorno completo à seleção pendente |
-| `0x0109` | Facção/limite de modo S→C | Observado; efeito sobre estado da UI exige documentação |
-| `0x010B` | Barra de atalhos | Leitor do cliente indica count + registros de 5 bytes; comparar ambas as direções |
-| `0x0201` | Entrada no mapa C→S | Recebido após carregamento na sessão local |
-| `0xB106` | Pacote relacionado ao início do mundo | Recebido; nome histórico `CHANGE_ENCRYPTION`, sem semântica completa confirmada |
+| `0xA301` | World handshake | Received locally; full specification pending |
+| `0x0101` | S→C character list | Reader `0x57C790`; additional writer unvalidated |
+| `0x0104` | Character selection | First selection/entry observed; repetition pending |
+| `0x0105` | S→C character details | Sent on first entry; field audit pending |
+| `0x0106` | S→C initial inventory | 34-byte record identified; first entry confirmed |
+| `0x0107` | Logout | Received/responded; complete return to selection pending |
+| `0x0109` | S→C faction/mode limit | Observed; UI state effects need documentation |
+| `0x010B` | Quickbar | Client reader indicates count plus 5-byte records; compare directions |
+| `0x0201` | C→S map entry | Received after loading in a local session |
+| `0xB106` | World-start-related packet | Received; historical `CHANGE_ENCRYPTION` name, full semantics unknown |
 
-## Inventário inicial `0x0106`
+## Initial inventory `0x0106`
 
-Leitor do cliente em `0x57CC60`. Payload começa com count de 1 byte;
-cada registro tem 34 bytes:
+Client reader: `0x57CC60`. Payload begins with a one-byte count; each record
+contains 34 bytes:
 
-| Offset no registro | Tamanho | Campo |
+| Record offset | Length | Field |
 | --- | --- | --- |
 | 0 | 1 | Bag |
 | 1 | 1 | Slot |
 | 2 | 1 | Type |
 | 3 | 1 | TypeId |
-| 4 | 2 | Quality, little-endian |
-| 6 | 6 | Seis identificadores de gemas de 1 byte |
+| 4 | 2 | Little-endian quality |
+| 6 | 6 | Six one-byte gem identifiers |
 | 12 | 1 | Count |
-| 13 | 21 | Craft name, campo fixo com terminador |
+| 13 | 21 | Fixed craft name with terminator |
 
-O leitor aloca seis bags × 24 slots. A falha observada ocorreu em
-`0x57CE8D` ao interpretar os registros maiores do EP8. O writer experimental
-rejeita bags/slots fora desse intervalo e gemas não representáveis em 1 byte.
-Os demais pacotes de inventário ainda precisam de mapeamento.
+The reader allocates six bags with 24 slots. The observed fault at `0x57CE8D`
+followed interpretation of larger EP8 records. The experimental writer rejects
+out-of-range bags/slots and gems not representable in one byte. Other inventory
+packets still need mapping.
 
-## Seleção de personagens `0x0101`
+## Character list `0x0101`
 
-O leitor em `0x57C790` consome slot, ID e, para ID não zero, dados básicos,
-oito tipos e oito IDs de equipamentos, seguidos de 21 bytes. A interpretação
-implementada no writer é nome de 19 bytes e dois indicadores históricos de
-exclusão/renomeação; confirmar a semântica desses indicadores nos fluxos da
-UI. Há seis bytes adicionais quando o tipo do equipamento de índice 7 não
-é zero. Não enviar os arrays de 17 elementos/campos extras do serializer EP8.
+Reader `0x57C790` consumes slot/ID and, for nonzero IDs, basic data, eight
+equipment types and eight equipment IDs, followed by 21 bytes. The additional
+writer interprets those bytes as a 19-byte name and historical deletion/rename
+flags. Verify flag semantics through UI flows. Six extra bytes occur when
+equipment type at index 7 is nonzero. EP8's 17-element arrays and additional
+fields do not match this observed reader.
 
-O writer adicional foi preparado, mas ainda não foi compilado nem exercitado.
-A ausência de segunda seleção nos logs após logout não confirma por si só
-que o formato desse pacote é a causa do problema.
+The additional writer has not been compiled or exercised. Missing second
+selection after logout alone does not prove that this packet causes the failure.
 
-## Criptografia e estados
+## Encryption and states
 
-O código atual usa AES na seleção e chave expandida XOR nas respostas do
-mundo. O envio da barra de atalhos está ligado à mudança de modo no cliente;
-o dispatch de logout chama `0x4015A0`. Documentar integralmente derivação,
-contadores, buffers, ordem e efeitos de transição antes de modificar a sessão.
-Ainda não existe especificação completa desses estados para a amostra.
+Current backend code uses AES during selection and expanded XOR keys for
+World responses. Quickbar sending is linked to a client mode change; logout
+dispatch calls `0x4015A0`. Document key derivation, counters, buffers, ordering,
+and transition effects before modifying sessions. A complete state contract
+for this sample is not yet available.
 
-Cada novo pacote deve ter ID de especificação, direção, layout com offsets,
-variantes/limites, rotina C→S/S→C e evidências estáticas/de execução. Bytes
-cifrados e respostas do nosso servidor não bastam para inferir campos.
+Every new packet needs a specification ID, direction, offset layout, variants/
+limits, client builder/reader, and static/runtime evidence. Encrypted bytes
+and bench responses alone cannot establish field semantics.

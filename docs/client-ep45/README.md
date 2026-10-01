@@ -1,36 +1,41 @@
-# Referência do cliente EP 4.5
+# EP 4.5 client reference
 
-Este diretório será a fonte de especificação para a compatibilidade com o
-cliente Rebirth Evolution instalado para teste. A identificação e a extração
-SAH/SAF foram executadas: 23.564 entradas da árvore e seis registros adicionais,
-com hashes verificados. A decodificação de tabelas, recursos, interface e
-protocolo continua na etapa A; nenhuma regra de gameplay foi importada de EP8.
+This directory is the specification source for compatibility with the locally
+installed Rebirth Evolution test client. Identification and SAH/SAF extraction
+are complete: 23,564 tree entries and six supplemental records, with verified
+hashes. Data, assets, UI, and protocol decoding remain in phase A. No EP8
+gameplay rule has been imported as evidence.
 
-O plano detalhado e a ordem do trabalho estão no [AGENTS.md](../../AGENTS.md).
-Primeiro extrair e documentar o cliente; depois implementar o backend.
+The detailed work order is in [AGENTS.md](../../AGENTS.md): extract and document
+the client first, then implement the backend.
 
-| Referência | Uso |
+| Reference | Purpose |
 | --- | --- |
-| [Progresso](progress.md) | Etapa ativa, tarefas e condições de passagem |
-| [Baseline](baseline.md) | Cliente identificado e estado do snapshot |
-| [Catálogos](catalogs/README.md) | Manifestos e formato das exportações |
-| [Domínios](domains/README.md) | Escopo dos dados e relações a extrair |
-| [Interface](ui/README.md) | Telas e matriz de ações |
-| [Protocolo](protocol/README.md) | Descobertas atuais e contratos a mapear |
-| [Análise](analysis/README.md) | Âncoras do executável e reprodução |
-| [Validação](validation/README.md) | Integridade, cobertura e critérios de saída |
-| [Backend](backend/README.md) | Requisitos derivados e sequência posterior |
-| [Modelo de domínio](templates/domain.md) | Padrão de documentação |
-| [Schema de evidência](schemas/provenance.schema.json) | Rastreabilidade de cada descoberta |
-| [Ferramentas de extração](../../tools/ep45-client/README.md) | Comandos reproduzíveis, cache e testes |
-| [Relatório A0/A1](validation/phase-a0-a1.md) | Resultados da identificação, extração e verificação |
-| [Formato SAH/SAF](schemas/sah-saf.md) | Estrutura comprovada e campos ainda desconhecidos |
+| [Progress](progress.md) | Active phase, tasks, exit criteria |
+| [Baseline](baseline.md) | Identified sample and snapshot limits |
+| [Catalogs](catalogs/README.md) | Manifests and exports |
+| [Domains](domains/README.md) | Data and relationships to extract |
+| [UI](ui/README.md) | Screens and action matrix |
+| [Protocol](protocol/README.md) | Initial findings and outstanding contracts |
+| [Analysis](analysis/README.md) | Executable anchors and reproduction |
+| [Validation](validation/README.md) | Integrity, coverage, exit criteria |
+| [Backend](backend/README.md) | Derived requirements and later implementation |
+| [Domain template](templates/domain.md) | Documentation standard |
+| [Evidence schema](schemas/provenance.schema.json) | Finding provenance |
+| [Tools](../../tools/ep45-client/README.md) | Reproducible commands and tests |
+| [A0/A1 report](validation/phase-a0-a1.md) | Identification and extraction results |
+| [SAH/SAF format](schemas/sah-saf.md) | Observed structure and unknown fields |
 
-Os arquivos brutos e exportações volumosas ficam em `.client-ep45-cache/`,
-fora do Git. As ferramentas ficam em `tools/ep45-client/` e devem
-receber o caminho do cliente como parâmetro. O manifesto inicial de arquivos
-soltos é separado do futuro índice interno SAH/SAF.
+Raw files and large exports belong in the ignored `.client-ep45-cache/`.
+Tools live in `tools/ep45-client/` and accept the client path as a parameter.
+The loose-file manifest and internal archive inventory are separate outputs.
 
-Um dado só recebe status de validação em execução quando houver cenário e
-resultado registrados. Uma descoberta estática não prova uma regra do
-servidor original. Lacunas documentadas são parte da referência.
+All authored code and prose use global English. Raw client strings, filenames,
+and bytes retain their original values as evidence. Status values use English
+as defined in the evidence schema. Earlier Portuguese status labels were
+replaced without changing raw data; the previous full manifest is preserved
+as `archive-files.v1.jsonl` in cache.
+
+Runtime validation requires a recorded scenario and result. A static finding
+does not establish an original server rule. Documented gaps remain part of
+this reference.

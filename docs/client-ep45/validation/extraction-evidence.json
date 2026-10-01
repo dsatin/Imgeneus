@@ -2,7 +2,7 @@
   "id": "EP45-A1-ARCHIVE-001",
   "domain": "archive",
   "baseline_id": "rebirth-evolution-ep45-98c7dd3a",
-  "status": "extraido",
+  "status": "extracted",
   "sources": [
     {
       "path": "data.sah",
@@ -16,15 +16,16 @@
   "method": "archive_extraction",
   "reproduction": {
     "tool": "tools/ep45-client/archive.py",
-    "version": "1.0.0",
+    "version": "2.0.0",
     "command": "python3 tools/ep45-client/archive.py extract --client-dir .client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/originals --output-dir .client-ep45-cache/rebirth-evolution-ep45-98c7dd3a --report-dir docs/client-ep45/catalogs --baseline-id rebirth-evolution-ep45-98c7dd3a --expected-manifest docs/client-ep45/catalogs/loose-files.current.json"
   },
-  "observed_at": "2026-10-01T22:02:58.032383+00:00",
+  "observed_at": "2026-10-01T22:32:53.396076+00:00",
   "validation": [
     "validation/phase-a0-a1.md",
     "catalogs/extraction-report.json",
     "13 passing integrity/containment/resume tests: python3 tools/ep45-client/test_archive.py",
-    "Second full extraction pass revalidated existing files against frozen SAF ranges"
+    "Second full extraction pass revalidated existing files against frozen SAF ranges",
+    "English schema/status migration: all 23570 outputs reverified without replacement; original manifest retained as archive-files.v1.jsonl"
   ],
   "unknowns": [
     "Semantics of six file-shaped records after the SAH tree",

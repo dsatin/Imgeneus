@@ -13,7 +13,7 @@ import struct
 import sys
 import tempfile
 
-TOOL_VERSION = "1.0.0"
+TOOL_VERSION = "2.0.0"
 SEED_SIGNATURE = b"0001CBCEBC5B2784D3FC9A2A9DB84D1C3FEB6E99"
 CHUNK_SIZE = 1024 * 1024
 
@@ -269,7 +269,7 @@ def process_entry(stream, entry, output_root, extract):
         content_hash = digest.hexdigest()
         if extract and sha256_file(target) != content_hash:
             raise FormatError("Existing/extracted file hash differs from its source SAF range")
-        return {"status": "extraido" if extract else "inventariado",
+        return {"status": "extracted" if extract else "inventoried",
                 "sha256": content_hash, "prefix_hex": bytes(header).hex(),
                 "format_hint": content_hint(bytes(header), entry["extension"]),
                 "verification": "source_range_matches_extracted_file" if extract else "source_range_hashed"}
@@ -310,12 +310,12 @@ def run(client_dir, output_dir, report_dir, baseline_id, extract=False, expected
         for i, entry in enumerate(entries):
             entry["baseline_id"] = baseline_id
             if entry["errors"] or checks["issues"]:
-                result = {"status": "desconhecido", "error": entry["errors"] or checks["issues"]}
+                result = {"status": "unknown", "error": entry["errors"] or checks["issues"]}
             else:
                 try:
                     result = process_entry(stream, entry, output_dir / "extracted", extract)
                 except (OSError, ValueError) as exc:
-                    result = {"status": "desconhecido", "error": str(exc)}
+                    result = {"status": "unknown", "error": str(exc)}
             entry["content"] = result
             counts[f"{entry['entry_kind']}:{result['status']}"] += 1
             formats[result.get("format_hint", "unreadable")] += 1
@@ -330,7 +330,7 @@ def run(client_dir, output_dir, report_dir, baseline_id, extract=False, expected
     temporary_manifest.replace(manifest_path)
     write_json(output_dir / "archive-folders.json", folders)
     report = {
-        "schema_version": 1, "baseline_id": baseline_id,
+        "schema_version": 2, "baseline_id": baseline_id,
         "generated_at_utc": datetime.now(timezone.utc).isoformat(),
         "tool": {"path": "tools/ep45-client/archive.py", "version": TOOL_VERSION,
                  "python": platform.python_version(), "sha256": sha256_file(Path(__file__))},

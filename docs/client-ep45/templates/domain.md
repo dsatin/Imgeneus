@@ -1,38 +1,38 @@
-# <Domínio ou recurso>
+# <Domain or feature>
 
-## Identificação e cobertura
+## Identification and coverage
 
-- ID da especificação:
+- Specification ID:
 - Baseline/hash:
-- Status e contagem de entidades/arquivos/ações:
-- Arquivos-fonte e catálogo gerado:
-- Comando, ferramenta e versão para reproduzir:
+- Status and entity/file/action counts:
+- Source files and generated catalog:
+- Reproduction command, tool, version:
 
-## Formato e campos
+## Format and fields
 
-| Campo | Tipo/tamanho/offset | Valores/unidade/encoding | Evidência/status |
+| Field | Type/length/offset | Values/unit/encoding | Evidence/status |
 | --- | --- | --- | --- |
 
-Documentar cabeçalhos, contagens, variante, ordenação, opcionais e bytes
-desconhecidos. Separar valores brutos de transformações normalizadas.
+Document headers, counts, variants, ordering, optional fields, and unknown
+bytes. Separate raw values from normalized transformations.
 
-## Entidades, recursos e relações
+## Entities, assets, and relationships
 
-Registrar IDs originais, relações com outros catálogos, recursos gráficos/
-sonoros, integridade referencial, duplicatas e ausências.
+Record original IDs, cross-catalog links, graphics/audio, referential
+integrity, duplicates, and missing values/resources.
 
-## Interface e protocolo
+## UI and protocol
 
-Ligar cada tela/ação e pacote à especificação. Explicar estado inicial/final,
-precondições, respostas, erros, cancelamento e repetição.
+Link screens/actions/packets to specifications. Explain initial/final states,
+preconditions, responses, errors, cancellation, and repetition.
 
-## Validação
+## Validation
 
-Separar análise estática, integridade dos dados e execução com o cliente.
-Registrar cenário, resultado, fixture/evidência e limites de cobertura.
+Separate static analysis, data integrity, and runtime observation. Record
+scenario, result, fixture/evidence, and coverage limits.
 
-## Lacunas e requisitos do backend
+## Gaps and backend requirements
 
-Listar hipóteses, campos opacos, informações que não estão no cliente,
-decisões próprias necessárias e dependências. Criar requisitos rastreáveis
-sem implementar regras durante a etapa de extração.
+List hypotheses, opaque fields, unavailable client information, required
+policy decisions, and dependencies. Derive traceable requirements without
+implementing rules during extraction.

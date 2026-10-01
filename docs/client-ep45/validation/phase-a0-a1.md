@@ -1,69 +1,65 @@
-# Relatório A0/A1 — identificação e extração
+# A0/A1 report — identification and extraction
 
-Execução em 2026-10-01, projeto na base `eacfc1d6`, Python 3.14.7,
-baseline `rebirth-evolution-ep45-98c7dd3a`. O backend e os bancos não foram
-alterados por este trabalho.
+Executed 2026-10-01 from project base `eacfc1d6`, Python 3.14.7,
+baseline `rebirth-evolution-ep45-98c7dd3a`. Backend/databases were unchanged.
+Extraction tools and evidence were committed as `e2bb56bc`.
 
-## Resultados
-
-| Indicador | Resultado |
+| Indicator | Result |
 | --- | --- |
-| Arquivos externos congelados | 18 + executável original pré-patch |
-| Entradas declaradas/lidas na árvore SAH | 23.564 / 23.564 |
-| Pastas da árvore | 172 |
-| Caminhos únicos da árvore | 23.563 |
-| Entradas suplementares após a árvore | 6 |
-| Entradas extraídas e verificadas | 23.570 |
-| Bytes das entradas da árvore | 2.385.899.048 |
-| Erros de extração/limites/path | 0 |
-| Sobreposições entre intervalos da árvore | 0 |
-| Duplicatas de caminho | 1, dois conteúdos idênticos preservados |
-| Testes automatizados | 13 passaram |
-| Registros de gameplay decodificados | 0 |
+| Frozen external files | 18 plus original pre-patch executable |
+| Declared/read SAH tree entries | 23,564 / 23,564 |
+| Tree folders | 172 |
+| Unique tree paths | 23,563 |
+| Supplemental post-tree records | 6 |
+| Extracted and verified entries | 23,570 |
+| Tree content bytes | 2,385,899,048 |
+| Extraction/bounds/path errors | 0 |
+| Tree interval overlaps | 0 |
+| Duplicate paths | One; both identical contents preserved |
+| Automated tests | 13 passed |
+| Gameplay records decoded at A1 | 0 |
 
-A extração existente foi conferida em uma segunda execução usando
-`originals/` como fonte. Os arquivos brutos existentes foram mantidos;
-cada hash de saída foi comparado novamente com a respectiva faixa no SAF.
-Hashes completos do SAH/SAF foram reconferidos antes e depois das execuções.
+A second run verified existing extraction against `originals/`, retaining
+raw files and comparing each output hash with its SAF interval. Complete
+SAH/SAF hashes were checked before and after each run.
 
-## Saídas e reprodução
+## Outputs and reproduction
 
-- [Identificação/PE/runner](../catalogs/baseline-evidence.json).
-- [Manifesto externo atual](../catalogs/loose-files.current.json), preservando
-  também o manifesto anterior. Só o hash de `CONFIG.INI` mudou.
-- [Relatório de extração](../catalogs/extraction-report.json): hashes do
-  cliente/ferramenta, contagens, classificações, validações e hash do índice.
-- [Fontes de dados](../catalogs/data-sources.json),
-  [arquivos de mapas](../catalogs/map-files.json) e
-  [recursos/anomalias](../catalogs/asset-summary.json).
-- Índice completo no cache: `archive-files.jsonl`, 23.570 registros,
-  SHA-256 `09240d9b290aded79f66f40991e62cca19aca5eab90792d1f1f8b584fe847a29`.
-- [Comandos e testes](../../../tools/ep45-client/README.md).
+- [Identification/PE/runner](../catalogs/baseline-evidence.json).
+- [Current external manifest](../catalogs/loose-files.current.json); prior
+  manifest retained, only `CONFIG.INI` differs.
+- [Extraction report](../catalogs/extraction-report.json): source/tool hashes,
+  counts, classifications, checks, and full-manifest hash.
+- [Data sources](../catalogs/data-sources.json), [maps](../catalogs/map-files.json),
+  [assets/anomalies](../catalogs/asset-summary.json).
+- Full cache index: `archive-files.jsonl`, 23,570 records. Its current hash
+  is recorded in the extraction report. Previous Portuguese-status manifest
+  is preserved as `archive-files.v1.jsonl`, SHA-256
+  `09240d9b290aded79f66f40991e62cca19aca5eab90792d1f1f8b584fe847a29`.
+- [Commands and tests](../../../tools/ep45-client/README.md).
 
-## Conteúdo identificado, ainda não decodificado
+## Identified content, not decoded at A1
 
-Há nove SData ativos: Cash, KillStatus, Skill, Item, NpcSkill, Monster,
-GuildHouse, PriestTalk e NpcQuest. Seis apresentam o cabeçalho associado a
-SEED; seus tamanhos declarados/alinhamento foram catalogados, mas a
-descriptografia e o checksum ainda não foram validados.
+Nine active SData files: Cash, KillStatus, Skill, Item, NpcSkill, Monster,
+GuildHouse, PriestTalk, NpcQuest. Six have SEED-associated headers. A1
+cataloged declared sizes/alignment; it did not validate decryption/checksums.
 
-Foram encontrados 86 WLD e um ZON, sem entradas `.svmap` no índice desta
-amostra. Isso não prova ausência de informações de posicionamento nos
-outros formatos. IDs obtidos de nomes de WLD são apenas candidatos.
+86 WLD and one ZON were found, with no `.svmap` index entries. This does not
+exclude position data in other formats. Numeric WLD names are only candidate IDs.
 
-A classificação por caminho identifica 997 recursos de UI e 1.039 arquivos
-de áudio. São contagens de arquivos; telas, controles e interações ainda
-não foram enumerados. Os 24 `Thumbs.db` têm assinatura de compound file e
-foram separados dos candidatos a tabelas de gameplay. Dez arquivos `.dds`
-começam com assinatura BMP; usar conteúdo e estrutura para selecionar leitores.
+Path classification finds 997 UI assets and 1,039 audio files, not enumerated
+screens/controls/interactions. 24 compound-file `Thumbs.db` entries are separated
+from gameplay candidates. Ten `.dds` entries have BMP signatures; readers
+must follow actual content structure.
 
-## Limites e próxima etapa
+## Limits and next phase
 
-A0/A1 estão concluídas para identificação, inventário e extração das entradas
-indexadas. A semântica dos seis registros suplementares e dos intervalos
-não referenciados permanece desconhecida, com bytes preservados no SAF
-congelado. Nenhuma regra autoritativa ou tabela de outro episódio foi importada.
+A0/A1 are complete for sample identification and indexed-file extraction.
+Supplemental-record semantics and unreferenced intervals remain unknown,
+with bytes preserved in the frozen SAF. No authoritative rule or other-episode
+table was imported.
 
-A2 deve agora validar containers/descriptografia e layouts de registros,
-seguida pelos catálogos de conteúdo, interface e protocolo. A etapa A não
-está concluída como um todo; este relatório não libera a etapa B.
+A2 must validate containers/decryption and record layouts before content,
+UI, and protocol catalogs. Phase A is not complete; this report does not
+release phase B. English status migration changes metadata hashes only,
+not source or extracted-content hashes.

@@ -87,7 +87,7 @@ class ArchiveChecks(unittest.TestCase):
             (client / "data.sah").write_bytes(sah([record("a", 0, 3), record("empty", 3, 0)]))
             (client / "data.saf").write_bytes(b"abc")
             first = archive.run(client, output, reports, "fixture", True)
-            self.assertEqual(first["counts"], {"tree:extraido": 2})
+            self.assertEqual(first["counts"], {"tree:extracted": 2})
             self.assertEqual((output / "extracted/tree/a").read_bytes(), b"abc")
             initial_mtime = (output / "extracted/tree/a").stat().st_mtime_ns
             second = archive.run(client, output, reports, "fixture", True)

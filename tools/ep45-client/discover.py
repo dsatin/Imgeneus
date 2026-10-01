@@ -23,14 +23,14 @@ def main():
     parser.add_argument("--output-dir", type=Path, required=True)
     args = parser.parse_args()
     entries = [json.loads(line) for line in args.manifest.open(encoding="utf-8")]
-    if any(e["content"]["status"] != "extraido" for e in entries):
+    if any(e["content"]["status"] != "extracted" for e in entries):
         parser.error("Discovery requires a completely verified extraction manifest")
     metadata = {
-        "schema_version": 1, "baseline_id": entries[0]["baseline_id"],
+        "schema_version": 2, "baseline_id": entries[0]["baseline_id"],
         "generated_at_utc": datetime.now(timezone.utc).isoformat(),
-        "tool": {"path": "tools/ep45-client/discover.py", "version": "1.0.0", "sha256": sha256_file(Path(__file__))},
+        "tool": {"path": "tools/ep45-client/discover.py", "version": "2.0.0", "sha256": sha256_file(Path(__file__))},
         "archive_manifest_sha256": sha256_file(args.manifest),
-        "status": "inventariado", "gameplay_records_decoded": 0,
+        "status": "inventoried", "gameplay_records_decoded": 0,
     }
     tables, maps, mismatches, thumbnail_caches = [], [], [], []
     for entry in entries:
@@ -38,7 +38,7 @@ def main():
         if entry["extension"] in (".sdata", ".cfg", ".zon"):
             item = {**reference(entry), "sha256": entry["content"]["sha256"],
                     "format_hint": hint, "domain_hint": entry["domain_hint"],
-                    "record_layout_status": "desconhecido"}
+                    "record_layout_status": "unknown"}
             header = bytes.fromhex(entry["content"]["prefix_hex"])
             if header.startswith(SEED_SIGNATURE) and len(header) == 64:
                 checksum, declared = struct.unpack_from("<II", header, 40)
@@ -60,7 +60,7 @@ def main():
             stem = Path(entry["path"]).stem
             maps.append({**reference(entry), "sha256": entry["content"]["sha256"],
                          "filename_numeric_id_candidate": int(stem) if stem.isdecimal() else None,
-                         "id_status": "inferido_do_nome", "layout_status": "desconhecido"})
+                         "id_status": "inferred_from_filename", "layout_status": "unknown"})
         recognized = {".dds": "dds", ".bmp": "bmp", ".wav": "wave", ".jpg": "jpeg"}
         if entry["extension"] in recognized and hint != recognized[entry["extension"]]:
             mismatches.append({**reference(entry), "extension": entry["extension"], "content_hint": hint})

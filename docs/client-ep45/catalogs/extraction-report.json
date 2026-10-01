@@ -1,12 +1,12 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "baseline_id": "rebirth-evolution-ep45-98c7dd3a",
-  "generated_at_utc": "2026-10-01T22:02:58.032383+00:00",
+  "generated_at_utc": "2026-10-01T22:32:53.396076+00:00",
   "tool": {
     "path": "tools/ep45-client/archive.py",
-    "version": "1.0.0",
+    "version": "2.0.0",
     "python": "3.14.7",
-    "sha256": "6eb9f4cce96e7de2405963207da75d1bef0cae198b113f0a43be8ae3c94227db"
+    "sha256": "f44fe451716305359d19b0ff18acdc9ac79922adcbf450931661955028781dbb"
   },
   "mode": "extract",
   "sources": {
@@ -33,13 +33,13 @@
   },
   "manifest": {
     "path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/archive-files.jsonl",
-    "sha256": "09240d9b290aded79f66f40991e62cca19aca5eab90792d1f1f8b584fe847a29",
-    "size_bytes": 19906965,
+    "sha256": "141493242b496dde8119fb30b45e84fe078b04ddbf957d2226ac1c92a28902cf",
+    "size_bytes": 19930535,
     "records": 23570
   },
   "counts": {
-    "supplemental:extraido": 6,
-    "tree:extraido": 23564
+    "supplemental:extracted": 6,
+    "tree:extracted": 23564
   },
   "content_hints": {
     "bmp": 39,

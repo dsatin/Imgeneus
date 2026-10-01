@@ -1,56 +1,50 @@
-# Estrutura SAH/SAF confirmada nesta amostra
+# SAH/SAF structure observed in this sample
 
-Fonte: baseline `rebirth-evolution-ep45-98c7dd3a`, hashes do
-[relatório](../catalogs/extraction-report.json). Leitor de infraestrutura
-comparado: Parsec `ebac92c473175a5c0aae29c1e370a2a299d1dedc`, classes
-`Sah`, `SFolder`, `SFile` e `SBinaryReader`. A confirmação nesta amostra vem
-das contagens, limites e comparação dos bytes/hashes efetivamente extraídos.
+Source: baseline `rebirth-evolution-ep45-98c7dd3a`; hashes in the
+[extraction report](../catalogs/extraction-report.json). Infrastructure compared:
+Parsec `ebac92c473175a5c0aae29c1e370a2a299d1dedc`, `Sah`, `SFolder`, `SFile`,
+and `SBinaryReader`. Actual counts, bounds, bytes, and content hashes provide
+sample-specific validation.
 
-## Cabeçalho e árvore
+## Header and tree
 
-| Offset | Tamanho | Campo observado |
+| Offset | Length | Observed field |
 | --- | --- | --- |
-| 0 | 3 | Assinatura ASCII `SAH` |
-| 3 | 4 | Versão signed int32 little-endian, valor 0 |
-| 7 | 4 | Contagem declarada signed int32, 23.564 |
-| 11 | 40 | Bytes de preenchimento, preservados no relatório |
-| 51 | Variável | Pasta raiz e árvore recursiva |
+| 0 | 3 | ASCII `SAH` |
+| 3 | 4 | Little-endian signed int32 version, 0 |
+| 7 | 4 | Signed int32 declared count, 23,564 |
+| 11 | 40 | Padding bytes preserved in report |
+| 51 | Variable | Root folder and recursive tree |
 
-Cada pasta contém nome com comprimento int32 little-endian, contagem de
-arquivos, registros de arquivos, contagem de subpastas e subpastas recursivas.
-O comprimento do nome conta bytes, incluindo o terminador zero presente.
-Os nomes desta amostra passaram na leitura UTF-8 estrita.
+Each folder contains an int32-length-prefixed name, file count/records,
+and subfolder count/recursive subfolders. Name lengths count bytes including
+the observed zero terminator. All sample names passed strict UTF-8 decoding.
 
-Cada registro de arquivo contém nome com comprimento, offset int64 no SAF,
-tamanho int32 e versão int32. Os nomes/campos originais e os offsets do SAH
-ficam no manifesto. O tamanho é usado em **bytes**, confirmado pela leitura
-exata e hashes; o comentário "kbs" de `SFile.Length` não foi usado como unidade.
-A finalidade do campo de versão não foi determinada.
+File records contain a length-prefixed name, int64 SAF offset, int32 length,
+and int32 version. Original bytes/fields/SAH offsets remain in the manifest.
+Lengths are **bytes**, verified by exact reads/hashes; the `SFile.Length`
+comment mentioning kbs is not used as a unit. Version semantics are unknown.
 
-O início do SAF desta amostra não possui assinatura `SAF`; o leitor usa
-intervalos do índice. Não inserir ou remover cabeçalhos para compensar isso.
+This SAF does not begin with a `SAF` signature. Access follows index intervals;
+do not add/remove a header to compensate.
 
-## Pós-árvore e intervalos desconhecidos
+## Post-tree records and unknown intervals
 
-A árvore terminou em 911.317 de 911.512 bytes do SAH. Os 195 bytes restantes
-se ajustam exatamente a: count int32 = 6, seis registros com formato de
-arquivo e int32 final = 0. Não há nome de pasta nesse bloco.
+The tree ends at byte 911,317 of 911,512. The remaining 195 bytes fit exactly:
+int32 count 6, six file-shaped records, and final int32 zero, without a folder name.
+Names: two `Cash.Sdata`, `Skill.SData`, `Item.SData`, and two `rest space`.
+They are extracted separately with `supplemental-*` IDs. Their purpose and
+client usage remain unknown; do not substitute them for active tables.
 
-Os nomes são dois `Cash.Sdata`, `Skill.SData`, `Item.SData` e dois `rest space`.
-Foram extraídos separadamente e receberam IDs `supplemental-*`. A semântica
-do bloco e seu uso pelo cliente permanecem desconhecidos; não substituir
-as tabelas ativas por esses conteúdos.
+95,141,488 SAF bytes lie outside the union of tree/supplemental intervals.
+Their manifest/hash is indexed in the [asset summary](../catalogs/asset-summary.json).
+They are not proven useless or recoverable as files. The frozen complete SAF
+preserves them for later analysis.
 
-Há 95.141.488 bytes do SAF fora da união das entradas principais e
-suplementares. Seus intervalos estão no cache e seu manifesto/hash no
-[resumo de recursos](../catalogs/asset-summary.json). Isso não prova que
-sejam dados inúteis ou arquivos recuperáveis. O SAF completo foi congelado
-para análise posterior, preservando também esses bytes.
+## Duplicate
 
-## Duplicata
-
-`Item/3DO/10051__.3do` aparece nos ordinais 14.672 e 14.912, em offsets
-diferentes. Os dois conteúdos têm 13.204 bytes e SHA-256 idêntico:
+`Item/3DO/10051__.3do` occurs at ordinals 14,672 and 14,912 with different SAF
+offsets. Both contents have 13,204 bytes and SHA-256
 `728a400f349ff114a0d0a66f022e41b5fef98e6339f200869a26d5930c880da8`.
-Ambos foram preservados. A precedência de lookup no cliente ainda não foi
-analisada; o comportamento de um dicionário do Parsec não é prova dela.
+Both are preserved. Client lookup precedence is unknown; Parsec dictionary
+behavior is not evidence of that precedence.
