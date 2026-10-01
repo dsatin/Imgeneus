@@ -1,0 +1,1388 @@
+{
+  "id": "EP45-A2-TABLE-001",
+  "schema_version": 1,
+  "baseline_id": "rebirth-evolution-ep45-98c7dd3a",
+  "layouts": [
+    {
+      "format_id": "items",
+      "numeric_block_layout": "<BBBBhBBBBBBBBBBhhhhhhhBBBBBBBhhhhhhhhhhhhhhBBiihhBB",
+      "numeric_block_size_bytes": 81,
+      "fields": [
+        {
+          "id": "unknown_numeric_000",
+          "offset_in_numeric_block": 0,
+          "size_bytes": 1,
+          "storage_type": "uint8",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "not_applicable_with_evidence"
+        },
+        {
+          "id": "unknown_numeric_001",
+          "offset_in_numeric_block": 1,
+          "size_bytes": 1,
+          "storage_type": "uint8",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "not_applicable_with_evidence"
+        },
+        {
+          "id": "unknown_numeric_002",
+          "offset_in_numeric_block": 2,
+          "size_bytes": 1,
+          "storage_type": "uint8",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "not_applicable_with_evidence"
+        },
+        {
+          "id": "unknown_numeric_003",
+          "offset_in_numeric_block": 3,
+          "size_bytes": 1,
+          "storage_type": "uint8",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "not_applicable_with_evidence"
+        },
+        {
+          "id": "unknown_numeric_004",
+          "offset_in_numeric_block": 4,
+          "size_bytes": 2,
+          "storage_type": "int16_candidate",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "unknown"
+        },
+        {
+          "id": "unknown_numeric_006",
+          "offset_in_numeric_block": 6,
+          "size_bytes": 1,
+          "storage_type": "uint8",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "not_applicable_with_evidence"
+        },
+        {
+          "id": "unknown_numeric_007",
+          "offset_in_numeric_block": 7,
+          "size_bytes": 1,
+          "storage_type": "uint8",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "not_applicable_with_evidence"
+        },
+        {
+          "id": "unknown_numeric_008",
+          "offset_in_numeric_block": 8,
+          "size_bytes": 1,
+          "storage_type": "uint8",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "not_applicable_with_evidence"
+        },
+        {
+          "id": "unknown_numeric_009",
+          "offset_in_numeric_block": 9,
+          "size_bytes": 1,
+          "storage_type": "uint8",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "not_applicable_with_evidence"
+        },
+        {
+          "id": "unknown_numeric_010",
+          "offset_in_numeric_block": 10,
+          "size_bytes": 1,
+          "storage_type": "uint8",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "not_applicable_with_evidence"
+        },
+        {
+          "id": "unknown_numeric_011",
+          "offset_in_numeric_block": 11,
+          "size_bytes": 1,
+          "storage_type": "uint8",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "not_applicable_with_evidence"
+        },
+        {
+          "id": "unknown_numeric_012",
+          "offset_in_numeric_block": 12,
+          "size_bytes": 1,
+          "storage_type": "uint8",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "not_applicable_with_evidence"
+        },
+        {
+          "id": "unknown_numeric_013",
+          "offset_in_numeric_block": 13,
+          "size_bytes": 1,
+          "storage_type": "uint8",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "not_applicable_with_evidence"
+        },
+        {
+          "id": "unknown_numeric_014",
+          "offset_in_numeric_block": 14,
+          "size_bytes": 1,
+          "storage_type": "uint8",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "not_applicable_with_evidence"
+        },
+        {
+          "id": "unknown_numeric_015",
+          "offset_in_numeric_block": 15,
+          "size_bytes": 1,
+          "storage_type": "uint8",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "not_applicable_with_evidence"
+        },
+        {
+          "id": "unknown_numeric_016",
+          "offset_in_numeric_block": 16,
+          "size_bytes": 2,
+          "storage_type": "int16_candidate",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "unknown"
+        },
+        {
+          "id": "unknown_numeric_018",
+          "offset_in_numeric_block": 18,
+          "size_bytes": 2,
+          "storage_type": "int16_candidate",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "unknown"
+        },
+        {
+          "id": "unknown_numeric_020",
+          "offset_in_numeric_block": 20,
+          "size_bytes": 2,
+          "storage_type": "int16_candidate",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "unknown"
+        },
+        {
+          "id": "unknown_numeric_022",
+          "offset_in_numeric_block": 22,
+          "size_bytes": 2,
+          "storage_type": "int16_candidate",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "unknown"
+        },
+        {
+          "id": "unknown_numeric_024",
+          "offset_in_numeric_block": 24,
+          "size_bytes": 2,
+          "storage_type": "int16_candidate",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "unknown"
+        },
+        {
+          "id": "unknown_numeric_026",
+          "offset_in_numeric_block": 26,
+          "size_bytes": 2,
+          "storage_type": "int16_candidate",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "unknown"
+        },
+        {
+          "id": "unknown_numeric_028",
+          "offset_in_numeric_block": 28,
+          "size_bytes": 2,
+          "storage_type": "int16_candidate",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "unknown"
+        },
+        {
+          "id": "unknown_numeric_030",
+          "offset_in_numeric_block": 30,
+          "size_bytes": 1,
+          "storage_type": "uint8",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "not_applicable_with_evidence"
+        },
+        {
+          "id": "unknown_numeric_031",
+          "offset_in_numeric_block": 31,
+          "size_bytes": 1,
+          "storage_type": "uint8",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "not_applicable_with_evidence"
+        },
+        {
+          "id": "unknown_numeric_032",
+          "offset_in_numeric_block": 32,
+          "size_bytes": 1,
+          "storage_type": "uint8",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "not_applicable_with_evidence"
+        },
+        {
+          "id": "unknown_numeric_033",
+          "offset_in_numeric_block": 33,
+          "size_bytes": 1,
+          "storage_type": "uint8",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "not_applicable_with_evidence"
+        },
+        {
+          "id": "unknown_numeric_034",
+          "offset_in_numeric_block": 34,
+          "size_bytes": 1,
+          "storage_type": "uint8",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "not_applicable_with_evidence"
+        },
+        {
+          "id": "unknown_numeric_035",
+          "offset_in_numeric_block": 35,
+          "size_bytes": 1,
+          "storage_type": "uint8",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "not_applicable_with_evidence"
+        },
+        {
+          "id": "unknown_numeric_036",
+          "offset_in_numeric_block": 36,
+          "size_bytes": 1,
+          "storage_type": "uint8",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "not_applicable_with_evidence"
+        },
+        {
+          "id": "unknown_numeric_037",
+          "offset_in_numeric_block": 37,
+          "size_bytes": 2,
+          "storage_type": "int16_candidate",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "unknown"
+        },
+        {
+          "id": "unknown_numeric_039",
+          "offset_in_numeric_block": 39,
+          "size_bytes": 2,
+          "storage_type": "int16_candidate",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "unknown"
+        },
+        {
+          "id": "unknown_numeric_041",
+          "offset_in_numeric_block": 41,
+          "size_bytes": 2,
+          "storage_type": "int16_candidate",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "unknown"
+        },
+        {
+          "id": "unknown_numeric_043",
+          "offset_in_numeric_block": 43,
+          "size_bytes": 2,
+          "storage_type": "int16_candidate",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "unknown"
+        },
+        {
+          "id": "unknown_numeric_045",
+          "offset_in_numeric_block": 45,
+          "size_bytes": 2,
+          "storage_type": "int16_candidate",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "unknown"
+        },
+        {
+          "id": "unknown_numeric_047",
+          "offset_in_numeric_block": 47,
+          "size_bytes": 2,
+          "storage_type": "int16_candidate",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "unknown"
+        },
+        {
+          "id": "unknown_numeric_049",
+          "offset_in_numeric_block": 49,
+          "size_bytes": 2,
+          "storage_type": "int16_candidate",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "unknown"
+        },
+        {
+          "id": "unknown_numeric_051",
+          "offset_in_numeric_block": 51,
+          "size_bytes": 2,
+          "storage_type": "int16_candidate",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "unknown"
+        },
+        {
+          "id": "unknown_numeric_053",
+          "offset_in_numeric_block": 53,
+          "size_bytes": 2,
+          "storage_type": "int16_candidate",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "unknown"
+        },
+        {
+          "id": "unknown_numeric_055",
+          "offset_in_numeric_block": 55,
+          "size_bytes": 2,
+          "storage_type": "int16_candidate",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "unknown"
+        },
+        {
+          "id": "unknown_numeric_057",
+          "offset_in_numeric_block": 57,
+          "size_bytes": 2,
+          "storage_type": "int16_candidate",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "unknown"
+        },
+        {
+          "id": "unknown_numeric_059",
+          "offset_in_numeric_block": 59,
+          "size_bytes": 2,
+          "storage_type": "int16_candidate",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "unknown"
+        },
+        {
+          "id": "unknown_numeric_061",
+          "offset_in_numeric_block": 61,
+          "size_bytes": 2,
+          "storage_type": "int16_candidate",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "unknown"
+        },
+        {
+          "id": "unknown_numeric_063",
+          "offset_in_numeric_block": 63,
+          "size_bytes": 2,
+          "storage_type": "int16_candidate",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "unknown"
+        },
+        {
+          "id": "unknown_numeric_065",
+          "offset_in_numeric_block": 65,
+          "size_bytes": 1,
+          "storage_type": "uint8",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "not_applicable_with_evidence"
+        },
+        {
+          "id": "unknown_numeric_066",
+          "offset_in_numeric_block": 66,
+          "size_bytes": 1,
+          "storage_type": "uint8",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "not_applicable_with_evidence"
+        },
+        {
+          "id": "unknown_numeric_067",
+          "offset_in_numeric_block": 67,
+          "size_bytes": 4,
+          "storage_type": "int32_candidate",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "unknown"
+        },
+        {
+          "id": "unknown_numeric_071",
+          "offset_in_numeric_block": 71,
+          "size_bytes": 4,
+          "storage_type": "int32_candidate",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "unknown"
+        },
+        {
+          "id": "unknown_numeric_075",
+          "offset_in_numeric_block": 75,
+          "size_bytes": 2,
+          "storage_type": "int16_candidate",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "unknown"
+        },
+        {
+          "id": "unknown_numeric_077",
+          "offset_in_numeric_block": 77,
+          "size_bytes": 2,
+          "storage_type": "int16_candidate",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "unknown"
+        },
+        {
+          "id": "unknown_numeric_079",
+          "offset_in_numeric_block": 79,
+          "size_bytes": 1,
+          "storage_type": "uint8",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "not_applicable_with_evidence"
+        },
+        {
+          "id": "unknown_numeric_080",
+          "offset_in_numeric_block": 80,
+          "size_bytes": 1,
+          "storage_type": "uint8",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "not_applicable_with_evidence"
+        }
+      ],
+      "status": "decoded",
+      "semantic_status": "unknown"
+    },
+    {
+      "format_id": "mobs",
+      "numeric_block_layout": "<hhBiBBBiBiBBBBBBBBh",
+      "numeric_block_size_bytes": 31,
+      "fields": [
+        {
+          "id": "unknown_numeric_000",
+          "offset_in_numeric_block": 0,
+          "size_bytes": 2,
+          "storage_type": "int16_candidate",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "unknown"
+        },
+        {
+          "id": "unknown_numeric_002",
+          "offset_in_numeric_block": 2,
+          "size_bytes": 2,
+          "storage_type": "int16_candidate",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "unknown"
+        },
+        {
+          "id": "unknown_numeric_004",
+          "offset_in_numeric_block": 4,
+          "size_bytes": 1,
+          "storage_type": "uint8",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "not_applicable_with_evidence"
+        },
+        {
+          "id": "unknown_numeric_005",
+          "offset_in_numeric_block": 5,
+          "size_bytes": 4,
+          "storage_type": "int32_candidate",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "unknown"
+        },
+        {
+          "id": "unknown_numeric_009",
+          "offset_in_numeric_block": 9,
+          "size_bytes": 1,
+          "storage_type": "uint8",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "not_applicable_with_evidence"
+        },
+        {
+          "id": "unknown_numeric_010",
+          "offset_in_numeric_block": 10,
+          "size_bytes": 1,
+          "storage_type": "uint8",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "not_applicable_with_evidence"
+        },
+        {
+          "id": "unknown_numeric_011",
+          "offset_in_numeric_block": 11,
+          "size_bytes": 1,
+          "storage_type": "uint8",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "not_applicable_with_evidence"
+        },
+        {
+          "id": "unknown_numeric_012",
+          "offset_in_numeric_block": 12,
+          "size_bytes": 4,
+          "storage_type": "int32_candidate",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "unknown"
+        },
+        {
+          "id": "unknown_numeric_016",
+          "offset_in_numeric_block": 16,
+          "size_bytes": 1,
+          "storage_type": "uint8",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "not_applicable_with_evidence"
+        },
+        {
+          "id": "unknown_numeric_017",
+          "offset_in_numeric_block": 17,
+          "size_bytes": 4,
+          "storage_type": "int32_candidate",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "unknown"
+        },
+        {
+          "id": "unknown_numeric_021",
+          "offset_in_numeric_block": 21,
+          "size_bytes": 1,
+          "storage_type": "uint8",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "not_applicable_with_evidence"
+        },
+        {
+          "id": "unknown_numeric_022",
+          "offset_in_numeric_block": 22,
+          "size_bytes": 1,
+          "storage_type": "uint8",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "not_applicable_with_evidence"
+        },
+        {
+          "id": "unknown_numeric_023",
+          "offset_in_numeric_block": 23,
+          "size_bytes": 1,
+          "storage_type": "uint8",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "not_applicable_with_evidence"
+        },
+        {
+          "id": "unknown_numeric_024",
+          "offset_in_numeric_block": 24,
+          "size_bytes": 1,
+          "storage_type": "uint8",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "not_applicable_with_evidence"
+        },
+        {
+          "id": "unknown_numeric_025",
+          "offset_in_numeric_block": 25,
+          "size_bytes": 1,
+          "storage_type": "uint8",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "not_applicable_with_evidence"
+        },
+        {
+          "id": "unknown_numeric_026",
+          "offset_in_numeric_block": 26,
+          "size_bytes": 1,
+          "storage_type": "uint8",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "not_applicable_with_evidence"
+        },
+        {
+          "id": "unknown_numeric_027",
+          "offset_in_numeric_block": 27,
+          "size_bytes": 1,
+          "storage_type": "uint8",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "not_applicable_with_evidence"
+        },
+        {
+          "id": "unknown_numeric_028",
+          "offset_in_numeric_block": 28,
+          "size_bytes": 1,
+          "storage_type": "uint8",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "not_applicable_with_evidence"
+        },
+        {
+          "id": "unknown_numeric_029",
+          "offset_in_numeric_block": 29,
+          "size_bytes": 2,
+          "storage_type": "int16_candidate",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "unknown"
+        }
+      ],
+      "status": "decoded",
+      "semantic_status": "unknown"
+    },
+    {
+      "format_id": "kill-status",
+      "numeric_block_layout": "<BihBhBhBhBhBhBh",
+      "numeric_block_size_bytes": 25,
+      "fields": [
+        {
+          "id": "unknown_numeric_000",
+          "offset_in_numeric_block": 0,
+          "size_bytes": 1,
+          "storage_type": "uint8",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "not_applicable_with_evidence"
+        },
+        {
+          "id": "unknown_numeric_001",
+          "offset_in_numeric_block": 1,
+          "size_bytes": 4,
+          "storage_type": "int32_candidate",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "unknown"
+        },
+        {
+          "id": "unknown_numeric_005",
+          "offset_in_numeric_block": 5,
+          "size_bytes": 2,
+          "storage_type": "int16_candidate",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "unknown"
+        },
+        {
+          "id": "unknown_numeric_007",
+          "offset_in_numeric_block": 7,
+          "size_bytes": 1,
+          "storage_type": "uint8",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "not_applicable_with_evidence"
+        },
+        {
+          "id": "unknown_numeric_008",
+          "offset_in_numeric_block": 8,
+          "size_bytes": 2,
+          "storage_type": "int16_candidate",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "unknown"
+        },
+        {
+          "id": "unknown_numeric_010",
+          "offset_in_numeric_block": 10,
+          "size_bytes": 1,
+          "storage_type": "uint8",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "not_applicable_with_evidence"
+        },
+        {
+          "id": "unknown_numeric_011",
+          "offset_in_numeric_block": 11,
+          "size_bytes": 2,
+          "storage_type": "int16_candidate",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "unknown"
+        },
+        {
+          "id": "unknown_numeric_013",
+          "offset_in_numeric_block": 13,
+          "size_bytes": 1,
+          "storage_type": "uint8",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "not_applicable_with_evidence"
+        },
+        {
+          "id": "unknown_numeric_014",
+          "offset_in_numeric_block": 14,
+          "size_bytes": 2,
+          "storage_type": "int16_candidate",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "unknown"
+        },
+        {
+          "id": "unknown_numeric_016",
+          "offset_in_numeric_block": 16,
+          "size_bytes": 1,
+          "storage_type": "uint8",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "not_applicable_with_evidence"
+        },
+        {
+          "id": "unknown_numeric_017",
+          "offset_in_numeric_block": 17,
+          "size_bytes": 2,
+          "storage_type": "int16_candidate",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "unknown"
+        },
+        {
+          "id": "unknown_numeric_019",
+          "offset_in_numeric_block": 19,
+          "size_bytes": 1,
+          "storage_type": "uint8",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "not_applicable_with_evidence"
+        },
+        {
+          "id": "unknown_numeric_020",
+          "offset_in_numeric_block": 20,
+          "size_bytes": 2,
+          "storage_type": "int16_candidate",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "unknown"
+        },
+        {
+          "id": "unknown_numeric_022",
+          "offset_in_numeric_block": 22,
+          "size_bytes": 1,
+          "storage_type": "uint8",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "not_applicable_with_evidence"
+        },
+        {
+          "id": "unknown_numeric_023",
+          "offset_in_numeric_block": 23,
+          "size_bytes": 2,
+          "storage_type": "int16_candidate",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "unknown"
+        }
+      ],
+      "status": "decoded",
+      "semantic_status": "unknown"
+    },
+    {
+      "format_id": "guild-house",
+      "numeric_block_layout": "<BBBBBhhhhBB",
+      "numeric_block_size_bytes": 15,
+      "fields": [
+        {
+          "id": "unknown_numeric_000",
+          "offset_in_numeric_block": 0,
+          "size_bytes": 1,
+          "storage_type": "uint8",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "not_applicable_with_evidence"
+        },
+        {
+          "id": "unknown_numeric_001",
+          "offset_in_numeric_block": 1,
+          "size_bytes": 1,
+          "storage_type": "uint8",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "not_applicable_with_evidence"
+        },
+        {
+          "id": "unknown_numeric_002",
+          "offset_in_numeric_block": 2,
+          "size_bytes": 1,
+          "storage_type": "uint8",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "not_applicable_with_evidence"
+        },
+        {
+          "id": "unknown_numeric_003",
+          "offset_in_numeric_block": 3,
+          "size_bytes": 1,
+          "storage_type": "uint8",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "not_applicable_with_evidence"
+        },
+        {
+          "id": "unknown_numeric_004",
+          "offset_in_numeric_block": 4,
+          "size_bytes": 1,
+          "storage_type": "uint8",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "not_applicable_with_evidence"
+        },
+        {
+          "id": "unknown_numeric_005",
+          "offset_in_numeric_block": 5,
+          "size_bytes": 2,
+          "storage_type": "int16_candidate",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "unknown"
+        },
+        {
+          "id": "unknown_numeric_007",
+          "offset_in_numeric_block": 7,
+          "size_bytes": 2,
+          "storage_type": "int16_candidate",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "unknown"
+        },
+        {
+          "id": "unknown_numeric_009",
+          "offset_in_numeric_block": 9,
+          "size_bytes": 2,
+          "storage_type": "int16_candidate",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "unknown"
+        },
+        {
+          "id": "unknown_numeric_011",
+          "offset_in_numeric_block": 11,
+          "size_bytes": 2,
+          "storage_type": "int16_candidate",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "unknown"
+        },
+        {
+          "id": "unknown_numeric_013",
+          "offset_in_numeric_block": 13,
+          "size_bytes": 1,
+          "storage_type": "uint8",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "not_applicable_with_evidence"
+        },
+        {
+          "id": "unknown_numeric_014",
+          "offset_in_numeric_block": 14,
+          "size_bytes": 1,
+          "storage_type": "uint8",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "not_applicable_with_evidence"
+        }
+      ],
+      "status": "decoded",
+      "semantic_status": "unknown"
+    },
+    {
+      "format_id": "cash",
+      "numeric_block_layout": "<iiiiiBiBiBiBiBiBiBiBiBiBiBiBiBiBiBiBiBiBiBiBiBiBiBiB",
+      "numeric_block_size_bytes": 136,
+      "fields": [
+        {
+          "id": "unknown_numeric_000",
+          "offset_in_numeric_block": 0,
+          "size_bytes": 4,
+          "storage_type": "int32_candidate",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "unknown"
+        },
+        {
+          "id": "unknown_numeric_004",
+          "offset_in_numeric_block": 4,
+          "size_bytes": 4,
+          "storage_type": "int32_candidate",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "unknown"
+        },
+        {
+          "id": "unknown_numeric_008",
+          "offset_in_numeric_block": 8,
+          "size_bytes": 4,
+          "storage_type": "int32_candidate",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "unknown"
+        },
+        {
+          "id": "unknown_numeric_012",
+          "offset_in_numeric_block": 12,
+          "size_bytes": 4,
+          "storage_type": "int32_candidate",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "unknown"
+        },
+        {
+          "id": "unknown_numeric_016",
+          "offset_in_numeric_block": 16,
+          "size_bytes": 4,
+          "storage_type": "int32_candidate",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "unknown"
+        },
+        {
+          "id": "unknown_numeric_020",
+          "offset_in_numeric_block": 20,
+          "size_bytes": 1,
+          "storage_type": "uint8",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "not_applicable_with_evidence"
+        },
+        {
+          "id": "unknown_numeric_021",
+          "offset_in_numeric_block": 21,
+          "size_bytes": 4,
+          "storage_type": "int32_candidate",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "unknown"
+        },
+        {
+          "id": "unknown_numeric_025",
+          "offset_in_numeric_block": 25,
+          "size_bytes": 1,
+          "storage_type": "uint8",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "not_applicable_with_evidence"
+        },
+        {
+          "id": "unknown_numeric_026",
+          "offset_in_numeric_block": 26,
+          "size_bytes": 4,
+          "storage_type": "int32_candidate",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "unknown"
+        },
+        {
+          "id": "unknown_numeric_030",
+          "offset_in_numeric_block": 30,
+          "size_bytes": 1,
+          "storage_type": "uint8",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "not_applicable_with_evidence"
+        },
+        {
+          "id": "unknown_numeric_031",
+          "offset_in_numeric_block": 31,
+          "size_bytes": 4,
+          "storage_type": "int32_candidate",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "unknown"
+        },
+        {
+          "id": "unknown_numeric_035",
+          "offset_in_numeric_block": 35,
+          "size_bytes": 1,
+          "storage_type": "uint8",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "not_applicable_with_evidence"
+        },
+        {
+          "id": "unknown_numeric_036",
+          "offset_in_numeric_block": 36,
+          "size_bytes": 4,
+          "storage_type": "int32_candidate",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "unknown"
+        },
+        {
+          "id": "unknown_numeric_040",
+          "offset_in_numeric_block": 40,
+          "size_bytes": 1,
+          "storage_type": "uint8",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "not_applicable_with_evidence"
+        },
+        {
+          "id": "unknown_numeric_041",
+          "offset_in_numeric_block": 41,
+          "size_bytes": 4,
+          "storage_type": "int32_candidate",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "unknown"
+        },
+        {
+          "id": "unknown_numeric_045",
+          "offset_in_numeric_block": 45,
+          "size_bytes": 1,
+          "storage_type": "uint8",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "not_applicable_with_evidence"
+        },
+        {
+          "id": "unknown_numeric_046",
+          "offset_in_numeric_block": 46,
+          "size_bytes": 4,
+          "storage_type": "int32_candidate",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "unknown"
+        },
+        {
+          "id": "unknown_numeric_050",
+          "offset_in_numeric_block": 50,
+          "size_bytes": 1,
+          "storage_type": "uint8",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "not_applicable_with_evidence"
+        },
+        {
+          "id": "unknown_numeric_051",
+          "offset_in_numeric_block": 51,
+          "size_bytes": 4,
+          "storage_type": "int32_candidate",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "unknown"
+        },
+        {
+          "id": "unknown_numeric_055",
+          "offset_in_numeric_block": 55,
+          "size_bytes": 1,
+          "storage_type": "uint8",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "not_applicable_with_evidence"
+        },
+        {
+          "id": "unknown_numeric_056",
+          "offset_in_numeric_block": 56,
+          "size_bytes": 4,
+          "storage_type": "int32_candidate",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "unknown"
+        },
+        {
+          "id": "unknown_numeric_060",
+          "offset_in_numeric_block": 60,
+          "size_bytes": 1,
+          "storage_type": "uint8",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "not_applicable_with_evidence"
+        },
+        {
+          "id": "unknown_numeric_061",
+          "offset_in_numeric_block": 61,
+          "size_bytes": 4,
+          "storage_type": "int32_candidate",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "unknown"
+        },
+        {
+          "id": "unknown_numeric_065",
+          "offset_in_numeric_block": 65,
+          "size_bytes": 1,
+          "storage_type": "uint8",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "not_applicable_with_evidence"
+        },
+        {
+          "id": "unknown_numeric_066",
+          "offset_in_numeric_block": 66,
+          "size_bytes": 4,
+          "storage_type": "int32_candidate",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "unknown"
+        },
+        {
+          "id": "unknown_numeric_070",
+          "offset_in_numeric_block": 70,
+          "size_bytes": 1,
+          "storage_type": "uint8",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "not_applicable_with_evidence"
+        },
+        {
+          "id": "unknown_numeric_071",
+          "offset_in_numeric_block": 71,
+          "size_bytes": 4,
+          "storage_type": "int32_candidate",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "unknown"
+        },
+        {
+          "id": "unknown_numeric_075",
+          "offset_in_numeric_block": 75,
+          "size_bytes": 1,
+          "storage_type": "uint8",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "not_applicable_with_evidence"
+        },
+        {
+          "id": "unknown_numeric_076",
+          "offset_in_numeric_block": 76,
+          "size_bytes": 4,
+          "storage_type": "int32_candidate",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "unknown"
+        },
+        {
+          "id": "unknown_numeric_080",
+          "offset_in_numeric_block": 80,
+          "size_bytes": 1,
+          "storage_type": "uint8",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "not_applicable_with_evidence"
+        },
+        {
+          "id": "unknown_numeric_081",
+          "offset_in_numeric_block": 81,
+          "size_bytes": 4,
+          "storage_type": "int32_candidate",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "unknown"
+        },
+        {
+          "id": "unknown_numeric_085",
+          "offset_in_numeric_block": 85,
+          "size_bytes": 1,
+          "storage_type": "uint8",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "not_applicable_with_evidence"
+        },
+        {
+          "id": "unknown_numeric_086",
+          "offset_in_numeric_block": 86,
+          "size_bytes": 4,
+          "storage_type": "int32_candidate",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "unknown"
+        },
+        {
+          "id": "unknown_numeric_090",
+          "offset_in_numeric_block": 90,
+          "size_bytes": 1,
+          "storage_type": "uint8",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "not_applicable_with_evidence"
+        },
+        {
+          "id": "unknown_numeric_091",
+          "offset_in_numeric_block": 91,
+          "size_bytes": 4,
+          "storage_type": "int32_candidate",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "unknown"
+        },
+        {
+          "id": "unknown_numeric_095",
+          "offset_in_numeric_block": 95,
+          "size_bytes": 1,
+          "storage_type": "uint8",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "not_applicable_with_evidence"
+        },
+        {
+          "id": "unknown_numeric_096",
+          "offset_in_numeric_block": 96,
+          "size_bytes": 4,
+          "storage_type": "int32_candidate",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "unknown"
+        },
+        {
+          "id": "unknown_numeric_100",
+          "offset_in_numeric_block": 100,
+          "size_bytes": 1,
+          "storage_type": "uint8",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "not_applicable_with_evidence"
+        },
+        {
+          "id": "unknown_numeric_101",
+          "offset_in_numeric_block": 101,
+          "size_bytes": 4,
+          "storage_type": "int32_candidate",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "unknown"
+        },
+        {
+          "id": "unknown_numeric_105",
+          "offset_in_numeric_block": 105,
+          "size_bytes": 1,
+          "storage_type": "uint8",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "not_applicable_with_evidence"
+        },
+        {
+          "id": "unknown_numeric_106",
+          "offset_in_numeric_block": 106,
+          "size_bytes": 4,
+          "storage_type": "int32_candidate",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "unknown"
+        },
+        {
+          "id": "unknown_numeric_110",
+          "offset_in_numeric_block": 110,
+          "size_bytes": 1,
+          "storage_type": "uint8",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "not_applicable_with_evidence"
+        },
+        {
+          "id": "unknown_numeric_111",
+          "offset_in_numeric_block": 111,
+          "size_bytes": 4,
+          "storage_type": "int32_candidate",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "unknown"
+        },
+        {
+          "id": "unknown_numeric_115",
+          "offset_in_numeric_block": 115,
+          "size_bytes": 1,
+          "storage_type": "uint8",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "not_applicable_with_evidence"
+        },
+        {
+          "id": "unknown_numeric_116",
+          "offset_in_numeric_block": 116,
+          "size_bytes": 4,
+          "storage_type": "int32_candidate",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "unknown"
+        },
+        {
+          "id": "unknown_numeric_120",
+          "offset_in_numeric_block": 120,
+          "size_bytes": 1,
+          "storage_type": "uint8",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "not_applicable_with_evidence"
+        },
+        {
+          "id": "unknown_numeric_121",
+          "offset_in_numeric_block": 121,
+          "size_bytes": 4,
+          "storage_type": "int32_candidate",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "unknown"
+        },
+        {
+          "id": "unknown_numeric_125",
+          "offset_in_numeric_block": 125,
+          "size_bytes": 1,
+          "storage_type": "uint8",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "not_applicable_with_evidence"
+        },
+        {
+          "id": "unknown_numeric_126",
+          "offset_in_numeric_block": 126,
+          "size_bytes": 4,
+          "storage_type": "int32_candidate",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "unknown"
+        },
+        {
+          "id": "unknown_numeric_130",
+          "offset_in_numeric_block": 130,
+          "size_bytes": 1,
+          "storage_type": "uint8",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "not_applicable_with_evidence"
+        },
+        {
+          "id": "unknown_numeric_131",
+          "offset_in_numeric_block": 131,
+          "size_bytes": 4,
+          "storage_type": "int32_candidate",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "unknown"
+        },
+        {
+          "id": "unknown_numeric_135",
+          "offset_in_numeric_block": 135,
+          "size_bytes": 1,
+          "storage_type": "uint8",
+          "endianness": "little",
+          "semantic_status": "unknown",
+          "signedness_status": "not_applicable_with_evidence"
+        }
+      ],
+      "status": "decoded",
+      "semantic_status": "unknown"
+    }
+  ],
+  "unknowns": [
+    "Numeric meaning, signedness, units, enum labels, and cross-catalog references require client usage analysis",
+    "Normalized field offsets are relative to the numeric block; numeric_block_offset locates it within each variable-length record"
+  ]
+}

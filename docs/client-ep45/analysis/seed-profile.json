@@ -1,0 +1,23 @@
+{
+  "id": "EP45-A2-SEED-001",
+  "baseline_id": "rebirth-evolution-ep45-98c7dd3a",
+  "executable_sha256": "98c7dd3a0589d5695e489d81b1acffdd456c633b47e913757b67e5f492d5ec48",
+  "image_base": "0x00400000",
+  "round_key": {
+    "file_offset": 3117384,
+    "virtual_address": "0x006f9148",
+    "size_bytes": 128,
+    "sha256": "aa2e5a8115eb016783f52ebf9541292501b9e7c8144d89ba70c694594f81d2f0"
+  },
+  "lookup_tables": {
+    "file_offset": 3117776,
+    "virtual_address": "0x006f92d0",
+    "size_bytes": 4096,
+    "sha256": "495870e2c79bd79ea61a1c59e32647ad51871d0d9d487ba3fdeb8eefd43a65b9"
+  },
+  "status": "statically_validated",
+  "unknowns": [
+    "Loading function and references to the round-key schedule still need full analysis",
+    "Constants identify this executable only; other client builds require separate profiles"
+  ]
+}

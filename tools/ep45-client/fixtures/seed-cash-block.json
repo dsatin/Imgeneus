@@ -1,0 +1,11 @@
+{
+  "baseline_id": "rebirth-evolution-ep45-98c7dd3a",
+  "archive_entry_id": "tree-000011",
+  "source_sha256": "24e026fabacd62cbf3d154313e8906972e2a0d51e5d59142a920bce6596050ab",
+  "source_offset": 64,
+  "size_bytes": 16,
+  "ciphertext_hex": "af37b49c6a0fa881422bce8e51d355c8",
+  "plaintext_hex": "6c000000010000000100000095000000",
+  "evidence_id": "EP45-A2-SEED-001",
+  "validation": "Full Cash payload CRC32 and decrypt/encrypt round trip verified before selecting this block"
+}

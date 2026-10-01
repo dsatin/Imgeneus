@@ -1,0 +1,40 @@
+{
+  "id": "EP45-A2-CONTAINERS-001",
+  "domain": "sdata",
+  "baseline_id": "rebirth-evolution-ep45-98c7dd3a",
+  "status": "statically_validated",
+  "sources": [
+    {
+      "path": "game.exe",
+      "sha256": "98c7dd3a0589d5695e489d81b1acffdd456c633b47e913757b67e5f492d5ec48"
+    },
+    {
+      "path": "data.saf",
+      "sha256": "e3c7f3a8268d5242b6199b99ca482c3390fc012fad2257dd155b1e35794d5e7b"
+    }
+  ],
+  "method": "combined",
+  "reproduction": {
+    "tool": "tools/ep45-client/sdata.py",
+    "version": "1.0.0",
+    "command": "python3 tools/ep45-client/sdata.py --manifest .client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/archive-files.jsonl --executable .client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/originals/game.exe --crypto-profile docs/client-ep45/analysis/seed-profile.json --output-dir .client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/decoded --report docs/client-ep45/catalogs/sdata-containers.json"
+  },
+  "observed_at": "2026-10-01T22:47:56.089034+00:00",
+  "validation": [
+    "analysis/seed-profile.json: executable and crypto segment hashes",
+    "analysis/sdata-functions.json: default key pointer, block loop, CRC32",
+    "catalogs/sdata-containers.json: 10 CRC32 and full cipher round-trip checks",
+    "validation/sdata-backend-comparison.json: 13 source results match both implementations",
+    "37 passing tests: python3 -m unittest discover -s tools/ep45-client -p 'test_*.py'"
+  ],
+  "unknowns": [
+    "Four active SData record layouts remain undecoded",
+    "Numeric field semantics, signedness, units, enums, and relationships are not yet validated",
+    "Four cash text encodings remain unknown",
+    "Supplemental record usage is unknown"
+  ],
+  "backend_implications": [
+    "Container payloads are verified sources for further format analysis",
+    "Five structural readers do not establish server rules or release phase B"
+  ]
+}
