@@ -58,6 +58,72 @@ try
 catch (HandlerActionNotFoundException) { }
 await invoker.InvokeAsync(Operation.Sync, new RawPacket(1));
 Console.WriteLine("PASS: scoped sync/async dispatch, packet transformation, lifetime and exceptions");
+CheckLegacyInventory();
+CheckLegacySelection();
+using (var disconnected = new DisconnectedClient(host.Services))
+{
+    using var packet = new ImgeneusPacket(PacketType.QUIT_GAME);
+    disconnected.Send(packet);
+    var closedSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+    disconnected.AttachSocket(closedSocket);
+    closedSocket.Dispose();
+    disconnected.Send(packet);
+    disconnected.Dispose();
+    disconnected.Send(packet);
+}
+Console.WriteLine("PASS: packets are skipped before connection and after socket/sender disposal");
+
+static void CheckLegacySelection()
+{
+    var character = new Imgeneus.Database.Entities.DbCharacter
+    {
+        Id = 42, Name = "TestEP45", Level = 7, IsRename = true,
+        Items = new List<Imgeneus.Database.Entities.DbCharacterItems>()
+    };
+    using var packet = new ImgeneusPacket(PacketType.CHARACTER_LIST);
+    packet.Write((byte)2);
+    Imgeneus.World.Packets.LegacyCharacterSelectionWriter.Write(packet, character);
+    var bytes = packet.Buffer;
+    Check(bytes.Length == 79, "EP4.5 character selection frame length");
+    Check(bytes[4] == 2 && BinaryPrimitives.ReadUInt32LittleEndian(bytes.AsSpan(5)) == 42,
+        "EP4.5 character slot and identifier");
+    Check(System.Text.Encoding.UTF8.GetString(bytes, 58, 8) == "TestEP45",
+        "EP4.5 character name offset");
+    Check(bytes[77] == 0 && bytes[78] == 1, "EP4.5 delete/rename flag offsets");
+    Console.WriteLine("PASS: EP4.5 character selection wire format");
+}
+
+static void CheckLegacyInventory()
+{
+    using var packet = new ImgeneusPacket(PacketType.CHARACTER_ITEMS);
+    packet.Write((byte)1);
+    LegacyInventoryItemWriter.Write(packet, 2, 23, 13, 54, 513,
+        new[] { 1, 2, 3, 4, 5, 6 }, 9, "01020304050607080910");
+    var frame = packet.Buffer;
+    Check(frame.Length == 39 && BinaryPrimitives.ReadUInt16LittleEndian(frame) == 39,
+        "EP4.5 frame consists of header, opcode, count and one 34-byte record");
+    Check(frame[5..18].SequenceEqual(Convert.FromHexString("02170D36010201020304050609")),
+        "EP4.5 item order, little-endian quality, byte gems and count");
+    Check(System.Text.Encoding.ASCII.GetString(frame[18..38]) == "01020304050607080910" && frame[38] == 0,
+        "EP4.5 craft name is 21 bytes including its terminator");
+
+    using var invalid = new ImgeneusPacket(PacketType.CHARACTER_ITEMS);
+    try
+    {
+        LegacyInventoryItemWriter.Write(invalid, 6, 0, 1, 1, 0, new int[6], 1, "");
+        throw new Exception("Invalid bag was accepted");
+    }
+    catch (ArgumentOutOfRangeException) { }
+    Check(invalid.Length == 4, "Invalid inventory coordinates are rejected before writing");
+    try
+    {
+        LegacyInventoryItemWriter.Write(invalid, 0, 0, 1, 1, 0, new[] { 256, 0, 0, 0, 0, 0 }, 1, "");
+        throw new Exception("Unrepresentable gem was accepted");
+    }
+    catch (OverflowException) { }
+    Check(invalid.Length == 4, "Oversized gem identifiers cannot shift or corrupt item records");
+    Console.WriteLine("PASS: EP4.5 inventory wire format and client array bounds");
+}
 
 static void Check(bool condition, string message)
 {
@@ -112,6 +178,28 @@ static async Task<byte[]> ReadFrameAsync(NetworkStream stream, CancellationToken
 }
 
 public enum Operation { Sync, Async, Failure }
+
+public sealed class DisconnectedClient : Imgeneus.Network.Client.ImgeneusClient
+{
+    private bool _scopeReleased;
+    public DisconnectedClient(IServiceProvider services) : base(
+        Microsoft.Extensions.Logging.Abstractions.NullLogger<Imgeneus.Network.Client.ImgeneusClient>.Instance,
+        new CryptoManager(), services) { }
+    public override PacketType[] ExcludedPackets => Array.Empty<PacketType>();
+    public override Task InvokePacketAsync(PacketType type, LiteNetwork.Protocol.Abstractions.ILitePacketStream packet)
+        => Task.CompletedTask;
+    public void AttachSocket(Socket socket) => typeof(LiteNetwork.Server.LiteServerUser)
+        .GetProperty(nameof(Socket))!.SetValue(this, socket);
+    public override void Dispose()
+    {
+        base.Dispose();
+        if (!_scopeReleased)
+        {
+            _scope.Dispose();
+            _scopeReleased = true;
+        }
+    }
+}
 public record RawPacket(int Value);
 public interface IParsedPacket { int Value { get; set; } }
 public class ParsedPacket : IParsedPacket { public int Value { get; set; } }

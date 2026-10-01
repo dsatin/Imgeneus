@@ -129,18 +129,27 @@ namespace Imgeneus.Network.Client
         /// <param name="shouldEncrypt">optional param, set to true if packet should be encrypted</param>
         public void Send(ImgeneusPacket packet, bool shouldEncrypt = true)
         {
-            byte[] bytes;
+            if (IsDisposed || Socket is null)
+                return;
 
-            if (shouldEncrypt)
+            try
             {
-                bytes = EncryptPacket(packet);
-            }
-            else
-            {
-                bytes = packet.Buffer;
-            }
+                if (!Socket.Connected)
+                    return;
 
-            Send(bytes);
+                var rawBytes = packet.Buffer;
+                var type = (PacketType)BitConverter.ToUInt16(rawBytes, 2);
+                _logger.LogTrace("Sending {type} (0x{opcode}) packet ({length} bytes, expanded key: {expanded}) to {endpoint}.",
+                    type, ((ushort)type).ToString("X4"), rawBytes.Length,
+                    CryptoManager.UseExpandedKey, Socket.RemoteEndPoint);
+
+                var bytes = shouldEncrypt ? EncryptPacket(packet) : rawBytes;
+                Send(bytes);
+            }
+            catch (ObjectDisposedException)
+            {
+                // Disconnection can dispose the sender between the connection check and enqueue.
+            }
         }
 
 

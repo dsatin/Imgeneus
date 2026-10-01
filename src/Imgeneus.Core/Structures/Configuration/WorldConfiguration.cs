@@ -13,6 +13,11 @@
         public int BuildVersion { get; set; }
 
         /// <summary>
+        /// Uses the experimental EP4.5 inventory and character-list wire formats.
+        /// </summary>
+        public bool LegacyInventoryPackets { get; set; }
+
+        /// <summary>
         /// Public ip address.
         /// </summary>
         public string Host { get; set; }

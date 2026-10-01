@@ -26,3 +26,4 @@ README.md
 deploy/backups
 deploy/logs
 .env.*
+.client-ep45-cache

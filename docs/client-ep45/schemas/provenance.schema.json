@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:imgeneus:client-ep45:provenance:1",
+  "title": "Evidência de referência do cliente EP4.5",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "domain", "baseline_id", "status", "sources", "method", "reproduction", "observed_at", "unknowns"],
+  "properties": {
+    "id": { "type": "string", "minLength": 1 },
+    "domain": { "type": "string", "minLength": 1 },
+    "baseline_id": { "type": "string", "minLength": 1 },
+    "status": {
+      "enum": ["inventariado", "extraido", "decodificado", "validado_estaticamente", "validado_em_execucao", "inferido", "desconhecido", "nao_aplicavel_com_evidencia"]
+    },
+    "sources": {
+      "type": "array", "minItems": 1,
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["path", "sha256"],
+        "properties": {
+          "path": { "type": "string", "minLength": 1 },
+          "sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+          "archive_entry_ordinal": { "type": "integer", "minimum": 0 },
+          "offset": { "type": "integer", "minimum": 0 },
+          "length": { "type": "integer", "minimum": 0 },
+          "virtual_address": { "type": "string", "pattern": "^0x[0-9A-Fa-f]+$" },
+          "record_id": { "type": "string" }
+        }
+      }
+    },
+    "method": { "enum": ["file_inventory", "archive_extraction", "format_parser", "static_analysis", "runtime_observation", "combined"] },
+    "reproduction": {
+      "type": "object", "additionalProperties": false,
+      "required": ["tool", "version", "command"],
+      "properties": {
+        "tool": { "type": "string", "minLength": 1 },
+        "version": { "type": "string", "minLength": 1 },
+        "command": { "type": "string", "minLength": 1 },
+        "scenario_id": { "type": "string" }
+      }
+    },
+    "observed_at": { "type": "string", "format": "date-time" },
+    "validation": { "type": "array", "items": { "type": "string" } },
+    "unknowns": { "type": "array", "items": { "type": "string" } },
+    "backend_implications": { "type": "array", "items": { "type": "string" } }
+  },
+  "allOf": [
+    {
+      "if": { "properties": { "status": { "const": "validado_em_execucao" } } },
+      "then": {
+        "required": ["validation"],
+        "properties": {
+          "validation": { "minItems": 1 },
+          "reproduction": { "required": ["scenario_id"] }
+        }
+      }
+    }
+  ]
+}

@@ -119,9 +119,46 @@ no Manjaro usando Heroic com GE-Proton: login, seleção de personagens,
 criação de personagem e entrada no mundo. No Heroic, configure `game.exe`
 como executável e `start 127.0.0.1 YOUR_USERNAME:YOUR_PASSWORD` como argumentos.
 
-A build atual implementa EP8 ps0032; não há suporte de protocolo implementado
-para EP4.5. As enumerações de episódios no Parsec se referem à leitura de
-arquivos de dados, não à compatibilidade dos clientes com o servidor.
+A configuração padrão implementa EP8 ps0032. As enumerações de episódios
+no Parsec se referem à leitura de arquivos de dados, não à compatibilidade
+dos clientes com o servidor.
+
+### Teste experimental com EP4.5
+
+O cliente Rebirth Evolution de 2011 completou handshake, login, seleção e
+criação de personagem. Seu leitor do pacote `CHARACTER_ITEMS` (`0x0106`)
+usa registros de 34 bytes: bag/slot/type/typeId, quality de 2 bytes, seis
+gemas de 1 byte, count e craft name de 21 bytes. O formato EP8 inclui gemas
+de 4 bytes e campos adicionais e causou uma falha em `game.exe+0x17ce8d`.
+
+Para testar a adaptação das listas de inventário e de personagens, configure:
+
+```dotenv
+WORLD_LEGACY_INVENTORY=true
+WORLD_LOG_LEVEL=Trace
+```
+
+Compile e recrie apenas World:
+
+```bash
+docker compose -f compose.linux.yml build world
+docker compose -f compose.linux.yml up -d --no-deps world
+```
+
+O diagnóstico registra códigos e tamanhos dos pacotes, sem seu conteúdo.
+A opção vale para todo o World; use `false` para o cliente EP8. Esta alteração
+não representa suporte completo ao EP4.5: movimentação de itens, combate e
+demais formatos ainda precisam de validação. A entrada no mapa e o logout foram
+confirmados no cliente. O retorno à seleção usa oito tipos/IDs de equipamento,
+nome de 19 bytes e indicadores de exclusão/renomeação, conforme o leitor em
+`game.exe` no endereço `0x57C790`; a segunda entrada ainda requer teste manual.
+
+Nessa variante inglesa, o IP de Login é embutido no executável; os argumentos
+do EP8 não o substituem. A instalação local usa `127.0.0.1`, TCP 30800, e
+`start game` no Heroic. O Login anuncia o World, TCP 30810. O executável original
+tem SHA-256 `45755d927ee66c7c5e354defb5e8f9329f8f21848307e62797f368dee2c33f91`;
+seu endereço inglês está no offset `0x2A9B84`. Outros executáveis podem ter
+endereços e offsets diferentes.
 
 ## Acesso externo
 

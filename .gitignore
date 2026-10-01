@@ -350,3 +350,4 @@ healthchecksdb
 /src/Imgeneus.World/ScaffoldingReadMe.txt
 /src/Imgeneus.World/*.db-shm
 /src/Imgeneus.World/*.db-wal
+/.client-ep45-cache/

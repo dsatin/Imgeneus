@@ -61,6 +61,8 @@ services:
       ASPNETCORE_URLS: http://0.0.0.0:80
       TcpServer__Host: world
       WorldServer__Host: ${WORLD_ADVERTISED_IPV4:-127.0.0.1}
+      WorldServer__LegacyInventoryPackets: ${WORLD_LEGACY_INVENTORY:-false}
+      Logging__LogLevel__Default: ${WORLD_LOG_LEVEL:-Information}
       InterServer__Endpoint: http://login/inter_server
     ports:
       - "${GAME_BIND_IP:-127.0.0.1}:30810:30810"

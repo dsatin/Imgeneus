@@ -48,11 +48,20 @@ using Quest = Imgeneus.World.Game.Quests.Quest;
 using Imgeneus.Game.Skills;
 using Imgeneus.Game.Crafting;
 using Imgeneus.Game.Market;
+using Imgeneus.Core.Structures.Configuration;
+using Microsoft.Extensions.Options;
 
 namespace Imgeneus.World.Packets
 {
     public class GamePacketFactory : IGamePacketFactory
     {
+        private readonly bool _legacyInventoryPackets;
+
+        public GamePacketFactory(IOptions<WorldConfiguration> configuration)
+        {
+            _legacyInventoryPackets = configuration.Value.LegacyInventoryPackets;
+        }
+
         #region Handshake
         public void SendGameHandshake(IWorldClient client)
         {
@@ -115,7 +124,10 @@ namespace Imgeneus.World.Packets
                 }
                 else
                 {
-                    packet.Write(new CharacterSelectionScreen(character).Serialize());
+                    if (_legacyInventoryPackets)
+                        LegacyCharacterSelectionWriter.Write(packet, character);
+                    else
+                        packet.Write(new CharacterSelectionScreen(character).Serialize());
                     existingCharacters.Add(packet);
                 }
             }
@@ -317,7 +329,25 @@ namespace Imgeneus.World.Packets
                 var endIndex = startIndex + length;
 
                 using var packet = new ImgeneusPacket(PacketType.CHARACTER_ITEMS);
-                packet.Write(new InventoryItems(inventoryItems.Take(startIndex..endIndex)).Serialize());
+                var items = inventoryItems.Take(startIndex..endIndex).ToList();
+                if (_legacyInventoryPackets)
+                {
+                    packet.Write((byte)items.Count);
+                    foreach (var item in items)
+                    {
+                        var gems = new int[] {
+                            item.Gem1?.TypeId ?? 0, item.Gem2?.TypeId ?? 0,
+                            item.Gem3?.TypeId ?? 0, item.Gem4?.TypeId ?? 0,
+                            item.Gem5?.TypeId ?? 0, item.Gem6?.TypeId ?? 0
+                        };
+                        LegacyInventoryItemWriter.Write(packet, item.Bag, item.Slot, item.Type,
+                            item.TypeId, item.Quality, gems, item.Count, item.GetCraftName());
+                    }
+                }
+                else
+                {
+                    packet.Write(new InventoryItems(items).Serialize());
+                }
                 client.Send(packet);
             }
         }

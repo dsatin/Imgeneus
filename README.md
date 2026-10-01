@@ -8,6 +8,14 @@ It's not about playing a game or competing with any services provided by Aeriaga
 
 This repo also uses the best parts of these repos: [Drakkus/ShaiyaGenesis](https://github.com/Drakkus/ShaiyaGenesis), [Origin](https://github.com/aosyatnik/Origin) and original Imgeneus (removed by creator).
 
+## EP 4.5 development fork
+
+The `develop/ep45-compatibility` branch preserves the experimental Linux/EP4.5
+work and defines a client-first compatibility plan in [AGENTS.md](AGENTS.md).
+The [client reference](docs/client-ep45/README.md) tracks extraction, evidence
+and coverage. Complete client documentation precedes backend implementation;
+the current experiment does not provide full EP4.5 support.
+
 ## Solution description
 
 ##### Imgeneus.Core

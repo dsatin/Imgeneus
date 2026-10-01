@@ -1,0 +1,122 @@
+{
+  "schema_version": 1,
+  "baseline_id": "rebirth-evolution-ep45-98c7dd3a",
+  "generated_at_utc": "2026-10-01T21:32:37.374160+00:00",
+  "source_kind": "loose_client_files",
+  "scope": "Files outside data.saf; internal archive inventory remains pending.",
+  "hash_algorithm": "SHA-256",
+  "generator": "tools/ep45-client/inventory.py",
+  "file_count": 18,
+  "total_size_bytes": 2498740140,
+  "skipped_symlinks": [],
+  "files": [
+    {
+      "path": "CONFIG.INI",
+      "size_bytes": 8803,
+      "sha256": "41d29299cac895e4e03e989cdfe608b3eff237c6a6e02770447f0edffb297c76",
+      "modified_at_utc": "2026-10-01T20:54:17.402344+00:00"
+    },
+    {
+      "path": "CONFIG.exe",
+      "size_bytes": 3223552,
+      "sha256": "df4bdad9105d29d8e0a14fb65603c601f52dc0fa448c5af3d54c636d1dec7f9b",
+      "modified_at_utc": "2010-03-11T18:29:20+00:00"
+    },
+    {
+      "path": "SORT_LIST.INI",
+      "size_bytes": 29,
+      "sha256": "0d3a0f21c59bb35a066096d2989c91b313fa6b375a275ea28a2a3aef0bad0328",
+      "modified_at_utc": "2010-04-10T04:36:52+00:00"
+    },
+    {
+      "path": "ShaiyaUS.ini",
+      "size_bytes": 330,
+      "sha256": "f76d229a4000df6d99e88a41671ae181a4b442875e1ed55c621c3199c38c1eb5",
+      "modified_at_utc": "2007-11-29T01:36:36+00:00"
+    },
+    {
+      "path": "T_CONFIG.ini",
+      "size_bytes": 3318,
+      "sha256": "838bad43e719ef87a8e0cd99bb2c906c49a85f59970a391e9d3603b8af07e9c1",
+      "modified_at_utc": "2010-04-15T02:53:50+00:00"
+    },
+    {
+      "path": "Updater.exe",
+      "size_bytes": 2834432,
+      "sha256": "d8ec17250030388cdd2b6711233abd9529aba7cac55031b66f78b98ee0b027ef",
+      "modified_at_utc": "2011-11-18T04:57:15.219000+00:00"
+    },
+    {
+      "path": "Version.ini",
+      "size_bytes": 69,
+      "sha256": "ad3f2b68648ca616b175873ecc97d2278a228afe4ef58672f4110641ed042fdd",
+      "modified_at_utc": "2011-11-26T04:44:40+00:00"
+    },
+    {
+      "path": "data.saf",
+      "size_bytes": 2487238964,
+      "sha256": "e3c7f3a8268d5242b6199b99ca482c3390fc012fad2257dd155b1e35794d5e7b",
+      "modified_at_utc": "2011-11-26T04:44:38+00:00"
+    },
+    {
+      "path": "data.sah",
+      "size_bytes": 911512,
+      "sha256": "6ad31356e94e243b45d4f4a6ffe881d76dd945a0e4f7f22687ebdf6026bf7f3c",
+      "modified_at_utc": "2011-11-26T04:44:38+00:00"
+    },
+    {
+      "path": "game.dmp",
+      "size_bytes": 129012,
+      "sha256": "d04423eb4a63079d8b8d70065f14a836d36c265d57c7f3246fb5c057df68c698",
+      "modified_at_utc": "2026-10-01T20:06:27.181321+00:00"
+    },
+    {
+      "path": "game.exe",
+      "size_bytes": 3219456,
+      "sha256": "98c7dd3a0589d5695e489d81b1acffdd456c633b47e913757b67e5f492d5ec48",
+      "modified_at_utc": "2011-11-18T04:47:01.896000+00:00"
+    },
+    {
+      "path": "ijl15.dll",
+      "size_bytes": 372736,
+      "sha256": "334aa12f7dee453d1c6cb1b661a3bb3494d3e4cc9c2ff3f9002064c78404e43a",
+      "modified_at_utc": "2003-12-15T19:42:00+00:00"
+    },
+    {
+      "path": "readme.txt",
+      "size_bytes": 905,
+      "sha256": "85c382536fc2869deacac1f2138e88f74a28c5f40eceb7e82e1895600b0bb587",
+      "modified_at_utc": "2011-11-18T18:22:12+00:00"
+    },
+    {
+      "path": "shaiya.ico",
+      "size_bytes": 15086,
+      "sha256": "412b8a1f70cf6bb32cc782a6f5ba823c632ff3c3eac720c784146103bf335f49",
+      "modified_at_utc": "2010-10-09T13:07:22+00:00"
+    },
+    {
+      "path": "tip.txt",
+      "size_bytes": 745,
+      "sha256": "561a159cb4b8b50037f8550350c195428195b092fb992021415225fca3a9fe5c",
+      "modified_at_utc": "2011-11-05T18:18:58+00:00"
+    },
+    {
+      "path": "unins000.dat",
+      "size_bytes": 2153,
+      "sha256": "cd66bd31884d7855e4944ca6a1580f3cdafac90fd4cef7578f86e9c9d1679b8a",
+      "modified_at_utc": "2026-10-01T19:22:28.948650+00:00"
+    },
+    {
+      "path": "unins000.exe",
+      "size_bytes": 725278,
+      "sha256": "21e0c8c7d55c40116a59ed44218c4d09ff04559b19967d70a9c69f9667e1aa0f",
+      "modified_at_utc": "2026-10-01T19:20:20.363168+00:00"
+    },
+    {
+      "path": "zlib.dll",
+      "size_bytes": 53760,
+      "sha256": "0df0c22bf411ad670d7b8fe5a533e4831313d5a3118cf9216389c642c90ec2f9",
+      "modified_at_utc": "2000-12-04T01:59:00+00:00"
+    }
+  ]
+}

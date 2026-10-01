@@ -8,5 +8,7 @@
   <ItemGroup>
     <FrameworkReference Include="Microsoft.AspNetCore.App" />
     <ProjectReference Include="../../src/Imgeneus.Network/Imgeneus.Network.csproj" />
+    <ProjectReference Include="../../src/Imgeneus.Database/Imgeneus.Database.csproj" />
+    <Compile Include="../../src/Imgeneus.World/Packets/LegacyCharacterSelectionWriter.cs" Link="LegacyCharacterSelectionWriter.cs" />
   </ItemGroup>
 </Project>
