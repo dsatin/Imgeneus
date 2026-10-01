@@ -9,8 +9,11 @@ preserved. Only `CONFIG.INI` changed. The full internal index contains 23,570
 records and stays in cache (~20 MB), indexed by `extraction-report.json`.
 
 Current outputs: `baseline-evidence.json`, `extraction-report.json`,
-`data-sources.json`, `map-files.json`, and `asset-summary.json`. They identify
-sources/assets rather than decoded gameplay records.
+`data-sources.json`, `map-files.json`, and `asset-summary.json`. Those A1 discovery outputs identify sources/assets rather than decoded
+records. A2 adds `sdata-containers.json` and `table-structures.json`; the latter
+indexes five raw/normalized bulk record catalogs and unresolved layouts.
+Discovery header flags describe the earlier A1 inventory; the A2 container
+report records subsequent checksum/decryption validation.
 
 Reproduce from the repository root:
 

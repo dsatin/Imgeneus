@@ -27,3 +27,7 @@ objdump -d -Mintel --start-address=0x57c790 --stop-address=0x57ca50 "$EP45_CLIEN
 Keep full disassembly in cache. Publish only relevant excerpts and function/
 evidence maps. Explain dynamic scenarios and correlate UI actions with
 functions. Strings and historical backend names are clues, not semantic proof.
+
+A2 adds [crypto constants](seed-profile.json) and [bounded loader/function windows](sdata-functions.json).
+Full disassembly stays in cache; addresses, source-byte hashes, inspection bounds,
+and reproduction commands are indexed without claiming complete function boundaries.

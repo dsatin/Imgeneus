@@ -3,11 +3,14 @@
 This directory is the specification source for compatibility with the locally
 installed Rebirth Evolution test client. Identification and SAH/SAF extraction
 are complete: 23,564 tree entries and six supplemental records, with verified
-hashes. Data, assets, UI, and protocol decoding remain in phase A. No EP8
+hashes. Ten encrypted SData containers are verified and five active table structures
+are decoded. Field semantics, remaining data, assets, UI, and protocol remain
+in phase A. No EP8
 gameplay rule has been imported as evidence.
 
 The detailed work order is in [AGENTS.md](../../AGENTS.md): extract and document
 the client first, then implement the backend.
+All compatibility development and commits continue on `develop/ep45-compatibility`.
 
 | Reference | Purpose |
 | --- | --- |
@@ -25,6 +28,9 @@ the client first, then implement the backend.
 | [Tools](../../tools/ep45-client/README.md) | Reproducible commands and tests |
 | [A0/A1 report](validation/phase-a0-a1.md) | Identification and extraction results |
 | [SAH/SAF format](schemas/sah-saf.md) | Observed structure and unknown fields |
+| [A2 initial report](validation/phase-a2-initial.md) | Container and record-structure coverage |
+| [SEED format](schemas/sdata-seed.md) | Client constants, checksums, round trips |
+| [Table structures](schemas/sdata-tables.md) | Lossless record layouts and unresolved semantics |
 
 Raw files and large exports belong in the ignored `.client-ep45-cache/`.
 Tools live in `tools/ep45-client/` and accept the client path as a parameter.

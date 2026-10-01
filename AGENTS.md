@@ -21,8 +21,10 @@ and commit messages must use global English. Preserve original client
 strings, filenames, and raw bytes verbatim as source data; identify their
 encoding and language separately. Do not translate evidence in place.
 
-Create commits only on `develop/ep45-compatibility` or its derived branches.
-Preserve `master` and `develop/linux-server`. Never force-push or rewrite
+Keep all compatibility development and commits on `develop/ep45-compatibility`.
+Do not create separate task branches for this initiative unless the user
+explicitly requests one. Preserve `master` and `develop/linux-server`.
+Never force-push or rewrite
 the base of this initiative. Commit existing work before starting the next
 extraction task; do not create an empty commit for work already committed.
 
@@ -52,7 +54,7 @@ internal rules that it does not reveal.
 ## Initial state to preserve
 
 - Fork: `https://github.com/dsatin/Imgeneus`.
-- Working branch: `develop/ep45-compatibility` and derived branches.
+- Working branch: `develop/ep45-compatibility` for all compatibility work.
 - Linux base: `63e0248ab148481dabe8394a34edd06720525b09`.
   Original upstream: `0ce355594d521c3a06a08f24d0a9b60ebc8a459f`.
 - The existing backend targets EP8. Its serializers, limits, seeds, and

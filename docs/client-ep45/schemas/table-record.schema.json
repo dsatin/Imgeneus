@@ -1,0 +1,160 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:imgeneus:client-ep45:table-record:1",
+  "title": "Structurally decoded SData record with unresolved semantics",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "domain",
+    "baseline_id",
+    "status",
+    "semantic_status",
+    "client_id",
+    "archive_entry_id",
+    "source_sha256",
+    "decoded_sha256",
+    "offset",
+    "size_bytes",
+    "schema_id",
+    "ordinal",
+    "texts",
+    "numeric_block_offset",
+    "fields"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "domain": {
+      "type": "string",
+      "minLength": 1
+    },
+    "baseline_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "archive_entry_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "decoded_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "offset": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "size_bytes": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "ordinal": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "numeric_block_offset": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "group_ordinal": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "group_record_ordinal": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "status": {
+      "const": "decoded"
+    },
+    "semantic_status": {
+      "const": "unknown"
+    },
+    "client_id": {
+      "type": "null"
+    },
+    "schema_id": {
+      "const": "EP45-A2-TABLE-001"
+    },
+    "client_id_candidate": {
+      "type": "array",
+      "items": {
+        "type": "integer",
+        "minimum": 0,
+        "maximum": 255
+      },
+      "minItems": 2,
+      "maxItems": 2
+    },
+    "client_id_status": {
+      "const": "inferred"
+    },
+    "fields": {
+      "type": "object",
+      "additionalProperties": false,
+      "patternProperties": {
+        "^unknown_[0-9]{3}_(u8|i16_candidate|i32_candidate)$": {
+          "type": "integer"
+        }
+      }
+    },
+    "texts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "offset",
+          "size_bytes",
+          "length_raw_i32",
+          "raw_hex",
+          "text",
+          "encoding_status",
+          "trailing_zero_bytes"
+        ],
+        "properties": {
+          "offset": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "size_bytes": {
+            "type": "integer",
+            "minimum": 4
+          },
+          "length_raw_i32": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "raw_hex": {
+            "type": "string",
+            "pattern": "^([a-f0-9]{2})*$"
+          },
+          "text": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "encoding_status": {
+            "enum": [
+              "ascii",
+              "utf8_candidate",
+              "unknown"
+            ]
+          },
+          "trailing_zero_bytes": {
+            "type": "integer",
+            "minimum": 0
+          }
+        }
+      }
+    }
+  }
+}

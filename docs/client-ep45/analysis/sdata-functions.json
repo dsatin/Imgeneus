@@ -1,0 +1,110 @@
+{
+  "baseline_id": "rebirth-evolution-ep45-98c7dd3a",
+  "executable_sha256": "98c7dd3a0589d5695e489d81b1acffdd456c633b47e913757b67e5f492d5ec48",
+  "image_base": "0x00400000",
+  "tool": "GNU objdump (GNU Binutils) 2.47",
+  "functions": [
+    {
+      "id": "EP45-A2-FUNCTION-SEED-BLOCKS",
+      "virtual_address": "0x5ae1c0",
+      "virtual_end_exclusive": "0x5ae270",
+      "rva": "0x1ae1c0",
+      "file_offset": 1761728,
+      "size_bytes": 176,
+      "source_bytes_sha256": "bd866feabfb43de855ed7ffde7f262acf23d3b6fdbfc6f1225e20ae24aaccc15",
+      "status": "statically_validated",
+      "observation": "Default round-key address 0x6f9148; 16-byte loop; calls 0x5b4640",
+      "disassembly_path": ".client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/analysis/a2/seed-blocks.asm",
+      "disassembly_sha256": "c4c61c843210718f46a121077b88a592e6db656240cf090c159ccfec20c4b658",
+      "reproduction_command": "objdump -d -Mintel --start-address=0x5ae1c0 --stop-address=0x5ae270 \"$EP45_EXECUTABLE\""
+    },
+    {
+      "id": "EP45-A2-FUNCTION-CRC32",
+      "virtual_address": "0x5ae110",
+      "virtual_end_exclusive": "0x5ae143",
+      "rva": "0x1ae110",
+      "file_offset": 1761552,
+      "size_bytes": 51,
+      "source_bytes_sha256": "0e0e08746e706350cdd479afd9efd668c63f8a822d6ee068944b00f384b6dd85",
+      "status": "statically_validated",
+      "observation": "Initial/final bitwise complement and table at 0x6f8d48",
+      "disassembly_path": ".client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/analysis/a2/crc32.asm",
+      "disassembly_sha256": "4d75ecfed80f7c6fc935cb08c926b9b4cb2ecfa17cdf8f0ce9daf690c11ff7f8",
+      "reproduction_command": "objdump -d -Mintel --start-address=0x5ae110 --stop-address=0x5ae143 \"$EP45_EXECUTABLE\""
+    },
+    {
+      "id": "EP45-A2-FUNCTION-ITEM-LOADER",
+      "virtual_address": "0x460c80",
+      "virtual_end_exclusive": "0x461410",
+      "rva": "0x60c80",
+      "file_offset": 396416,
+      "size_bytes": 1936,
+      "source_bytes_sha256": "634ac8c7cd0e899f16a09f002c5b3ddd145cb9d803c8533f9f8fc5cdf2ad6477",
+      "status": "inventoried",
+      "observation": "Item filename caller at 0x42a3bd; group counts, two byte-length-prefixed strings, numeric copies",
+      "disassembly_path": ".client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/analysis/a2/item-loader.asm",
+      "disassembly_sha256": "718c8c116145b38bb859d3b32fc8ba27b25b25507215f7409abc6f9fd00fd3ec",
+      "reproduction_command": "objdump -d -Mintel --start-address=0x460c80 --stop-address=0x461410 \"$EP45_EXECUTABLE\""
+    },
+    {
+      "id": "EP45-A2-FUNCTION-MOB-LOADER",
+      "virtual_address": "0x4615a0",
+      "virtual_end_exclusive": "0x461980",
+      "rva": "0x615a0",
+      "file_offset": 398752,
+      "size_bytes": 992,
+      "source_bytes_sha256": "9311607a6221d70f3373d93b7fa3b04b9bbe53bcbb83add05a5c0c5aabe0fd33",
+      "status": "inventoried",
+      "observation": "Caller 0x424c6f references Monster.SData; count, string, 31-byte numeric tail",
+      "disassembly_path": ".client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/analysis/a2/mob-loader.asm",
+      "disassembly_sha256": "efdd9adf2ce7472c6857ee468edf217701755de0c8d77a5696c68d6d6c001b0c",
+      "reproduction_command": "objdump -d -Mintel --start-address=0x4615a0 --stop-address=0x461980 \"$EP45_EXECUTABLE\""
+    },
+    {
+      "id": "EP45-A2-FUNCTION-CASH-LOADER",
+      "virtual_address": "0x4623a0",
+      "virtual_end_exclusive": "0x462a20",
+      "rva": "0x623a0",
+      "file_offset": 402336,
+      "size_bytes": 1664,
+      "source_bytes_sha256": "7cada200c48d5ffac0e0bda8102f4db7ad5e14ee624f7cfb4d2d30e88affdc67",
+      "status": "inventoried",
+      "observation": "Caller 0x424ca7 references Cash.Sdata; field semantics require further analysis",
+      "disassembly_path": ".client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/analysis/a2/cash-loader.asm",
+      "disassembly_sha256": "ba9a211c3d918c0b30875bd5bb6041e94b48cffdc09c9cd5b2db13082d407056",
+      "reproduction_command": "objdump -d -Mintel --start-address=0x4623a0 --stop-address=0x462a20 \"$EP45_EXECUTABLE\""
+    },
+    {
+      "id": "EP45-A2-FUNCTION-KILL-STATUS-LOADER",
+      "virtual_address": "0x478ca0",
+      "virtual_end_exclusive": "0x478e50",
+      "rva": "0x78ca0",
+      "file_offset": 494752,
+      "size_bytes": 432,
+      "source_bytes_sha256": "fbbb598689f9c517866766604f7126393871cb1902070a84f13e52c678b96eec",
+      "status": "inventoried",
+      "observation": "Caller 0x424c53 references KillStatus.SData",
+      "disassembly_path": ".client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/analysis/a2/kill-status-loader.asm",
+      "disassembly_sha256": "85f6e765c2598e2b551139d5b66a3df136b161fe7b331a8ebb62cda3008b6a6d",
+      "reproduction_command": "objdump -d -Mintel --start-address=0x478ca0 --stop-address=0x478e50 \"$EP45_EXECUTABLE\""
+    },
+    {
+      "id": "EP45-A2-FUNCTION-GUILD-HOUSE-LOADER",
+      "virtual_address": "0x4c5e70",
+      "virtual_end_exclusive": "0x4c6080",
+      "rva": "0xc5e70",
+      "file_offset": 810608,
+      "size_bytes": 528,
+      "source_bytes_sha256": "0f784fcdd7760f4353e2a21b955c574b65ceae309f439af1d43740ab0d32eeaa",
+      "status": "inventoried",
+      "observation": "Filename reference 0x4c5ec1 to data/Npc/GuildHouse.SData",
+      "disassembly_path": ".client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/analysis/a2/guild-house-loader.asm",
+      "disassembly_sha256": "1edf4a2b26f6f6fd48de4224bcd0d53c25c72f59d9f93eb128cef17db43ddaa7",
+      "reproduction_command": "objdump -d -Mintel --start-address=0x4c5e70 --stop-address=0x4c6080 \"$EP45_EXECUTABLE\""
+    }
+  ],
+  "limitations": [
+    "Routine range ends are bounded inspection windows, not proven function boundaries",
+    "No field usage, UI state, or original server rule is inferred from function labels alone"
+  ]
+}
