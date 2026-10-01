@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:imgeneus:client-ep45:archive-file:1",
+  "title": "Uma entrada original SAH e seu resultado de extração",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "ordinal", "baseline_id", "entry_kind", "original_path", "path", "name_bytes_hex", "sah_record_offset", "sah_record_size_bytes", "saf_offset", "size_bytes", "version", "extension", "domain_hint", "classification_basis", "errors", "extracted_path", "content"],
+  "properties": {
+    "id": {"type": "string", "pattern": "^(tree|supplemental)-[0-9]{6,}$"},
+    "ordinal": {"type": "integer", "minimum": 0},
+    "baseline_id": {"type": "string", "minLength": 1},
+    "entry_kind": {"enum": ["tree", "supplemental"]},
+    "original_path": {"type": "string"},
+    "path": {"type": ["string", "null"]},
+    "name_bytes_hex": {"type": "string", "pattern": "^([0-9a-f]{2})*$"},
+    "sah_record_offset": {"type": "integer", "minimum": 51},
+    "sah_record_size_bytes": {"type": "integer", "minimum": 20},
+    "saf_offset": {"type": "integer"},
+    "size_bytes": {"type": "integer"},
+    "version": {"type": "integer"},
+    "extension": {"type": "string"},
+    "domain_hint": {"type": "string"},
+    "classification_basis": {"const": "path_hint"},
+    "errors": {"type": "array", "items": {"type": "string"}},
+    "extracted_path": {"type": ["string", "null"]},
+    "content": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status"],
+      "properties": {
+        "status": {"enum": ["extraido", "inventariado", "desconhecido"]},
+        "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "prefix_hex": {"type": "string", "pattern": "^([0-9a-f]{2})*$", "maxLength": 128},
+        "format_hint": {"type": "string"},
+        "verification": {"enum": ["source_range_matches_extracted_file", "source_range_hashed"]},
+        "error": {"type": ["string", "array"]}
+      },
+      "allOf": [
+        {
+          "if": {"properties": {"status": {"enum": ["extraido", "inventariado"]}}},
+          "then": {"required": ["sha256", "prefix_hex", "format_hint", "verification"]},
+          "else": {"required": ["error"]}
+        }
+      ]
+    }
+  }
+}

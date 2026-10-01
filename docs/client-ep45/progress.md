@@ -6,9 +6,9 @@ As adaptações experimentais anteriores permanecem no snapshot histórico.
 
 | ID | Trabalho | Estado | Próxima entrega |
 | --- | --- | --- | --- |
-| A0 | Identificação da amostra | Parcial | Manifesto externo completo, ferramentas/ambiente e reprodução das sessões |
-| A1 | Índice e extração SAH/SAF | Pendente | Todas as entradas, hashes, árvore e relatório de integridade |
-| A2 | Formatos e parsers | Pendente | Schemas, leitores e testes de integridade |
+| A0 | Identificação da amostra | Concluída | 18 arquivos congelados + executável original; PE, hashes, ambiente e alteração do IP conferidos |
+| A1 | Índice e extração SAH/SAF | Concluída | 23.564 entradas da árvore + 6 suplementares, hashes e retomada verificados; zero erros |
+| A2 | Formatos e parsers | Em andamento | Cabeçalhos e candidatos catalogados; descriptografia e registros ainda pendentes |
 | A3 | Catálogos de conteúdo | Pendente | Todos os domínios com referências e lacunas |
 | A4 | Interface e ações | Pendente | Índice de telas e matriz de interações |
 | A5 | Protocolo estático | Parcial | Alguns leitores identificados; enumerar todas as direções/opcodes |
@@ -16,15 +16,33 @@ As adaptações experimentais anteriores permanecem no snapshot histórico.
 | A7 | Consolidação e critérios de saída | Pendente | `validation/phase-a-report.md` |
 | B0–B8 | Implementação do backend | Aguardando A7 | Requisitos rastreáveis e execução por dependências |
 
-## Primeira tarefa de extração
+## Resultados de A0/A1
 
-1. Concluir A0 e conferir o hash do cliente contra a baseline.
-2. Implementar uma ferramenta que **liste** o SAH e valide offsets/contagens
-   antes de extrair. Não presumir que o enum EP4 do Parsec seleciona um
-   leitor próprio para esse cliente.
-3. Extrair para cache preservando a árvore, conferindo bytes e gerando hashes.
-4. Publicar o índice de todos os arquivos internos e a distribuição por
-   domínio/formato, sem começar a implementar gameplay.
+Ver [relatório](validation/phase-a0-a1.md),
+[comandos](../../tools/ep45-client/README.md) e
+[fontes de dados](catalogs/data-sources.json).
+
+- Árvore de 172 pastas; 23.564 entradas e 23.563 caminhos únicos.
+- Um caminho duplicado, conteúdos idênticos, ambas as entradas preservadas.
+- Seis registros adicionais no fim do SAH, sem semântica confirmada.
+- Manifesto completo de 23.570 registros no cache; resumo e hash versionados.
+- Nove SData ativos, seis com cabeçalho SEED; 86 WLD e um ZON.
+- 24 `Thumbs.db` separados das fontes de gameplay; dez DDS com assinatura BMP.
+- Conteúdo não referenciado pelo índice registrado; SAF completo preservado.
+- 13 testes de integridade/retomada/contenção passaram. Uma segunda execução
+  verificou a extração existente usando a cópia congelada como fonte.
+
+## Próxima tarefa: A2
+
+1. Confirmar o formato dos seis containers SEED com análise do cliente,
+   validar descriptografia/checksum e preservar os bytes originais.
+2. Decodificar os nove SData, começando por itens, skills, mobs e NPCs/quests,
+   validando tamanhos, contagens e referências. Não usar o fallback EP5 como
+   prova de layout EP4.5.
+3. Documentar os formatos de WLD/ZON, recursos e interface; os IDs numéricos
+   dos nomes de WLD ainda são candidatos, não entidades confirmadas.
+4. Produzir catálogos de registros com schemas e evidências. A contagem atual
+   de registros de gameplay decodificados permanece zero.
 
 ## Pendências herdadas do experimento
 

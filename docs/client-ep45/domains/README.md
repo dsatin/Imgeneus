@@ -1,7 +1,9 @@
 # Domínios a extrair
 
-Nenhum dos catálogos de gameplay abaixo foi extraído integralmente nesta
-solicitação. Usar o [modelo](../templates/domain.md) para documentá-los.
+Os arquivos-fonte foram extraídos em A1, mas os registros de gameplay
+ainda não foram decodificados. Ver [fontes](../catalogs/data-sources.json)
+e [mapas](../catalogs/map-files.json). Usar o
+[modelo](../templates/domain.md) para documentar cada domínio.
 
 | Grupo | Referência esperada | Relações principais |
 | --- | --- | --- |

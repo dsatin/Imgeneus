@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "baseline_id": "rebirth-evolution-ep45-98c7dd3a",
+  "observed_at_utc": "2026-10-01T21:59:16.965766+00:00",
+  "tool": {
+    "path": "tools/ep45-client/baseline.py",
+    "version": "1.0.0",
+    "sha256": "c39e90cb971e22f30aa278035fdbd5e796ab045660b0df00d60a6b4a1f873efd"
+  },
+  "project_commit": "eacfc1d6c5a9f09623a4de738e6287570cb0a4a3",
+  "environment": {
+    "os": "Linux-7.2.3-2-MANJARO-x86_64-with-glibc2.44",
+    "python": "3.14.7",
+    "heroic": {
+      "runner_name": "GE-Proton-latest",
+      "runner_type": "proton",
+      "runner_version_file": "1786437966 GE-Proton11-5",
+      "safe_options": {
+        "enableEsync": true,
+        "enableFsync": true,
+        "useGameMode": true,
+        "autoInstallDxvk": true,
+        "autoInstallVkd3d": true,
+        "enableWineWayland": false
+      }
+    }
+  },
+  "snapshot_files": 18,
+  "snapshot_directory": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/originals",
+  "loose_manifest_sha256": "84cba0655328818694286fcfed6561ad502420f375d42fae3814eefc5cff4e25",
+  "executable": {
+    "sha256": "98c7dd3a0589d5695e489d81b1acffdd456c633b47e913757b67e5f492d5ec48",
+    "machine": "0x14c",
+    "format": "PE32",
+    "coff_timestamp": 1278906985,
+    "coff_timestamp_utc": "2010-07-12T03:56:25+00:00",
+    "image_base": 4194304,
+    "entry_point_rva": 1827284,
+    "characteristics": 271,
+    "sections": [
+      {
+        "name": ".text",
+        "virtual_size": 2784396,
+        "rva": 4096,
+        "file_offset": 4096,
+        "file_size": 2785280
+      },
+      {
+        "name": ".rdata",
+        "virtual_size": 310772,
+        "rva": 2789376,
+        "file_offset": 2789376,
+        "file_size": 311296
+      },
+      {
+        "name": ".data",
+        "virtual_size": 28615060,
+        "rva": 3100672,
+        "file_offset": 3100672,
+        "file_size": 69632
+      },
+      {
+        "name": ".rsrc",
+        "virtual_size": 48048,
+        "rva": 31719424,
+        "file_offset": 3170304,
+        "file_size": 49152
+      }
+    ]
+  },
+  "patch": {
+    "original_sha256": "45755d927ee66c7c5e354defb5e8f9329f8f21848307e62797f368dee2c33f91",
+    "modified_sha256": "98c7dd3a0589d5695e489d81b1acffdd456c633b47e913757b67e5f492d5ec48",
+    "equal_file_sizes": true,
+    "changed_bytes": 11,
+    "all_changes_inside_login_slot": true,
+    "slot_offset": 2792324,
+    "slot_size_bytes": 16,
+    "original_slot_hex": "39322e35352e3134372e313037000000",
+    "local_slot_hex": "3132372e302e302e3100000000000000"
+  }
+}

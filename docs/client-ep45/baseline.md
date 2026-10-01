@@ -17,7 +17,7 @@ Base Linux: `63e0248ab148481dabe8394a34edd06720525b09`.
 As adaptações de infraestrutura Linux estão descritas em
 [deploy/README.md](../../deploy/README.md). O Docker aplica os patches dos
 submódulos na build. O SDK não está instalado globalmente nesta máquina;
-as ferramentas de extração ainda precisam ter sua execução definida.
+as ferramentas de inventário/extração agora usam Python 3, sem SDK ou Docker.
 
 ## Cliente
 
@@ -37,7 +37,8 @@ Instalação informada pelo usuário como EP 4.5, Rebirth Evolution, em:
 O executável é PE32/x86. Tamanhos observados: `game.exe` 3.219.456 bytes,
 `data.sah` 911.512 bytes, `data.saf` 2.487.238.964 bytes.
 O manifesto externo registra hashes e tamanhos dos arquivos soltos;
-os arquivos internos do SAF ainda não foram inventariados.
+o [relatório A0/A1](validation/phase-a0-a1.md) registra o inventário interno
+e a extração completa das entradas SAH/SAF.
 
 `Version.ini` declara `CheckVersion=3`, `CurrentVersion=5`,
 `StartUpdate=UPDATE_END`. Esses valores não são prova de episódio.
@@ -52,6 +53,33 @@ Ambiente usado nas sessões: Manjaro, Heroic e GE-Proton. Login TCP 30800 e
 World TCP 30810 locais. Completar em A0 as versões exatas e parâmetros que
 forem necessários à reprodução; não publicar credenciais ou arquivos de
 configuração contendo contas.
+
+### Amostra congelada em A0
+
+Os 18 arquivos soltos atuais foram copiados para `originals/` no cache,
+conferidos por SHA-256 e gravados com permissão 0444. O executável original
+pré-patch foi preservado separadamente como `game-original.exe`.
+O [manifesto atual](catalogs/loose-files.current.json) difere do manifesto
+anterior somente em `CONFIG.INI`; os três hashes de executável/SAH/SAF
+continuam iguais. Nenhum arquivo-fonte foi alterado pela extração.
+
+[Evidência de identificação](catalogs/baseline-evidence.json): PE32, máquina
+`0x14c`, base `0x00400000`, timestamp COFF `2010-07-12T03:56:25Z`.
+O timestamp interno difere das datas de arquivos de 2011; não prova o episódio.
+A comparação com o original confirmou 11 bytes alterados, todos dentro do
+slot de Login de 16 bytes em `0x2A9B84`, sem alteração de tamanho.
+
+Ambiente registrado: Python 3.14.7, Linux 7.2.3-2-MANJARO, glibc 2.44,
+GE-Proton11-5. O comando local `flatpak info com.heroicgameslauncher.hgl`
+informou Heroic v2.22.1. As opções relevantes do runner, sem contas/segredos,
+estão na evidência. A confirmação de idioma inglês vem das mensagens/UI
+observadas nas sessões anteriores, não do nome do diretório.
+
+Reprodução dos cenários históricos: usar o executável com IP local e
+argumentos `start game`; autenticar com uma conta local de teste, selecionar
+ou criar personagem, entrar no mapa e solicitar logout. Após retornar à
+seleção, tentar entrar com a mesma personagem reproduziu a falha relatada.
+O inventário desta execução não repetiu esses testes de gameplay.
 
 ## O que foi observado e o que está pendente
 

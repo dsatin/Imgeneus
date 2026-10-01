@@ -4,6 +4,15 @@
 contém configurações, dumps ou executáveis: somente metadados e hashes.
 Não representa a extração do SAF nem prova compatibilidade de formatos.
 
+Após A0/A1, `loose-files.current.json` registra a configuração atual;
+o manifesto anterior foi preservado. Só `CONFIG.INI` mudou. O índice interno
+completo tem 23.570 registros e fica no cache devido ao tamanho (~20 MB),
+com caminho/hash em `extraction-report.json`.
+
+As saídas atuais incluem `baseline-evidence.json`, `extraction-report.json`,
+`data-sources.json`, `map-files.json` e `asset-summary.json`. Esses catálogos
+identificam fontes e recursos; não são tabelas de registros de gameplay.
+
 Gerar novamente na raiz do projeto, usando apenas Python 3:
 
 ```bash

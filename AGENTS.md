@@ -356,8 +356,9 @@ real. Comparar também com EP8 se uma mudança afetar infraestrutura comum.
 
 ## Disciplina de execução e entrega
 
-- Nesta solicitação, criar o snapshot e o plano; a extração integral é o
-  próximo trabalho. Não preencher catálogos com dados fictícios.
+- O snapshot e o plano iniciais já foram registrados. Executar a etapa A
+  conforme a tarefa atual e atualizar o progresso; não preencher catálogos
+  com dados fictícios.
 - Manter mudanças pequenas por formato/domínio. Registrar comandos,
   contagens, incertezas e próximos passos; usar buscas com `rg`.
 - Manter segredos em `.env` e arquivos locais ignorados. As ferramentas de

@@ -1,0 +1,190 @@
+{
+  "schema_version": 1,
+  "baseline_id": "rebirth-evolution-ep45-98c7dd3a",
+  "generated_at_utc": "2026-10-01T22:02:58.032383+00:00",
+  "tool": {
+    "path": "tools/ep45-client/archive.py",
+    "version": "1.0.0",
+    "python": "3.14.7",
+    "sha256": "6eb9f4cce96e7de2405963207da75d1bef0cae198b113f0a43be8ae3c94227db"
+  },
+  "mode": "extract",
+  "sources": {
+    "data.sah": "6ad31356e94e243b45d4f4a6ffe881d76dd945a0e4f7f22687ebdf6026bf7f3c",
+    "data.saf": "e3c7f3a8268d5242b6199b99ca482c3390fc012fad2257dd155b1e35794d5e7b"
+  },
+  "saf_size_bytes": 2487238964,
+  "index": {
+    "signature": "SAH",
+    "version": 0,
+    "declared_file_count": 23564,
+    "tree_file_count": 23564,
+    "folder_count": 172,
+    "tree_bytes_consumed": 911317,
+    "header_padding_hex": "00000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "trailing": {
+      "offset": 911317,
+      "size_bytes": 195,
+      "sha256": "5830846f929a278a5d81c0e4d04a2f20191b4611c745e67fe6f21113de40d743",
+      "file_shaped_records": 6,
+      "semantics": "unknown",
+      "candidate_error": null
+    }
+  },
+  "manifest": {
+    "path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/archive-files.jsonl",
+    "sha256": "09240d9b290aded79f66f40991e62cca19aca5eab90792d1f1f8b584fe847a29",
+    "size_bytes": 19906965,
+    "records": 23570
+  },
+  "counts": {
+    "supplemental:extraido": 6,
+    "tree:extraido": 23564
+  },
+  "content_hints": {
+    "bmp": 39,
+    "compound_file_header": 24,
+    "dds": 10451,
+    "extension_only:.3dc": 3120,
+    "extension_only:.3de": 678,
+    "extension_only:.3do": 416,
+    "extension_only:.alt": 16,
+    "extension_only:.ani": 3563,
+    "extension_only:.cfg": 1,
+    "extension_only:.ctl": 4,
+    "extension_only:.cur": 7,
+    "extension_only:.dat": 3,
+    "extension_only:.dg": 47,
+    "extension_only:.dg_pv": 12,
+    "extension_only:.eft": 517,
+    "extension_only:.itm": 17,
+    "extension_only:.mani": 39,
+    "extension_only:.mlt": 112,
+    "extension_only:.mon": 16,
+    "extension_only:.pc": 128,
+    "extension_only:.sdata": 3,
+    "extension_only:.seff": 5,
+    "extension_only:.smod": 2048,
+    "extension_only:.tga": 973,
+    "extension_only:.tol": 1,
+    "extension_only:.txt": 47,
+    "extension_only:.vani": 117,
+    "extension_only:.wld": 86,
+    "extension_only:.wtr": 3,
+    "extension_only:.zon": 1,
+    "jpeg": 22,
+    "pe_candidate": 1,
+    "seed_sdata_header": 10,
+    "unknown": 2,
+    "wave": 1039,
+    "zip": 2
+  },
+  "by_extension": {
+    ".3dc": 3120,
+    ".3de": 678,
+    ".3do": 416,
+    ".alt": 16,
+    ".ani": 3563,
+    ".bmp": 29,
+    ".cfg": 1,
+    ".ctl": 4,
+    ".cur": 7,
+    ".dat": 3,
+    ".db": 24,
+    ".dds": 10461,
+    ".dg": 47,
+    ".dg_pv": 12,
+    ".eft": 517,
+    ".exe": 1,
+    ".itm": 17,
+    ".jpg": 22,
+    ".mani": 39,
+    ".mlt": 112,
+    ".mon": 16,
+    ".pc": 128,
+    ".sdata": 9,
+    ".seff": 5,
+    ".smod": 2048,
+    ".tga": 973,
+    ".tol": 1,
+    ".txt": 47,
+    ".vani": 117,
+    ".wav": 1039,
+    ".wld": 86,
+    ".wtr": 3,
+    ".zip": 2,
+    ".zon": 1
+  },
+  "by_domain_hint": {
+    "audio": 1039,
+    "characters": 4810,
+    "economy": 1,
+    "effects": 2273,
+    "equipment_assets": 754,
+    "items": 1032,
+    "maps": 1313,
+    "mobs": 3448,
+    "npcs_quests": 1624,
+    "skills": 2,
+    "ui": 997,
+    "unclassified": 11,
+    "vehicle_assets": 186,
+    "world_objects": 6074
+  },
+  "by_root": {
+    "Cash.Sdata": 1,
+    "Character": 4811,
+    "Cursor": 7,
+    "Effect": 2266,
+    "Entity": 5814,
+    "Item": 1032,
+    "Lensflare": 7,
+    "Monster": 3449,
+    "Npc": 1624,
+    "Sky": 36,
+    "Sound": 1039,
+    "Strip": 260,
+    "Terrain": 106,
+    "Vehicle": 186,
+    "WaterBumps1.tga": 1,
+    "WaterBumps2.tga": 1,
+    "WaterDetails.tga": 1,
+    "WorldMap.cfg": 1,
+    "auction_completion .tga": 1,
+    "cl.tga": 1,
+    "cloak": 754,
+    "filter.txt": 1,
+    "interface": 990,
+    "shadow.tga": 1,
+    "spheremap.bmp": 1,
+    "sysmsg-uni.txt": 1,
+    "sysmsg.txt": 1,
+    "world": 1171
+  },
+  "tree_content_bytes": 2385899048,
+  "validation": {
+    "issues": [],
+    "duplicates": [
+      {
+        "path": "Item/3DO/10051__.3do",
+        "ids": [
+          "tree-014672",
+          "tree-014912"
+        ]
+      }
+    ],
+    "case_collisions": [
+      {
+        "casefold_path": "item/3do/10051__.3do",
+        "ids": [
+          "tree-014672",
+          "tree-014912"
+        ]
+      }
+    ],
+    "tree_overlaps": [],
+    "invalid_entries": []
+  },
+  "errors": [],
+  "semantics_decoded": false
+}
