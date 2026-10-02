@@ -89,8 +89,34 @@ its own analyzed profile. Raw source/constants remain in the executable.
 and normalized provenance. Existing outputs are verified, never replaced;
 use a new output directory for an intentional format/export revision.
 
-All 13 SData containers have recorded outcomes. Five active structures are
-decoded; four active layouts and supplemental semantics remain pending.
+All 13 SData containers have recorded outcomes. The initial tool decoded five
+active structures; the extended tool covers the remaining four active sources
+and the supplemental Skill separately.
 Unknown fields, IDs, signedness, and non-UTF-8 texts remain explicit. Record
 counts are distinct from semantically validated formats and runtime coverage.
 See [A2 evidence](../../docs/client-ep45/validation/phase-a2-initial.md).
+
+## A2: skills, dialogue, NPCs, and quests
+
+```bash
+EP45_CACHE='.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a'
+python3 tools/ep45-client/extended_tables.py --containers docs/client-ep45/catalogs/sdata-containers.json --output-dir "$EP45_CACHE/catalogs/extended-v1" --report docs/client-ep45/catalogs/extended-table-structures.json
+```
+
+The identified active Skill file lacks six terminal records expected by the
+executable. This command deliberately exits **1**, while publishing complete
+recovered records and an explicit discrepancy; it does not hide the failure
+or substitute supplemental data. The other three active sources decode
+completely. A repeated run verifies existing exports without replacement.
+Raw/normalized exports are separated by archive entry ID. The matrix export
+is sparse; all 65,536 cells/two arrays per cell remain in coverage denominators.
+`fixtures/skill-records.json` contains small first/last NpcSkill source spans
+with provenance and hashes. Tests need no installed client for these fixtures.
+See [schema](../../docs/client-ep45/schemas/extended-sdata-tables.md) and
+[validation](../../docs/client-ep45/validation/phase-a2-extended.md).
+
+Executable inspection is read-only. Reproduce the bounded windows with
+`objdump -d -Mintel` and the start/stop addresses and source parameters in
+[loader evidence](../../docs/client-ep45/analysis/extended-table-loaders.json).
+Verify the executable hash and PE address mapping before applying any offsets.
+These tools require no database credentials, running server, SDK, or network.

@@ -3,8 +3,9 @@
 This directory is the specification source for compatibility with the locally
 installed Rebirth Evolution test client. Identification and SAH/SAF extraction
 are complete: 23,564 tree entries and six supplemental records, with verified
-hashes. Ten encrypted SData containers are verified and five active table structures
-are decoded. Field semantics, remaining data, assets, UI, and protocol remain
+hashes. Ten encrypted SData containers are verified and eight of nine active
+SData sources are fully structurally decoded. Skill has six missing expected
+records. Field semantics, remaining data, assets, UI, and protocol remain
 in phase A. No EP8
 gameplay rule has been imported as evidence.
 
@@ -31,6 +32,8 @@ All compatibility development and commits continue on `develop/ep45-compatibilit
 | [A2 initial report](validation/phase-a2-initial.md) | Container and record-structure coverage |
 | [SEED format](schemas/sdata-seed.md) | Client constants, checksums, round trips |
 | [Table structures](schemas/sdata-tables.md) | Lossless record layouts and unresolved semantics |
+| [Extended structures](schemas/extended-sdata-tables.md) | Skills, dialogue, NPCs, quests, and explicit source discrepancies |
+| [Extended A2 report](validation/phase-a2-extended.md) | Structural coverage, source outcomes, and pending validation |
 
 Raw files and large exports belong in the ignored `.client-ep45-cache/`.
 Tools live in `tools/ep45-client/` and accept the client path as a parameter.

@@ -61,7 +61,9 @@ characters. No client evidence has been translated.
 
 ## Remaining work
 
-Decode Skill, NpcSkill, PriestTalk, and NpcQuest structures. Analyze item/mob
+The [extended schemas](extended-sdata-tables.md) now describe Skill, NpcSkill,
+PriestTalk, and NpcQuest. Active Skill has six missing expected records;
+the other three active sources are fully structurally decoded. Analyze item/mob
 field uses and lookup semantics; confirm cash/guild-house/kill-status loaders,
 encodings, enums, units, and references. Supplemental layouts need separate
 usage evidence. WLD/ZON, assets, UI, protocol, and runtime coverage remain

@@ -12,6 +12,9 @@ Current outputs: `baseline-evidence.json`, `extraction-report.json`,
 `data-sources.json`, `map-files.json`, and `asset-summary.json`. Those A1 discovery outputs identify sources/assets rather than decoded
 records. A2 adds `sdata-containers.json` and `table-structures.json`; the latter
 indexes five raw/normalized bulk record catalogs and unresolved layouts.
+`extended-table-structures.json` indexes the subsequent Skill/NpcSkill,
+PriestTalk, NPC/quest, and sparse matrix exports, including the active Skill
+count discrepancy and the separate supplemental Skill outcome.
 Discovery header flags describe the earlier A1 inventory; the A2 container
 report records subsequent checksum/decryption validation.
 

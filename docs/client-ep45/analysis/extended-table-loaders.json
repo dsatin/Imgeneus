@@ -1,0 +1,859 @@
+{
+  "id": "EP45-A2-LOADERS-002",
+  "baseline_id": "rebirth-evolution-ep45-98c7dd3a",
+  "executable_sha256": "98c7dd3a0589d5695e489d81b1acffdd456c633b47e913757b67e5f492d5ec48",
+  "observation_date": "2026-10-01",
+  "project_commit": "0f68fb8b1011f0edf79642b2b53670db8559da26",
+  "tool_version": "GNU objdump (GNU Binutils) 2.47",
+  "image_base": "0x400000",
+  "address_mapping": "These bounded .text windows use file offset = VA - image base; verified PE section mapping. Window bounds are inspection bounds, not asserted complete function boundaries.",
+  "windows": [
+    {
+      "id": "skill-loader",
+      "start_va": "0x461a70",
+      "stop_va": "0x462390",
+      "start_rva": "0x61a70",
+      "file_offset": "0x61a70",
+      "length": 2336,
+      "source_bytes_sha256": "16c59b39e51e8af06827769f1351c2da56858bdc9e68744944cd4066486beed2",
+      "disassembly_path": ".client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/analysis/a2/skill-loader.asm",
+      "disassembly_sha256": "82d46bb00ad4af94fb8c4a7bd7a9bad021c3c46f5a596af6cf201288792e8997",
+      "reproduction_command": "objdump -d -Mintel --start-address=0x461a70 --stop-address=0x462390 .client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/originals/game.exe"
+    },
+    {
+      "id": "npc-quest-loader",
+      "start_va": "0x47a050",
+      "stop_va": "0x47aa90",
+      "start_rva": "0x7a050",
+      "file_offset": "0x7a050",
+      "length": 2624,
+      "source_bytes_sha256": "d9fdb94d4a1d6f13c56f59d6d72f42597c9a4d3c29f8421983c862f28ece792d",
+      "disassembly_path": ".client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/analysis/a2/npc-quest-loader.asm",
+      "disassembly_sha256": "22203cd85fc45862eb750bc211179ced8fac668943fa46bbd444d2f7022287fc",
+      "reproduction_command": "objdump -d -Mintel --start-address=0x47a050 --stop-address=0x47aa90 .client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/originals/game.exe"
+    },
+    {
+      "id": "quest-record-loader",
+      "start_va": "0x479500",
+      "stop_va": "0x479c90",
+      "start_rva": "0x79500",
+      "file_offset": "0x79500",
+      "length": 1936,
+      "source_bytes_sha256": "2c579e659c39cf56c0620973aa8d018c3a44b5244991d8adcf3f7e239dc0c3c7",
+      "disassembly_path": ".client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/analysis/a2/quest-record-loader.asm",
+      "disassembly_sha256": "6b6a307481f7f239a22db16e0efe847574390524ec887ce23ff1615338869f9e",
+      "reproduction_command": "objdump -d -Mintel --start-address=0x479500 --stop-address=0x479c90 .client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/originals/game.exe"
+    }
+  ],
+  "skill_numeric_reads": [
+    {
+      "numeric_offset": 0,
+      "size_bytes": 1,
+      "instruction_va": "0x461dc6",
+      "instruction_rva": "0x61dc6",
+      "instruction_file_offset": "0x61dc6",
+      "status": "statically_validated",
+      "semantic_status": "unknown"
+    },
+    {
+      "numeric_offset": 1,
+      "size_bytes": 2,
+      "instruction_va": "0x461dd3",
+      "instruction_rva": "0x61dd3",
+      "instruction_file_offset": "0x61dd3",
+      "status": "statically_validated",
+      "semantic_status": "unknown"
+    },
+    {
+      "numeric_offset": 3,
+      "size_bytes": 1,
+      "instruction_va": "0x461de3",
+      "instruction_rva": "0x61de3",
+      "instruction_file_offset": "0x61de3",
+      "status": "statically_validated",
+      "semantic_status": "unknown"
+    },
+    {
+      "numeric_offset": 4,
+      "size_bytes": 2,
+      "instruction_va": "0x461df3",
+      "instruction_rva": "0x61df3",
+      "instruction_file_offset": "0x61df3",
+      "status": "statically_validated",
+      "semantic_status": "unknown"
+    },
+    {
+      "numeric_offset": 6,
+      "size_bytes": 2,
+      "instruction_va": "0x461e03",
+      "instruction_rva": "0x61e03",
+      "instruction_file_offset": "0x61e03",
+      "status": "statically_validated",
+      "semantic_status": "unknown"
+    },
+    {
+      "numeric_offset": 8,
+      "size_bytes": 2,
+      "instruction_va": "0x461e15",
+      "instruction_rva": "0x61e15",
+      "instruction_file_offset": "0x61e15",
+      "status": "statically_validated",
+      "semantic_status": "unknown"
+    },
+    {
+      "numeric_offset": 10,
+      "size_bytes": 1,
+      "instruction_va": "0x461e27",
+      "instruction_rva": "0x61e27",
+      "instruction_file_offset": "0x61e27",
+      "status": "statically_validated",
+      "semantic_status": "unknown"
+    },
+    {
+      "numeric_offset": 11,
+      "size_bytes": 1,
+      "instruction_va": "0x461e37",
+      "instruction_rva": "0x61e37",
+      "instruction_file_offset": "0x61e37",
+      "status": "statically_validated",
+      "semantic_status": "unknown"
+    },
+    {
+      "numeric_offset": 12,
+      "size_bytes": 1,
+      "instruction_va": "0x461e45",
+      "instruction_rva": "0x61e45",
+      "instruction_file_offset": "0x61e45",
+      "status": "statically_validated",
+      "semantic_status": "unknown"
+    },
+    {
+      "numeric_offset": 13,
+      "size_bytes": 1,
+      "instruction_va": "0x461e53",
+      "instruction_rva": "0x61e53",
+      "instruction_file_offset": "0x61e53",
+      "status": "statically_validated",
+      "semantic_status": "unknown"
+    },
+    {
+      "numeric_offset": 14,
+      "size_bytes": 1,
+      "instruction_va": "0x461e61",
+      "instruction_rva": "0x61e61",
+      "instruction_file_offset": "0x61e61",
+      "status": "statically_validated",
+      "semantic_status": "unknown"
+    },
+    {
+      "numeric_offset": 15,
+      "size_bytes": 1,
+      "instruction_va": "0x461e6f",
+      "instruction_rva": "0x61e6f",
+      "instruction_file_offset": "0x61e6f",
+      "status": "statically_validated",
+      "semantic_status": "unknown"
+    },
+    {
+      "numeric_offset": 16,
+      "size_bytes": 1,
+      "instruction_va": "0x461e7d",
+      "instruction_rva": "0x61e7d",
+      "instruction_file_offset": "0x61e7d",
+      "status": "statically_validated",
+      "semantic_status": "unknown"
+    },
+    {
+      "numeric_offset": 17,
+      "size_bytes": 1,
+      "instruction_va": "0x461e8b",
+      "instruction_rva": "0x61e8b",
+      "instruction_file_offset": "0x61e8b",
+      "status": "statically_validated",
+      "semantic_status": "unknown"
+    },
+    {
+      "numeric_offset": 18,
+      "size_bytes": 1,
+      "instruction_va": "0x461e99",
+      "instruction_rva": "0x61e99",
+      "instruction_file_offset": "0x61e99",
+      "status": "statically_validated",
+      "semantic_status": "unknown"
+    },
+    {
+      "numeric_offset": 19,
+      "size_bytes": 1,
+      "instruction_va": "0x461ea7",
+      "instruction_rva": "0x61ea7",
+      "instruction_file_offset": "0x61ea7",
+      "status": "statically_validated",
+      "semantic_status": "unknown"
+    },
+    {
+      "numeric_offset": 20,
+      "size_bytes": 1,
+      "instruction_va": "0x461eb6",
+      "instruction_rva": "0x61eb6",
+      "instruction_file_offset": "0x61eb6",
+      "status": "statically_validated",
+      "semantic_status": "unknown"
+    },
+    {
+      "numeric_offset": 21,
+      "size_bytes": 1,
+      "instruction_va": "0x461ec3",
+      "instruction_rva": "0x61ec3",
+      "instruction_file_offset": "0x61ec3",
+      "status": "statically_validated",
+      "semantic_status": "unknown"
+    },
+    {
+      "numeric_offset": 22,
+      "size_bytes": 2,
+      "instruction_va": "0x461ed1",
+      "instruction_rva": "0x61ed1",
+      "instruction_file_offset": "0x61ed1",
+      "status": "statically_validated",
+      "semantic_status": "unknown"
+    },
+    {
+      "numeric_offset": 24,
+      "size_bytes": 1,
+      "instruction_va": "0x461f0d",
+      "instruction_rva": "0x61f0d",
+      "instruction_file_offset": "0x61f0d",
+      "status": "statically_validated",
+      "semantic_status": "unknown"
+    },
+    {
+      "numeric_offset": 25,
+      "size_bytes": 1,
+      "instruction_va": "0x461f1a",
+      "instruction_rva": "0x61f1a",
+      "instruction_file_offset": "0x61f1a",
+      "status": "statically_validated",
+      "semantic_status": "unknown"
+    },
+    {
+      "numeric_offset": 26,
+      "size_bytes": 1,
+      "instruction_va": "0x461f27",
+      "instruction_rva": "0x61f27",
+      "instruction_file_offset": "0x61f27",
+      "status": "statically_validated",
+      "semantic_status": "unknown"
+    },
+    {
+      "numeric_offset": 27,
+      "size_bytes": 1,
+      "instruction_va": "0x461f34",
+      "instruction_rva": "0x61f34",
+      "instruction_file_offset": "0x61f34",
+      "status": "statically_validated",
+      "semantic_status": "unknown"
+    },
+    {
+      "numeric_offset": 28,
+      "size_bytes": 1,
+      "instruction_va": "0x461f41",
+      "instruction_rva": "0x61f41",
+      "instruction_file_offset": "0x61f41",
+      "status": "statically_validated",
+      "semantic_status": "unknown"
+    },
+    {
+      "numeric_offset": 29,
+      "size_bytes": 1,
+      "instruction_va": "0x461f4e",
+      "instruction_rva": "0x61f4e",
+      "instruction_file_offset": "0x61f4e",
+      "status": "statically_validated",
+      "semantic_status": "unknown"
+    },
+    {
+      "numeric_offset": 30,
+      "size_bytes": 1,
+      "instruction_va": "0x461f5b",
+      "instruction_rva": "0x61f5b",
+      "instruction_file_offset": "0x61f5b",
+      "status": "statically_validated",
+      "semantic_status": "unknown"
+    },
+    {
+      "numeric_offset": 31,
+      "size_bytes": 1,
+      "instruction_va": "0x461f68",
+      "instruction_rva": "0x61f68",
+      "instruction_file_offset": "0x61f68",
+      "status": "statically_validated",
+      "semantic_status": "unknown"
+    },
+    {
+      "numeric_offset": 32,
+      "size_bytes": 1,
+      "instruction_va": "0x461f75",
+      "instruction_rva": "0x61f75",
+      "instruction_file_offset": "0x61f75",
+      "status": "statically_validated",
+      "semantic_status": "unknown"
+    },
+    {
+      "numeric_offset": 33,
+      "size_bytes": 1,
+      "instruction_va": "0x461f82",
+      "instruction_rva": "0x61f82",
+      "instruction_file_offset": "0x61f82",
+      "status": "statically_validated",
+      "semantic_status": "unknown"
+    },
+    {
+      "numeric_offset": 34,
+      "size_bytes": 1,
+      "instruction_va": "0x461f8f",
+      "instruction_rva": "0x61f8f",
+      "instruction_file_offset": "0x61f8f",
+      "status": "statically_validated",
+      "semantic_status": "unknown"
+    },
+    {
+      "numeric_offset": 35,
+      "size_bytes": 1,
+      "instruction_va": "0x461f9c",
+      "instruction_rva": "0x61f9c",
+      "instruction_file_offset": "0x61f9c",
+      "status": "statically_validated",
+      "semantic_status": "unknown"
+    },
+    {
+      "numeric_offset": 36,
+      "size_bytes": 1,
+      "instruction_va": "0x461fa9",
+      "instruction_rva": "0x61fa9",
+      "instruction_file_offset": "0x61fa9",
+      "status": "statically_validated",
+      "semantic_status": "unknown"
+    },
+    {
+      "numeric_offset": 37,
+      "size_bytes": 1,
+      "instruction_va": "0x461fb7",
+      "instruction_rva": "0x61fb7",
+      "instruction_file_offset": "0x61fb7",
+      "status": "statically_validated",
+      "semantic_status": "unknown"
+    },
+    {
+      "numeric_offset": 38,
+      "size_bytes": 1,
+      "instruction_va": "0x461fc5",
+      "instruction_rva": "0x61fc5",
+      "instruction_file_offset": "0x61fc5",
+      "status": "statically_validated",
+      "semantic_status": "unknown"
+    },
+    {
+      "numeric_offset": 39,
+      "size_bytes": 1,
+      "instruction_va": "0x461fd3",
+      "instruction_rva": "0x61fd3",
+      "instruction_file_offset": "0x61fd3",
+      "status": "statically_validated",
+      "semantic_status": "unknown"
+    },
+    {
+      "numeric_offset": 40,
+      "size_bytes": 2,
+      "instruction_va": "0x461fe1",
+      "instruction_rva": "0x61fe1",
+      "instruction_file_offset": "0x61fe1",
+      "status": "statically_validated",
+      "semantic_status": "unknown"
+    },
+    {
+      "numeric_offset": 42,
+      "size_bytes": 2,
+      "instruction_va": "0x461ff1",
+      "instruction_rva": "0x61ff1",
+      "instruction_file_offset": "0x61ff1",
+      "status": "statically_validated",
+      "semantic_status": "unknown"
+    },
+    {
+      "numeric_offset": 44,
+      "size_bytes": 1,
+      "instruction_va": "0x462003",
+      "instruction_rva": "0x62003",
+      "instruction_file_offset": "0x62003",
+      "status": "statically_validated",
+      "semantic_status": "unknown"
+    },
+    {
+      "numeric_offset": 45,
+      "size_bytes": 2,
+      "instruction_va": "0x462013",
+      "instruction_rva": "0x62013",
+      "instruction_file_offset": "0x62013",
+      "status": "statically_validated",
+      "semantic_status": "unknown"
+    },
+    {
+      "numeric_offset": 47,
+      "size_bytes": 1,
+      "instruction_va": "0x462023",
+      "instruction_rva": "0x62023",
+      "instruction_file_offset": "0x62023",
+      "status": "statically_validated",
+      "semantic_status": "unknown"
+    },
+    {
+      "numeric_offset": 48,
+      "size_bytes": 1,
+      "instruction_va": "0x462033",
+      "instruction_rva": "0x62033",
+      "instruction_file_offset": "0x62033",
+      "status": "statically_validated",
+      "semantic_status": "unknown"
+    },
+    {
+      "numeric_offset": 49,
+      "size_bytes": 1,
+      "instruction_va": "0x462041",
+      "instruction_rva": "0x62041",
+      "instruction_file_offset": "0x62041",
+      "status": "statically_validated",
+      "semantic_status": "unknown"
+    },
+    {
+      "numeric_offset": 50,
+      "size_bytes": 2,
+      "instruction_va": "0x46204f",
+      "instruction_rva": "0x6204f",
+      "instruction_file_offset": "0x6204f",
+      "status": "statically_validated",
+      "semantic_status": "unknown"
+    },
+    {
+      "numeric_offset": 52,
+      "size_bytes": 2,
+      "instruction_va": "0x46205f",
+      "instruction_rva": "0x6205f",
+      "instruction_file_offset": "0x6205f",
+      "status": "statically_validated",
+      "semantic_status": "unknown"
+    },
+    {
+      "numeric_offset": 54,
+      "size_bytes": 1,
+      "instruction_va": "0x462071",
+      "instruction_rva": "0x62071",
+      "instruction_file_offset": "0x62071",
+      "status": "statically_validated",
+      "semantic_status": "unknown"
+    },
+    {
+      "numeric_offset": 55,
+      "size_bytes": 1,
+      "instruction_va": "0x462081",
+      "instruction_rva": "0x62081",
+      "instruction_file_offset": "0x62081",
+      "status": "statically_validated",
+      "semantic_status": "unknown"
+    },
+    {
+      "numeric_offset": 56,
+      "size_bytes": 1,
+      "instruction_va": "0x46208f",
+      "instruction_rva": "0x6208f",
+      "instruction_file_offset": "0x6208f",
+      "status": "statically_validated",
+      "semantic_status": "unknown"
+    },
+    {
+      "numeric_offset": 57,
+      "size_bytes": 1,
+      "instruction_va": "0x46209d",
+      "instruction_rva": "0x6209d",
+      "instruction_file_offset": "0x6209d",
+      "status": "statically_validated",
+      "semantic_status": "unknown"
+    },
+    {
+      "numeric_offset": 58,
+      "size_bytes": 1,
+      "instruction_va": "0x4620ab",
+      "instruction_rva": "0x620ab",
+      "instruction_file_offset": "0x620ab",
+      "status": "statically_validated",
+      "semantic_status": "unknown"
+    },
+    {
+      "numeric_offset": 59,
+      "size_bytes": 2,
+      "instruction_va": "0x4620b9",
+      "instruction_rva": "0x620b9",
+      "instruction_file_offset": "0x620b9",
+      "status": "statically_validated",
+      "semantic_status": "unknown"
+    },
+    {
+      "numeric_offset": 61,
+      "size_bytes": 1,
+      "instruction_va": "0x4620c9",
+      "instruction_rva": "0x620c9",
+      "instruction_file_offset": "0x620c9",
+      "status": "statically_validated",
+      "semantic_status": "unknown"
+    },
+    {
+      "numeric_offset": 62,
+      "size_bytes": 1,
+      "instruction_va": "0x4620d9",
+      "instruction_rva": "0x620d9",
+      "instruction_file_offset": "0x620d9",
+      "status": "statically_validated",
+      "semantic_status": "unknown"
+    },
+    {
+      "numeric_offset": 63,
+      "size_bytes": 1,
+      "instruction_va": "0x4620e7",
+      "instruction_rva": "0x620e7",
+      "instruction_file_offset": "0x620e7",
+      "status": "statically_validated",
+      "semantic_status": "unknown"
+    },
+    {
+      "numeric_offset": 64,
+      "size_bytes": 1,
+      "instruction_va": "0x4620f5",
+      "instruction_rva": "0x620f5",
+      "instruction_file_offset": "0x620f5",
+      "status": "statically_validated",
+      "semantic_status": "unknown"
+    },
+    {
+      "numeric_offset": 65,
+      "size_bytes": 2,
+      "instruction_va": "0x462103",
+      "instruction_rva": "0x62103",
+      "instruction_file_offset": "0x62103",
+      "status": "statically_validated",
+      "semantic_status": "unknown"
+    },
+    {
+      "numeric_offset": 67,
+      "size_bytes": 1,
+      "instruction_va": "0x462113",
+      "instruction_rva": "0x62113",
+      "instruction_file_offset": "0x62113",
+      "status": "statically_validated",
+      "semantic_status": "unknown"
+    },
+    {
+      "numeric_offset": 68,
+      "size_bytes": 2,
+      "instruction_va": "0x462123",
+      "instruction_rva": "0x62123",
+      "instruction_file_offset": "0x62123",
+      "status": "statically_validated",
+      "semantic_status": "unknown"
+    },
+    {
+      "numeric_offset": 70,
+      "size_bytes": 2,
+      "instruction_va": "0x462133",
+      "instruction_rva": "0x62133",
+      "instruction_file_offset": "0x62133",
+      "status": "statically_validated",
+      "semantic_status": "unknown"
+    },
+    {
+      "numeric_offset": 72,
+      "size_bytes": 2,
+      "instruction_va": "0x462145",
+      "instruction_rva": "0x62145",
+      "instruction_file_offset": "0x62145",
+      "status": "statically_validated",
+      "semantic_status": "unknown"
+    },
+    {
+      "numeric_offset": 74,
+      "size_bytes": 1,
+      "instruction_va": "0x462157",
+      "instruction_rva": "0x62157",
+      "instruction_file_offset": "0x62157",
+      "status": "statically_validated",
+      "semantic_status": "unknown"
+    },
+    {
+      "numeric_offset": 75,
+      "size_bytes": 2,
+      "instruction_va": "0x462167",
+      "instruction_rva": "0x62167",
+      "instruction_file_offset": "0x62167",
+      "status": "statically_validated",
+      "semantic_status": "unknown"
+    },
+    {
+      "numeric_offset": 77,
+      "size_bytes": 2,
+      "instruction_va": "0x462177",
+      "instruction_rva": "0x62177",
+      "instruction_file_offset": "0x62177",
+      "status": "statically_validated",
+      "semantic_status": "unknown"
+    },
+    {
+      "numeric_offset": 79,
+      "size_bytes": 2,
+      "instruction_va": "0x462189",
+      "instruction_rva": "0x62189",
+      "instruction_file_offset": "0x62189",
+      "status": "statically_validated",
+      "semantic_status": "unknown"
+    },
+    {
+      "numeric_offset": 81,
+      "size_bytes": 2,
+      "instruction_va": "0x46219e",
+      "instruction_rva": "0x6219e",
+      "instruction_file_offset": "0x6219e",
+      "status": "statically_validated",
+      "semantic_status": "unknown"
+    },
+    {
+      "numeric_offset": 83,
+      "size_bytes": 2,
+      "instruction_va": "0x4621ad",
+      "instruction_rva": "0x621ad",
+      "instruction_file_offset": "0x621ad",
+      "status": "statically_validated",
+      "semantic_status": "unknown"
+    },
+    {
+      "numeric_offset": 85,
+      "size_bytes": 2,
+      "instruction_va": "0x4621bf",
+      "instruction_rva": "0x621bf",
+      "instruction_file_offset": "0x621bf",
+      "status": "statically_validated",
+      "semantic_status": "unknown"
+    },
+    {
+      "numeric_offset": 87,
+      "size_bytes": 1,
+      "instruction_va": "0x4621d1",
+      "instruction_rva": "0x621d1",
+      "instruction_file_offset": "0x621d1",
+      "status": "statically_validated",
+      "semantic_status": "unknown"
+    },
+    {
+      "numeric_offset": 88,
+      "size_bytes": 2,
+      "instruction_va": "0x4621e1",
+      "instruction_rva": "0x621e1",
+      "instruction_file_offset": "0x621e1",
+      "status": "statically_validated",
+      "semantic_status": "unknown"
+    },
+    {
+      "numeric_offset": 90,
+      "size_bytes": 1,
+      "instruction_va": "0x4621f1",
+      "instruction_rva": "0x621f1",
+      "instruction_file_offset": "0x621f1",
+      "status": "statically_validated",
+      "semantic_status": "unknown"
+    },
+    {
+      "numeric_offset": 91,
+      "size_bytes": 2,
+      "instruction_va": "0x462201",
+      "instruction_rva": "0x62201",
+      "instruction_file_offset": "0x62201",
+      "status": "statically_validated",
+      "semantic_status": "unknown"
+    },
+    {
+      "numeric_offset": 93,
+      "size_bytes": 1,
+      "instruction_va": "0x462211",
+      "instruction_rva": "0x62211",
+      "instruction_file_offset": "0x62211",
+      "status": "statically_validated",
+      "semantic_status": "unknown"
+    },
+    {
+      "numeric_offset": 94,
+      "size_bytes": 2,
+      "instruction_va": "0x462221",
+      "instruction_rva": "0x62221",
+      "instruction_file_offset": "0x62221",
+      "status": "statically_validated",
+      "semantic_status": "unknown"
+    },
+    {
+      "numeric_offset": 96,
+      "size_bytes": 2,
+      "instruction_va": "0x462231",
+      "instruction_rva": "0x62231",
+      "instruction_file_offset": "0x62231",
+      "status": "statically_validated",
+      "semantic_status": "unknown"
+    },
+    {
+      "numeric_offset": 98,
+      "size_bytes": 2,
+      "instruction_va": "0x462243",
+      "instruction_rva": "0x62243",
+      "instruction_file_offset": "0x62243",
+      "status": "statically_validated",
+      "semantic_status": "unknown"
+    },
+    {
+      "numeric_offset": 100,
+      "size_bytes": 2,
+      "instruction_va": "0x462255",
+      "instruction_rva": "0x62255",
+      "instruction_file_offset": "0x62255",
+      "status": "statically_validated",
+      "semantic_status": "unknown"
+    },
+    {
+      "numeric_offset": 102,
+      "size_bytes": 2,
+      "instruction_va": "0x462267",
+      "instruction_rva": "0x62267",
+      "instruction_file_offset": "0x62267",
+      "status": "statically_validated",
+      "semantic_status": "unknown"
+    },
+    {
+      "numeric_offset": 104,
+      "size_bytes": 2,
+      "instruction_va": "0x462279",
+      "instruction_rva": "0x62279",
+      "instruction_file_offset": "0x62279",
+      "status": "statically_validated",
+      "semantic_status": "unknown"
+    },
+    {
+      "numeric_offset": 106,
+      "size_bytes": 2,
+      "instruction_va": "0x46228b",
+      "instruction_rva": "0x6228b",
+      "instruction_file_offset": "0x6228b",
+      "status": "statically_validated",
+      "semantic_status": "unknown"
+    },
+    {
+      "numeric_offset": 108,
+      "size_bytes": 1,
+      "instruction_va": "0x46229d",
+      "instruction_rva": "0x6229d",
+      "instruction_file_offset": "0x6229d",
+      "status": "statically_validated",
+      "semantic_status": "unknown"
+    },
+    {
+      "numeric_offset": 109,
+      "size_bytes": 1,
+      "instruction_va": "0x4622ae",
+      "instruction_rva": "0x622ae",
+      "instruction_file_offset": "0x622ae",
+      "status": "statically_validated",
+      "semantic_status": "unknown"
+    },
+    {
+      "numeric_offset": 110,
+      "size_bytes": 1,
+      "instruction_va": "0x4622bb",
+      "instruction_rva": "0x622bb",
+      "instruction_file_offset": "0x622bb",
+      "status": "statically_validated",
+      "semantic_status": "unknown"
+    },
+    {
+      "numeric_offset": 111,
+      "size_bytes": 1,
+      "instruction_va": "0x4622c9",
+      "instruction_rva": "0x622c9",
+      "instruction_file_offset": "0x622c9",
+      "status": "statically_validated",
+      "semantic_status": "unknown"
+    },
+    {
+      "numeric_offset": 112,
+      "size_bytes": 2,
+      "instruction_va": "0x4622d7",
+      "instruction_rva": "0x622d7",
+      "instruction_file_offset": "0x622d7",
+      "status": "statically_validated",
+      "semantic_status": "unknown"
+    },
+    {
+      "numeric_offset": 114,
+      "size_bytes": 2,
+      "instruction_va": "0x4622e7",
+      "instruction_rva": "0x622e7",
+      "instruction_file_offset": "0x622e7",
+      "status": "statically_validated",
+      "semantic_status": "unknown"
+    }
+  ],
+  "observations": [
+    {
+      "id": "skill-nine-slots",
+      "status": "statically_validated",
+      "anchors": [
+        "0x461cda",
+        "0x462302"
+      ],
+      "observation": "Nine records per group; runtime stride 0x88, loop bound 0x4c8. Raw tail consumes 116 bytes."
+    },
+    {
+      "id": "skill-unknown-022-transform",
+      "status": "statically_validated",
+      "anchors": [
+        "0x461ed1"
+      ],
+      "observation": "Two-byte field at numeric offset 22 is reduced modulo 1000 in the loaded object. Export retains original storage; meaning unknown."
+    },
+    {
+      "id": "npc-matrix",
+      "status": "statically_validated",
+      "anchors": [
+        "0x47a9b0",
+        "0x47a9c0"
+      ],
+      "observation": "Nested 0x100 iteration bounds follow NPC records. Matrix domain meanings remain unknown."
+    },
+    {
+      "id": "quest-loader-call",
+      "status": "statically_validated",
+      "anchors": [
+        "0x47aa35",
+        "0x479500",
+        "0x4795e0"
+      ],
+      "observation": "NpcQuest loader calls the quest reader; it reads a count and each record begins with a two-byte field followed by text lengths."
+    },
+    {
+      "id": "quest-unknown-002-transform",
+      "status": "statically_validated",
+      "anchors": [
+        "0x4796b8",
+        "0x4796da",
+        "0x4796e0"
+      ],
+      "observation": "Second two-byte field after the first two texts: loaded value 60 becomes 70. Export retains raw value; semantic meaning remains unknown."
+    },
+    {
+      "id": "priest-usage",
+      "status": "unknown",
+      "observation": "Four-section structure consumes source exactly. No dedicated loader/active-use proof identified; byte decoding alone does not prove runtime usage."
+    }
+  ]
+}

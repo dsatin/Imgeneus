@@ -8,7 +8,7 @@ remain historical test-bench code.
 | --- | --- | --- | --- |
 | A0 | Sample identification | Complete | 18 frozen files plus original executable; PE, hashes, environment, IP patch |
 | A1 | SAH/SAF indexing and extraction | Complete | 23,564 tree entries plus six supplemental records; verified hashes/resume; zero errors |
-| A2 | Formats and parsers | In progress | 10 encrypted containers verified; 5 of 9 active table structures decoded; semantics and four layouts pending |
+| A2 | Formats and parsers | In progress | 10 encrypted containers verified; 8 of 9 active SData sources fully structurally decoded; Skill lacks six expected records; semantics pending |
 | A3 | Content catalogs | Pending | Domain references and explicit gaps |
 | A4 | UI and actions | Pending | Screen index and interaction matrix |
 | A5 | Static protocol | Partial | Some readers found; complete opcode/direction inventory pending |
@@ -53,10 +53,33 @@ See [initial A2 report](validation/phase-a2-initial.md),
   That work is now integrated into `develop/ep45-compatibility`; all further
   compatibility development and commits stay on this single branch.
 
+## A2 extended results
+
+See [extended report](validation/phase-a2-extended.md),
+[source outcomes and catalog hashes](catalogs/extended-table-structures.json),
+[schemas](schemas/extended-sdata-tables.md), and
+[loader evidence](analysis/extended-table-loaders.json).
+
+- Shared Skill/NpcSkill loader confirms nine slots and a 116-byte numeric tail.
+- NpcSkill: 3,456 complete records. Active Skill: 3,360 complete records,
+  six fewer than expected; source remains `unknown` despite valid CRC/cipher.
+- Separate supplemental Skill: 3,366 records, not substituted for the active file.
+- PriestTalk: 86 records, all 172 texts retain unresolved encoding; usage unknown.
+- NpcQuest: 1,510 NPCs, 2,109 quests, and 637 nonempty matrix arrays out of
+  131,072. Matrix rows are not entity counts; semantics remain unknown.
+- Cumulative fully decoded active sources: 8/9, containing 27,198 records;
+  30,558 complete records including recovery from inconsistent active Skill.
+- Exact byte reconstruction and existing-export verification passed.
+  The CLI exits 1 deliberately for the Skill discrepancy; failures stay visible.
+- 49 tests passed, including extracted first/last NpcSkill fixtures.
+  Zero new runtime interactions or semantically validated formats.
+
 ## Next A2 tasks
 
-1. Analyze shared Skill/NpcSkill loader `0x461a70` and decode both layouts.
-2. Decode PriestTalk and NpcQuest, preserving text encodings and opaque fields.
+1. Resolve the active Skill count discrepancy through executable/runtime evidence;
+   establish original skill/level lookup keys without substituting source data.
+2. Confirm full NpcQuest field reads and PriestTalk usage/encoding; identify NPC,
+   quest, list, and matrix lookup semantics and relationships.
 3. Trace item/mob field uses and lookup semantics; verify the remaining three
    structural loaders, enums, units, references, and the four cash encodings.
 4. Analyze supplemental usage and backend-relevant WLD/ZON/resource formats.

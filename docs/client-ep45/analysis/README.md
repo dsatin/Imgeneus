@@ -31,3 +31,8 @@ functions. Strings and historical backend names are clues, not semantic proof.
 A2 adds [crypto constants](seed-profile.json) and [bounded loader/function windows](sdata-functions.json).
 Full disassembly stays in cache; addresses, source-byte hashes, inspection bounds,
 and reproduction commands are indexed without claiming complete function boundaries.
+
+[Extended loader evidence](extended-table-loaders.json) records 84 Skill tail
+reads, nine-slot allocation, NpcQuest matrix bounds, quest-reader calls, and
+two observed numeric loading transformations. Original exports retain raw
+values. PriestTalk usage and complete NPC/quest field semantics remain unknown.

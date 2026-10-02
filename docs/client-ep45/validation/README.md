@@ -4,6 +4,11 @@ Report separately: inventoried/extracted files, decoded formats, cataloged
 entities, identified screens/actions, mapped opcodes, executed scenarios,
 and scenarios accepted by the client. State denominators and include errors.
 
+[Extended A2 validation](phase-a2-extended.md) records eight of nine active
+SData sources fully structurally decoded and Skill's six missing expected
+records. It separates recovered records, supplemental data, and matrix arrays
+from fully validated source coverage. No new runtime interactions are claimed.
+
 ## Extraction integrity
 
 - Reconcile declared SAH counts with all actual entries.

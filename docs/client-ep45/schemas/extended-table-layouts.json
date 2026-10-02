@@ -1,0 +1,1282 @@
+{
+  "schema_id": "EP45-A2-EXTENDED-001",
+  "baseline_id": "rebirth-evolution-ep45-98c7dd3a",
+  "byte_order": "little-endian",
+  "layouts": {
+    "skill-tail": {
+      "layout": "<BHBHHHBBBBBBBBBBBBHBBBBBBBBBBBBBBBBHHBHBBBHHBBBBBHBBBBHBHHHBHHHHHHBHBHBHHHHHHHBBBBHH",
+      "size_bytes": 116,
+      "fields": [
+        {
+          "name": "unknown_000",
+          "offset": 0,
+          "size_bytes": 1,
+          "storage": "uint8",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_001",
+          "offset": 1,
+          "size_bytes": 2,
+          "storage": "uint16",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_003",
+          "offset": 3,
+          "size_bytes": 1,
+          "storage": "uint8",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_004",
+          "offset": 4,
+          "size_bytes": 2,
+          "storage": "uint16",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_006",
+          "offset": 6,
+          "size_bytes": 2,
+          "storage": "uint16",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_008",
+          "offset": 8,
+          "size_bytes": 2,
+          "storage": "uint16",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_010",
+          "offset": 10,
+          "size_bytes": 1,
+          "storage": "uint8",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_011",
+          "offset": 11,
+          "size_bytes": 1,
+          "storage": "uint8",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_012",
+          "offset": 12,
+          "size_bytes": 1,
+          "storage": "uint8",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_013",
+          "offset": 13,
+          "size_bytes": 1,
+          "storage": "uint8",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_014",
+          "offset": 14,
+          "size_bytes": 1,
+          "storage": "uint8",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_015",
+          "offset": 15,
+          "size_bytes": 1,
+          "storage": "uint8",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_016",
+          "offset": 16,
+          "size_bytes": 1,
+          "storage": "uint8",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_017",
+          "offset": 17,
+          "size_bytes": 1,
+          "storage": "uint8",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_018",
+          "offset": 18,
+          "size_bytes": 1,
+          "storage": "uint8",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_019",
+          "offset": 19,
+          "size_bytes": 1,
+          "storage": "uint8",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_020",
+          "offset": 20,
+          "size_bytes": 1,
+          "storage": "uint8",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_021",
+          "offset": 21,
+          "size_bytes": 1,
+          "storage": "uint8",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_022",
+          "offset": 22,
+          "size_bytes": 2,
+          "storage": "uint16",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_024",
+          "offset": 24,
+          "size_bytes": 1,
+          "storage": "uint8",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_025",
+          "offset": 25,
+          "size_bytes": 1,
+          "storage": "uint8",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_026",
+          "offset": 26,
+          "size_bytes": 1,
+          "storage": "uint8",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_027",
+          "offset": 27,
+          "size_bytes": 1,
+          "storage": "uint8",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_028",
+          "offset": 28,
+          "size_bytes": 1,
+          "storage": "uint8",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_029",
+          "offset": 29,
+          "size_bytes": 1,
+          "storage": "uint8",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_030",
+          "offset": 30,
+          "size_bytes": 1,
+          "storage": "uint8",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_031",
+          "offset": 31,
+          "size_bytes": 1,
+          "storage": "uint8",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_032",
+          "offset": 32,
+          "size_bytes": 1,
+          "storage": "uint8",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_033",
+          "offset": 33,
+          "size_bytes": 1,
+          "storage": "uint8",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_034",
+          "offset": 34,
+          "size_bytes": 1,
+          "storage": "uint8",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_035",
+          "offset": 35,
+          "size_bytes": 1,
+          "storage": "uint8",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_036",
+          "offset": 36,
+          "size_bytes": 1,
+          "storage": "uint8",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_037",
+          "offset": 37,
+          "size_bytes": 1,
+          "storage": "uint8",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_038",
+          "offset": 38,
+          "size_bytes": 1,
+          "storage": "uint8",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_039",
+          "offset": 39,
+          "size_bytes": 1,
+          "storage": "uint8",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_040",
+          "offset": 40,
+          "size_bytes": 2,
+          "storage": "uint16",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_042",
+          "offset": 42,
+          "size_bytes": 2,
+          "storage": "uint16",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_044",
+          "offset": 44,
+          "size_bytes": 1,
+          "storage": "uint8",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_045",
+          "offset": 45,
+          "size_bytes": 2,
+          "storage": "uint16",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_047",
+          "offset": 47,
+          "size_bytes": 1,
+          "storage": "uint8",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_048",
+          "offset": 48,
+          "size_bytes": 1,
+          "storage": "uint8",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_049",
+          "offset": 49,
+          "size_bytes": 1,
+          "storage": "uint8",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_050",
+          "offset": 50,
+          "size_bytes": 2,
+          "storage": "uint16",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_052",
+          "offset": 52,
+          "size_bytes": 2,
+          "storage": "uint16",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_054",
+          "offset": 54,
+          "size_bytes": 1,
+          "storage": "uint8",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_055",
+          "offset": 55,
+          "size_bytes": 1,
+          "storage": "uint8",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_056",
+          "offset": 56,
+          "size_bytes": 1,
+          "storage": "uint8",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_057",
+          "offset": 57,
+          "size_bytes": 1,
+          "storage": "uint8",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_058",
+          "offset": 58,
+          "size_bytes": 1,
+          "storage": "uint8",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_059",
+          "offset": 59,
+          "size_bytes": 2,
+          "storage": "uint16",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_061",
+          "offset": 61,
+          "size_bytes": 1,
+          "storage": "uint8",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_062",
+          "offset": 62,
+          "size_bytes": 1,
+          "storage": "uint8",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_063",
+          "offset": 63,
+          "size_bytes": 1,
+          "storage": "uint8",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_064",
+          "offset": 64,
+          "size_bytes": 1,
+          "storage": "uint8",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_065",
+          "offset": 65,
+          "size_bytes": 2,
+          "storage": "uint16",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_067",
+          "offset": 67,
+          "size_bytes": 1,
+          "storage": "uint8",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_068",
+          "offset": 68,
+          "size_bytes": 2,
+          "storage": "uint16",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_070",
+          "offset": 70,
+          "size_bytes": 2,
+          "storage": "uint16",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_072",
+          "offset": 72,
+          "size_bytes": 2,
+          "storage": "uint16",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_074",
+          "offset": 74,
+          "size_bytes": 1,
+          "storage": "uint8",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_075",
+          "offset": 75,
+          "size_bytes": 2,
+          "storage": "uint16",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_077",
+          "offset": 77,
+          "size_bytes": 2,
+          "storage": "uint16",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_079",
+          "offset": 79,
+          "size_bytes": 2,
+          "storage": "uint16",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_081",
+          "offset": 81,
+          "size_bytes": 2,
+          "storage": "uint16",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_083",
+          "offset": 83,
+          "size_bytes": 2,
+          "storage": "uint16",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_085",
+          "offset": 85,
+          "size_bytes": 2,
+          "storage": "uint16",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_087",
+          "offset": 87,
+          "size_bytes": 1,
+          "storage": "uint8",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_088",
+          "offset": 88,
+          "size_bytes": 2,
+          "storage": "uint16",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_090",
+          "offset": 90,
+          "size_bytes": 1,
+          "storage": "uint8",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_091",
+          "offset": 91,
+          "size_bytes": 2,
+          "storage": "uint16",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_093",
+          "offset": 93,
+          "size_bytes": 1,
+          "storage": "uint8",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_094",
+          "offset": 94,
+          "size_bytes": 2,
+          "storage": "uint16",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_096",
+          "offset": 96,
+          "size_bytes": 2,
+          "storage": "uint16",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_098",
+          "offset": 98,
+          "size_bytes": 2,
+          "storage": "uint16",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_100",
+          "offset": 100,
+          "size_bytes": 2,
+          "storage": "uint16",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_102",
+          "offset": 102,
+          "size_bytes": 2,
+          "storage": "uint16",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_104",
+          "offset": 104,
+          "size_bytes": 2,
+          "storage": "uint16",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_106",
+          "offset": 106,
+          "size_bytes": 2,
+          "storage": "uint16",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_108",
+          "offset": 108,
+          "size_bytes": 1,
+          "storage": "uint8",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_109",
+          "offset": 109,
+          "size_bytes": 1,
+          "storage": "uint8",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_110",
+          "offset": 110,
+          "size_bytes": 1,
+          "storage": "uint8",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_111",
+          "offset": 111,
+          "size_bytes": 1,
+          "storage": "uint8",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_112",
+          "offset": 112,
+          "size_bytes": 2,
+          "storage": "uint16",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_114",
+          "offset": 114,
+          "size_bytes": 2,
+          "storage": "uint16",
+          "semantic_status": "unknown"
+        }
+      ]
+    },
+    "npc-base": {
+      "layout": "<BHIIII",
+      "size_bytes": 19,
+      "fields": [
+        {
+          "name": "unknown_000",
+          "offset": 0,
+          "size_bytes": 1,
+          "storage": "uint8",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_001",
+          "offset": 1,
+          "size_bytes": 2,
+          "storage": "uint16",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_003",
+          "offset": 3,
+          "size_bytes": 4,
+          "storage": "uint32",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_007",
+          "offset": 7,
+          "size_bytes": 4,
+          "storage": "uint32",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_011",
+          "offset": 11,
+          "size_bytes": 4,
+          "storage": "uint32",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_015",
+          "offset": 15,
+          "size_bytes": 4,
+          "storage": "uint32",
+          "semantic_status": "unknown"
+        }
+      ]
+    },
+    "npc-group-zero": {
+      "layout": "<BHBIIII",
+      "size_bytes": 20,
+      "fields": [
+        {
+          "name": "unknown_000",
+          "offset": 0,
+          "size_bytes": 1,
+          "storage": "uint8",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_001",
+          "offset": 1,
+          "size_bytes": 2,
+          "storage": "uint16",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_003",
+          "offset": 3,
+          "size_bytes": 1,
+          "storage": "uint8",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_004",
+          "offset": 4,
+          "size_bytes": 4,
+          "storage": "uint32",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_008",
+          "offset": 8,
+          "size_bytes": 4,
+          "storage": "uint32",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_012",
+          "offset": 12,
+          "size_bytes": 4,
+          "storage": "uint32",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_016",
+          "offset": 16,
+          "size_bytes": 4,
+          "storage": "uint32",
+          "semantic_status": "unknown"
+        }
+      ]
+    },
+    "npc-target": {
+      "layout": "<HIII",
+      "size_bytes": 14,
+      "fields": [
+        {
+          "name": "unknown_000",
+          "offset": 0,
+          "size_bytes": 2,
+          "storage": "uint16",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_002",
+          "offset": 2,
+          "size_bytes": 4,
+          "storage": "uint32",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_006",
+          "offset": 6,
+          "size_bytes": 4,
+          "storage": "uint32",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_010",
+          "offset": 10,
+          "size_bytes": 4,
+          "storage": "uint32",
+          "semantic_status": "unknown"
+        }
+      ]
+    },
+    "quest-tail": {
+      "layout": "<HHBBBBBBBBBBHhBBBHBBBBBBBIIIIIBBHBBBBBBBBBBBBBhBBBBBBBBBBHBHBBB",
+      "size_bytes": 87,
+      "fields": [
+        {
+          "name": "unknown_000",
+          "offset": 0,
+          "size_bytes": 2,
+          "storage": "uint16",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_002",
+          "offset": 2,
+          "size_bytes": 2,
+          "storage": "uint16",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_004",
+          "offset": 4,
+          "size_bytes": 1,
+          "storage": "uint8",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_005",
+          "offset": 5,
+          "size_bytes": 1,
+          "storage": "uint8",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_006",
+          "offset": 6,
+          "size_bytes": 1,
+          "storage": "uint8",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_007",
+          "offset": 7,
+          "size_bytes": 1,
+          "storage": "uint8",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_008",
+          "offset": 8,
+          "size_bytes": 1,
+          "storage": "uint8",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_009",
+          "offset": 9,
+          "size_bytes": 1,
+          "storage": "uint8",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_010",
+          "offset": 10,
+          "size_bytes": 1,
+          "storage": "uint8",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_011",
+          "offset": 11,
+          "size_bytes": 1,
+          "storage": "uint8",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_012",
+          "offset": 12,
+          "size_bytes": 1,
+          "storage": "uint8",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_013",
+          "offset": 13,
+          "size_bytes": 1,
+          "storage": "uint8",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_014",
+          "offset": 14,
+          "size_bytes": 2,
+          "storage": "uint16",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_016",
+          "offset": 16,
+          "size_bytes": 2,
+          "storage": "int16_candidate",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_018",
+          "offset": 18,
+          "size_bytes": 1,
+          "storage": "uint8",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_019",
+          "offset": 19,
+          "size_bytes": 1,
+          "storage": "uint8",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_020",
+          "offset": 20,
+          "size_bytes": 1,
+          "storage": "uint8",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_021",
+          "offset": 21,
+          "size_bytes": 2,
+          "storage": "uint16",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_023",
+          "offset": 23,
+          "size_bytes": 1,
+          "storage": "uint8",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_024",
+          "offset": 24,
+          "size_bytes": 1,
+          "storage": "uint8",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_025",
+          "offset": 25,
+          "size_bytes": 1,
+          "storage": "uint8",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_026",
+          "offset": 26,
+          "size_bytes": 1,
+          "storage": "uint8",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_027",
+          "offset": 27,
+          "size_bytes": 1,
+          "storage": "uint8",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_028",
+          "offset": 28,
+          "size_bytes": 1,
+          "storage": "uint8",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_029",
+          "offset": 29,
+          "size_bytes": 1,
+          "storage": "uint8",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_030",
+          "offset": 30,
+          "size_bytes": 4,
+          "storage": "uint32",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_034",
+          "offset": 34,
+          "size_bytes": 4,
+          "storage": "uint32",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_038",
+          "offset": 38,
+          "size_bytes": 4,
+          "storage": "uint32",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_042",
+          "offset": 42,
+          "size_bytes": 4,
+          "storage": "uint32",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_046",
+          "offset": 46,
+          "size_bytes": 4,
+          "storage": "uint32",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_050",
+          "offset": 50,
+          "size_bytes": 1,
+          "storage": "uint8",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_051",
+          "offset": 51,
+          "size_bytes": 1,
+          "storage": "uint8",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_052",
+          "offset": 52,
+          "size_bytes": 2,
+          "storage": "uint16",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_054",
+          "offset": 54,
+          "size_bytes": 1,
+          "storage": "uint8",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_055",
+          "offset": 55,
+          "size_bytes": 1,
+          "storage": "uint8",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_056",
+          "offset": 56,
+          "size_bytes": 1,
+          "storage": "uint8",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_057",
+          "offset": 57,
+          "size_bytes": 1,
+          "storage": "uint8",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_058",
+          "offset": 58,
+          "size_bytes": 1,
+          "storage": "uint8",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_059",
+          "offset": 59,
+          "size_bytes": 1,
+          "storage": "uint8",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_060",
+          "offset": 60,
+          "size_bytes": 1,
+          "storage": "uint8",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_061",
+          "offset": 61,
+          "size_bytes": 1,
+          "storage": "uint8",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_062",
+          "offset": 62,
+          "size_bytes": 1,
+          "storage": "uint8",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_063",
+          "offset": 63,
+          "size_bytes": 1,
+          "storage": "uint8",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_064",
+          "offset": 64,
+          "size_bytes": 1,
+          "storage": "uint8",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_065",
+          "offset": 65,
+          "size_bytes": 1,
+          "storage": "uint8",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_066",
+          "offset": 66,
+          "size_bytes": 1,
+          "storage": "uint8",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_067",
+          "offset": 67,
+          "size_bytes": 2,
+          "storage": "int16_candidate",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_069",
+          "offset": 69,
+          "size_bytes": 1,
+          "storage": "uint8",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_070",
+          "offset": 70,
+          "size_bytes": 1,
+          "storage": "uint8",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_071",
+          "offset": 71,
+          "size_bytes": 1,
+          "storage": "uint8",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_072",
+          "offset": 72,
+          "size_bytes": 1,
+          "storage": "uint8",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_073",
+          "offset": 73,
+          "size_bytes": 1,
+          "storage": "uint8",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_074",
+          "offset": 74,
+          "size_bytes": 1,
+          "storage": "uint8",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_075",
+          "offset": 75,
+          "size_bytes": 1,
+          "storage": "uint8",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_076",
+          "offset": 76,
+          "size_bytes": 1,
+          "storage": "uint8",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_077",
+          "offset": 77,
+          "size_bytes": 1,
+          "storage": "uint8",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_078",
+          "offset": 78,
+          "size_bytes": 1,
+          "storage": "uint8",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_079",
+          "offset": 79,
+          "size_bytes": 2,
+          "storage": "uint16",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_081",
+          "offset": 81,
+          "size_bytes": 1,
+          "storage": "uint8",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_082",
+          "offset": 82,
+          "size_bytes": 2,
+          "storage": "uint16",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_084",
+          "offset": 84,
+          "size_bytes": 1,
+          "storage": "uint8",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_085",
+          "offset": 85,
+          "size_bytes": 1,
+          "storage": "uint8",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_086",
+          "offset": 86,
+          "size_bytes": 1,
+          "storage": "uint8",
+          "semantic_status": "unknown"
+        }
+      ]
+    },
+    "quest-result": {
+      "layout": "<HBBBIHhBIIBBH",
+      "size_bytes": 26,
+      "fields": [
+        {
+          "name": "unknown_000",
+          "offset": 0,
+          "size_bytes": 2,
+          "storage": "uint16",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_002",
+          "offset": 2,
+          "size_bytes": 1,
+          "storage": "uint8",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_003",
+          "offset": 3,
+          "size_bytes": 1,
+          "storage": "uint8",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_004",
+          "offset": 4,
+          "size_bytes": 1,
+          "storage": "uint8",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_005",
+          "offset": 5,
+          "size_bytes": 4,
+          "storage": "uint32",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_009",
+          "offset": 9,
+          "size_bytes": 2,
+          "storage": "uint16",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_011",
+          "offset": 11,
+          "size_bytes": 2,
+          "storage": "int16_candidate",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_013",
+          "offset": 13,
+          "size_bytes": 1,
+          "storage": "uint8",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_014",
+          "offset": 14,
+          "size_bytes": 4,
+          "storage": "uint32",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_018",
+          "offset": 18,
+          "size_bytes": 4,
+          "storage": "uint32",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_022",
+          "offset": 22,
+          "size_bytes": 1,
+          "storage": "uint8",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_023",
+          "offset": 23,
+          "size_bytes": 1,
+          "storage": "uint8",
+          "semantic_status": "unknown"
+        },
+        {
+          "name": "unknown_024",
+          "offset": 24,
+          "size_bytes": 2,
+          "storage": "uint16",
+          "semantic_status": "unknown"
+        }
+      ]
+    }
+  }
+}

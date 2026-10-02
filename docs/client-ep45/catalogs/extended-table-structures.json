@@ -1,0 +1,1538 @@
+{
+  "schema_version": 1,
+  "schema_id": "EP45-A2-EXTENDED-001",
+  "baseline_id": "rebirth-evolution-ep45-98c7dd3a",
+  "executable_sha256": "98c7dd3a0589d5695e489d81b1acffdd456c633b47e913757b67e5f492d5ec48",
+  "generated_at_utc": "2026-10-02T01:35:33.930453+00:00",
+  "tool": {
+    "path": "tools/ep45-client/extended_tables.py",
+    "version": "1.0.0",
+    "sha256": "153accf026c7492c8e4dccffcd0316ac3bf443f8dc75b6b96f9694acf9d6989c"
+  },
+  "dependency_hashes": {
+    "tables.py": "16f782004d7eb9000a82ce52bb8de8fee220003b063a9e81e180a8809884c793",
+    "archive.py": "f44fe451716305359d19b0ff18acdc9ac79922adcbf450931661955028781dbb",
+    "sdata.py": "327a320793ba3c4a6c42a05d6dd23e42ab0075f3920f886485ef848b89e4479c"
+  },
+  "container_report_sha256": "49995b72b65c81e3214c6a39d8191e71a47b529d46c153d9e05ed78f56328a1e",
+  "sources": [
+    {
+      "id": "tree-000013",
+      "entry_kind": "tree",
+      "original_path": "Character/Skill.SData",
+      "format_id": "skills",
+      "source_sha256": "5b36ff9fd0b4b60200113a760767c5a08b3b5901bf815b83cc27a968f643a77a",
+      "decoded_sha256": "6043f1317849cf45f2fe50b8c7259cab4550852d190f684ab45640292d518702",
+      "status": "unknown",
+      "semantic_status": "unknown",
+      "issues": [
+        {
+          "id": "missing-terminal-records",
+          "offset": 612062,
+          "expected_records": 3366,
+          "complete_records": 3360,
+          "missing_records": 6
+        }
+      ],
+      "complete_records": 3360,
+      "headers": {
+        "declared_group_count": 374,
+        "records_per_group": 9,
+        "expected_records": 3366
+      },
+      "exports": {
+        "raw": {
+          "path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/catalogs/extended-v1/tree-000013.raw.jsonl",
+          "sha256": "28003504e17d1871e215fd020e7ea04d6674902a667ce91e769acd6ee8e57eec",
+          "rows": 3360
+        },
+        "normalized": {
+          "path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/catalogs/extended-v1/tree-000013.normalized.jsonl",
+          "sha256": "7f782d6ca1eca2138ae8ab4324f40cfa93fedd89815d143b486395444371cbed",
+          "rows": 3360
+        }
+      },
+      "bytes_consumed": 612062,
+      "structured_round_trip_matches": true,
+      "domain_counts": {
+        "skills": 3360
+      },
+      "unresolved_text_encodings": 0,
+      "first_record": {
+        "domain": "skills",
+        "group_ordinal": 0,
+        "ordinal": 0,
+        "offset": 4,
+        "numeric_blocks": [
+          {
+            "offset": 84,
+            "layout": "<BHBHHHBBBBBBBBBBBBHBBBBBBBBBBBBBBBBHHBHBBBHHBBBBBHBBBBHBHHHBHHHHHHBHBHBHHHHHHHBBBBHH",
+            "values": [
+              1,
+              1,
+              0,
+              0,
+              0,
+              1,
+              6,
+              1,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              1,
+              0,
+              0,
+              4,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              23,
+              10,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "texts": [
+          {
+            "offset": 4,
+            "size_bytes": 26,
+            "length_raw_i32": 22,
+            "raw_hex": "537472656e67746820547261696e696e67204c763100",
+            "text": "Strength Training Lv1",
+            "encoding_status": "ascii",
+            "trailing_zero_bytes": 1
+          },
+          {
+            "offset": 30,
+            "size_bytes": 54,
+            "length_raw_i32": 50,
+            "raw_hex": "496e6372656173657320696e697469616c2041747461636b20506f776572206279203130207065726d616e656e746c792e00",
+            "text": "Increases initial Attack Power by 10 permanently.",
+            "encoding_status": "ascii",
+            "trailing_zero_bytes": 1
+          }
+        ],
+        "group_record_ordinal": 0,
+        "size_bytes": 196
+      },
+      "last_record": {
+        "domain": "skills",
+        "group_ordinal": 373,
+        "ordinal": 3359,
+        "offset": 611924,
+        "numeric_blocks": [
+          {
+            "offset": 611946,
+            "layout": "<BHBHHHBBBBBBBBBBBBHBBBBBBBBBBBBBBBBHHBHBBBHHBBBBBHBBBBHBHHHBHHHHHHBHBHBHHHHHHHBBBBHH",
+            "values": [
+              3,
+              0,
+              0,
+              0,
+              0,
+              0,
+              6,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "texts": [
+          {
+            "offset": 611924,
+            "size_bytes": 13,
+            "length_raw_i32": 9,
+            "raw_hex": "3f3f3f3f3f33454400",
+            "text": "?????3ED",
+            "encoding_status": "ascii",
+            "trailing_zero_bytes": 1
+          },
+          {
+            "offset": 611937,
+            "size_bytes": 9,
+            "length_raw_i32": 5,
+            "raw_hex": "4e6f6e6500",
+            "text": "None",
+            "encoding_status": "ascii",
+            "trailing_zero_bytes": 1
+          }
+        ],
+        "group_record_ordinal": 2,
+        "size_bytes": 138
+      }
+    },
+    {
+      "id": "tree-015695",
+      "entry_kind": "tree",
+      "original_path": "Monster/NpcSkill.SData",
+      "format_id": "npc-skills",
+      "source_sha256": "4d70f73796fa0f4ea7bfa98fc25b364a33921fd62d68584eceff29d63775edfe",
+      "decoded_sha256": "a10755f833f8e6042a8ef7f619ff5325949111da5278e7f3381c49700762d348",
+      "status": "decoded",
+      "semantic_status": "unknown",
+      "issues": [],
+      "complete_records": 3456,
+      "headers": {
+        "declared_group_count": 384,
+        "records_per_group": 9,
+        "expected_records": 3456
+      },
+      "exports": {
+        "raw": {
+          "path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/catalogs/extended-v1/tree-015695.raw.jsonl",
+          "sha256": "6db70ee87a25dbc4f1dfd84355fa0836231acf1febff06516f1def2990d18fe7",
+          "rows": 3456
+        },
+        "normalized": {
+          "path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/catalogs/extended-v1/tree-015695.normalized.jsonl",
+          "sha256": "733a294bf88bbf4c12b2b52e88977ac25503151acd805a341f91b5ca504fb6bb",
+          "rows": 3456
+        }
+      },
+      "bytes_consumed": 465522,
+      "structured_round_trip_matches": true,
+      "domain_counts": {
+        "npc-skills": 3456
+      },
+      "unresolved_text_encodings": 0,
+      "first_record": {
+        "domain": "npc-skills",
+        "group_ordinal": 0,
+        "ordinal": 0,
+        "offset": 4,
+        "numeric_blocks": [
+          {
+            "offset": 101,
+            "layout": "<BHBHHHBBBBBBBBBBBBHBBBBBBBBBBBBBBBBHHBHBBBHHBBBBBHBBBBHBHHHBHHHHHHBHBHBHHHHHHHBBBBHH",
+            "values": [
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              3,
+              3,
+              66,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              20,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              3,
+              0,
+              0,
+              30,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "texts": [
+          {
+            "offset": 4,
+            "size_bytes": 10,
+            "length_raw_i32": 6,
+            "raw_hex": "536c65657000",
+            "text": "Sleep",
+            "encoding_status": "ascii",
+            "trailing_zero_bytes": 1
+          },
+          {
+            "offset": 14,
+            "size_bytes": 87,
+            "length_raw_i32": 83,
+            "raw_hex": "536c656570202d20556e61626c6520746f20706572666f726d20616e7920616374696f6e73207768696c652072657374696e672e20596f752077696c6c2077616b652075702069662061747461636b65642e00",
+            "text": "Sleep - Unable to perform any actions while resting. You will wake up if attacked.",
+            "encoding_status": "ascii",
+            "trailing_zero_bytes": 1
+          }
+        ],
+        "group_record_ordinal": 0,
+        "size_bytes": 213
+      },
+      "last_record": {
+        "domain": "npc-skills",
+        "group_ordinal": 383,
+        "ordinal": 3455,
+        "offset": 465396,
+        "numeric_blocks": [
+          {
+            "offset": 465406,
+            "layout": "<BHBHHHBBBBBBBBBBBBHBBBBBBBBBBBBBBBBHHBHBBBHHBBBBBHBBBBHBHHHBHHHHHHBHBHBHHHHHHHBBBBHH",
+            "values": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "texts": [
+          {
+            "offset": 465396,
+            "size_bytes": 5,
+            "length_raw_i32": 1,
+            "raw_hex": "00",
+            "text": "",
+            "encoding_status": "ascii",
+            "trailing_zero_bytes": 1
+          },
+          {
+            "offset": 465401,
+            "size_bytes": 5,
+            "length_raw_i32": 1,
+            "raw_hex": "00",
+            "text": "",
+            "encoding_status": "ascii",
+            "trailing_zero_bytes": 1
+          }
+        ],
+        "group_record_ordinal": 8,
+        "size_bytes": 126
+      }
+    },
+    {
+      "id": "tree-019145",
+      "entry_kind": "tree",
+      "original_path": "Npc/PriestTalk.SData",
+      "format_id": "priest-talk",
+      "source_sha256": "fe42e85b507f11825e533d7cee28192afaf9ed4ed7a83b5a3c3b08df8d04570f",
+      "decoded_sha256": "fe42e85b507f11825e533d7cee28192afaf9ed4ed7a83b5a3c3b08df8d04570f",
+      "status": "decoded",
+      "semantic_status": "unknown",
+      "issues": [],
+      "complete_records": 86,
+      "headers": {
+        "section_counts": [
+          25,
+          19,
+          21,
+          21
+        ],
+        "section_count_offsets": [
+          0,
+          14377,
+          25617,
+          38287
+        ]
+      },
+      "exports": {
+        "raw": {
+          "path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/catalogs/extended-v1/tree-019145.raw.jsonl",
+          "sha256": "3cb1d2a70c512557634133b314a4fdd1fc1e9fabc625bfdcc20bc6e1b51a3143",
+          "rows": 86
+        },
+        "normalized": {
+          "path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/catalogs/extended-v1/tree-019145.normalized.jsonl",
+          "sha256": "e71bf2fde8f2115600e3859fd3ba6880f7580fc7b83c3c7f04fd894997df8b8e",
+          "rows": 86
+        }
+      },
+      "bytes_consumed": 50985,
+      "structured_round_trip_matches": true,
+      "domain_counts": {
+        "priest-talk": 86
+      },
+      "unresolved_text_encodings": 172,
+      "first_record": {
+        "domain": "priest-talk",
+        "group_ordinal": 0,
+        "ordinal": 0,
+        "offset": 4,
+        "numeric_blocks": [
+          {
+            "offset": 4,
+            "layout": "<B",
+            "values": [
+              0
+            ]
+          }
+        ],
+        "texts": [
+          {
+            "offset": 5,
+            "size_bytes": 292,
+            "length_raw_i32": 288,
+            "raw_hex": "22c0fcbbe73f20b4e7bdc5bfa1b0d420b1d7b7b1b8bbc0bb20c7d220b0a1c4a1b0a120c0d6b4d9b0ed20bbfdb0a2b5c7bfc03f200abfecb8aeb0a120c1f6b1dd20c4a1b7e7b4c220c0fcc0efc0ba20b1e6bfa120b3aab5b9bec620b4d9b4cfb4c220b1abb9b0b5e9c0ccb3aa20b8f8bbfdb1e420b5bfb9b0b5e9b0fa20bdcebfecb4c220b0cdc0cc20bec6b4cfb6f520b8bbc0ccbfc02e0abfecb8aec0c720c0fbc0ba20baa3c0cfc1b720bec7b8b6b5e9b0fa20b5a5beb2c0ccc5cdc1b720b9ccb0b3c7cfb0ed20c3dfbec7c7d120b1abb9b0b5e9c0ceb0cdc0bba1a62020bacec5b9c0ccb4cf20c0cc20c0fcc0efc0c720bdc2b8aeb8a620c0a7c7d820b1d7b4ebb0a120b0a1c1f820b4c9b7c2c0bb20b9dfc8d6c7d820c1d6bdc3bfc02200",
+            "text": null,
+            "encoding_status": "unknown",
+            "trailing_zero_bytes": 1
+          },
+          {
+            "offset": 297,
+            "size_bytes": 289,
+            "length_raw_i32": 285,
+            "raw_hex": "c0ccb7b120c1a8c0e52e20b4e7bdc5c0ba20bec6c1f720c0fcbbe7b6f3b0ed20c7d2bcf6b5b520bef8b4c220b1d7c0fa20b0dfbdc0bbfdc0cfbbd3c0ccc0ddbec63f20b5b5b4ebc3bc20c0fcbbe7b6f3b4c2b0cdc0cc20beeeb6b2b0cdc0cec1f620becbb0edb3aa20c0d6b4c2b0c5bedf3f20c0cc20c0fcc0efc0ba20b8bbc0ccbedf20c0a7bcb1c0da20bfa4c7c1b5e9b0fa20b8dbc3bbc7d120c0ceb0a3b5e9c0bb20c0cc20b4ebb7fabfa1bcad20b8f4bec6b3bbb4c220b0cdc0cc20b8f1c0fbc0ccb6f520b8bbc0ccbedf2e20c7aeb7e7baf1bfecbdba20c0cfb4ebbfa1b0a1bcad20b1d7b5e9c0bb20b8f0b5ce20c1d7bfa9b9f6b7c12e20b1d7b7a1bedfb8b820bfecb8aeb0a120bbecbec6b3b2c0bb20bcf620c0d6beee2e00",
+            "text": null,
+            "encoding_status": "unknown",
+            "trailing_zero_bytes": 1
+          }
+        ],
+        "size_bytes": 582
+      },
+      "last_record": {
+        "domain": "priest-talk",
+        "group_ordinal": 3,
+        "ordinal": 20,
+        "offset": 50541,
+        "numeric_blocks": [
+          {
+            "offset": 50541,
+            "layout": "<B",
+            "values": [
+              200
+            ]
+          }
+        ],
+        "texts": [
+          {
+            "offset": 50542,
+            "size_bytes": 320,
+            "length_raw_i32": 316,
+            "raw_hex": "bec6b8b6b5b520c0ccc1a4b5b5c0c720b5bfb7e1b5e9b0fa20b1e4b9d0c7d120c7f9c1b6b8a620c7d8bfc220bbe7b6f7c0ccb6f3b8e920b4d9b8a520b4c9b7c2b5b520b8c5bfec20b3f4c0bbb0cdc0ccb6f320bbe7b7c1b5c7c1f6b8b820b1d7b4ebb0a120b0a1c1f6b0ed20c0d6b4c220b4c9b7c2c1dfbfa1bcad20b0a1c0e520b3f4b4d9b0ed20c6c7b4dcb5c7bfc02e20b5fbb6f3bcad20c0ccc1a6bacec5cdb4c220c0ccb7b8b0d420b1d7b4ebb0a120b0a1c1f6b0ed20c0d6b4c220b4c9b7c2c0bb20c3e6bad0c8f720b9dfc8d6c7cfb4c220c0cfb8b820b3b2bed2bcd22e20b9b0b7d020b2d9c1d8c7d120b0fcb8aeb8a620c5ebc7d8bcad20b4c9b7c2c4a1c0c720c7cfb6f4b5b520b8b7c0b8b8e9bcad20c1f8c7e0c7d8bedfc7cfb4c2b0cdc0bb20c0d8c1f620b8bbbed2c0b8b8e920c1c1b0dabcd22e00",
+            "text": null,
+            "encoding_status": "unknown",
+            "trailing_zero_bytes": 1
+          },
+          {
+            "offset": 50862,
+            "size_bytes": 123,
+            "length_raw_i32": 119,
+            "raw_hex": "b1d7b8b82c2089e7beee2e20b4e7bdc5bfa1b0d420b4f520c0ccbbf320b5bfb7e1b5e9b0fac0c720c7f9b5bfc1a4b5b5b8a620c6f2b0a1c7d820c1d9bcf6b4c220bef8beee2e20c0ccc1a4b5b5b8e920c3e6bad0c7d1b0c5bedf2e20b1d7b7afb4cf20b0fcb8aeb3aa20c0dfc7cfb5b5b7cf20c7d82e00",
+            "text": null,
+            "encoding_status": "unknown",
+            "trailing_zero_bytes": 1
+          }
+        ],
+        "size_bytes": 444
+      }
+    },
+    {
+      "id": "tree-019146",
+      "entry_kind": "tree",
+      "original_path": "Npc/NpcQuest.Sdata",
+      "format_id": "npc-quest",
+      "source_sha256": "73fac01227b05330329aabc35c0394310ba41bb06baf82f23de946deb89d1088",
+      "decoded_sha256": "376d7c30ef559afde72a9a31474e3e36ba36e6f5b4c4d05f83e8eceafffa4dfe",
+      "status": "decoded",
+      "semantic_status": "unknown",
+      "issues": [],
+      "complete_records": 3619,
+      "headers": {
+        "npc_group_counts": [
+          313,
+          72,
+          52,
+          2,
+          8,
+          40,
+          747,
+          150,
+          24,
+          83,
+          6,
+          11,
+          2
+        ],
+        "npc_group_count_offsets": [
+          0,
+          58957,
+          75043,
+          82861,
+          83106,
+          84375,
+          89524,
+          195224,
+          217768,
+          220054,
+          233302,
+          234213,
+          235664
+        ],
+        "matrix": {
+          "offset": 235973,
+          "size_bytes": 526656,
+          "cells": 65536,
+          "arrays": 131072,
+          "nonempty_arrays": 637,
+          "sha256": "76db90cfcb8b915de34f49ed11712dcc442088e5c2315912e104b8df7932ca27"
+        },
+        "quest_count_offset": 762629,
+        "quest_count": 2109
+      },
+      "exports": {
+        "raw": {
+          "path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/catalogs/extended-v1/tree-019146.raw.jsonl",
+          "sha256": "f1b87edc8c39747c64a1988d0b3e7250c8d4d16845578bac0cd2bb65548b3843",
+          "rows": 3619
+        },
+        "normalized": {
+          "path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/catalogs/extended-v1/tree-019146.normalized.jsonl",
+          "sha256": "1cc244732d1f305255ecb8cdbbd91e53619f344dd10cdb5cebc504c42f6f37b2",
+          "rows": 3619
+        },
+        "matrix": {
+          "path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/catalogs/extended-v1/tree-019146.matrix.jsonl",
+          "sha256": "49286568c7bfd309c40774b7c6f004eba352cfccd7ab3fb13949b3de7f3f24bc",
+          "rows": 637
+        }
+      },
+      "bytes_consumed": 3604234,
+      "structured_round_trip_matches": true,
+      "domain_counts": {
+        "npcs": 1510,
+        "quests": 2109
+      },
+      "unresolved_text_encodings": 6,
+      "first_record": {
+        "domain": "npcs",
+        "group_ordinal": 0,
+        "ordinal": 0,
+        "offset": 4,
+        "numeric_blocks": [
+          {
+            "offset": 4,
+            "layout": "<BHBIIII",
+            "values": [
+              1,
+              1,
+              1,
+              42,
+              16,
+              8000,
+              1
+            ]
+          }
+        ],
+        "texts": [
+          {
+            "offset": 24,
+            "size_bytes": 18,
+            "length_raw_i32": 14,
+            "raw_hex": "4572696e612050726f626963696f",
+            "text": "Erina Probicio",
+            "encoding_status": "ascii",
+            "trailing_zero_bytes": 0
+          },
+          {
+            "offset": 42,
+            "size_bytes": 122,
+            "length_raw_i32": 118,
+            "raw_hex": "476f6f64204d6f726e696e672e20596f75206c6f6f6b206c696b65206120676f6f6420706572736f6e20616e6420686176652061207472757374776f7274687920766f6963652e202057652073686f756c642074616c6b2e202020202020202020202020202020202020202020202020202020200d0a",
+            "text": "Good Morning. You look like a good person and have a trustworthy voice.  We should talk.                            \r\n",
+            "encoding_status": "ascii",
+            "trailing_zero_bytes": 0
+          }
+        ],
+        "unknown_pairs": {
+          "offset": 164,
+          "declared_count": 25,
+          "entries": [
+            {
+              "offset": 168,
+              "layout": "<BB",
+              "values": [
+                1,
+                1
+              ]
+            },
+            {
+              "offset": 170,
+              "layout": "<BB",
+              "values": [
+                1,
+                11
+              ]
+            },
+            {
+              "offset": 172,
+              "layout": "<BB",
+              "values": [
+                2,
+                1
+              ]
+            },
+            {
+              "offset": 174,
+              "layout": "<BB",
+              "values": [
+                2,
+                11
+              ]
+            },
+            {
+              "offset": 176,
+              "layout": "<BB",
+              "values": [
+                5,
+                1
+              ]
+            },
+            {
+              "offset": 178,
+              "layout": "<BB",
+              "values": [
+                5,
+                11
+              ]
+            },
+            {
+              "offset": 180,
+              "layout": "<BB",
+              "values": [
+                6,
+                1
+              ]
+            },
+            {
+              "offset": 182,
+              "layout": "<BB",
+              "values": [
+                6,
+                11
+              ]
+            },
+            {
+              "offset": 184,
+              "layout": "<BB",
+              "values": [
+                7,
+                1
+              ]
+            },
+            {
+              "offset": 186,
+              "layout": "<BB",
+              "values": [
+                7,
+                11
+              ]
+            },
+            {
+              "offset": 188,
+              "layout": "<BB",
+              "values": [
+                8,
+                1
+              ]
+            },
+            {
+              "offset": 190,
+              "layout": "<BB",
+              "values": [
+                8,
+                11
+              ]
+            },
+            {
+              "offset": 192,
+              "layout": "<BB",
+              "values": [
+                9,
+                1
+              ]
+            },
+            {
+              "offset": 194,
+              "layout": "<BB",
+              "values": [
+                9,
+                11
+              ]
+            },
+            {
+              "offset": 196,
+              "layout": "<BB",
+              "values": [
+                12,
+                1
+              ]
+            },
+            {
+              "offset": 198,
+              "layout": "<BB",
+              "values": [
+                12,
+                11
+              ]
+            },
+            {
+              "offset": 200,
+              "layout": "<BB",
+              "values": [
+                13,
+                1
+              ]
+            },
+            {
+              "offset": 202,
+              "layout": "<BB",
+              "values": [
+                13,
+                11
+              ]
+            },
+            {
+              "offset": 204,
+              "layout": "<BB",
+              "values": [
+                14,
+                1
+              ]
+            },
+            {
+              "offset": 206,
+              "layout": "<BB",
+              "values": [
+                14,
+                11
+              ]
+            },
+            {
+              "offset": 208,
+              "layout": "<BB",
+              "values": [
+                15,
+                1
+              ]
+            },
+            {
+              "offset": 210,
+              "layout": "<BB",
+              "values": [
+                15,
+                11
+              ]
+            },
+            {
+              "offset": 212,
+              "layout": "<BB",
+              "values": [
+                10,
+                1
+              ]
+            },
+            {
+              "offset": 214,
+              "layout": "<BB",
+              "values": [
+                10,
+                11
+              ]
+            },
+            {
+              "offset": 216,
+              "layout": "<BB",
+              "values": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "unknown_lists": [
+          {
+            "offset": 218,
+            "declared_count": 0,
+            "entries": []
+          },
+          {
+            "offset": 222,
+            "declared_count": 0,
+            "entries": []
+          }
+        ],
+        "size_bytes": 222
+      },
+      "last_record": {
+        "domain": "quests",
+        "group_ordinal": 0,
+        "ordinal": 2108,
+        "offset": 3603542,
+        "numeric_blocks": [
+          {
+            "offset": 3603542,
+            "layout": "<H",
+            "values": [
+              2109
+            ]
+          },
+          {
+            "offset": 3603646,
+            "layout": "<HHBBBBBBBBBBHhBBBHBBBBBBBIIIIIBBHBBBBBBBBBBBBBhBBBBBBBBBBHBHBBB",
+            "values": [
+              70,
+              70,
+              6,
+              2,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              2070,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              7,
+              736,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              7,
+              736,
+              25,
+              236,
+              7,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0
+            ]
+          }
+        ],
+        "texts": [
+          {
+            "offset": 3603544,
+            "size_bytes": 12,
+            "length_raw_i32": 8,
+            "raw_hex": "3f203f3f203f3f00",
+            "text": "? ?? ??",
+            "encoding_status": "ascii",
+            "trailing_zero_bytes": 1
+          },
+          {
+            "offset": 3603556,
+            "size_bytes": 90,
+            "length_raw_i32": 86,
+            "raw_hex": "7b63337d3f3f203f3f7b2f637d20383f3f203f3f3f203f3f3f3f207b63327d3f3f3f203f3f7b2f637d3f3f203f3f3f203f3f207b63337d3f3f3f203f7b2f637d3f203f3f203f203f3f3f3f2e200d0a0d0a0d0a0d0a00",
+            "text": "{c3}?? ??{/c} 8?? ??? ???? {c2}??? ??{/c}?? ??? ?? {c3}??? ?{/c}? ?? ? ????. \r\n\r\n\r\n\r\n",
+            "encoding_status": "ascii",
+            "trailing_zero_bytes": 1
+          },
+          {
+            "offset": 3603811,
+            "size_bytes": 61,
+            "length_raw_i32": 57,
+            "raw_hex": "3f3f203f3f3f203f3f3f21200d0a3f203f3f3f203f3f3f3f3f203f3f203f3f3f3f203f3f203f3f203f3f3f203f3f3f3f3f210d0a0d0a0d0a00",
+            "text": "?? ??? ???! \r\n? ??? ????? ?? ???? ?? ?? ??? ?????!\r\n\r\n\r\n",
+            "encoding_status": "ascii",
+            "trailing_zero_bytes": 1
+          },
+          {
+            "offset": 3603872,
+            "size_bytes": 9,
+            "length_raw_i32": 5,
+            "raw_hex": "0d0a0d0a00",
+            "text": "\r\n\r\n",
+            "encoding_status": "ascii",
+            "trailing_zero_bytes": 1
+          },
+          {
+            "offset": 3603881,
+            "size_bytes": 9,
+            "length_raw_i32": 5,
+            "raw_hex": "0d0a0d0a00",
+            "text": "\r\n\r\n",
+            "encoding_status": "ascii",
+            "trailing_zero_bytes": 1
+          },
+          {
+            "offset": 3603890,
+            "size_bytes": 273,
+            "length_raw_i32": 269,
+            "raw_hex": "3f3f3f3f3f21203f3f3f203f3f210d0a3f3f203f3f3f3f3f203f203f3f203f203f3f203f3f3f203f3f3f203f3f3f203f3f3f2e0d0a3f3f203f3f203f3f203f203f3f3f203f3f3f3f3f203f3f3f3f2e203f3f3f203f3f3f3f203f3f3f3f3f203f3f203f203f3f3f21200d0a0d0a3f3f3f203f3f3f203f3f3f203f3f203f3f3f203f3f3f203f3f3f3f3f2e203f203f3f3f203f3f203f3f3f3f203f3f3f3f3f2e0d0a0d0a3f3f207b63337d3f3f203f3f7b2f637d20383f3f203f3f3f203f3f3f2e203f20383f3f3f3f203f3f3f203f203f3f203f3f203f3f3f3f203f3f3f2e203f3f207b63337d3f3f203f3f7b2f637d3f203f3f3f203f3f203f3f3f3f203f3f3f203f3f3f3f210d0a0d0a0d0a00",
+            "text": "?????! ??? ??!\r\n?? ????? ? ?? ? ?? ??? ??? ??? ???.\r\n?? ?? ?? ? ??? ????? ????. ??? ???? ????? ?? ? ???! \r\n\r\n??? ??? ??? ?? ??? ??? ?????. ? ??? ?? ???? ?????.\r\n\r\n?? {c3}?? ??{/c} 8?? ??? ???. ? 8???? ??? ? ?? ?? ???? ???. ?? {c3}?? ??{/c}? ??? ?? ???? ??? ????!\r\n\r\n\r\n",
+            "encoding_status": "ascii",
+            "trailing_zero_bytes": 1
+          },
+          {
+            "offset": 3604163,
+            "size_bytes": 9,
+            "length_raw_i32": 5,
+            "raw_hex": "0d0a0d0a00",
+            "text": "\r\n\r\n",
+            "encoding_status": "ascii",
+            "trailing_zero_bytes": 1
+          },
+          {
+            "offset": 3604172,
+            "size_bytes": 31,
+            "length_raw_i32": 27,
+            "raw_hex": "3f3f203f3f203f3f3f3f203f3f203f3f3f203f3f3f3f0d0a0d0a00",
+            "text": "?? ?? ???? ?? ??? ????\r\n\r\n",
+            "encoding_status": "ascii",
+            "trailing_zero_bytes": 1
+          },
+          {
+            "offset": 3604203,
+            "size_bytes": 31,
+            "length_raw_i32": 27,
+            "raw_hex": "3f3f203f3f203f3f3f3f203f3f203f3f3f203f3f3f3f0d0a0d0a00",
+            "text": "?? ?? ???? ?? ??? ????\r\n\r\n",
+            "encoding_status": "ascii",
+            "trailing_zero_bytes": 1
+          }
+        ],
+        "unknown_results": [
+          {
+            "offset": 3603733,
+            "layout": "<HBBBIHhBIIBBH",
+            "values": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              342473,
+              99,
+              2,
+              0
+            ]
+          },
+          {
+            "offset": 3603759,
+            "layout": "<HBBBIHhBIIBBH",
+            "values": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "offset": 3603785,
+            "layout": "<HBBBIHhBIIBBH",
+            "values": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "size_bytes": 692
+      }
+    },
+    {
+      "id": "supplemental-000002",
+      "entry_kind": "supplemental",
+      "original_path": "Skill.SData",
+      "format_id": "skills",
+      "source_sha256": "42e0bfc91055946d452cbb9ecbdcc314ee92fb70d9ec4baa96d4dbf84da6eab1",
+      "decoded_sha256": "15dfc41fcf850bc96f6713a2e8ecb18ca624b06d79b6cfa100213d5f21166dd8",
+      "status": "decoded",
+      "semantic_status": "unknown",
+      "issues": [],
+      "complete_records": 3366,
+      "headers": {
+        "declared_group_count": 374,
+        "records_per_group": 9,
+        "expected_records": 3366
+      },
+      "exports": {
+        "raw": {
+          "path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/catalogs/extended-v1/supplemental-000002.raw.jsonl",
+          "sha256": "a2c7ee0e80e4c603f409584ba7334ef4b5bd69f139c8e0919741ee553c1f11bb",
+          "rows": 3366
+        },
+        "normalized": {
+          "path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/catalogs/extended-v1/supplemental-000002.normalized.jsonl",
+          "sha256": "1122776182952fb678fb721014152c516744ffb78cda07877483d673a9c071a3",
+          "rows": 3366
+        }
+      },
+      "bytes_consumed": 613063,
+      "structured_round_trip_matches": true,
+      "domain_counts": {
+        "skills": 3366
+      },
+      "unresolved_text_encodings": 0,
+      "first_record": {
+        "domain": "skills",
+        "group_ordinal": 0,
+        "ordinal": 0,
+        "offset": 4,
+        "numeric_blocks": [
+          {
+            "offset": 84,
+            "layout": "<BHBHHHBBBBBBBBBBBBHBBBBBBBBBBBBBBBBHHBHBBBHHBBBBBHBBBBHBHHHBHHHHHHBHBHBHHHHHHHBBBBHH",
+            "values": [
+              1,
+              1,
+              0,
+              0,
+              0,
+              1,
+              6,
+              1,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              1,
+              0,
+              0,
+              4,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              23,
+              10,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "texts": [
+          {
+            "offset": 4,
+            "size_bytes": 26,
+            "length_raw_i32": 22,
+            "raw_hex": "537472656e67746820547261696e696e67204c763100",
+            "text": "Strength Training Lv1",
+            "encoding_status": "ascii",
+            "trailing_zero_bytes": 1
+          },
+          {
+            "offset": 30,
+            "size_bytes": 54,
+            "length_raw_i32": 50,
+            "raw_hex": "496e6372656173657320696e697469616c2041747461636b20506f776572206279203130207065726d616e656e746c792e00",
+            "text": "Increases initial Attack Power by 10 permanently.",
+            "encoding_status": "ascii",
+            "trailing_zero_bytes": 1
+          }
+        ],
+        "group_record_ordinal": 0,
+        "size_bytes": 196
+      },
+      "last_record": {
+        "domain": "skills",
+        "group_ordinal": 373,
+        "ordinal": 3365,
+        "offset": 612822,
+        "numeric_blocks": [
+          {
+            "offset": 612947,
+            "layout": "<BHBHHHBBBBBBBBBBBBHBBBBBBBBBBBBBBBBHHBHBBBHHBBBBBHBBBBHBHHHBHHHHHHBHBHBHHHHHHHBBBBHH",
+            "values": [
+              9,
+              58,
+              0,
+              0,
+              0,
+              70,
+              6,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              0,
+              0,
+              0,
+              0,
+              4,
+              99,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              100,
+              2,
+              0,
+              0,
+              72,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              51,
+              74,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0
+            ]
+          }
+        ],
+        "texts": [
+          {
+            "offset": 612822,
+            "size_bytes": 24,
+            "length_raw_i32": 20,
+            "raw_hex": "43727970746963204f6e65277320437572736500",
+            "text": "Cryptic One's Curse",
+            "encoding_status": "ascii",
+            "trailing_zero_bytes": 1
+          },
+          {
+            "offset": 612846,
+            "size_bytes": 101,
+            "length_raw_i32": 97,
+            "raw_hex": "596f752068617665206265656e206375727365642120596f752063616e6e6f7420656e746572207468652043727970746963204f6e652773205468726f6e65207768696c6520746869732063757273652072656d61696e73206163746976652e00",
+            "text": "You have been cursed! You cannot enter the Cryptic One's Throne while this curse remains active.",
+            "encoding_status": "ascii",
+            "trailing_zero_bytes": 1
+          }
+        ],
+        "group_record_ordinal": 8,
+        "size_bytes": 241
+      }
+    }
+  ],
+  "active_sources_in_scope": 4,
+  "active_sources_fully_decoded": 3,
+  "sources_with_issues": 1,
+  "semantically_validated_formats": 0
+}
