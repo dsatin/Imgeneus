@@ -120,3 +120,16 @@ Executable inspection is read-only. Reproduce the bounded windows with
 [loader evidence](../../docs/client-ep45/analysis/extended-table-loaders.json).
 Verify the executable hash and PE address mapping before applying any offsets.
 These tools require no database credentials, running server, SDK, or network.
+
+## A2: remaining-gap audit
+
+```bash
+EP45_CACHE='.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a'
+python3 tools/ep45-client/a2_audit.py --containers docs/client-ep45/catalogs/sdata-containers.json --initial docs/client-ep45/catalogs/table-structures.json --extended docs/client-ep45/catalogs/extended-table-structures.json --profile docs/client-ep45/analysis/table-lookup-profile.json --executable "$EP45_CACHE/originals/game.exe" --output-dir "$EP45_CACHE/catalogs/audit-v2" --report docs/client-ep45/validation/a2-audit.json
+```
+
+The audit pins executable windows and verifies input catalog hashes. It creates
+separate lookup-enriched catalogs and a corrected GuildHouse word layout,
+compares active/supplemental Skill contents by value rather than shifted offsets,
+and reports strict encoding round trips as candidates. It does not declare
+remaining A2 gaps resolved. See [pending work](../../docs/client-ep45/validation/a2-pending.md).

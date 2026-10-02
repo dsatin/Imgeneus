@@ -23,6 +23,9 @@ exports retain original bytes/values.
 ## Entities, assets, and relationships
 
 Group/slot ordinals identify provenance, not confirmed skill/level IDs.
+The [A2 audit](../validation/a2-pending.md) subsequently confirms one-based
+group/slot address keys at `0x462350`, exported separately as static lookup
+keys. The first tail byte is not that positional key; on-wire IDs remain pending.
 No IDs are renumbered or synthesized as original client IDs. Class, icons,
 animation/effects, targets, costs, duration, range, and buff links remain
 unknown until individual field uses and resource references are traced.

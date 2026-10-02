@@ -1,0 +1,387 @@
+{
+  "id": "EP45-A2-AUDIT-001",
+  "baseline_id": "rebirth-evolution-ep45-98c7dd3a",
+  "executable_sha256": "98c7dd3a0589d5695e489d81b1acffdd456c633b47e913757b67e5f492d5ec48",
+  "generated_at_utc": "2026-10-02T01:52:50.428913+00:00",
+  "tool": {
+    "path": "tools/ep45-client/a2_audit.py",
+    "version": "1.0.0",
+    "sha256": "3c13d427d6621d60922d70ce84c44086f2c36b288e9062e9abe877ab7078c730"
+  },
+  "input_hashes": {
+    "initial": "1837cc9d6fa4e3bca153e8478ad1b26225c572edd1ea7817aba568168d7bd478",
+    "extended": "52c9171fb77e2a28884b468aff295f74ab41a85ef552736e554a76fc8b20bbe7",
+    "containers": "49995b72b65c81e3214c6a39d8191e71a47b529d46c153d9e05ed78f56328a1e",
+    "profile": "68d2b802e3d52c9e41d6a20ce2b7e0a48f30f49e3825fda07803cd04fbcd649f"
+  },
+  "lookup_catalogs": [
+    {
+      "id": "tree-014671",
+      "entry_kind": "tree",
+      "domain": "items",
+      "source_status": "decoded",
+      "key_count": 16832,
+      "export": {
+        "path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/catalogs/audit-v2/tree-014671.lookup.jsonl",
+        "sha256": "4ea1db7c9d958529850c9ac134a408c5ebbcf923c89ab0684b2af9dd37f25a63",
+        "rows": 16832
+      },
+      "stored_pair_matches_lookup_key": 16832
+    },
+    {
+      "id": "tree-015696",
+      "entry_kind": "tree",
+      "domain": "mobs",
+      "source_status": "decoded",
+      "key_count": 3001,
+      "export": {
+        "path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/catalogs/audit-v2/tree-015696.lookup.jsonl",
+        "sha256": "10d8fa6b3ef8bc2fcc8b9ce2e8d8a56b618172fbccc7e73d45b773eff4c8e587",
+        "rows": 3001
+      }
+    },
+    {
+      "id": "tree-000013",
+      "entry_kind": "tree",
+      "domain": "skills",
+      "source_status": "unknown",
+      "key_count": 3360,
+      "export": {
+        "path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/catalogs/audit-v2/tree-000013.lookup.jsonl",
+        "sha256": "1f9f0003402fdeb84fb4979bfa32ef113f1f80474f5e4272ca77b5cdf6bc794a",
+        "rows": 3360
+      },
+      "first_numeric_byte_distribution": {
+        "1": 374,
+        "2": 374,
+        "3": 374,
+        "4": 373,
+        "5": 373,
+        "6": 373,
+        "7": 373,
+        "8": 373,
+        "9": 373
+      }
+    },
+    {
+      "id": "tree-015695",
+      "entry_kind": "tree",
+      "domain": "npc-skills",
+      "source_status": "decoded",
+      "key_count": 3456,
+      "export": {
+        "path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/catalogs/audit-v2/tree-015695.lookup.jsonl",
+        "sha256": "d9b879781351aa9dd5d0db3d9e44115504bfb551a1fe89a270d81bb1e0957a23",
+        "rows": 3456
+      },
+      "first_numeric_byte_distribution": {
+        "0": 3072,
+        "1": 384
+      }
+    },
+    {
+      "id": "supplemental-000002",
+      "entry_kind": "supplemental",
+      "domain": "skills",
+      "source_status": "decoded",
+      "key_count": 3366,
+      "export": {
+        "path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/catalogs/audit-v2/supplemental-000002.lookup.jsonl",
+        "sha256": "2f98582f7a6ae628d4268b5a8e4e1c2d42ca74295de175b7f83eaca0c011c233",
+        "rows": 3366
+      },
+      "first_numeric_byte_distribution": {
+        "1": 374,
+        "2": 374,
+        "3": 374,
+        "4": 374,
+        "5": 374,
+        "6": 374,
+        "7": 374,
+        "8": 374,
+        "9": 374
+      }
+    }
+  ],
+  "skill_source_comparison": {
+    "shared_records": 3360,
+    "equal_content_records": 3331,
+    "changed_content_records": 29,
+    "additional_supplemental_records": 6,
+    "active_usage_of_supplemental": "unknown",
+    "difference_export": {
+      "path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/catalogs/audit-v2/skill-source-differences.jsonl",
+      "sha256": "2fda942a7303752fab4825bf97f4815c4ce936b4c1e4f96d87ef0c015c680bfa",
+      "rows": 29
+    }
+  },
+  "encoding_analysis": [
+    {
+      "id": "tree-000011",
+      "unresolved_texts": 4,
+      "candidates": {
+        "cp949": {
+          "lossless_texts": 0,
+          "tested_texts": 4,
+          "status": "inferred"
+        },
+        "cp1252": {
+          "lossless_texts": 4,
+          "tested_texts": 4,
+          "status": "inferred"
+        },
+        "utf-16le": {
+          "lossless_texts": 3,
+          "tested_texts": 4,
+          "status": "inferred"
+        }
+      },
+      "client_conversion_encoding": "unknown"
+    },
+    {
+      "id": "tree-000012",
+      "unresolved_texts": 0,
+      "candidates": {
+        "cp949": {
+          "lossless_texts": 0,
+          "tested_texts": 0,
+          "status": "inferred"
+        },
+        "cp1252": {
+          "lossless_texts": 0,
+          "tested_texts": 0,
+          "status": "inferred"
+        },
+        "utf-16le": {
+          "lossless_texts": 0,
+          "tested_texts": 0,
+          "status": "inferred"
+        }
+      },
+      "client_conversion_encoding": "unknown"
+    },
+    {
+      "id": "tree-014671",
+      "unresolved_texts": 0,
+      "candidates": {
+        "cp949": {
+          "lossless_texts": 0,
+          "tested_texts": 0,
+          "status": "inferred"
+        },
+        "cp1252": {
+          "lossless_texts": 0,
+          "tested_texts": 0,
+          "status": "inferred"
+        },
+        "utf-16le": {
+          "lossless_texts": 0,
+          "tested_texts": 0,
+          "status": "inferred"
+        }
+      },
+      "client_conversion_encoding": "unknown"
+    },
+    {
+      "id": "tree-015696",
+      "unresolved_texts": 0,
+      "candidates": {
+        "cp949": {
+          "lossless_texts": 0,
+          "tested_texts": 0,
+          "status": "inferred"
+        },
+        "cp1252": {
+          "lossless_texts": 0,
+          "tested_texts": 0,
+          "status": "inferred"
+        },
+        "utf-16le": {
+          "lossless_texts": 0,
+          "tested_texts": 0,
+          "status": "inferred"
+        }
+      },
+      "client_conversion_encoding": "unknown"
+    },
+    {
+      "id": "tree-019142",
+      "unresolved_texts": 0,
+      "candidates": {
+        "cp949": {
+          "lossless_texts": 0,
+          "tested_texts": 0,
+          "status": "inferred"
+        },
+        "cp1252": {
+          "lossless_texts": 0,
+          "tested_texts": 0,
+          "status": "inferred"
+        },
+        "utf-16le": {
+          "lossless_texts": 0,
+          "tested_texts": 0,
+          "status": "inferred"
+        }
+      },
+      "client_conversion_encoding": "unknown"
+    },
+    {
+      "id": "tree-000013",
+      "unresolved_texts": 0,
+      "candidates": {
+        "cp949": {
+          "lossless_texts": 0,
+          "tested_texts": 0,
+          "status": "inferred"
+        },
+        "cp1252": {
+          "lossless_texts": 0,
+          "tested_texts": 0,
+          "status": "inferred"
+        },
+        "utf-16le": {
+          "lossless_texts": 0,
+          "tested_texts": 0,
+          "status": "inferred"
+        }
+      },
+      "client_conversion_encoding": "unknown"
+    },
+    {
+      "id": "tree-015695",
+      "unresolved_texts": 0,
+      "candidates": {
+        "cp949": {
+          "lossless_texts": 0,
+          "tested_texts": 0,
+          "status": "inferred"
+        },
+        "cp1252": {
+          "lossless_texts": 0,
+          "tested_texts": 0,
+          "status": "inferred"
+        },
+        "utf-16le": {
+          "lossless_texts": 0,
+          "tested_texts": 0,
+          "status": "inferred"
+        }
+      },
+      "client_conversion_encoding": "unknown"
+    },
+    {
+      "id": "tree-019145",
+      "unresolved_texts": 172,
+      "candidates": {
+        "cp949": {
+          "lossless_texts": 172,
+          "tested_texts": 172,
+          "status": "inferred"
+        },
+        "cp1252": {
+          "lossless_texts": 172,
+          "tested_texts": 172,
+          "status": "inferred"
+        },
+        "utf-16le": {
+          "lossless_texts": 0,
+          "tested_texts": 172,
+          "status": "inferred"
+        }
+      },
+      "client_conversion_encoding": "unknown"
+    },
+    {
+      "id": "tree-019146",
+      "unresolved_texts": 6,
+      "candidates": {
+        "cp949": {
+          "lossless_texts": 0,
+          "tested_texts": 6,
+          "status": "inferred"
+        },
+        "cp1252": {
+          "lossless_texts": 6,
+          "tested_texts": 6,
+          "status": "inferred"
+        },
+        "utf-16le": {
+          "lossless_texts": 6,
+          "tested_texts": 6,
+          "status": "inferred"
+        }
+      },
+      "client_conversion_encoding": "unknown"
+    },
+    {
+      "id": "supplemental-000002",
+      "unresolved_texts": 0,
+      "candidates": {
+        "cp949": {
+          "lossless_texts": 0,
+          "tested_texts": 0,
+          "status": "inferred"
+        },
+        "cp1252": {
+          "lossless_texts": 0,
+          "tested_texts": 0,
+          "status": "inferred"
+        },
+        "utf-16le": {
+          "lossless_texts": 0,
+          "tested_texts": 0,
+          "status": "inferred"
+        }
+      },
+      "client_conversion_encoding": "unknown"
+    }
+  ],
+  "guild_house_correction": {
+    "id": "tree-019142",
+    "source_sha256": "739fb38a5e2bf3020ecd0220b2bddf1b680ad9890893e48b29c975fedc68b73d",
+    "decoded_sha256": "739fb38a5e2bf3020ecd0220b2bddf1b680ad9890893e48b29c975fedc68b73d",
+    "layout": "<BBBBBHHHHH",
+    "headers": {
+      "unknown_header_i32": [
+        1,
+        50000000,
+        2000
+      ],
+      "unknown_trailing_i32": [
+        37,
+        38,
+        39,
+        41,
+        42,
+        43,
+        196,
+        198,
+        197,
+        207,
+        209,
+        208,
+        200,
+        201,
+        202,
+        210,
+        212,
+        213,
+        220,
+        221,
+        222,
+        223,
+        224,
+        225
+      ]
+    },
+    "export": {
+      "path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/catalogs/audit-v2/guild-house.corrected.jsonl",
+      "sha256": "80a7b7acda25ad6c91e9ff6156228933fddf78a56145bba682edc94f6c925407",
+      "rows": 36
+    },
+    "structured_round_trip_matches": true
+  },
+  "semantically_completed_formats": 0,
+  "new_runtime_interactions": 0
+}

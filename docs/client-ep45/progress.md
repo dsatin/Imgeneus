@@ -76,6 +76,14 @@ See [extended report](validation/phase-a2-extended.md),
 
 ## Next A2 tasks
 
+The [pending-work audit](validation/a2-pending.md) confirms static lookup
+keys for items/mobs/skills, corrects GuildHouse's final word grouping in a
+separate export, and corroborates KillStatus widths. Active/supplemental Skill
+comparison found 29 changed shared records plus six additional supplemental
+records; substitution is unsupported. Encoding candidates remain unconfirmed.
+54 tests pass. Runtime-dependent gaps remain open; independently verifiable
+A3 resource catalogs may proceed as authorized by the user.
+
 1. Resolve the active Skill count discrepancy through executable/runtime evidence;
    establish original skill/level lookup keys without substituting source data.
 2. Confirm full NpcQuest field reads and PriestTalk usage/encoding; identify NPC,

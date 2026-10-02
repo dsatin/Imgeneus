@@ -40,6 +40,9 @@ code. Truncation inside a record remains a hard parsing error. The supplemental
 source is separate evidence and never replaces the active source.
 
 Group/slot ordinals are provenance, not invented skill IDs or confirmed levels.
+The later [lookup audit](../validation/a2-pending.md) proves one-based group/slot
+address selection; its enriched catalogs use a separate schema and do not
+claim packet-ID semantics or modify the original structural exports.
 Numeric offset 22 is reduced modulo 1,000 by the client loader; exports retain
 the original value. Meaning, units, buff/effect semantics, and lookup IDs are
 unresolved. A possible runtime out-of-bounds read is a hypothesis requiring

@@ -27,15 +27,21 @@ counts. Signed interpretation of numeric storage is still a candidate.
 | `Npc/GuildHouse.SData` | Three int32 values; 36 fixed records; 24 trailing int32 values | 15 | 36 |
 
 Guild-house fixed records are five bytes, four two-byte values, and two bytes.
+**Audit correction:** that grouping is historical. Executable read widths show
+five bytes followed by **five two-byte values**. Use the separate corrected
+`EP45-A2-GUILD-002` export in [A2 audit](../validation/a2-audit.json);
+the old export remains byte-lossless but has an incorrect last-field boundary.
 The [JSON dictionary](sdata-table-layouts.json) specifies every numeric offset,
 width, and candidate type. All unresolved meanings use `unknown_*` names.
 
 The item file declares 100 groups. The first two tail bytes form unique
 candidate `(type,typeId)` pairs, and the first byte matches the one-based group
 number for all 16,832 records. Those original bytes are preserved without
-renumbering. Full client lookup semantics still require analysis.
+renumbering. The [lookup audit](../analysis/table-lookup-profile.json) confirms
+one-based byte group/record arguments and all stored pairs match those positions.
 Mob records contain no explicit identifier in this layout; ordinal is a
-provenance position, not a confirmed mob ID. Guild-house trailing values and
+provenance position; the audit confirms a zero-based uint16 lookup index, without
+claiming a packet mob ID. Guild-house trailing values and
 cash pair values remain raw references until target catalog links are proven.
 
 ## Export and validation

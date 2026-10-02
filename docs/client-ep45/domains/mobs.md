@@ -11,7 +11,9 @@ at `0x424c7e` with `Monster.SData`, demonstrates corresponding string and numeri
 copies in the `0x461810`–`0x46194a` window.
 
 No explicit mob ID occurs in this candidate structure. Original ordinals and
-source offsets remain provenance identifiers; logical IDs need lookup analysis.
+source offsets remain provenance identifiers. The
+[A2 audit](../validation/a2-pending.md) confirms zero-based uint16 lookup
+at `0x461990`; packet IDs and other field meanings remain uncorrelated.
 The normalized catalog uses `unknown_*` fields, without treating infrastructure
 names such as HP/AI as confirmed semantics. ASCII/UTF-8 text candidates retain
 all original bytes. Structured round trip is identical for the whole file.

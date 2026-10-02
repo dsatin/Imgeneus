@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:imgeneus:ep45:table-lookup-record:1",
+  "title": "EP45 statically evidenced lookup enrichment",
+  "description": "Retains fields from the identified source record schema; adds a static lookup key, never a claimed packet ID.",
+  "type": "object",
+  "required": ["id", "baseline_id", "schema_id", "source_record_schema_id", "source_sha256", "decoded_sha256", "offset", "size_bytes", "client_lookup_key", "lookup_status", "lookup_evidence_id", "lookup_limitations"],
+  "properties": {
+    "schema_id": {"const": "EP45-A2-LOOKUP-001"},
+    "source_record_schema_id": {"enum": ["EP45-A2-TABLE-001", "EP45-A2-EXTENDED-001"]},
+    "lookup_status": {"const": "statically_validated"},
+    "client_lookup_key": {
+      "oneOf": [
+        {"type": "object", "required": ["index_u16"], "properties": {"index_u16": {"type": "integer", "minimum": 0, "maximum": 65535}}, "additionalProperties": false},
+        {"type": "object", "required": ["group_u8", "record_u8"], "properties": {"group_u8": {"type": "integer", "minimum": 1, "maximum": 255}, "record_u8": {"type": "integer", "minimum": 1, "maximum": 255}}, "additionalProperties": false},
+        {"type": "object", "required": ["group_u16", "slot_u8"], "properties": {"group_u16": {"type": "integer", "minimum": 1, "maximum": 65535}, "slot_u8": {"type": "integer", "minimum": 1, "maximum": 9}}, "additionalProperties": false}
+      ]
+    }
+  }
+}

@@ -1,0 +1,160 @@
+{
+  "id": "EP45-A2-LOOKUPS-001",
+  "baseline_id": "rebirth-evolution-ep45-98c7dd3a",
+  "executable_sha256": "98c7dd3a0589d5695e489d81b1acffdd456c633b47e913757b67e5f492d5ec48",
+  "project_commit": "f0b495133ce67922f8ecee756780ebbd8c9d1211",
+  "observation_date": "2026-10-01",
+  "tool_version": "GNU objdump (GNU Binutils) 2.47",
+  "image_base": "0x400000",
+  "windows": [
+    {
+      "id": "item-lookup",
+      "virtual_address": "0x461450",
+      "virtual_end_exclusive": "0x4614a0",
+      "rva": "0x61450",
+      "file_offset": 398416,
+      "size_bytes": 80,
+      "source_bytes_sha256": "fd3355ae13b92caf66eef9422bf96560d05a129c1a814c16a9fc48abaf2fddb2",
+      "disassembly_path": ".client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/analysis/a2/item-lookup.asm",
+      "disassembly_sha256": "a44209a273f8b36b9f6e6deb1ef4cd99a0829f4361aa901a8cfa3db6d1ae2249",
+      "reproduction_command": "objdump -d -Mintel --start-address=0x461450 --stop-address=0x4614a0 .client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/originals/game.exe"
+    },
+    {
+      "id": "mob-lookup",
+      "virtual_address": "0x461990",
+      "virtual_end_exclusive": "0x4619b0",
+      "rva": "0x61990",
+      "file_offset": 399760,
+      "size_bytes": 32,
+      "source_bytes_sha256": "6f97947ca7e598ea1570e5cdb0d2e9b563cf9cc5ad248b1d99891870bc85f0b8",
+      "disassembly_path": ".client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/analysis/a2/mob-lookup.asm",
+      "disassembly_sha256": "85c6168d4889d0a9da8de8f9436a86ef38f738a8692244936234c821421de381",
+      "reproduction_command": "objdump -d -Mintel --start-address=0x461990 --stop-address=0x4619b0 .client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/originals/game.exe"
+    },
+    {
+      "id": "skill-lookup",
+      "virtual_address": "0x462350",
+      "virtual_end_exclusive": "0x462398",
+      "rva": "0x62350",
+      "file_offset": 402256,
+      "size_bytes": 72,
+      "source_bytes_sha256": "12caeb70da84ee3a270ed4d6076698b88636a983d16fcb1ba0b1a6fe6bd5b07a",
+      "disassembly_path": ".client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/analysis/a2/skill-lookup.asm",
+      "disassembly_sha256": "54c795f42a3ca48906ab7cfdf22b72b4fd6ddecf1b43b19676393c076f30ba6d",
+      "reproduction_command": "objdump -d -Mintel --start-address=0x462350 --stop-address=0x462398 .client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/originals/game.exe"
+    },
+    {
+      "id": "guild-house-fields",
+      "virtual_address": "0x4c5ebc",
+      "virtual_end_exclusive": "0x4c60c0",
+      "rva": "0xc5ebc",
+      "file_offset": 810684,
+      "size_bytes": 516,
+      "source_bytes_sha256": "bfa5e5a824b353d598f6aa3f4ecde90d07de656edcd3c730c8d34a90de6f674c",
+      "disassembly_path": ".client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/analysis/a2/guild-house-fields.asm",
+      "disassembly_sha256": "4be495f007f65d0845ae02e122acd2be5990164d6f14c509df0478a4ff335236",
+      "reproduction_command": "objdump -d -Mintel --start-address=0x4c5ebc --stop-address=0x4c60c0 .client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/originals/game.exe"
+    },
+    {
+      "id": "kill-status-fields",
+      "virtual_address": "0x478ecd",
+      "virtual_end_exclusive": "0x478f76",
+      "rva": "0x78ecd",
+      "file_offset": 495309,
+      "size_bytes": 169,
+      "source_bytes_sha256": "e7f3e2b57a85f455b07ba7f06307a6db083f0ef216b4cab85652ac1054d8db9c",
+      "disassembly_path": ".client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/analysis/a2/kill-status-fields.asm",
+      "disassembly_sha256": "4a6e5a3ca24bebb5df08f6b77031e17ea29f3abb0fb00b2166ab00eda02a6f8e",
+      "reproduction_command": "objdump -d -Mintel --start-address=0x478ecd --stop-address=0x478f76 .client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/originals/game.exe"
+    }
+  ],
+  "contracts": [
+    {
+      "id": "EP45-A2-LOOKUP-ITEMS",
+      "status": "statically_validated",
+      "routine_va": "0x461450",
+      "key_types": [
+        "uint8",
+        "uint8"
+      ],
+      "mapping": "group = first argument - 1; record = second argument - 1; loaded stride 0x5c",
+      "acceptance": "first argument >= 1 and <= group count; second argument >= 1 and <= per-group record count; non-null group pointer",
+      "limitations": "Byte types cap representable keys at 255. No inventory protocol linkage or item field semantics inferred."
+    },
+    {
+      "id": "EP45-A2-LOOKUP-MOBS",
+      "status": "statically_validated",
+      "routine_va": "0x461990",
+      "key_types": [
+        "uint16"
+      ],
+      "mapping": "zero-based record index; loaded stride 0x2c",
+      "acceptance": "index < low-16-bit stored record count",
+      "limitations": "Name-based search routines also exist; on-wire mob IDs remain uncorrelated."
+    },
+    {
+      "id": "EP45-A2-LOOKUP-SKILLS",
+      "status": "statically_validated",
+      "routine_va": "0x462350",
+      "key_types": [
+        "uint16",
+        "uint8"
+      ],
+      "mapping": "group = first argument - 1; slot = second argument - 1; loaded stride 0x88",
+      "acceptance": "group argument >= 1 and <= stored group count; slot 1..9; non-null group pointer",
+      "limitations": "Slot lookup does not consult the first serialized tail byte. Active Skill source remains incomplete."
+    },
+    {
+      "id": "EP45-A2-LOOKUP-NPC-SKILLS",
+      "status": "statically_validated",
+      "routine_va": "0x462350",
+      "key_types": [
+        "uint16",
+        "uint8"
+      ],
+      "mapping": "same shared skill lookup contract",
+      "acceptance": "same as skill lookup",
+      "limitations": "The source tail first byte is 1 in 384 records and 0 in 3072 records; never use it to renumber or discard positional slots."
+    },
+    {
+      "id": "EP45-A2-GUILD-002",
+      "status": "statically_validated",
+      "anchors": [
+        "0x4c5ee2",
+        "0x4c5ef3",
+        "0x4c5f04",
+        "0x4c5f20",
+        "0x4c5f35",
+        "0x4c5f4a",
+        "0x4c5f5f",
+        "0x4c5f77",
+        "0x4c5f8c",
+        "0x4c5fa1",
+        "0x4c5fb6",
+        "0x4c5fce",
+        "0x4c5fe1",
+        "0x4c5fec"
+      ],
+      "observation": "Three four-byte headers, 36 records each containing five one-byte then five two-byte reads; four repeated 2-by-3 loops each reading four-byte trailing values (24 total).",
+      "correction": "The prior 5-byte + 4-short + 2-byte grouping has the same total length but incorrectly split the final two-byte field. Preserve historical exports; corrected layout is <BBBBBHHHHH."
+    },
+    {
+      "id": "EP45-A2-KILL-STRUCTURE",
+      "status": "statically_validated",
+      "anchors": [
+        "0x478ecd",
+        "0x478ef0",
+        "0x478ef5",
+        "0x478efb",
+        "0x478f06",
+        "0x478f10",
+        "0x478f70"
+      ],
+      "observation": "Count followed by one-byte/four-byte/two-byte values and six one-byte/two-byte pairs; numeric meanings still unknown."
+    }
+  ],
+  "limitations": [
+    "These contracts confirm static address selection, not gameplay packet layouts.",
+    "PE .text address mapping verified; source files opened read-only."
+  ]
+}

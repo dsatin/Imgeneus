@@ -34,6 +34,7 @@ All compatibility development and commits continue on `develop/ep45-compatibilit
 | [Table structures](schemas/sdata-tables.md) | Lossless record layouts and unresolved semantics |
 | [Extended structures](schemas/extended-sdata-tables.md) | Skills, dialogue, NPCs, quests, and explicit source discrepancies |
 | [Extended A2 report](validation/phase-a2-extended.md) | Structural coverage, source outcomes, and pending validation |
+| [A2 pending-work audit](validation/a2-pending.md) | Resolved lookup/width questions and deferred gaps |
 
 Raw files and large exports belong in the ignored `.client-ep45-cache/`.
 Tools live in `tools/ep45-client/` and accept the client path as a parameter.

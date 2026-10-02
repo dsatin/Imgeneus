@@ -23,3 +23,8 @@ UI actions, and inventory packet relationships remain pending.
 
 The backend may eventually import confirmed original IDs and fields. No
 existing EP8 seed, rule, or serializer is validated by this structural export.
+
+The [A2 lookup audit](../validation/a2-pending.md) confirms one-based byte
+group/record addressing at `0x461450`, matching all 16,832 stored pairs.
+Separate lookup catalogs are indexed in [audit outputs](../validation/a2-audit.json).
+Other fields, resource links, and packet ID uses remain unresolved.
