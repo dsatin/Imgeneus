@@ -133,3 +133,22 @@ separate lookup-enriched catalogs and a corrected GuildHouse word layout,
 compares active/supplemental Skill contents by value rather than shifted offsets,
 and reports strict encoding round trips as candidates. It does not declare
 remaining A2 gaps resolved. See [pending work](../../docs/client-ep45/validation/a2-pending.md).
+
+## A3: resource catalogs and map metadata
+
+```bash
+EP45_CACHE='.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a'
+python3 tools/ep45-client/resources.py --manifest "$EP45_CACHE/archive-files.jsonl" --extraction-report docs/client-ep45/catalogs/extraction-report.json --extracted-root "$EP45_CACHE/extracted" --output-dir "$EP45_CACHE/catalogs/resources-v4" --report docs/client-ep45/catalogs/resource-catalogs.json --executable-sha256 98c7dd3a0589d5695e489d81b1acffdd456c633b47e913757b67e5f492d5ec48
+```
+
+This verifies every source size/hash, preserves all entries/errors, and creates
+full/UI/audio/map catalogs plus ZON records. Media metadata is separate from
+payload decoding. Two explicitly labeled unpadded WAV layouts retain their
+standard-layout failures; their playback is untested. WorldMap.cfg keeps raw
+lines and duplicate fields; MapNum-to-WLD filename matches remain inferred.
+The command succeeds with zero reader/file errors for this identified sample.
+Existing exports are verified without replacement; revisions use new folders.
+
+Small extracted first/last ZON fixtures in `fixtures/zon-records.json` run
+without the installation. See [resource schema](../../docs/client-ep45/schemas/resource-metadata.md)
+and [A3 validation](../../docs/client-ep45/validation/phase-a3-resources.md).

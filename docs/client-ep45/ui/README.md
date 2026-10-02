@@ -1,5 +1,8 @@
 # UI and action matrix
 
+[Initial resource catalog](resources.md): 997 UI-path resources with source
+hashes and bounded metadata. Screen/action/state coverage remains pending.
+
 Inventory accessible screens and screens referenced by assets/functions
 that remain inaccessible. Record image/text IDs, shortcuts, controls,
 initial/final states, and access conditions.

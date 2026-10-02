@@ -15,6 +15,9 @@ indexes five raw/normalized bulk record catalogs and unresolved layouts.
 `extended-table-structures.json` indexes the subsequent Skill/NpcSkill,
 PriestTalk, NPC/quest, and sparse matrix exports, including the active Skill
 count discrepancy and the separate supplemental Skill outcome.
+`resource-catalogs.json` indexes A3 catalogs for all 23,570 source entries,
+UI/audio/map groups, 35 ZON records, candidate map links, and explicit WAV
+source anomalies. Resource file counts are not entity/action coverage.
 Discovery header flags describe the earlier A1 inventory; the A2 container
 report records subsequent checksum/decryption validation.
 

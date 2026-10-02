@@ -9,7 +9,7 @@ remain historical test-bench code.
 | A0 | Sample identification | Complete | 18 frozen files plus original executable; PE, hashes, environment, IP patch |
 | A1 | SAH/SAF indexing and extraction | Complete | 23,564 tree entries plus six supplemental records; verified hashes/resume; zero errors |
 | A2 | Formats and parsers | In progress | 10 encrypted containers verified; 8 of 9 active SData sources fully structurally decoded; Skill lacks six expected records; semantics pending |
-| A3 | Content catalogs | Pending | Domain references and explicit gaps |
+| A3 | Content catalogs | In progress | 23,570 resource entries verified/cataloged; UI/audio/map exports; 35 ZON records; entity relationships pending |
 | A4 | UI and actions | Pending | Screen index and interaction matrix |
 | A5 | Static protocol | Partial | Some readers found; complete opcode/direction inventory pending |
 | A6 | Runtime validation | Partial | First cycle observed; reentry and other flows pending |
@@ -92,7 +92,29 @@ A3 resource catalogs may proceed as authorized by the user.
    structural loaders, enums, units, references, and the four cash encodings.
 4. Analyze supplemental usage and backend-relevant WLD/ZON/resource formats.
    Numeric WLD filenames remain candidate IDs.
-5. Add semantic catalogs and validation evidence before progressing to A3–A7.
+5. Add semantic catalogs and validation evidence; A3 independent resource work
+   proceeds with these gaps open, while A7 still gates Phase B.
+
+## A3 initial resource results
+
+The user authorized continuing independent extraction when A2 questions need
+additional evidence. See [resource validation](validation/phase-a3-resources.md),
+[catalog index](catalogs/resource-catalogs.json), and
+[schemas](schemas/resource-metadata.md).
+
+- All 23,570 archive entries have resource rows and rechecked sizes/hashes.
+- Recognized metadata/structures: 12,590 files; opaque structures: 10,980.
+  Media payloads remain undecoded; no file disappeared from coverage.
+- UI-path resources: 997; audio-path resources: 1,039. Two WAV sources omit
+  odd-chunk padding; their explicitly parsed variants and strict-layout errors
+  remain recorded, with runtime playback unknown.
+- 86 WLD prefixes indexed; WLD bodies/terrain/collision/entities remain opaque.
+- ZON: 35 structurally decoded records. WorldMap.cfg: 20 sections,
+  19 numbered map entries and 19 candidate filename links, with original bytes.
+- 63 tests pass, including extracted ZON fixtures. Zero new runtime interactions.
+- Next: model/animation/effect/WLD readers, confirmed resource references,
+  UI strings/layouts/actions, and static protocol discovery. A2 remains open;
+  A7 has not released Phase B.
 
 ## Outstanding experimental work
 

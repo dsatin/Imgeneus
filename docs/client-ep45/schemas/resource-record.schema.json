@@ -1,0 +1,101 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:imgeneus:ep45:resource-record:1",
+  "title": "EP45 verified resource inventory and bounded metadata",
+  "type": "object",
+  "required": [
+    "id",
+    "baseline_id",
+    "source_path",
+    "entry_kind",
+    "source_sha256",
+    "size_bytes",
+    "saf_offset",
+    "extension",
+    "domain_hint",
+    "classification_status",
+    "schema_id",
+    "status",
+    "semantic_status"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "baseline_id": {
+      "type": "string"
+    },
+    "source_path": {
+      "type": "string"
+    },
+    "entry_kind": {
+      "enum": [
+        "tree",
+        "supplemental"
+      ]
+    },
+    "source_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "size_bytes": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "saf_offset": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "extension": {
+      "type": "string"
+    },
+    "domain_hint": {
+      "type": "string"
+    },
+    "classification_status": {
+      "const": "inferred"
+    },
+    "schema_id": {
+      "const": "EP45-A3-RESOURCE-001"
+    },
+    "status": {
+      "const": "inventoried"
+    },
+    "semantic_status": {
+      "const": "unknown"
+    },
+    "integrity_status": {
+      "const": "statically_validated"
+    },
+    "header_status": {
+      "enum": [
+        "decoded",
+        "unknown"
+      ]
+    },
+    "metadata": {
+      "type": "object",
+      "required": [
+        "kind"
+      ],
+      "properties": {
+        "kind": {
+          "enum": [
+            "dds",
+            "bmp",
+            "tga_candidate",
+            "wave",
+            "wld_header",
+            "opaque",
+            "zon",
+            "world-map-config"
+          ]
+        }
+      }
+    },
+    "error": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}

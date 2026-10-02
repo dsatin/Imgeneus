@@ -1,0 +1,306 @@
+{
+  "id": "EP45-A3-RESOURCE-001",
+  "baseline_id": "rebirth-evolution-ep45-98c7dd3a",
+  "executable_sha256": "98c7dd3a0589d5695e489d81b1acffdd456c633b47e913757b67e5f492d5ec48",
+  "generated_at_utc": "2026-10-02T02:04:45.576934+00:00",
+  "tool": {
+    "path": "tools/ep45-client/resources.py",
+    "version": "1.0.0",
+    "sha256": "52f8d408deeacbb78e3ddddb150a86799262f09d1014cc26a72269fd71899c0f"
+  },
+  "dependency_hashes": {
+    "tables.py": "16f782004d7eb9000a82ce52bb8de8fee220003b063a9e81e180a8809884c793",
+    "archive.py": "f44fe451716305359d19b0ff18acdc9ac79922adcbf450931661955028781dbb",
+    "sdata.py": "327a320793ba3c4a6c42a05d6dd23e42ab0075f3920f886485ef848b89e4479c"
+  },
+  "archive_manifest_sha256": "141493242b496dde8119fb30b45e84fe078b04ddbf957d2226ac1c92a28902cf",
+  "extraction_report_sha256": "210864dc82b464b0b3af0a48f3b5c5e399bad3567ba9700790fbaccf476fbbf4",
+  "entries_examined": 23570,
+  "verified_entries": 23570,
+  "header_families": {
+    "bmp": 39,
+    "dds": 10451,
+    "opaque": 10980,
+    "tga_candidate": 973,
+    "wave": 1039,
+    "wld_header": 86,
+    "world-map-config": 1,
+    "zon": 1
+  },
+  "errors": [],
+  "source_layout_anomalies": [
+    {
+      "id": "tree-021771",
+      "path": "Sound/back/bg_mzone003.wav",
+      "layout_variant": "observed_unpadded_chunks",
+      "standard_layout_error": "RIFF chunk exceeds file bounds",
+      "runtime_playback_status": "unknown"
+    },
+    {
+      "id": "tree-021772",
+      "path": "Sound/back/bg_mzone004.wav",
+      "layout_variant": "observed_unpadded_chunks",
+      "standard_layout_error": "RIFF chunk exceeds file bounds",
+      "runtime_playback_status": "unknown"
+    }
+  ],
+  "resource_catalog": {
+    "path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/catalogs/resources-v4/resources.jsonl",
+    "sha256": "7c4e933187024d76974a3c870d5087e9ada5d1f7785b2ec84f478b75fd301b49",
+    "rows": 23570
+  },
+  "zon_catalog": {
+    "path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/catalogs/resources-v4/zon.jsonl",
+    "sha256": "ee60c80f77d78568c906e334bf59e7203e143f5a48052bcd78ccfcb095fa827c",
+    "rows": 35
+  },
+  "ui_catalog": {
+    "path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/catalogs/resources-v4/ui-resources.jsonl",
+    "sha256": "ed2f360bff711992267cde28cef13ff022bf2808ea1501833f11dd484629d949",
+    "rows": 997
+  },
+  "audio_catalog": {
+    "path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/catalogs/resources-v4/audio-resources.jsonl",
+    "sha256": "14dc3cc52e66e24995f8e8f35e4d0be8b7acc2d853a741f8d1ae6bc3ba0e9f06",
+    "rows": 1039
+  },
+  "map_resource_catalog": {
+    "path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/catalogs/resources-v4/map-resources.jsonl",
+    "sha256": "73e05dc52aabe3fb67473eb0c4bffea1ae834de027b3e0f21f791878ec959ad9",
+    "rows": 1314
+  },
+  "world_map_references": [
+    {
+      "source_entry_id": "tree-000008",
+      "section": "0",
+      "offset": 410,
+      "original_value_hex": "3139",
+      "integer_candidate": 19,
+      "target_entry_ids": [
+        "tree-022510"
+      ],
+      "status": "inferred",
+      "basis": "MapNum numeric value matches WLD filename stem; loader linkage remains unproven"
+    },
+    {
+      "source_entry_id": "tree-000008",
+      "section": "1",
+      "offset": 544,
+      "original_value_hex": "31",
+      "integer_candidate": 1,
+      "target_entry_ids": [
+        "tree-022508"
+      ],
+      "status": "inferred",
+      "basis": "MapNum numeric value matches WLD filename stem; loader linkage remains unproven"
+    },
+    {
+      "source_entry_id": "tree-000008",
+      "section": "2",
+      "offset": 676,
+      "original_value_hex": "3238",
+      "integer_candidate": 28,
+      "target_entry_ids": [
+        "tree-022514"
+      ],
+      "status": "inferred",
+      "basis": "MapNum numeric value matches WLD filename stem; loader linkage remains unproven"
+    },
+    {
+      "source_entry_id": "tree-000008",
+      "section": "3",
+      "offset": 811,
+      "original_value_hex": "3433",
+      "integer_candidate": 43,
+      "target_entry_ids": [
+        "tree-022449"
+      ],
+      "status": "inferred",
+      "basis": "MapNum numeric value matches WLD filename stem; loader linkage remains unproven"
+    },
+    {
+      "source_entry_id": "tree-000008",
+      "section": "4",
+      "offset": 943,
+      "original_value_hex": "3335",
+      "integer_candidate": 35,
+      "target_entry_ids": [
+        "tree-022516"
+      ],
+      "status": "inferred",
+      "basis": "MapNum numeric value matches WLD filename stem; loader linkage remains unproven"
+    },
+    {
+      "source_entry_id": "tree-000008",
+      "section": "5",
+      "offset": 1077,
+      "original_value_hex": "32",
+      "integer_candidate": 2,
+      "target_entry_ids": [
+        "tree-022511"
+      ],
+      "status": "inferred",
+      "basis": "MapNum numeric value matches WLD filename stem; loader linkage remains unproven"
+    },
+    {
+      "source_entry_id": "tree-000008",
+      "section": "6",
+      "offset": 1210,
+      "original_value_hex": "3230",
+      "integer_candidate": 20,
+      "target_entry_ids": [
+        "tree-022512"
+      ],
+      "status": "inferred",
+      "basis": "MapNum numeric value matches WLD filename stem; loader linkage remains unproven"
+    },
+    {
+      "source_entry_id": "tree-000008",
+      "section": "7",
+      "offset": 1344,
+      "original_value_hex": "3239",
+      "integer_candidate": 29,
+      "target_entry_ids": [
+        "tree-022515"
+      ],
+      "status": "inferred",
+      "basis": "MapNum numeric value matches WLD filename stem; loader linkage remains unproven"
+    },
+    {
+      "source_entry_id": "tree-000008",
+      "section": "8",
+      "offset": 1476,
+      "original_value_hex": "3336",
+      "integer_candidate": 36,
+      "target_entry_ids": [
+        "tree-022517"
+      ],
+      "status": "inferred",
+      "basis": "MapNum numeric value matches WLD filename stem; loader linkage remains unproven"
+    },
+    {
+      "source_entry_id": "tree-000008",
+      "section": "9",
+      "offset": 1612,
+      "original_value_hex": "3434",
+      "integer_candidate": 44,
+      "target_entry_ids": [
+        "tree-022451"
+      ],
+      "status": "inferred",
+      "basis": "MapNum numeric value matches WLD filename stem; loader linkage remains unproven"
+    },
+    {
+      "source_entry_id": "tree-000008",
+      "section": "10",
+      "offset": 1758,
+      "original_value_hex": "3138",
+      "integer_candidate": 18,
+      "target_entry_ids": [
+        "tree-022421"
+      ],
+      "status": "inferred",
+      "basis": "MapNum numeric value matches WLD filename stem; loader linkage remains unproven"
+    },
+    {
+      "source_entry_id": "tree-000008",
+      "section": "11",
+      "offset": 1895,
+      "original_value_hex": "3330",
+      "integer_candidate": 30,
+      "target_entry_ids": [
+        "tree-022434"
+      ],
+      "status": "inferred",
+      "basis": "MapNum numeric value matches WLD filename stem; loader linkage remains unproven"
+    },
+    {
+      "source_entry_id": "tree-000008",
+      "section": "12",
+      "offset": 2037,
+      "original_value_hex": "30",
+      "integer_candidate": 0,
+      "target_entry_ids": [
+        "tree-022394"
+      ],
+      "status": "inferred",
+      "basis": "MapNum numeric value matches WLD filename stem; loader linkage remains unproven"
+    },
+    {
+      "source_entry_id": "tree-000008",
+      "section": "13",
+      "offset": 2174,
+      "original_value_hex": "3435",
+      "integer_candidate": 45,
+      "target_entry_ids": [
+        "tree-022452"
+      ],
+      "status": "inferred",
+      "basis": "MapNum numeric value matches WLD filename stem; loader linkage remains unproven"
+    },
+    {
+      "source_entry_id": "tree-000008",
+      "section": "14",
+      "offset": 2312,
+      "original_value_hex": "3436",
+      "integer_candidate": 46,
+      "target_entry_ids": [
+        "tree-022453"
+      ],
+      "status": "inferred",
+      "basis": "MapNum numeric value matches WLD filename stem; loader linkage remains unproven"
+    },
+    {
+      "source_entry_id": "tree-000008",
+      "section": "15",
+      "offset": 2452,
+      "original_value_hex": "3437",
+      "integer_candidate": 47,
+      "target_entry_ids": [
+        "tree-022455"
+      ],
+      "status": "inferred",
+      "basis": "MapNum numeric value matches WLD filename stem; loader linkage remains unproven"
+    },
+    {
+      "source_entry_id": "tree-000008",
+      "section": "16",
+      "offset": 2594,
+      "original_value_hex": "3638",
+      "integer_candidate": 68,
+      "target_entry_ids": [
+        "tree-022490"
+      ],
+      "status": "inferred",
+      "basis": "MapNum numeric value matches WLD filename stem; loader linkage remains unproven"
+    },
+    {
+      "source_entry_id": "tree-000008",
+      "section": "17",
+      "offset": 2736,
+      "original_value_hex": "3639",
+      "integer_candidate": 69,
+      "target_entry_ids": [
+        "tree-022492"
+      ],
+      "status": "inferred",
+      "basis": "MapNum numeric value matches WLD filename stem; loader linkage remains unproven"
+    },
+    {
+      "source_entry_id": "tree-000008",
+      "section": "18",
+      "offset": 2871,
+      "original_value_hex": "3730",
+      "integer_candidate": 70,
+      "target_entry_ids": [
+        "tree-022496"
+      ],
+      "status": "inferred",
+      "basis": "MapNum numeric value matches WLD filename stem; loader linkage remains unproven"
+    }
+  ],
+  "opaque_files": 10980,
+  "fully_decoded_media_payloads": 0,
+  "decoded_zon_records": 35,
+  "new_runtime_interactions": 0
+}

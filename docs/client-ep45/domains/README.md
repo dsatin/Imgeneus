@@ -13,10 +13,11 @@ and the [domain template](../templates/domain.md).
 | Mobs | [mobs.md](mobs.md) | ID/text, models/animation/audio, maps, available data |
 | NPCs | [npcs.md](npcs.md) | ID/type/faction, dialogue, shop/service, quest/map |
 | Quests | [quests.md](quests.md) | Stages, objectives, NPC/mob/item links, displayed rewards |
-| Maps | `maps.md` | ID/coordinates, terrain/collision, included portals/positions |
+| Maps | [maps.md](maps.md) | ID/coordinates, terrain/collision, included portals/positions |
 | Economy | [economy.md](economy.md) | Currency, buying/selling/trade, storage, discovered systems |
 | Social/PvP | [social-pvp.md](social-pvp.md) | Chat/friends, groups/guilds, duels/ranks, present events |
-| Assets | `assets.md` | Textures, models, animations, effects, fonts/audio |
+| Assets | [assets.md](assets.md) | Textures, models, animations, effects, fonts |
+| Audio | [audio.md](audio.md) | Music/effect/voice sources, chunk metadata, pending action/entity links |
 | Configuration | `configuration.md` | Networking, settings/updater, limits, auxiliary files |
 
 This list starts the inventory; it does not limit it. Absent/opaque/unknown
