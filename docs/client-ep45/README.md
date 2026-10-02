@@ -37,6 +37,9 @@ All compatibility development and commits continue on `develop/ep45-compatibilit
 | [A2 pending-work audit](validation/a2-pending.md) | Resolved lookup/width questions and deferred gaps |
 | [Resource catalog index](catalogs/resource-catalogs.json) | Verified archive entries, UI/audio/maps, metadata, and source anomalies |
 | [A3 resource validation](validation/phase-a3-resources.md) | Initial catalogs, ZON/config decoding, and remaining entity relationships |
+| [WLD catalogs](catalogs/wld-catalogs.json) | 86 source structures, map content, asset links, and cache hashes |
+| [WLD format](schemas/wld.md) | Client-specific layouts, nested counts, unknown fields, and loader evidence |
+| [A3 WLD validation](validation/phase-a3-wld.md) | Map extraction coverage, source fixtures, and remaining semantics |
 
 Raw files and large exports belong in the ignored `.client-ep45-cache/`.
 Tools live in `tools/ep45-client/` and accept the client path as a parameter.

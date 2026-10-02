@@ -36,3 +36,10 @@ and reproduction commands are indexed without claiming complete function boundar
 reads, nine-slot allocation, NpcQuest matrix bounds, quest-reader calls, and
 two observed numeric loading transformations. Original exports retain raw
 values. PriestTalk usage and complete NPC/quest field semantics remain unknown.
+
+[WLD loader evidence](wld-loaders.json) indexes 13 windows from the same
+executable. The [WLD format](../schemas/wld.md) links reads to 44-byte Mani
+placements, Object0 singles/pairs, portal text boundaries, nested regions,
+and NPC aggregate accounting. `wld_loaders.py` reproduces windows using PE
+section mappings and hashes; `wld.py` verifies that evidence before extraction.
+Full map IDs, axes/units, field semantics, and runtime behavior remain pending.

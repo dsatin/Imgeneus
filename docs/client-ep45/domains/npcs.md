@@ -27,6 +27,11 @@ for but its index meanings remain unknown. Type/faction, model, shops,
 destinations, quest links, and map positions require field/resource evidence.
 No spawn positions or shop rules have been invented.
 
+The [WLD catalog](../catalogs/wld-catalogs.json) adds 2,707 NPC candidate parents
+with 779 associated points. Their original aggregate is 3,486, not the parent
+count. Fields/offsets remain raw; links to NpcQuest IDs, point semantics,
+appearance, and service behavior are unresolved. See [WLD schema](../schemas/wld.md).
+
 ## UI and protocol
 
 Dialogue, merchant, and gatekeeper are candidate interpretations of these

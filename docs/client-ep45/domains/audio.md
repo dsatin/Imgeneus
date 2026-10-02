@@ -20,6 +20,12 @@ Paths distinguish candidate background/action/entity sound families without
 proving map/mob/skill/action links. Music, ambient, effect, and voice assignments
 need loader/path references and runtime events. Preserve original names.
 
+[WLD extraction](../catalogs/wld-catalogs.json) adds 155 music-name records,
+861 background sound names, 201 music-zone records, and 5,796 sound spots.
+Candidate filename links preserve empty/missing names and every archive target.
+These are map-to-audio discovery links, not validated playback or packet triggers.
+See [WLD validation](../validation/phase-a3-wld.md) for unresolved names.
+
 ## UI and protocol
 
 No sound trigger or packet/UI effect was newly validated.

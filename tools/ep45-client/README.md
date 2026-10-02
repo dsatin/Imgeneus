@@ -152,3 +152,32 @@ Existing exports are verified without replacement; revisions use new folders.
 Small extracted first/last ZON fixtures in `fixtures/zon-records.json` run
 without the installation. See [resource schema](../../docs/client-ep45/schemas/resource-metadata.md)
 and [A3 validation](../../docs/client-ep45/validation/phase-a3-resources.md).
+
+## A3: WLD readers and map-content catalogs
+
+```bash
+EP45_CACHE='.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a'
+python3 tools/ep45-client/wld_loaders.py --executable "$EP45_CACHE/originals/game.exe" --baseline-id rebirth-evolution-ep45-98c7dd3a --output-dir "$EP45_CACHE/analysis/wld-v1" --report docs/client-ep45/analysis/wld-loaders.json
+python3 tools/ep45-client/wld.py --manifest "$EP45_CACHE/archive-files.jsonl" --extraction-report docs/client-ep45/catalogs/extraction-report.json --extracted-root "$EP45_CACHE/extracted" --executable "$EP45_CACHE/originals/game.exe" --profile docs/client-ep45/analysis/wld-loaders.json --output-dir "$EP45_CACHE/catalogs/wld-v3" --report docs/client-ep45/catalogs/wld-catalogs.json
+python3 -m unittest discover -s tools/ep45-client -p 'test_*.py'
+```
+
+Both tools are version 1.0.0. Loader extraction requires local `objdump` and
+binds 13 bounded windows through PE section mappings and source byte hashes.
+The parser verifies that profile, the executable hash, and archive manifest.
+It decodes 86/86 WLD structures with complete consumption and saved-export
+reconstruction. Raw JSON and relative hashed grid blobs reconstruct the source;
+normalized JSONL catalogs records and candidate asset/name-index relationships.
+Every failure remains in the denominator and produces exit status 1.
+
+Grid payload semantics, original entity keys, units, portal/NPC rules, and
+runtime behavior remain unknown. Empty/missing resource links remain present.
+Object0's 76/152-byte nonempty variants have static/synthetic evidence only.
+Existing export content is verified, never replaced; changed layouts require
+a new directory. Reports may update generation metadata; structured exports
+are deterministic. The earlier local WLD probe outputs remain untracked cache.
+
+Three complete small source fixtures in `fixtures/wld-samples.json` run without
+the installation. See [format/field dictionary](../../docs/client-ep45/schemas/wld.md),
+[catalog index](../../docs/client-ep45/catalogs/wld-catalogs.json), and
+[validation](../../docs/client-ep45/validation/phase-a3-wld.md).

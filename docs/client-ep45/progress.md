@@ -1,6 +1,6 @@
 # Progress and next execution
 
-Active phase: **A — extraction and documentation**. Snapshot date: 2026-10-01.
+Active phase: **A — extraction and documentation**. Last updated: 2026-10-02.
 Phase B has not started under this plan. Earlier experimental adaptations
 remain historical test-bench code.
 
@@ -9,7 +9,7 @@ remain historical test-bench code.
 | A0 | Sample identification | Complete | 18 frozen files plus original executable; PE, hashes, environment, IP patch |
 | A1 | SAH/SAF indexing and extraction | Complete | 23,564 tree entries plus six supplemental records; verified hashes/resume; zero errors |
 | A2 | Formats and parsers | In progress | 10 encrypted containers verified; 8 of 9 active SData sources fully structurally decoded; Skill lacks six expected records; semantics pending |
-| A3 | Content catalogs | In progress | 23,570 resource entries verified/cataloged; UI/audio/map exports; 35 ZON records; entity relationships pending |
+| A3 | Content catalogs | In progress | 23,570 resource entries; 86 WLD structures; 463,346 placement records; 5,937 resource links; remaining domain semantics/relationships pending |
 | A4 | UI and actions | Pending | Screen index and interaction matrix |
 | A5 | Static protocol | Partial | Some readers found; complete opcode/direction inventory pending |
 | A6 | Runtime validation | Partial | First cycle observed; reentry and other flows pending |
@@ -90,8 +90,9 @@ A3 resource catalogs may proceed as authorized by the user.
    quest, list, and matrix lookup semantics and relationships.
 3. Trace item/mob field uses and lookup semantics; verify the remaining three
    structural loaders, enums, units, references, and the four cash encodings.
-4. Analyze supplemental usage and backend-relevant WLD/ZON/resource formats.
-   Numeric WLD filenames remain candidate IDs.
+4. Analyze supplemental usage and WLD/ZON/resource semantics. WLD structures
+   now decode completely; numeric filenames remain candidate map IDs, while
+   terrain/collision units and entity keys still need evidence.
 5. Add semantic catalogs and validation evidence; A3 independent resource work
    proceeds with these gaps open, while A7 still gates Phase B.
 
@@ -115,6 +116,33 @@ additional evidence. See [resource validation](validation/phase-a3-resources.md)
 - Next: model/animation/effect/WLD readers, confirmed resource references,
   UI strings/layouts/actions, and static protocol discovery. A2 remains open;
   A7 has not released Phase B.
+
+## A3 WLD and map-content results
+
+See [validation](validation/phase-a3-wld.md), [schema](schemas/wld.md),
+[loader evidence](analysis/wld-loaders.json), and
+[catalog index](catalogs/wld-catalogs.json).
+
+- 86/86 WLD sources structurally decoded: 55 DUN and 31 FLD; zero errors.
+  All 78,903,753 source bytes consume/reconstruct exactly.
+- 491,518 structural catalog rows, including 463,346 placements and 11,287
+  effect records. These are evidence rows, not unique gameplay entity counts.
+- 280 portal candidates, 553 named-area candidates, 62 grouped region records,
+  and 27 unknown regions. Their keys, requirements, and server rules remain unknown.
+- 2,707 NPC candidate parents and 779 associated points. Their aggregate
+  count is 3,486; it must not be treated as a parent count.
+- 155 music and 861 background sound names, 201 music-zone records, and
+  5,796 sound spots. Playback/trigger behavior remains unvalidated.
+- 5,937 filename links: 5,907 matched archive targets; 30 unresolved,
+  consisting of 21 empty names and nine nonempty missing candidates.
+- Raw JSON, normalized JSONL, and hashed grid blobs stay in cache. Saved
+  exports reconstruct the sources; repeated generation verifies existing outputs.
+- 75 tests pass, with three complete small WLD source fixtures and synthetic
+  tests for nested counts, 44/76/152-byte variants, portal boundaries, corruption,
+  and blob integrity. No new runtime interactions or fully semantic formats.
+- Next: trace map/entity IDs, coordinate/terrain units, water/sky/effect/model
+  dependencies, NPC-definition links, and remaining A3 domains. Keep the A2
+  runtime-dependent questions open. Phase B continues to wait for A7.
 
 ## Outstanding experimental work
 

@@ -18,6 +18,11 @@ count discrepancy and the separate supplemental Skill outcome.
 `resource-catalogs.json` indexes A3 catalogs for all 23,570 source entries,
 UI/audio/map groups, 35 ZON records, candidate map links, and explicit WAV
 source anomalies. Resource file counts are not entity/action coverage.
+`wld-catalogs.json` indexes subsequent body extraction of all 86 WLD sources,
+491,518 structural rows, 5,937 filename links, and exact reconstruction.
+Its raw JSON/normalized JSONL and hashed grid blobs remain in cache. Grid
+semantics and runtime behavior are pending; the original resource metadata
+index remains a historical snapshot. See [WLD validation](../validation/phase-a3-wld.md).
 Discovery header flags describe the earlier A1 inventory; the A2 container
 report records subsequent checksum/decryption validation.
 

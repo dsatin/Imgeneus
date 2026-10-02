@@ -22,6 +22,11 @@ index, equipment/mount relation, skeleton layout, or entity-to-texture link has
 been invented. Models, skeletons, animation/effects, clothing, emblems, and
 additional resources are cataloged as sources pending structural readers.
 
+[WLD structures](../schemas/wld.md) now catalog 463,346 placement records and
+11,287 effect records. Filename links use roots passed by the client loader
+and retain original source text/indices and duplicate targets. Asset bodies,
+transform units, dependencies, and runtime rendering still require analysis.
+
 ## UI and protocol
 
 UI resource names/dimensions provide discovery clues. They do not prove that a

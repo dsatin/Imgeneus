@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "EP45-A3-WLD-001",
+  "title": "EP 4.5 WLD normalized structural record",
+  "type": "object",
+  "required": ["id", "archive_entry_id", "baseline_id", "source_sha256", "domain", "schema_id", "status", "semantic_status", "client_id", "section", "kind", "ordinal", "offset", "size_bytes", "numeric_blocks", "texts"],
+  "properties": {
+    "id": {"type": "string"},
+    "archive_entry_id": {"type": "string"},
+    "baseline_id": {"type": "string"},
+    "source_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "domain": {"const": "maps"},
+    "schema_id": {"const": "EP45-A3-WLD-001"},
+    "status": {"const": "decoded"},
+    "semantic_status": {"const": "unknown"},
+    "client_id": {"type": "null"},
+    "section": {"type": "string"},
+    "kind": {"const": "record"},
+    "ordinal": {"type": "integer", "minimum": 0},
+    "offset": {"type": "integer", "minimum": 0},
+    "size_bytes": {"type": "integer", "minimum": 1},
+    "numeric_blocks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["offset", "layout", "values"],
+        "properties": {
+          "offset": {"type": "integer", "minimum": 0},
+          "layout": {"type": "string", "pattern": "^<I+$"},
+          "values": {"type": "array", "items": {"type": "integer", "minimum": 0, "maximum": 4294967295}}
+        }
+      }
+    },
+    "texts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["offset", "size_bytes", "raw_hex", "text", "encoding_status", "language", "nul_terminated", "padding_nonzero_bytes"],
+        "properties": {
+          "offset": {"type": "integer", "minimum": 0},
+          "size_bytes": {"enum": [248, 256]},
+          "raw_hex": {"type": "string", "pattern": "^(?:[0-9a-f]{2})+$"},
+          "text": {"type": ["string", "null"]},
+          "encoding_status": {"enum": ["ascii", "utf8_candidate", "unknown"]},
+          "language": {"const": "unknown"},
+          "nul_terminated": {"type": "boolean"},
+          "padding_nonzero_bytes": {"type": "integer", "minimum": 0}
+        }
+      }
+    }
+  }
+}

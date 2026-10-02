@@ -9,6 +9,11 @@ SData sources fully structurally decoded and Skill's six missing expected
 records. It separates recovered records, supplemental data, and matrix arrays
 from fully validated source coverage. No new runtime interactions are claimed.
 
+[A3 WLD validation](phase-a3-wld.md) records 86/86 structures, source/export
+reconstruction, map content counts, and resource links. It distinguishes
+491,518 structural rows from unique gameplay entities and leaves terrain,
+field semantics, original keys, and runtime behavior as explicit gaps.
+
 ## Extraction integrity
 
 - Reconcile declared SAH counts with all actual entries.

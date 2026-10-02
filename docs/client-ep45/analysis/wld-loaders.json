@@ -1,0 +1,267 @@
+{
+  "id": "EP45-A3-WLD-LOADERS-001",
+  "baseline_id": "rebirth-evolution-ep45-98c7dd3a",
+  "executable_sha256": "98c7dd3a0589d5695e489d81b1acffdd456c633b47e913757b67e5f492d5ec48",
+  "image_base": "0x400000",
+  "observation_date": "2026-10-02",
+  "project_commit": "30fcec0f2b5c668ac2e8f0986aeb5f598a7e7e89",
+  "tool": {
+    "path": "tools/ep45-client/wld_loaders.py",
+    "version": "1.0.0",
+    "sha256": "d86567a86e52f9d4fc3ac69518ea866164277618b64526bade305c7c6136259b"
+  },
+  "objdump_version": "GNU objdump (GNU Binutils) 2.47",
+  "address_mapping": "RVA = VA - PE image base; file offsets are calculated using PE section mappings. Windows are inspection bounds, not asserted function boundaries.",
+  "windows": [
+    {
+      "id": "wld-main",
+      "start_va": "0x451db0",
+      "stop_va": "0x452960",
+      "start_rva": "0x51db0",
+      "file_offset": "0x51db0",
+      "length": 2992,
+      "source_bytes_sha256": "034be48b345131e6f2d8bf59c4f162633ee65a518ac04b2d2feb9691eb9f628b",
+      "disassembly_path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/analysis/wld-v1/wld-main.asm",
+      "disassembly_sha256": "593b6afe3a43fbf61831617d14ca08f9f203c6a6d71a816148fa9cf8f52edce7",
+      "reproduction_arguments": [
+        "objdump",
+        "-D",
+        "-Mintel",
+        "--start-address=0x451db0",
+        "--stop-address=0x452960",
+        ".client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/originals/game.exe"
+      ]
+    },
+    {
+      "id": "wld-filename",
+      "start_va": "0x452960",
+      "stop_va": "0x452d90",
+      "start_rva": "0x52960",
+      "file_offset": "0x52960",
+      "length": 1072,
+      "source_bytes_sha256": "a642ec31b197e17a5af38ee7b308fe861608f084bd105ae7547b3eed5fb83183",
+      "disassembly_path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/analysis/wld-v1/wld-filename.asm",
+      "disassembly_sha256": "52090a8181199f23e5f0af11bd61d5a4fca30c8708088f9bf369bd12618b437e",
+      "reproduction_arguments": [
+        "objdump",
+        "-D",
+        "-Mintel",
+        "--start-address=0x452960",
+        "--stop-address=0x452d90",
+        ".client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/originals/game.exe"
+      ]
+    },
+    {
+      "id": "common-placements",
+      "start_va": "0x446890",
+      "stop_va": "0x446b60",
+      "start_rva": "0x46890",
+      "file_offset": "0x46890",
+      "length": 720,
+      "source_bytes_sha256": "8eb3d7f5f861652df3d01a02adac58aa07059ccf42081832c59ecff6d42186a0",
+      "disassembly_path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/analysis/wld-v1/common-placements.asm",
+      "disassembly_sha256": "517059671400a5cb8da47caf78c87296355aceef0dbffa7bb06fe70bbb2ee8b2",
+      "reproduction_arguments": [
+        "objdump",
+        "-D",
+        "-Mintel",
+        "--start-address=0x446890",
+        "--stop-address=0x446b60",
+        ".client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/originals/game.exe"
+      ]
+    },
+    {
+      "id": "vani-placements",
+      "start_va": "0x446c80",
+      "stop_va": "0x446f50",
+      "start_rva": "0x46c80",
+      "file_offset": "0x46c80",
+      "length": 720,
+      "source_bytes_sha256": "11c2ddcd553776ba51d50549a203cf84ffae72c01036f8c5b19d320ec9146cfc",
+      "disassembly_path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/analysis/wld-v1/vani-placements.asm",
+      "disassembly_sha256": "302324fbba83d37e03f47a70e0ffbb589d8717f9051d3e614a5d451bdb11228d",
+      "reproduction_arguments": [
+        "objdump",
+        "-D",
+        "-Mintel",
+        "--start-address=0x446c80",
+        "--stop-address=0x446f50",
+        ".client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/originals/game.exe"
+      ]
+    },
+    {
+      "id": "dungeon-placements",
+      "start_va": "0x447070",
+      "stop_va": "0x447240",
+      "start_rva": "0x47070",
+      "file_offset": "0x47070",
+      "length": 464,
+      "source_bytes_sha256": "57cbb65fdd370154d51a85db3f99234026aceb4db8628e636a681a3f211d2d6f",
+      "disassembly_path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/analysis/wld-v1/dungeon-placements.asm",
+      "disassembly_sha256": "7013af323312433a0d62bd8663a69f8d4cddebacdd6ce6d9c2169576c75e7606",
+      "reproduction_arguments": [
+        "objdump",
+        "-D",
+        "-Mintel",
+        "--start-address=0x447070",
+        "--stop-address=0x447240",
+        ".client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/originals/game.exe"
+      ]
+    },
+    {
+      "id": "mani-placements",
+      "start_va": "0x41f9a0",
+      "stop_va": "0x41fc00",
+      "start_rva": "0x1f9a0",
+      "file_offset": "0x1f9a0",
+      "length": 608,
+      "source_bytes_sha256": "d3392f904d2898b09c65ae7eac7742e03da49f64572fa02e90e52a9818b6afcb",
+      "disassembly_path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/analysis/wld-v1/mani-placements.asm",
+      "disassembly_sha256": "06b78155268ca1dbb33ad7372739db2a675e5a4cd4aebf5a10cf4d935473f09b",
+      "reproduction_arguments": [
+        "objdump",
+        "-D",
+        "-Mintel",
+        "--start-address=0x41f9a0",
+        "--stop-address=0x41fc00",
+        ".client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/originals/game.exe"
+      ]
+    },
+    {
+      "id": "object-placements",
+      "start_va": "0x525ba0",
+      "stop_va": "0x5263b0",
+      "start_rva": "0x125ba0",
+      "file_offset": "0x125ba0",
+      "length": 2064,
+      "source_bytes_sha256": "6dd5229c62d62a12a6c84f3b2c75c8aecb0d2c07896307ae618aebec955650d0",
+      "disassembly_path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/analysis/wld-v1/object-placements.asm",
+      "disassembly_sha256": "c1b7fc84f5864249e758238e78d46f6f8a39130d70f40d66f0f6cd04037a493c",
+      "reproduction_arguments": [
+        "objdump",
+        "-D",
+        "-Mintel",
+        "--start-address=0x525ba0",
+        "--stop-address=0x5263b0",
+        ".client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/originals/game.exe"
+      ]
+    },
+    {
+      "id": "object-secondary",
+      "start_va": "0x5264d0",
+      "stop_va": "0x526760",
+      "start_rva": "0x1264d0",
+      "file_offset": "0x1264d0",
+      "length": 656,
+      "source_bytes_sha256": "317da9df5d037b5b05763e9295aa5cc72ebd109fd162a82e939c8a615d830565",
+      "disassembly_path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/analysis/wld-v1/object-secondary.asm",
+      "disassembly_sha256": "50d88afd71d2342d3091469ab7eccfcaf9271ef88cf21f85d2d048afe9f3113d",
+      "reproduction_arguments": [
+        "objdump",
+        "-D",
+        "-Mintel",
+        "--start-address=0x5264d0",
+        "--stop-address=0x526760",
+        ".client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/originals/game.exe"
+      ]
+    },
+    {
+      "id": "sound-lists",
+      "start_va": "0x52c250",
+      "stop_va": "0x52c560",
+      "start_rva": "0x12c250",
+      "file_offset": "0x12c250",
+      "length": 784,
+      "source_bytes_sha256": "120afbb490072d0f2fe493bf50c367ecc88979c58ef14024631dff257ff3c03b",
+      "disassembly_path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/analysis/wld-v1/sound-lists.asm",
+      "disassembly_sha256": "7333b0a2a45f536898d79277ebff0d994e652e9a4b1b39133ba451e98085e2f8",
+      "reproduction_arguments": [
+        "objdump",
+        "-D",
+        "-Mintel",
+        "--start-address=0x52c250",
+        "--stop-address=0x52c560",
+        ".client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/originals/game.exe"
+      ]
+    },
+    {
+      "id": "entity-lists",
+      "start_va": "0x527c00",
+      "stop_va": "0x528c10",
+      "start_rva": "0x127c00",
+      "file_offset": "0x127c00",
+      "length": 4112,
+      "source_bytes_sha256": "7c15e87f6fc13ac3fe9d0f7fe203806b0fe818f25ee8c3202e427b5cc54dcef2",
+      "disassembly_path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/analysis/wld-v1/entity-lists.asm",
+      "disassembly_sha256": "37a6486772626ace40f1434122bedfd2d42153d49e588c9442068548605f49fe",
+      "reproduction_arguments": [
+        "objdump",
+        "-D",
+        "-Mintel",
+        "--start-address=0x527c00",
+        "--stop-address=0x528c10",
+        ".client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/originals/game.exe"
+      ]
+    },
+    {
+      "id": "terrain-dispatch",
+      "start_va": "0x5916e0",
+      "stop_va": "0x591730",
+      "start_rva": "0x1916e0",
+      "file_offset": "0x1916e0",
+      "length": 80,
+      "source_bytes_sha256": "435136cc7ca53bdffcc22de997e05503de2fdca41cc026c6e549dbe12ec16470",
+      "disassembly_path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/analysis/wld-v1/terrain-dispatch.asm",
+      "disassembly_sha256": "635d05564ca7e0d61042bc5263227a7e1cdb8a917b6c86d1591f98eca6efc397",
+      "reproduction_arguments": [
+        "objdump",
+        "-D",
+        "-Mintel",
+        "--start-address=0x5916e0",
+        "--stop-address=0x591730",
+        ".client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/originals/game.exe"
+      ]
+    },
+    {
+      "id": "terrain-grids",
+      "start_va": "0x5a1af0",
+      "stop_va": "0x5a1c00",
+      "start_rva": "0x1a1af0",
+      "file_offset": "0x1a1af0",
+      "length": 272,
+      "source_bytes_sha256": "3197e569c1cfdda313969489a0b7d699e284def6e8f13beb0df6b4d52b57ff68",
+      "disassembly_path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/analysis/wld-v1/terrain-grids.asm",
+      "disassembly_sha256": "63cb8a68837ff63471d6d15718461f26c3399d6d40732fc947d4c1f157a99cea",
+      "reproduction_arguments": [
+        "objdump",
+        "-D",
+        "-Mintel",
+        "--start-address=0x5a1af0",
+        "--stop-address=0x5a1c00",
+        ".client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/originals/game.exe"
+      ]
+    },
+    {
+      "id": "terrain-materials",
+      "start_va": "0x5a1490",
+      "stop_va": "0x5a16c0",
+      "start_rva": "0x1a1490",
+      "file_offset": "0x1a1490",
+      "length": 560,
+      "source_bytes_sha256": "1bd37d4d8457de3be9ec78d1f4fbab88a66985f35bed1876290ae43d95dfb41b",
+      "disassembly_path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/analysis/wld-v1/terrain-materials.asm",
+      "disassembly_sha256": "e2194cc440ec67b1b4b5a47611b14dad528ebf23a7f26f4f44409085b8bfa885",
+      "reproduction_arguments": [
+        "objdump",
+        "-D",
+        "-Mintel",
+        "--start-address=0x5a1490",
+        "--stop-address=0x5a16c0",
+        ".client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/originals/game.exe"
+      ]
+    }
+  ],
+  "status": "statically_validated",
+  "runtime_status": "unknown",
+  "interpretations_reference": "docs/client-ep45/schemas/wld.md"
+}
