@@ -14,6 +14,7 @@ and the [domain template](../templates/domain.md).
 | NPCs | [npcs.md](npcs.md) | ID/type/faction, dialogue, shop/service, quest/map |
 | Quests | [quests.md](quests.md) | Stages, objectives, NPC/mob/item links, displayed rewards |
 | Maps | [maps.md](maps.md) | ID/coordinates, terrain/collision, included portals/positions |
+| Map geometry/water | [map-geometry.md](map-geometry.md) | Dungeon tree/mesh arrays, water parameters, WLD/resource dependencies |
 | Economy | [economy.md](economy.md) | Currency, buying/selling/trade, storage, discovered systems |
 | Social/PvP | [social-pvp.md](social-pvp.md) | Chat/friends, groups/guilds, duels/ranks, present events |
 | Assets | [assets.md](assets.md) | Textures, models, animations, effects, fonts |

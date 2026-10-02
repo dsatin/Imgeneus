@@ -9,7 +9,7 @@ remain historical test-bench code.
 | A0 | Sample identification | Complete | 18 frozen files plus original executable; PE, hashes, environment, IP patch |
 | A1 | SAH/SAF indexing and extraction | Complete | 23,564 tree entries plus six supplemental records; verified hashes/resume; zero errors |
 | A2 | Formats and parsers | In progress | 10 encrypted containers verified; 8 of 9 active SData sources fully structurally decoded; Skill lacks six expected records; semantics pending |
-| A3 | Content catalogs | In progress | 23,570 resource entries; 86 WLD structures; 463,346 placement records; 5,937 resource links; remaining domain semantics/relationships pending |
+| A3 | Content catalogs | In progress | 23,570 resources; 86 WLDs; 47 DG and three WTR decoded; 12 DG_PV gaps; domain semantics/relationships pending |
 | A4 | UI and actions | Pending | Screen index and interaction matrix |
 | A5 | Static protocol | Partial | Some readers found; complete opcode/direction inventory pending |
 | A6 | Runtime validation | Partial | First cycle observed; reentry and other flows pending |
@@ -143,6 +143,41 @@ See [validation](validation/phase-a3-wld.md), [schema](schemas/wld.md),
 - Next: trace map/entity IDs, coordinate/terrain units, water/sky/effect/model
   dependencies, NPC-definition links, and remaining A3 domains. Keep the A2
   runtime-dependent questions open. Phase B continues to wait for A7.
+
+## A3 dungeon and water results
+
+See [validation](validation/phase-a3-spatial.md),
+[formats/fields](schemas/spatial-resources.md),
+[loader evidence](analysis/spatial-loaders.json),
+[catalog index](catalogs/spatial-catalogs.json), and
+[domain reference](domains/map-geometry.md).
+
+- All 62 candidate source sizes/hashes rechecked: 47 DG, 12 DG_PV, three WTR.
+  Fifty files across two structural families decode/reconstruct completely;
+  all 12 DG_PV bodies fail the verified DG reader and retain explicit errors.
+- 206,067,062 source bytes verified; 145,803,996 bytes structurally decoded.
+  No original client file, database, server, or backend behavior was changed.
+- 193,059 structural catalog parts; 2,024 nodes, 22,889 groups, 23,076 patches,
+  3,021,237 render vertices and 1,411,815 render triangles. These are structural
+  measurements, not unique gameplay entity counts.
+- 1,588 auxiliary meshes with 165,187 vertices and 158,045 triangles. All
+  numeric cells/indices are exported; collision/coordinate semantics remain unknown.
+- 3,091 texture-name records: 2,993 DG and 98 WTR. Three water sources have
+  30/32/32 names and preserve their parameters/text padding exactly.
+- 3,552 new dependency links: 449 exact matches, 3,082 separately labeled
+  same-stem DDS candidates, 11 empty names, and ten missing generated DDS
+  page candidates. No extension replacement or rendering result is assumed.
+- All 22,889 group texture-index candidates fit their file-local name list;
+  the relationship remains inferred. WLD inner links reach 41 DG and three
+  WTR entries; lack of this link alone does not establish an unused resource.
+- Saved JSON reconstruction, read/write/read counts, and repeated export
+  verification passed. Ninety tests pass; five source fixtures include all
+  three water files and two exact dungeon leaf spans in synthetic test envelopes.
+- Zero new runtime interactions or fully semantic formats. A3 remains in
+  progress. Next: DG_PV loader/variant, texture lookup/page resolution,
+  spatial/auxiliary/water semantics, sky/cloud/effect/model dependencies,
+  original entity-definition joins, and the other pending content domains.
+  A2 remains open; A7 continues to gate Phase B.
 
 ## Outstanding experimental work
 

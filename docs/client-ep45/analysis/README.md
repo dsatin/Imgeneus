@@ -43,3 +43,10 @@ placements, Object0 singles/pairs, portal text boundaries, nested regions,
 and NPC aggregate accounting. `wld_loaders.py` reproduces windows using PE
 section mappings and hashes; `wld.py` verifies that evidence before extraction.
 Full map IDs, axes/units, field semantics, and runtime behavior remain pending.
+
+[Dungeon/water loader evidence](spatial-loaders.json) adds 12 windows and four
+exact strings from the same executable, reproduced by `spatial_loaders.py`.
+[Spatial formats](../schemas/spatial-resources.md) tie DG nodes/groups/patches,
+44-byte render and 12-byte auxiliary vertices, u16 index arrays, and WTR fields
+to actual read sites. `spatial.py` binds window/string hashes before decoding.
+DG_PV variants, DDS extension lookup, and runtime activation remain unknown.

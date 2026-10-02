@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:imgeneus:ep45:spatial-record:1",
+  "title": "EP4.5 DG/WTR structural catalog part",
+  "type": "object",
+  "required": ["id", "archive_entry_id", "baseline_id", "source_path", "source_sha256", "domain", "schema_id", "status", "semantic_status", "client_id", "kind", "section", "offset", "size_bytes"],
+  "properties": {
+    "id": {"type": "string"},
+    "archive_entry_id": {"type": "string"},
+    "baseline_id": {"type": "string"},
+    "source_path": {"type": "string"},
+    "source_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "domain": {"const": "maps"},
+    "schema_id": {"const": "EP45-A3-SPATIAL-001"},
+    "status": {"const": "decoded"},
+    "semantic_status": {"const": "unknown"},
+    "client_id": {"type": "null"},
+    "kind": {"enum": ["scalar", "count", "record", "array"]},
+    "section": {"type": "string"},
+    "offset": {"type": "integer", "minimum": 0},
+    "size_bytes": {"type": "integer", "minimum": 0},
+    "ordinal": {"type": "integer", "minimum": 0},
+    "count": {"type": "integer", "minimum": 0},
+    "node_path": {"type": "string", "pattern": "^root(/[0-7])*$"},
+    "parent_node_path": {"type": ["string", "null"]},
+    "child_slot": {"type": ["integer", "null"], "minimum": 0, "maximum": 7},
+    "group_ordinal": {"type": "integer", "minimum": 0},
+    "patch_ordinal": {"type": "integer", "minimum": 0},
+    "numeric_blocks": {"type": "array", "items": {"$ref": "#/$defs/numericBlock"}},
+    "texts": {"type": "array", "items": {"$ref": "#/$defs/fixedText"}}
+  },
+  "allOf": [
+    {"if": {"properties": {"kind": {"enum": ["scalar", "count"]}}}, "then": {"required": ["layout", "value"], "properties": {"layout": {"enum": ["<i", "<I"]}, "value": {"type": "integer", "minimum": 0, "maximum": 4294967295}, "size_bytes": {"const": 4}}}},
+    {"if": {"properties": {"kind": {"const": "record"}}}, "then": {"required": ["numeric_blocks", "texts"]}},
+    {"if": {"properties": {"kind": {"const": "array"}}}, "then": {
+      "required": ["count", "layout", "values"],
+      "oneOf": [
+        {"properties": {"layout": {"const": "<IIIIIIIIIII"}, "values": {"type": "array", "items": {"type": "array", "minItems": 11, "maxItems": 11, "items": {"$ref": "#/$defs/u32"}}}}},
+        {"properties": {"layout": {"const": "<III"}, "values": {"type": "array", "items": {"type": "array", "minItems": 3, "maxItems": 3, "items": {"$ref": "#/$defs/u32"}}}}},
+        {"properties": {"layout": {"const": "<HHH"}, "values": {"type": "array", "items": {"type": "array", "minItems": 3, "maxItems": 3, "items": {"type": "integer", "minimum": 0, "maximum": 65535}}}}}
+      ]
+    }}
+  ],
+  "$defs": {
+    "u32": {"type": "integer", "minimum": 0, "maximum": 4294967295},
+    "numericBlock": {"type": "object", "required": ["offset", "layout", "values"], "properties": {"offset": {"type": "integer", "minimum": 0}, "layout": {"type": "string", "pattern": "^<I+$"}, "values": {"type": "array", "items": {"$ref": "#/$defs/u32"}}}},
+    "fixedText": {
+      "type": "object",
+      "required": ["offset", "size_bytes", "raw_hex", "text", "encoding_status", "language", "nul_terminated", "padding_nonzero_bytes"],
+      "properties": {
+        "offset": {"type": "integer", "minimum": 0},
+        "size_bytes": {"const": 256},
+        "raw_hex": {"type": "string", "pattern": "^[0-9a-f]{512}$"},
+        "text": {"type": ["string", "null"]},
+        "encoding_status": {"enum": ["ascii", "utf8_candidate", "unknown"]},
+        "language": {"const": "unknown"},
+        "nul_terminated": {"type": "boolean"},
+        "padding_nonzero_bytes": {"type": "integer", "minimum": 0, "maximum": 255}
+      }
+    }
+  }
+}

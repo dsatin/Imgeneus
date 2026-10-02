@@ -3,6 +3,8 @@
 ## Identification and coverage
 
 Specification IDs: `EP45-A3-RESOURCE-001`, `EP45-A3-ZON-001`, `EP45-A3-WLD-001`.
+Dungeon/water extension: `EP45-A3-SPATIAL-001`; see
+[geometry/water reference](map-geometry.md).
 Baseline/hash: [baseline](../baseline.md); executable
 `98c7dd3a0589d5695e489d81b1acffdd456c633b47e913757b67e5f492d5ec48`.
 Observation date: 2026-10-02. Verified sources: 86 WLD files,
@@ -48,6 +50,14 @@ from a 16-bit argument, but complete logical map-ID/config linkage is pending.
 No SVMAP was present in the inventoried tree. WLD includes entity/region
 candidates, so SVMAP absence does not establish absent positions. Terrain,
 collision, water, sky, resource loading, and visible access rules remain pending.
+
+The subsequent [spatial catalog](../catalogs/spatial-catalogs.json) decodes all
+47 DG dungeon structures and three WTR water structures; 12 DG_PV bodies
+remain unknown. WLD inner-resource links yield 84 exact matches and two empty
+FLD names. Geometry arrays are fully preserved as typed values; authoritative
+collision, coordinates/units, water semantics, and runtime behavior remain
+unvalidated. Exact extension matches and inferred same-stem DDS candidates
+are recorded separately. See [integrity/relationships](../validation/phase-a3-spatial.md).
 
 ## UI and protocol
 

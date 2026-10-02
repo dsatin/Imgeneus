@@ -40,6 +40,9 @@ All compatibility development and commits continue on `develop/ep45-compatibilit
 | [WLD catalogs](catalogs/wld-catalogs.json) | 86 source structures, map content, asset links, and cache hashes |
 | [WLD format](schemas/wld.md) | Client-specific layouts, nested counts, unknown fields, and loader evidence |
 | [A3 WLD validation](validation/phase-a3-wld.md) | Map extraction coverage, source fixtures, and remaining semantics |
+| [Dungeon/water catalogs](catalogs/spatial-catalogs.json) | 62 source outcomes, typed geometry, water data, and dependency hashes |
+| [Dungeon/water formats](schemas/spatial-resources.md) | Verified read layouts, preserved unknown fields, and DG_PV gaps |
+| [A3 dungeon/water validation](validation/phase-a3-spatial.md) | Reconstruction, geometry/link counts, fixtures, and remaining contracts |
 
 Raw files and large exports belong in the ignored `.client-ep45-cache/`.
 Tools live in `tools/ep45-client/` and accept the client path as a parameter.

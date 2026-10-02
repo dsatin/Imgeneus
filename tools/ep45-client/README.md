@@ -181,3 +181,38 @@ Three complete small source fixtures in `fixtures/wld-samples.json` run without
 the installation. See [format/field dictionary](../../docs/client-ep45/schemas/wld.md),
 [catalog index](../../docs/client-ep45/catalogs/wld-catalogs.json), and
 [validation](../../docs/client-ep45/validation/phase-a3-wld.md).
+
+## A3: dungeon geometry and water resources
+
+```bash
+EP45_CACHE='.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a'
+python3 tools/ep45-client/spatial_loaders.py --executable "$EP45_CACHE/originals/game.exe" --baseline-id rebirth-evolution-ep45-98c7dd3a --output-dir "$EP45_CACHE/analysis/spatial-loaders-v1" --report docs/client-ep45/analysis/spatial-loaders.json
+python3 tools/ep45-client/spatial.py --manifest "$EP45_CACHE/archive-files.jsonl" --extraction-report docs/client-ep45/catalogs/extraction-report.json --extracted-root "$EP45_CACHE/extracted" --executable "$EP45_CACHE/originals/game.exe" --profile docs/client-ep45/analysis/spatial-loaders.json --wld-index docs/client-ep45/catalogs/wld-catalogs.json --output-dir "$EP45_CACHE/catalogs/spatial-v2" --report docs/client-ep45/catalogs/spatial-catalogs.json
+python3 tools/ep45-client/spatial_fixtures.py --manifest "$EP45_CACHE/archive-files.jsonl" --extracted-root "$EP45_CACHE/extracted" --catalog-index docs/client-ep45/catalogs/spatial-catalogs.json --output tools/ep45-client/fixtures/spatial-samples.json
+python3 -m unittest discover -s tools/ep45-client -p 'test_*.py'
+```
+
+All three tools are version 1.0.0. Loader evidence uses local `objdump` and
+the frozen executable's PE section mappings; the catalog tool verifies window,
+string, executable, manifest, source, and WLD-export hashes. All 47 DG and three
+WTR sources decode completely. The 12 DG_PV candidates remain in the denominator
+with errors: **the catalog command deliberately exits 1** after writing its
+report and complete outputs. Do not substitute a guessed variant to make it pass.
+
+Raw JSON and normalized JSONL retain every scalar, fixed-text byte/padding,
+tree/group/patch relationship, typed vertex word, and u16 index. Saved exports
+reconstruct source bytes, and reconstructed sources reproduce counts. Existing
+bulk files are verified without replacement; intentional layout changes need
+a new cache folder. Repeating the final command verified `spatial-v2` outputs;
+`spatial-v1` is a preserved intermediate local export. Reports can refresh
+generation metadata; structured exports remain deterministic.
+
+Resource links separate exact filenames, generated page names, empty/missing
+references, and same-stem DDS candidates. The latter remain hypotheses. No
+water units, authoritative collision role, DG_PV activation, or gameplay
+behavior is inferred. Ninety tests pass across the tools; new fixtures/tests
+run without the installation. The fixture generator preserves three complete
+small WTR sources and two exact DG leaf spans, identifying their synthetic
+test envelopes separately. See [formats](../../docs/client-ep45/schemas/spatial-resources.md),
+[catalog](../../docs/client-ep45/catalogs/spatial-catalogs.json), and
+[validation](../../docs/client-ep45/validation/phase-a3-spatial.md).

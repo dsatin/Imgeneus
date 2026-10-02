@@ -14,6 +14,12 @@ reconstruction, map content counts, and resource links. It distinguishes
 491,518 structural rows from unique gameplay entities and leaves terrain,
 field semantics, original keys, and runtime behavior as explicit gaps.
 
+[A3 dungeon/water validation](phase-a3-spatial.md) adds 50/62 structurally
+decoded source outcomes across two families, complete typed mesh arrays,
+verified export reconstruction/resume, and 3,552 dependency links. All 12
+DG_PV failures and unresolved links remain visible. Ninety tests pass; no new
+runtime interaction or completed semantic format is claimed.
+
 ## Extraction integrity
 
 - Reconcile declared SAH counts with all actual entries.

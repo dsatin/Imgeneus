@@ -26,6 +26,14 @@ index remains a historical snapshot. See [WLD validation](../validation/phase-a3
 Discovery header flags describe the earlier A1 inventory; the A2 container
 report records subsequent checksum/decryption validation.
 
+`spatial-catalogs.json` indexes the subsequent 47 DG/three WTR structural
+exports and all 12 failed DG_PV candidates. It retains 193,059 structural
+parts, complete typed mesh arrays, water parameters/texts, and 3,552 dependency
+links. Raw JSON/normalized JSONL stay in `catalogs/spatial-v2/` cache, with
+source/export hashes in the versioned index. Exact links, same-stem DDS
+hypotheses, empty names, and missing generated pages are counted separately.
+See [validation](../validation/phase-a3-spatial.md).
+
 Reproduce from the repository root:
 
 ```bash

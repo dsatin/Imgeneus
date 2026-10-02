@@ -27,6 +27,14 @@ additional resources are cataloged as sources pending structural readers.
 and retain original source text/indices and duplicate targets. Asset bodies,
 transform units, dependencies, and runtime rendering still require analysis.
 
+[Dungeon/water catalogs](../catalogs/spatial-catalogs.json) subsequently decode
+47 DG and three WTR bodies, including complete typed vertex/index arrays,
+3,091 texture names, 375 generated page candidates, and 86 WLD inner links.
+Twelve DG_PV bodies remain unresolved. Same-stem DDS candidates do not prove
+extension replacement or successful rendering. See
+[geometry/water reference](map-geometry.md) for counts, source hashes, field
+dictionaries, link integrity, and missing information.
+
 ## UI and protocol
 
 UI resource names/dimensions provide discovery clues. They do not prove that a

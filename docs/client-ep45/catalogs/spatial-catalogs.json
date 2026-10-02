@@ -1,0 +1,2965 @@
+{
+  "id": "EP45-A3-SPATIAL-001",
+  "baseline_id": "rebirth-evolution-ep45-98c7dd3a",
+  "executable_sha256": "98c7dd3a0589d5695e489d81b1acffdd456c633b47e913757b67e5f492d5ec48",
+  "generated_at_utc": "2026-10-02T13:03:26.313128+00:00",
+  "project_commit": "4b311208dd45c067541d3ed8f8fc1456c65e7e64",
+  "reproduction_arguments": [
+    "python3",
+    "tools/ep45-client/spatial.py",
+    "--manifest",
+    ".client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/archive-files.jsonl",
+    "--extraction-report",
+    "docs/client-ep45/catalogs/extraction-report.json",
+    "--extracted-root",
+    ".client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/extracted",
+    "--executable",
+    ".client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/originals/game.exe",
+    "--profile",
+    "docs/client-ep45/analysis/spatial-loaders.json",
+    "--wld-index",
+    "docs/client-ep45/catalogs/wld-catalogs.json",
+    "--output-dir",
+    ".client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/catalogs/spatial-v2",
+    "--report",
+    "docs/client-ep45/catalogs/spatial-catalogs.json"
+  ],
+  "tool": {
+    "path": "tools/ep45-client/spatial.py",
+    "version": "1.0.0",
+    "sha256": "12794e9ea678d4a11b4a2e1a44b7e885846afc86f56410f9429be035a381d744"
+  },
+  "dependency_hashes": {
+    "wld.py": "96e77f2933290893a64fe28a94477c6fe7197b1c9e20f4df9106ac9e26c43386",
+    "tables.py": "16f782004d7eb9000a82ce52bb8de8fee220003b063a9e81e180a8809884c793",
+    "archive.py": "f44fe451716305359d19b0ff18acdc9ac79922adcbf450931661955028781dbb",
+    "sdata.py": "327a320793ba3c4a6c42a05d6dd23e42ab0075f3920f886485ef848b89e4479c"
+  },
+  "evidence_profile": {
+    "id": "EP45-A3-SPATIAL-LOADERS-001",
+    "path": "docs/client-ep45/analysis/spatial-loaders.json",
+    "sha256": "8f472cc117b595c55210b398ae1764b6981ccbabc970bf8ba7e040f530106861"
+  },
+  "archive_manifest_sha256": "141493242b496dde8119fb30b45e84fe078b04ddbf957d2226ac1c92a28902cf",
+  "extraction_report_sha256": "210864dc82b464b0b3af0a48f3b5c5e399bad3567ba9700790fbaccf476fbbf4",
+  "wld_catalog_index_sha256": "38a0d35f88b1f18fa05730b980823c94fe12549417015e86de20106fb024a290",
+  "sources_examined": 62,
+  "sources_decoded": 50,
+  "errors": [
+    {
+      "id": "tree-022526",
+      "source_path": "world/dungeon/B3_DUN1_1F.dg_pv",
+      "extension": ".dg_pv",
+      "source_sha256": "0d98a73932e9f8707b31a787ac9c25acacd5700cb11788c22ca9a9df0ac9bdbc",
+      "size_bytes": 4954834,
+      "status": "unknown",
+      "semantic_status": "unknown",
+      "source_integrity_verified": true,
+      "error": "Invalid table count 1136484863 at 153438"
+    },
+    {
+      "id": "tree-022529",
+      "source_path": "world/dungeon/B5_Dun_Caelumchakra_1F_final.dg_pv",
+      "extension": ".dg_pv",
+      "source_sha256": "ec7fe4e2e5d19c8c72485b185a5f19678409a844d213f0a4353005ae1c0777c2",
+      "size_bytes": 6651544,
+      "status": "unknown",
+      "semantic_status": "unknown",
+      "source_integrity_verified": true,
+      "error": "Invalid table count 1064425369 at 34476"
+    },
+    {
+      "id": "tree-022532",
+      "source_path": "world/dungeon/B5_Dun_Caelumchakra_2F_final.dg_pv",
+      "extension": ".dg_pv",
+      "source_sha256": "ef7574db80b158d9b142e93391b94e53596861939f0b689af2fcb2bfb13cff7d",
+      "size_bytes": 7558680,
+      "status": "unknown",
+      "semantic_status": "unknown",
+      "source_integrity_verified": true,
+      "error": "Invalid table count 1065353216 at 19434"
+    },
+    {
+      "id": "tree-022547",
+      "source_path": "world/dungeon/Login_eternity_territory_01.dg_pv",
+      "extension": ".dg_pv",
+      "source_sha256": "f1597e53b7d8428fc1e52db237e4aee7f4bb1d5b7b68d9f8d513063a46b226de",
+      "size_bytes": 2314974,
+      "status": "unknown",
+      "semantic_status": "unknown",
+      "source_integrity_verified": true,
+      "error": "Invalid table count 1073741824 at 8952"
+    },
+    {
+      "id": "tree-022551",
+      "source_path": "world/dungeon/L_A1_DUN2_2F.dg_pv",
+      "extension": ".dg_pv",
+      "source_sha256": "b5a6bbd7be7e67fa0a5decd52fa488c36078377fb15c6b079db67d3480f4fbae",
+      "size_bytes": 10919832,
+      "status": "unknown",
+      "semantic_status": "unknown",
+      "source_integrity_verified": true,
+      "error": "Invalid table count 1065353216 at 428060"
+    },
+    {
+      "id": "tree-022562",
+      "source_path": "world/dungeon/L_R1_Fortress00.dg_pv",
+      "extension": ".dg_pv",
+      "source_sha256": "7b217fc2a520b7c7238a07b8abe50f9998d41424809c4dfcc3b8f35d27a61757",
+      "size_bytes": 6308990,
+      "status": "unknown",
+      "semantic_status": "unknown",
+      "source_integrity_verified": true,
+      "error": "Invalid table count 1065236013 at 43936"
+    },
+    {
+      "id": "tree-022568",
+      "source_path": "world/dungeon/R1_DUN3.dg_pv",
+      "extension": ".dg_pv",
+      "source_sha256": "da2e01e25eae600d2d713d585f470c480500b2877c047867606baac625b42847",
+      "size_bytes": 9666432,
+      "status": "unknown",
+      "semantic_status": "unknown",
+      "source_integrity_verified": true,
+      "error": "Invalid table count -1082130432 at 50548"
+    },
+    {
+      "id": "tree-022571",
+      "source_path": "world/dungeon/r1_dun3_01.dg_pv",
+      "extension": ".dg_pv",
+      "source_sha256": "8f7524c6c72e154d41b44a34573a0c3738f112fe7ab2e18e45c01c8999ce11c8",
+      "size_bytes": 2762618,
+      "status": "unknown",
+      "semantic_status": "unknown",
+      "source_integrity_verified": true,
+      "error": "Invalid table count 1132554138 at 22684"
+    },
+    {
+      "id": "tree-022573",
+      "source_path": "world/dungeon/r1_dun3_02.dg_pv",
+      "extension": ".dg_pv",
+      "source_sha256": "2017edcd9e128b6021cab15373a3d031ca8151b493e3129ed120250c995d5c7c",
+      "size_bytes": 3876206,
+      "status": "unknown",
+      "semantic_status": "unknown",
+      "source_integrity_verified": true,
+      "error": "Invalid table count 1065353216 at 34570"
+    },
+    {
+      "id": "tree-022575",
+      "source_path": "world/dungeon/r1_dun3_boss.dg_pv",
+      "extension": ".dg_pv",
+      "source_sha256": "d474073db704d8a865046af8941a84752d30eaedaf7f671f79f608f9ee07a338",
+      "size_bytes": 730152,
+      "status": "unknown",
+      "semantic_status": "unknown",
+      "source_integrity_verified": true,
+      "error": "Invalid table count -1508601089 at 7740"
+    },
+    {
+      "id": "tree-022577",
+      "source_path": "world/dungeon/R1_Trade.dg_pv",
+      "extension": ".dg_pv",
+      "source_sha256": "15fafaa4d675621f7481878ace7bed94959e9dc01418352ba30540509962ee62",
+      "size_bytes": 642260,
+      "status": "unknown",
+      "semantic_status": "unknown",
+      "source_integrity_verified": true,
+      "error": "Invalid table count -1082130432 at 6208"
+    },
+    {
+      "id": "tree-022580",
+      "source_path": "world/dungeon/test000_01.dg_pv",
+      "extension": ".dg_pv",
+      "source_sha256": "ef1cf4d260f992ffbf75afbca54e35ccd4cf1697106a6fe1f6a43e01b338b126",
+      "size_bytes": 3876544,
+      "status": "unknown",
+      "semantic_status": "unknown",
+      "source_integrity_verified": true,
+      "error": "Invalid table count 1064774679 at 34320"
+    }
+  ],
+  "sources_by_extension": {
+    ".dg": 47,
+    ".dg_pv": 12,
+    ".wtr": 3
+  },
+  "decoded_structure_families": 2,
+  "variants": {
+    "DG": 47,
+    "WTR": 3
+  },
+  "section_counts": {
+    "auxiliary-meshes": 1588,
+    "auxiliary-triangles": 158045,
+    "auxiliary-vertices": 165187,
+    "external-page-count": 375,
+    "groups": 22889,
+    "nodes": 2024,
+    "patches": 23076,
+    "render-triangles": 1411815,
+    "render-vertices": 3021237,
+    "texture-names": 3091
+  },
+  "cataloged_structural_rows": 193059,
+  "source_bytes_verified": 206067062,
+  "source_bytes_structurally_decoded": 145803996,
+  "resource_references": {
+    "path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/catalogs/spatial-v2/resource-references.jsonl",
+    "sha256": "d111572a2c7b683255b3c412bf93b98c37b21c698d0fc77be9d6e032fabfc617",
+    "rows": 3552
+  },
+  "map_resource_references": 86,
+  "exact_matched_resource_references": 449,
+  "unresolved_resource_references": 3103,
+  "same_stem_dds_candidate_references": 3082,
+  "empty_resource_references": 11,
+  "group_texture_index_candidates": {
+    "matched": 22889
+  },
+  "numeric_extremes": {
+    "dungeon-header:unknown_000_u32_bits": {
+      "minimum_raw_u32": 0,
+      "maximum_raw_u32": 0
+    },
+    "dungeon-header:unknown_004_u32_bits": {
+      "minimum_raw_u32": 0,
+      "maximum_raw_u32": 0
+    },
+    "dungeon-header:unknown_008_u32_bits": {
+      "minimum_raw_u32": 0,
+      "maximum_raw_u32": 0
+    },
+    "dungeon-header:unknown_012_u32_bits": {
+      "minimum_raw_u32": 1105595071,
+      "maximum_raw_u32": 1149190259
+    },
+    "dungeon-header:unknown_016_u32_bits": {
+      "minimum_raw_u32": 1086822531,
+      "maximum_raw_u32": 1141571318
+    },
+    "dungeon-header:unknown_020_u32_bits": {
+      "minimum_raw_u32": 1105252810,
+      "maximum_raw_u32": 1151910244
+    },
+    "group-header:unknown_000_u32_bits": {
+      "minimum_raw_u32": 0,
+      "maximum_raw_u32": 156
+    },
+    "node-header:unknown_000_u32_bits": {
+      "minimum_raw_u32": 1097206463,
+      "maximum_raw_u32": 1148812755
+    },
+    "node-header:unknown_004_u32_bits": {
+      "minimum_raw_u32": 1097206463,
+      "maximum_raw_u32": 1143521636
+    },
+    "node-header:unknown_008_u32_bits": {
+      "minimum_raw_u32": 1097206463,
+      "maximum_raw_u32": 1151564633
+    },
+    "node-header:unknown_012_u32_bits": {
+      "minimum_raw_u32": 0,
+      "maximum_raw_u32": 3251822720
+    },
+    "node-header:unknown_016_u32_bits": {
+      "minimum_raw_u32": 0,
+      "maximum_raw_u32": 3242640499
+    },
+    "node-header:unknown_020_u32_bits": {
+      "minimum_raw_u32": 0,
+      "maximum_raw_u32": 3278462337
+    },
+    "node-header:unknown_024_u32_bits": {
+      "minimum_raw_u32": 1069760512,
+      "maximum_raw_u32": 1149190259
+    },
+    "node-header:unknown_028_u32_bits": {
+      "minimum_raw_u32": 1057168640,
+      "maximum_raw_u32": 1141571318
+    },
+    "node-header:unknown_032_u32_bits": {
+      "minimum_raw_u32": 1071712256,
+      "maximum_raw_u32": 1151910244
+    },
+    "node-header:unknown_036_u32_bits": {
+      "minimum_raw_u32": 0,
+      "maximum_raw_u32": 3251822720
+    },
+    "node-header:unknown_040_u32_bits": {
+      "minimum_raw_u32": 0,
+      "maximum_raw_u32": 3242640499
+    },
+    "node-header:unknown_044_u32_bits": {
+      "minimum_raw_u32": 0,
+      "maximum_raw_u32": 3278462337
+    },
+    "node-header:unknown_048_u32_bits": {
+      "minimum_raw_u32": 1069760512,
+      "maximum_raw_u32": 3351465856
+    },
+    "node-header:unknown_052_u32_bits": {
+      "minimum_raw_u32": 1055641226,
+      "maximum_raw_u32": 3351465856
+    },
+    "node-header:unknown_056_u32_bits": {
+      "minimum_raw_u32": 1071712256,
+      "maximum_raw_u32": 3351465856
+    },
+    "patch-header:unknown_000_u32_bits": {
+      "minimum_raw_u32": 0,
+      "maximum_raw_u32": 49
+    },
+    "water-header:unknown_000_u32_bits": {
+      "minimum_raw_u32": 1115684864,
+      "maximum_raw_u32": 1124073472
+    },
+    "water-header:unknown_004_u32_bits": {
+      "minimum_raw_u32": 2566914047,
+      "maximum_raw_u32": 3640655871
+    },
+    "water-header:unknown_008_u32_bits": {
+      "minimum_raw_u32": 40,
+      "maximum_raw_u32": 150
+    }
+  },
+  "mesh_cell_extremes": {
+    "auxiliary-triangles:unknown_000_u16_bits": {
+      "minimum_raw_bits": 0,
+      "maximum_raw_bits": 3042
+    },
+    "auxiliary-triangles:unknown_002_u16_bits": {
+      "minimum_raw_bits": 0,
+      "maximum_raw_bits": 3041
+    },
+    "auxiliary-triangles:unknown_004_u16_bits": {
+      "minimum_raw_bits": 0,
+      "maximum_raw_bits": 3041
+    },
+    "auxiliary-vertices:unknown_000_u32_bits": {
+      "minimum_raw_bits": 0,
+      "maximum_raw_bits": 3251822720
+    },
+    "auxiliary-vertices:unknown_004_u32_bits": {
+      "minimum_raw_bits": 0,
+      "maximum_raw_bits": 3242640499
+    },
+    "auxiliary-vertices:unknown_008_u32_bits": {
+      "minimum_raw_bits": 0,
+      "maximum_raw_bits": 3278462337
+    },
+    "render-triangles:unknown_000_u16_bits": {
+      "minimum_raw_bits": 0,
+      "maximum_raw_bits": 14529
+    },
+    "render-triangles:unknown_002_u16_bits": {
+      "minimum_raw_bits": 1,
+      "maximum_raw_bits": 14531
+    },
+    "render-triangles:unknown_004_u16_bits": {
+      "minimum_raw_bits": 2,
+      "maximum_raw_bits": 14532
+    },
+    "render-vertices:unknown_000_u32_bits": {
+      "minimum_raw_bits": 0,
+      "maximum_raw_bits": 1149190259
+    },
+    "render-vertices:unknown_004_u32_bits": {
+      "minimum_raw_bits": 0,
+      "maximum_raw_bits": 1141571318
+    },
+    "render-vertices:unknown_008_u32_bits": {
+      "minimum_raw_bits": 0,
+      "maximum_raw_bits": 1151910244
+    },
+    "render-vertices:unknown_012_u32_bits": {
+      "minimum_raw_bits": 0,
+      "maximum_raw_bits": 4294967295
+    },
+    "render-vertices:unknown_016_u32_bits": {
+      "minimum_raw_bits": 0,
+      "maximum_raw_bits": 4294967295
+    },
+    "render-vertices:unknown_020_u32_bits": {
+      "minimum_raw_bits": 0,
+      "maximum_raw_bits": 4294967295
+    },
+    "render-vertices:unknown_024_u32_bits": {
+      "minimum_raw_bits": 4279636236,
+      "maximum_raw_bits": 4294967295
+    },
+    "render-vertices:unknown_028_u32_bits": {
+      "minimum_raw_bits": 0,
+      "maximum_raw_bits": 3264752252
+    },
+    "render-vertices:unknown_032_u32_bits": {
+      "minimum_raw_bits": 0,
+      "maximum_raw_bits": 3273642215
+    },
+    "render-vertices:unknown_036_u32_bits": {
+      "minimum_raw_bits": 0,
+      "maximum_raw_bits": 3127965696
+    },
+    "render-vertices:unknown_040_u32_bits": {
+      "minimum_raw_bits": 0,
+      "maximum_raw_bits": 3128133632
+    }
+  },
+  "maximum_observed_tree_depth": 4,
+  "fully_semantically_validated_formats": 0,
+  "new_runtime_interactions": 0,
+  "sources": [
+    {
+      "id": "tree-013565",
+      "source_path": "Entity/Water/A2.wtr",
+      "extension": ".wtr",
+      "source_sha256": "6c122d765880bcf8c8867a71bbaa2308c4d84688f003b256de456ae8f1df4cab",
+      "size_bytes": 7696,
+      "status": "decoded",
+      "semantic_status": "unknown",
+      "source_integrity_verified": true,
+      "variant": "WTR",
+      "counts": {
+        "texture-names": 30
+      },
+      "catalog_rows": 32,
+      "bytes_consumed": 7696,
+      "raw_catalog": {
+        "path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/catalogs/spatial-v2/tree-013565.raw.json",
+        "sha256": "2d10bc9f2c52d8db5768f58a2754ef87c0eb04322deda1c058b85d94b1448203"
+      },
+      "normalized_catalog": {
+        "path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/catalogs/spatial-v2/tree-013565.jsonl",
+        "sha256": "9ddf84526a268262edb117bf46fbf236e827ba454e3ff9737e2b1ed8ca346576",
+        "rows": 32
+      },
+      "structured_round_trip_matches": true,
+      "read_write_read_matches": true,
+      "first_part": {
+        "id": "tree-013565:part:000000",
+        "section": "water-header",
+        "offset": 0,
+        "size_bytes": 12
+      },
+      "last_part": {
+        "id": "tree-013565:part:000031",
+        "section": "texture-names",
+        "offset": 7440,
+        "size_bytes": 256
+      }
+    },
+    {
+      "id": "tree-013566",
+      "source_path": "Entity/Water/B1_Water.wtr",
+      "extension": ".wtr",
+      "source_sha256": "57aa6ce1ce2c107276e0d23a6b01024dc255d66278ce9b8f3d546c3644908edd",
+      "size_bytes": 8208,
+      "status": "decoded",
+      "semantic_status": "unknown",
+      "source_integrity_verified": true,
+      "variant": "WTR",
+      "counts": {
+        "texture-names": 32
+      },
+      "catalog_rows": 34,
+      "bytes_consumed": 8208,
+      "raw_catalog": {
+        "path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/catalogs/spatial-v2/tree-013566.raw.json",
+        "sha256": "53498c52426bc7a9d30fb00559505bd35dba57017f6bc2ee30e7869250b234fe"
+      },
+      "normalized_catalog": {
+        "path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/catalogs/spatial-v2/tree-013566.jsonl",
+        "sha256": "2fef42ced895d443bbe1d28b2962bbf8771f12e93210fe1a78a419c877ae0225",
+        "rows": 34
+      },
+      "structured_round_trip_matches": true,
+      "read_write_read_matches": true,
+      "first_part": {
+        "id": "tree-013566:part:000000",
+        "section": "water-header",
+        "offset": 0,
+        "size_bytes": 12
+      },
+      "last_part": {
+        "id": "tree-013566:part:000033",
+        "section": "texture-names",
+        "offset": 7952,
+        "size_bytes": 256
+      }
+    },
+    {
+      "id": "tree-013663",
+      "source_path": "Entity/Water/World.wtr",
+      "extension": ".wtr",
+      "source_sha256": "4f61a8233da83b047768f6214535efdc0acd0307c4ac63399453882c5c9406f5",
+      "size_bytes": 8208,
+      "status": "decoded",
+      "semantic_status": "unknown",
+      "source_integrity_verified": true,
+      "variant": "WTR",
+      "counts": {
+        "texture-names": 32
+      },
+      "catalog_rows": 34,
+      "bytes_consumed": 8208,
+      "raw_catalog": {
+        "path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/catalogs/spatial-v2/tree-013663.raw.json",
+        "sha256": "e84199aedbbc9048fcb339d26052a67499ee242d7cdeb9171da2ccc0333a18c5"
+      },
+      "normalized_catalog": {
+        "path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/catalogs/spatial-v2/tree-013663.jsonl",
+        "sha256": "241f52732656ad488a6cf5c85723d9d5c4094b27fb230936dd018e99712bdba1",
+        "rows": 34
+      },
+      "structured_round_trip_matches": true,
+      "read_write_read_matches": true,
+      "first_part": {
+        "id": "tree-013663:part:000000",
+        "section": "water-header",
+        "offset": 0,
+        "size_bytes": 12
+      },
+      "last_part": {
+        "id": "tree-013663:part:000033",
+        "section": "texture-names",
+        "offset": 7952,
+        "size_bytes": 256
+      }
+    },
+    {
+      "id": "tree-022519",
+      "source_path": "world/dungeon/A1_Dun1_1F.dg",
+      "extension": ".dg",
+      "source_sha256": "ec0e6767bc220cca718ec43de5e1880b86e1ba2a55f3fbcac871e73917f4879a",
+      "size_bytes": 3385682,
+      "status": "decoded",
+      "semantic_status": "unknown",
+      "source_integrity_verified": true,
+      "variant": "DG",
+      "counts": {
+        "texture-names": 85,
+        "external-page-count": 4,
+        "render-vertices": 70923,
+        "render-triangles": 28401,
+        "auxiliary-vertices": 3286,
+        "auxiliary-triangles": 2652,
+        "nodes": 54,
+        "groups": 587,
+        "patches": 587,
+        "auxiliary-meshes": 48,
+        "max-depth": 3
+      },
+      "catalog_rows": 4984,
+      "bytes_consumed": 3385682,
+      "raw_catalog": {
+        "path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/catalogs/spatial-v2/tree-022519.raw.json",
+        "sha256": "c42d4cadf98b90e62c20f4c10c523264132ae0cd0d5a8b5c1a5ba9880e4cb69b"
+      },
+      "normalized_catalog": {
+        "path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/catalogs/spatial-v2/tree-022519.jsonl",
+        "sha256": "28d12140ab6cc8766ab0d80419cf2b273229b44bc9d506e3a65666a6bd9d2b7e",
+        "rows": 4984
+      },
+      "structured_round_trip_matches": true,
+      "read_write_read_matches": true,
+      "first_part": {
+        "id": "tree-022519:part:000000",
+        "section": "dungeon-header",
+        "offset": 0,
+        "size_bytes": 24
+      },
+      "last_part": {
+        "id": "tree-022519:part:004983",
+        "section": "child-present",
+        "offset": 3385678,
+        "size_bytes": 4
+      }
+    },
+    {
+      "id": "tree-022520",
+      "source_path": "world/dungeon/A1_Dun1_2F.dg",
+      "extension": ".dg",
+      "source_sha256": "409e9eb984887b75afa34e713b21959b49e8b080425105e5479d0dba5039b762",
+      "size_bytes": 1071420,
+      "status": "decoded",
+      "semantic_status": "unknown",
+      "source_integrity_verified": true,
+      "variant": "DG",
+      "counts": {
+        "texture-names": 47,
+        "external-page-count": 2,
+        "render-vertices": 22160,
+        "render-triangles": 9370,
+        "auxiliary-vertices": 1261,
+        "auxiliary-triangles": 950,
+        "nodes": 24,
+        "groups": 235,
+        "patches": 235,
+        "auxiliary-meshes": 20,
+        "max-depth": 3
+      },
+      "catalog_rows": 2040,
+      "bytes_consumed": 1071420,
+      "raw_catalog": {
+        "path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/catalogs/spatial-v2/tree-022520.raw.json",
+        "sha256": "6b9ebc594f568b7071d76c19f44c3c323865115856d7e7cb55ab4392e2768624"
+      },
+      "normalized_catalog": {
+        "path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/catalogs/spatial-v2/tree-022520.jsonl",
+        "sha256": "165c00fa93148e9212de201a02201a9ae615f742141f1f1d9da4f9a5bdf5f068",
+        "rows": 2040
+      },
+      "structured_round_trip_matches": true,
+      "read_write_read_matches": true,
+      "first_part": {
+        "id": "tree-022520:part:000000",
+        "section": "dungeon-header",
+        "offset": 0,
+        "size_bytes": 24
+      },
+      "last_part": {
+        "id": "tree-022520:part:002039",
+        "section": "child-present",
+        "offset": 1071416,
+        "size_bytes": 4
+      }
+    },
+    {
+      "id": "tree-022521",
+      "source_path": "world/dungeon/A2_Sexyhouse.dg",
+      "extension": ".dg",
+      "source_sha256": "3d779f801932d11b24a47d05e3fcfb777b81f142012d8cbe4bd932ec11fa3868",
+      "size_bytes": 524588,
+      "status": "decoded",
+      "semantic_status": "unknown",
+      "source_integrity_verified": true,
+      "variant": "DG",
+      "counts": {
+        "texture-names": 51,
+        "external-page-count": 1,
+        "render-vertices": 10870,
+        "render-triangles": 5322,
+        "auxiliary-vertices": 8,
+        "auxiliary-triangles": 10,
+        "nodes": 1,
+        "groups": 51,
+        "patches": 51,
+        "auxiliary-meshes": 1,
+        "max-depth": 0
+      },
+      "catalog_rows": 427,
+      "bytes_consumed": 524588,
+      "raw_catalog": {
+        "path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/catalogs/spatial-v2/tree-022521.raw.json",
+        "sha256": "ab4ba796cebb63824f5a7c4f92cd6975e9f84ca5bac27e0cf276ffa288e14a44"
+      },
+      "normalized_catalog": {
+        "path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/catalogs/spatial-v2/tree-022521.jsonl",
+        "sha256": "1ff1d37fc28cd3abda0d423ab598e938f7425c86102864f722ad6375e4f739f2",
+        "rows": 427
+      },
+      "structured_round_trip_matches": true,
+      "read_write_read_matches": true,
+      "first_part": {
+        "id": "tree-022521:part:000000",
+        "section": "dungeon-header",
+        "offset": 0,
+        "size_bytes": 24
+      },
+      "last_part": {
+        "id": "tree-022521:part:000426",
+        "section": "child-present",
+        "offset": 524584,
+        "size_bytes": 4
+      }
+    },
+    {
+      "id": "tree-022522",
+      "source_path": "world/dungeon/A3_DUN1_1F.dg",
+      "extension": ".dg",
+      "source_sha256": "33d14319a0420db404b7851541465493bff4bc6b70f9f80bab4b1b0492df2199",
+      "size_bytes": 2160108,
+      "status": "decoded",
+      "semantic_status": "unknown",
+      "source_integrity_verified": true,
+      "variant": "DG",
+      "counts": {
+        "texture-names": 57,
+        "external-page-count": 15,
+        "render-vertices": 44510,
+        "render-triangles": 20428,
+        "auxiliary-vertices": 2734,
+        "auxiliary-triangles": 2602,
+        "nodes": 94,
+        "groups": 307,
+        "patches": 315,
+        "auxiliary-meshes": 52,
+        "max-depth": 4
+      },
+      "catalog_rows": 3492,
+      "bytes_consumed": 2160108,
+      "raw_catalog": {
+        "path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/catalogs/spatial-v2/tree-022522.raw.json",
+        "sha256": "70e80903be0026a99e4af79c30232cb36ae6e7a1aff6e05bb357444047eb2214"
+      },
+      "normalized_catalog": {
+        "path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/catalogs/spatial-v2/tree-022522.jsonl",
+        "sha256": "366aa7a2ea9600fe02a512c8ba4808ef5517d0eb5cec5e7e7bea2d90cc6da0c1",
+        "rows": 3492
+      },
+      "structured_round_trip_matches": true,
+      "read_write_read_matches": true,
+      "first_part": {
+        "id": "tree-022522:part:000000",
+        "section": "dungeon-header",
+        "offset": 0,
+        "size_bytes": 24
+      },
+      "last_part": {
+        "id": "tree-022522:part:003491",
+        "section": "child-present",
+        "offset": 2160104,
+        "size_bytes": 4
+      }
+    },
+    {
+      "id": "tree-022523",
+      "source_path": "world/dungeon/A4_PVP.dg",
+      "extension": ".dg",
+      "source_sha256": "573268e29012ea10849691386d0b5cfd5e18099b35537cc7d2fc1060469d4d73",
+      "size_bytes": 348884,
+      "status": "decoded",
+      "semantic_status": "unknown",
+      "source_integrity_verified": true,
+      "variant": "DG",
+      "counts": {
+        "texture-names": 39,
+        "external-page-count": 4,
+        "render-vertices": 7018,
+        "render-triangles": 3322,
+        "auxiliary-vertices": 271,
+        "auxiliary-triangles": 212,
+        "nodes": 16,
+        "groups": 197,
+        "patches": 198,
+        "auxiliary-meshes": 8,
+        "max-depth": 2
+      },
+      "catalog_rows": 1635,
+      "bytes_consumed": 348884,
+      "raw_catalog": {
+        "path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/catalogs/spatial-v2/tree-022523.raw.json",
+        "sha256": "311274044675d71f2ecc346b610220491ab0b0cf9d837d13f49f1fd1baf9709a"
+      },
+      "normalized_catalog": {
+        "path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/catalogs/spatial-v2/tree-022523.jsonl",
+        "sha256": "5cb425863d80ab55352b5108cd76df81a35cbe018057d29bd202606cdee6eb1a",
+        "rows": 1635
+      },
+      "structured_round_trip_matches": true,
+      "read_write_read_matches": true,
+      "first_part": {
+        "id": "tree-022523:part:000000",
+        "section": "dungeon-header",
+        "offset": 0,
+        "size_bytes": 24
+      },
+      "last_part": {
+        "id": "tree-022523:part:001634",
+        "section": "child-present",
+        "offset": 348880,
+        "size_bytes": 4
+      }
+    },
+    {
+      "id": "tree-022524",
+      "source_path": "world/dungeon/B1_Dun1_1F.dg",
+      "extension": ".dg",
+      "source_sha256": "177ca8d6d57c55cd5bf7cbf5e231a5463496a5f6050576fdf1d1fcc328101b67",
+      "size_bytes": 3268240,
+      "status": "decoded",
+      "semantic_status": "unknown",
+      "source_integrity_verified": true,
+      "variant": "DG",
+      "counts": {
+        "texture-names": 61,
+        "external-page-count": 4,
+        "render-vertices": 67993,
+        "render-triangles": 32737,
+        "auxiliary-vertices": 3024,
+        "auxiliary-triangles": 2539,
+        "nodes": 33,
+        "groups": 470,
+        "patches": 471,
+        "auxiliary-meshes": 30,
+        "max-depth": 3
+      },
+      "catalog_rows": 3843,
+      "bytes_consumed": 3268240,
+      "raw_catalog": {
+        "path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/catalogs/spatial-v2/tree-022524.raw.json",
+        "sha256": "e2e3048415055769352716d617a9f80276b94e2c4401a2be8d9294903eb92a6d"
+      },
+      "normalized_catalog": {
+        "path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/catalogs/spatial-v2/tree-022524.jsonl",
+        "sha256": "fe192cf9b0f265dbdcfbc932965e1e4b68fcfa6f85f23404d8083c135033732e",
+        "rows": 3843
+      },
+      "structured_round_trip_matches": true,
+      "read_write_read_matches": true,
+      "first_part": {
+        "id": "tree-022524:part:000000",
+        "section": "dungeon-header",
+        "offset": 0,
+        "size_bytes": 24
+      },
+      "last_part": {
+        "id": "tree-022524:part:003842",
+        "section": "child-present",
+        "offset": 3268236,
+        "size_bytes": 4
+      }
+    },
+    {
+      "id": "tree-022525",
+      "source_path": "world/dungeon/B3_DUN1_1F.dg",
+      "extension": ".dg",
+      "source_sha256": "98382b7cff91f227155071487d9662a74aaf4f6b4b23a96bef9bf41f1efb87d8",
+      "size_bytes": 3365602,
+      "status": "decoded",
+      "semantic_status": "unknown",
+      "source_integrity_verified": true,
+      "variant": "DG",
+      "counts": {
+        "texture-names": 54,
+        "external-page-count": 17,
+        "render-vertices": 69585,
+        "render-triangles": 33503,
+        "auxiliary-vertices": 4171,
+        "auxiliary-triangles": 3636,
+        "nodes": 83,
+        "groups": 406,
+        "patches": 418,
+        "auxiliary-meshes": 69,
+        "max-depth": 4
+      },
+      "catalog_rows": 4149,
+      "bytes_consumed": 3365602,
+      "raw_catalog": {
+        "path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/catalogs/spatial-v2/tree-022525.raw.json",
+        "sha256": "675e0b0ba3ccfb30b362726f287c9181b4915f4fe222558ba2f739752a833318"
+      },
+      "normalized_catalog": {
+        "path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/catalogs/spatial-v2/tree-022525.jsonl",
+        "sha256": "192539f35afc7e80ca70f950f320c216ae2fdc5cabd0c47a1a457644a050ccbf",
+        "rows": 4149
+      },
+      "structured_round_trip_matches": true,
+      "read_write_read_matches": true,
+      "first_part": {
+        "id": "tree-022525:part:000000",
+        "section": "dungeon-header",
+        "offset": 0,
+        "size_bytes": 24
+      },
+      "last_part": {
+        "id": "tree-022525:part:004148",
+        "section": "child-present",
+        "offset": 3365598,
+        "size_bytes": 4
+      }
+    },
+    {
+      "id": "tree-022526",
+      "source_path": "world/dungeon/B3_DUN1_1F.dg_pv",
+      "extension": ".dg_pv",
+      "source_sha256": "0d98a73932e9f8707b31a787ac9c25acacd5700cb11788c22ca9a9df0ac9bdbc",
+      "size_bytes": 4954834,
+      "status": "unknown",
+      "semantic_status": "unknown",
+      "source_integrity_verified": true,
+      "error": "Invalid table count 1136484863 at 153438"
+    },
+    {
+      "id": "tree-022527",
+      "source_path": "world/dungeon/b4_pvp.dg",
+      "extension": ".dg",
+      "source_sha256": "5a4a7403a7f031a7e47fa7ebe8898850d260fc1cc7236265da062a8c6353e3a9",
+      "size_bytes": 539568,
+      "status": "decoded",
+      "semantic_status": "unknown",
+      "source_integrity_verified": true,
+      "variant": "DG",
+      "counts": {
+        "texture-names": 44,
+        "external-page-count": 3,
+        "render-vertices": 11066,
+        "render-triangles": 5186,
+        "auxiliary-vertices": 255,
+        "auxiliary-triangles": 192,
+        "nodes": 19,
+        "groups": 203,
+        "patches": 204,
+        "auxiliary-meshes": 8,
+        "max-depth": 2
+      },
+      "catalog_rows": 1715,
+      "bytes_consumed": 539568,
+      "raw_catalog": {
+        "path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/catalogs/spatial-v2/tree-022527.raw.json",
+        "sha256": "05b0d88edc45e34b061fdbf94bf7bc66b5733fbcd9cb17203634d9fdeec989c7"
+      },
+      "normalized_catalog": {
+        "path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/catalogs/spatial-v2/tree-022527.jsonl",
+        "sha256": "1697e9a7eec0324bb40e2ba4bbdfe0253ce7812f9c4ef071572b3669754f15e8",
+        "rows": 1715
+      },
+      "structured_round_trip_matches": true,
+      "read_write_read_matches": true,
+      "first_part": {
+        "id": "tree-022527:part:000000",
+        "section": "dungeon-header",
+        "offset": 0,
+        "size_bytes": 24
+      },
+      "last_part": {
+        "id": "tree-022527:part:001714",
+        "section": "child-present",
+        "offset": 539564,
+        "size_bytes": 4
+      }
+    },
+    {
+      "id": "tree-022528",
+      "source_path": "world/dungeon/B5_Dun_Caelumchakra_1F_final.dg",
+      "extension": ".dg",
+      "source_sha256": "0dd8cc163528219c17ee0d33a490cb2a6589871607794755a50eb3f54659b4cc",
+      "size_bytes": 4396148,
+      "status": "decoded",
+      "semantic_status": "unknown",
+      "source_integrity_verified": true,
+      "variant": "DG",
+      "counts": {
+        "texture-names": 128,
+        "external-page-count": 8,
+        "render-vertices": 90574,
+        "render-triangles": 39360,
+        "auxiliary-vertices": 6682,
+        "auxiliary-triangles": 8014,
+        "nodes": 35,
+        "groups": 495,
+        "patches": 496,
+        "auxiliary-meshes": 31,
+        "max-depth": 3
+      },
+      "catalog_rows": 4111,
+      "bytes_consumed": 4396148,
+      "raw_catalog": {
+        "path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/catalogs/spatial-v2/tree-022528.raw.json",
+        "sha256": "af6ec9fcbc6dfe8b06737a281b4340ab38b55e4632730ba02d28a4441cd4f59f"
+      },
+      "normalized_catalog": {
+        "path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/catalogs/spatial-v2/tree-022528.jsonl",
+        "sha256": "90077b10b8ff2a6b9654628f0fa4e91f7d762c6afb39eb6d2df520e6761edaab",
+        "rows": 4111
+      },
+      "structured_round_trip_matches": true,
+      "read_write_read_matches": true,
+      "first_part": {
+        "id": "tree-022528:part:000000",
+        "section": "dungeon-header",
+        "offset": 0,
+        "size_bytes": 24
+      },
+      "last_part": {
+        "id": "tree-022528:part:004110",
+        "section": "child-present",
+        "offset": 4396144,
+        "size_bytes": 4
+      }
+    },
+    {
+      "id": "tree-022529",
+      "source_path": "world/dungeon/B5_Dun_Caelumchakra_1F_final.dg_pv",
+      "extension": ".dg_pv",
+      "source_sha256": "ec7fe4e2e5d19c8c72485b185a5f19678409a844d213f0a4353005ae1c0777c2",
+      "size_bytes": 6651544,
+      "status": "unknown",
+      "semantic_status": "unknown",
+      "source_integrity_verified": true,
+      "error": "Invalid table count 1064425369 at 34476"
+    },
+    {
+      "id": "tree-022531",
+      "source_path": "world/dungeon/B5_Dun_Caelumchakra_2F_final.dg",
+      "extension": ".dg",
+      "source_sha256": "4cbb93fe9a42089fbd3e5dda2bc0370a7949021fc6956b9038508a6fc7216a88",
+      "size_bytes": 4912000,
+      "status": "decoded",
+      "semantic_status": "unknown",
+      "source_integrity_verified": true,
+      "variant": "DG",
+      "counts": {
+        "texture-names": 57,
+        "external-page-count": 8,
+        "render-vertices": 103102,
+        "render-triangles": 42990,
+        "auxiliary-vertices": 4653,
+        "auxiliary-triangles": 5580,
+        "nodes": 45,
+        "groups": 438,
+        "patches": 444,
+        "auxiliary-meshes": 37,
+        "max-depth": 4
+      },
+      "catalog_rows": 3800,
+      "bytes_consumed": 4912000,
+      "raw_catalog": {
+        "path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/catalogs/spatial-v2/tree-022531.raw.json",
+        "sha256": "d8df53211c0cbe4f66f1c51eef264787915537554b082a9c320e8664394a04d6"
+      },
+      "normalized_catalog": {
+        "path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/catalogs/spatial-v2/tree-022531.jsonl",
+        "sha256": "d7273686cb4e645f9d98cefb58262021e922c88f5e3a1d35ff6b2e17747524b2",
+        "rows": 3800
+      },
+      "structured_round_trip_matches": true,
+      "read_write_read_matches": true,
+      "first_part": {
+        "id": "tree-022531:part:000000",
+        "section": "dungeon-header",
+        "offset": 0,
+        "size_bytes": 24
+      },
+      "last_part": {
+        "id": "tree-022531:part:003799",
+        "section": "child-present",
+        "offset": 4911996,
+        "size_bytes": 4
+      }
+    },
+    {
+      "id": "tree-022532",
+      "source_path": "world/dungeon/B5_Dun_Caelumchakra_2F_final.dg_pv",
+      "extension": ".dg_pv",
+      "source_sha256": "ef7574db80b158d9b142e93391b94e53596861939f0b689af2fcb2bfb13cff7d",
+      "size_bytes": 7558680,
+      "status": "unknown",
+      "semantic_status": "unknown",
+      "source_integrity_verified": true,
+      "error": "Invalid table count 1065353216 at 19434"
+    },
+    {
+      "id": "tree-022534",
+      "source_path": "world/dungeon/DUN_LOGIN.dg",
+      "extension": ".dg",
+      "source_sha256": "97962453de249470d86212c66740aac08756fcd7d1d9a3c2e2616c1e32338b8b",
+      "size_bytes": 321260,
+      "status": "decoded",
+      "semantic_status": "unknown",
+      "source_integrity_verified": true,
+      "variant": "DG",
+      "counts": {
+        "texture-names": 31,
+        "external-page-count": 4,
+        "render-vertices": 6574,
+        "render-triangles": 3188,
+        "auxiliary-vertices": 0,
+        "auxiliary-triangles": 0,
+        "nodes": 23,
+        "groups": 129,
+        "patches": 131,
+        "auxiliary-meshes": 0,
+        "max-depth": 2
+      },
+      "catalog_rows": 1201,
+      "bytes_consumed": 321260,
+      "raw_catalog": {
+        "path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/catalogs/spatial-v2/tree-022534.raw.json",
+        "sha256": "dac5eab7fdaf7bb23f412da9f9bb3c140b8f10fb1f6c45df7353a7027fdebd21"
+      },
+      "normalized_catalog": {
+        "path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/catalogs/spatial-v2/tree-022534.jsonl",
+        "sha256": "1b3cdc45bb6a53b3f511534c7f6fd46421825b0a0bbd232e47f74ce73c11c964",
+        "rows": 1201
+      },
+      "structured_round_trip_matches": true,
+      "read_write_read_matches": true,
+      "first_part": {
+        "id": "tree-022534:part:000000",
+        "section": "dungeon-header",
+        "offset": 0,
+        "size_bytes": 24
+      },
+      "last_part": {
+        "id": "tree-022534:part:001200",
+        "section": "child-present",
+        "offset": 321256,
+        "size_bytes": 4
+      }
+    },
+    {
+      "id": "tree-022535",
+      "source_path": "world/dungeon/DUN_LOGIN_N.dg",
+      "extension": ".dg",
+      "source_sha256": "83e3c43dfe2002caafd3d0bfa46106f6d31eaed8fbb8ca57f10a0fe4583567ce",
+      "size_bytes": 1732008,
+      "status": "decoded",
+      "semantic_status": "unknown",
+      "source_integrity_verified": true,
+      "variant": "DG",
+      "counts": {
+        "texture-names": 49,
+        "external-page-count": 2,
+        "render-vertices": 36760,
+        "render-triangles": 16108,
+        "auxiliary-vertices": 4,
+        "auxiliary-triangles": 2,
+        "nodes": 16,
+        "groups": 183,
+        "patches": 184,
+        "auxiliary-meshes": 1,
+        "max-depth": 2
+      },
+      "catalog_rows": 1519,
+      "bytes_consumed": 1732008,
+      "raw_catalog": {
+        "path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/catalogs/spatial-v2/tree-022535.raw.json",
+        "sha256": "75e8eb2f68071838fadc0489f27c72d6826485e50766f944ad5958eda0e02fa1"
+      },
+      "normalized_catalog": {
+        "path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/catalogs/spatial-v2/tree-022535.jsonl",
+        "sha256": "ea78a28a890f303693bf39b345783e1623360b27729d3852959b419f0b9e58ca",
+        "rows": 1519
+      },
+      "structured_round_trip_matches": true,
+      "read_write_read_matches": true,
+      "first_part": {
+        "id": "tree-022535:part:000000",
+        "section": "dungeon-header",
+        "offset": 0,
+        "size_bytes": 24
+      },
+      "last_part": {
+        "id": "tree-022535:part:001518",
+        "section": "child-present",
+        "offset": 1732004,
+        "size_bytes": 4
+      }
+    },
+    {
+      "id": "tree-022536",
+      "source_path": "world/dungeon/F_B1_Dun2_1F.dg",
+      "extension": ".dg",
+      "source_sha256": "9b9e9c003027a909e45ab67b5e208c52ef325b9f906e531d04e42c585e6c6d9a",
+      "size_bytes": 5755324,
+      "status": "decoded",
+      "semantic_status": "unknown",
+      "source_integrity_verified": true,
+      "variant": "DG",
+      "counts": {
+        "texture-names": 86,
+        "external-page-count": 5,
+        "render-vertices": 119315,
+        "render-triangles": 58195,
+        "auxiliary-vertices": 6552,
+        "auxiliary-triangles": 5955,
+        "nodes": 46,
+        "groups": 745,
+        "patches": 748,
+        "auxiliary-meshes": 44,
+        "max-depth": 3
+      },
+      "catalog_rows": 6002,
+      "bytes_consumed": 5755324,
+      "raw_catalog": {
+        "path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/catalogs/spatial-v2/tree-022536.raw.json",
+        "sha256": "6e98fa9246d8346edb42ab01486dd74921e82d63ed4ef90f0b3016c0fbe6293a"
+      },
+      "normalized_catalog": {
+        "path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/catalogs/spatial-v2/tree-022536.jsonl",
+        "sha256": "c187f1af9ceda092ff717b19eabbf56a0015a846bddf9198487496535e6b48f5",
+        "rows": 6002
+      },
+      "structured_round_trip_matches": true,
+      "read_write_read_matches": true,
+      "first_part": {
+        "id": "tree-022536:part:000000",
+        "section": "dungeon-header",
+        "offset": 0,
+        "size_bytes": 24
+      },
+      "last_part": {
+        "id": "tree-022536:part:006001",
+        "section": "child-present",
+        "offset": 5755320,
+        "size_bytes": 4
+      }
+    },
+    {
+      "id": "tree-022537",
+      "source_path": "world/dungeon/F_B1_Dun2_2F.dg",
+      "extension": ".dg",
+      "source_sha256": "c9c819670b9490a69a0b997174fe6a1cf64134d0db66aa2ee4b6a0aaa6d3fd39",
+      "size_bytes": 4981780,
+      "status": "decoded",
+      "semantic_status": "unknown",
+      "source_integrity_verified": true,
+      "variant": "DG",
+      "counts": {
+        "texture-names": 87,
+        "external-page-count": 9,
+        "render-vertices": 103291,
+        "render-triangles": 49429,
+        "auxiliary-vertices": 5624,
+        "auxiliary-triangles": 5153,
+        "nodes": 40,
+        "groups": 766,
+        "patches": 772,
+        "auxiliary-meshes": 37,
+        "max-depth": 3
+      },
+      "catalog_rows": 6071,
+      "bytes_consumed": 4981780,
+      "raw_catalog": {
+        "path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/catalogs/spatial-v2/tree-022537.raw.json",
+        "sha256": "8f833e1e930935516d98351c6246c1a80a6dbb16898f41887b2ac0a224f4e221"
+      },
+      "normalized_catalog": {
+        "path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/catalogs/spatial-v2/tree-022537.jsonl",
+        "sha256": "8912b624bcbd7ab2946c6ea46cde0b8ad1bd42813a3212ab0a9592025a5fc706",
+        "rows": 6071
+      },
+      "structured_round_trip_matches": true,
+      "read_write_read_matches": true,
+      "first_part": {
+        "id": "tree-022537:part:000000",
+        "section": "dungeon-header",
+        "offset": 0,
+        "size_bytes": 24
+      },
+      "last_part": {
+        "id": "tree-022537:part:006070",
+        "section": "child-present",
+        "offset": 4981776,
+        "size_bytes": 4
+      }
+    },
+    {
+      "id": "tree-022538",
+      "source_path": "world/dungeon/F_B2_Dun1_1F.dg",
+      "extension": ".dg",
+      "source_sha256": "3b2beade4493b7ff8df59dcce3892eaf4f9b1523ad8a746c2759a617a618ecf8",
+      "size_bytes": 8176266,
+      "status": "decoded",
+      "semantic_status": "unknown",
+      "source_integrity_verified": true,
+      "variant": "DG",
+      "counts": {
+        "texture-names": 62,
+        "external-page-count": 18,
+        "render-vertices": 171925,
+        "render-triangles": 83655,
+        "auxiliary-vertices": 4421,
+        "auxiliary-triangles": 4210,
+        "nodes": 50,
+        "groups": 498,
+        "patches": 508,
+        "auxiliary-meshes": 42,
+        "max-depth": 3
+      },
+      "catalog_rows": 4320,
+      "bytes_consumed": 8176266,
+      "raw_catalog": {
+        "path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/catalogs/spatial-v2/tree-022538.raw.json",
+        "sha256": "3d64a81b9284e971b971e9b7ae8c88b63fa3365707083f9ab1b97b60326cd978"
+      },
+      "normalized_catalog": {
+        "path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/catalogs/spatial-v2/tree-022538.jsonl",
+        "sha256": "dd95084c3ae0481513a8e27945ec2c9dc6810843817f5ec8bc840b595bdde5f5",
+        "rows": 4320
+      },
+      "structured_round_trip_matches": true,
+      "read_write_read_matches": true,
+      "first_part": {
+        "id": "tree-022538:part:000000",
+        "section": "dungeon-header",
+        "offset": 0,
+        "size_bytes": 24
+      },
+      "last_part": {
+        "id": "tree-022538:part:004319",
+        "section": "child-present",
+        "offset": 8176262,
+        "size_bytes": 4
+      }
+    },
+    {
+      "id": "tree-022539",
+      "source_path": "world/dungeon/F_B2_Dun1_2F.dg",
+      "extension": ".dg",
+      "source_sha256": "6fc938bbb994a178ef0403fa5bcf6bc317fc274f373dda4ca27ad77a3ba2f03b",
+      "size_bytes": 6437850,
+      "status": "decoded",
+      "semantic_status": "unknown",
+      "source_integrity_verified": true,
+      "variant": "DG",
+      "counts": {
+        "texture-names": 97,
+        "external-page-count": 23,
+        "render-vertices": 134943,
+        "render-triangles": 64845,
+        "auxiliary-vertices": 3976,
+        "auxiliary-triangles": 3690,
+        "nodes": 54,
+        "groups": 535,
+        "patches": 546,
+        "auxiliary-meshes": 42,
+        "max-depth": 4
+      },
+      "catalog_rows": 4663,
+      "bytes_consumed": 6437850,
+      "raw_catalog": {
+        "path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/catalogs/spatial-v2/tree-022539.raw.json",
+        "sha256": "a851d67ff7ea15cfb2a33a3943385c166cd622b6fb8a9cdd42ffc31a45c7971e"
+      },
+      "normalized_catalog": {
+        "path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/catalogs/spatial-v2/tree-022539.jsonl",
+        "sha256": "5fb04c61afb669919863ada4170b99e9c9be0f46f6d2e5170f3a6d0f89d4da92",
+        "rows": 4663
+      },
+      "structured_round_trip_matches": true,
+      "read_write_read_matches": true,
+      "first_part": {
+        "id": "tree-022539:part:000000",
+        "section": "dungeon-header",
+        "offset": 0,
+        "size_bytes": 24
+      },
+      "last_part": {
+        "id": "tree-022539:part:004662",
+        "section": "child-present",
+        "offset": 6437846,
+        "size_bytes": 4
+      }
+    },
+    {
+      "id": "tree-022540",
+      "source_path": "world/dungeon/F_B2_DUN2_1F.dg",
+      "extension": ".dg",
+      "source_sha256": "22931a010d7d4b2e6a2a97e07df3e4d11a9d74c9a4318f5888ddbf7a23416e68",
+      "size_bytes": 5610552,
+      "status": "decoded",
+      "semantic_status": "unknown",
+      "source_integrity_verified": true,
+      "variant": "DG",
+      "counts": {
+        "texture-names": 86,
+        "external-page-count": 8,
+        "render-vertices": 115210,
+        "render-triangles": 54472,
+        "auxiliary-vertices": 9171,
+        "auxiliary-triangles": 9154,
+        "nodes": 66,
+        "groups": 1017,
+        "patches": 1019,
+        "auxiliary-meshes": 61,
+        "max-depth": 4
+      },
+      "catalog_rows": 8189,
+      "bytes_consumed": 5610552,
+      "raw_catalog": {
+        "path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/catalogs/spatial-v2/tree-022540.raw.json",
+        "sha256": "1bcae0e6e8c213ecfbebb987275c66394321beeb297f5edf89bb123ab1c134a1"
+      },
+      "normalized_catalog": {
+        "path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/catalogs/spatial-v2/tree-022540.jsonl",
+        "sha256": "d548c0491fd8f3b408ce43f755f715436345fe670c31634ac5bb7e83b66d2c4d",
+        "rows": 8189
+      },
+      "structured_round_trip_matches": true,
+      "read_write_read_matches": true,
+      "first_part": {
+        "id": "tree-022540:part:000000",
+        "section": "dungeon-header",
+        "offset": 0,
+        "size_bytes": 24
+      },
+      "last_part": {
+        "id": "tree-022540:part:008188",
+        "section": "child-present",
+        "offset": 5610548,
+        "size_bytes": 4
+      }
+    },
+    {
+      "id": "tree-022541",
+      "source_path": "world/dungeon/F_B2_Dun2_2F.dg",
+      "extension": ".dg",
+      "source_sha256": "b5369678e8e2b33bf21e5f83c2d8c4566dd0088dd83a0cfa3aef3c59f85fbec2",
+      "size_bytes": 2655626,
+      "status": "decoded",
+      "semantic_status": "unknown",
+      "source_integrity_verified": true,
+      "variant": "DG",
+      "counts": {
+        "texture-names": 78,
+        "external-page-count": 6,
+        "render-vertices": 54642,
+        "render-triangles": 25652,
+        "auxiliary-vertices": 3511,
+        "auxiliary-triangles": 4661,
+        "nodes": 23,
+        "groups": 247,
+        "patches": 250,
+        "auxiliary-meshes": 11,
+        "max-depth": 4
+      },
+      "catalog_rows": 2123,
+      "bytes_consumed": 2655626,
+      "raw_catalog": {
+        "path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/catalogs/spatial-v2/tree-022541.raw.json",
+        "sha256": "0f23f27e25c34e26b5571721f31a122b4a191b6a273e6d6dac4c2b13e27e6ace"
+      },
+      "normalized_catalog": {
+        "path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/catalogs/spatial-v2/tree-022541.jsonl",
+        "sha256": "4b3b8149e7ca93f41828ca28fbe150faef4ead1a08996905d1bac5b12822c4b1",
+        "rows": 2123
+      },
+      "structured_round_trip_matches": true,
+      "read_write_read_matches": true,
+      "first_part": {
+        "id": "tree-022541:part:000000",
+        "section": "dungeon-header",
+        "offset": 0,
+        "size_bytes": 24
+      },
+      "last_part": {
+        "id": "tree-022541:part:002122",
+        "section": "child-present",
+        "offset": 2655622,
+        "size_bytes": 4
+      }
+    },
+    {
+      "id": "tree-022542",
+      "source_path": "world/dungeon/F_B2_Dun3_1F.dg",
+      "extension": ".dg",
+      "source_sha256": "70c4beb22b0f08dcfc56d43ca5b4b799b416b3184f86eff8cd7d836951635d0e",
+      "size_bytes": 3349398,
+      "status": "decoded",
+      "semantic_status": "unknown",
+      "source_integrity_verified": true,
+      "variant": "DG",
+      "counts": {
+        "texture-names": 67,
+        "external-page-count": 5,
+        "render-vertices": 69475,
+        "render-triangles": 33663,
+        "auxiliary-vertices": 3355,
+        "auxiliary-triangles": 2654,
+        "nodes": 49,
+        "groups": 593,
+        "patches": 596,
+        "auxiliary-meshes": 44,
+        "max-depth": 3
+      },
+      "catalog_rows": 4952,
+      "bytes_consumed": 3349398,
+      "raw_catalog": {
+        "path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/catalogs/spatial-v2/tree-022542.raw.json",
+        "sha256": "598bd3948f2aea0e354fdd305dbb24749bed38093524152c98571fe1ac4ec9fe"
+      },
+      "normalized_catalog": {
+        "path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/catalogs/spatial-v2/tree-022542.jsonl",
+        "sha256": "975544e74edebbfd154f2d96d925a243baf4c2a7fe40ed4f057ba8fd877a3e4c",
+        "rows": 4952
+      },
+      "structured_round_trip_matches": true,
+      "read_write_read_matches": true,
+      "first_part": {
+        "id": "tree-022542:part:000000",
+        "section": "dungeon-header",
+        "offset": 0,
+        "size_bytes": 24
+      },
+      "last_part": {
+        "id": "tree-022542:part:004951",
+        "section": "child-present",
+        "offset": 3349394,
+        "size_bytes": 4
+      }
+    },
+    {
+      "id": "tree-022543",
+      "source_path": "world/dungeon/F_Dun_Hell.dg",
+      "extension": ".dg",
+      "source_sha256": "27d07f9fb66b528778ed67df66c972eefa628c75f9c774d249ef44982639003b",
+      "size_bytes": 5839520,
+      "status": "decoded",
+      "semantic_status": "unknown",
+      "source_integrity_verified": true,
+      "variant": "DG",
+      "counts": {
+        "texture-names": 30,
+        "external-page-count": 50,
+        "render-vertices": 123131,
+        "render-triangles": 44973,
+        "auxiliary-vertices": 6754,
+        "auxiliary-triangles": 6437,
+        "nodes": 126,
+        "groups": 543,
+        "patches": 583,
+        "auxiliary-meshes": 74,
+        "max-depth": 4
+      },
+      "catalog_rows": 5717,
+      "bytes_consumed": 5839520,
+      "raw_catalog": {
+        "path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/catalogs/spatial-v2/tree-022543.raw.json",
+        "sha256": "c476ea247fab3121b8f9cb21593596642f055c629276b930d222c98ee58a4832"
+      },
+      "normalized_catalog": {
+        "path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/catalogs/spatial-v2/tree-022543.jsonl",
+        "sha256": "047a8b0fde71a6ab0266f2588d13f3ae6d35e3bd94a03437669cdc5dc0d5b57f",
+        "rows": 5717
+      },
+      "structured_round_trip_matches": true,
+      "read_write_read_matches": true,
+      "first_part": {
+        "id": "tree-022543:part:000000",
+        "section": "dungeon-header",
+        "offset": 0,
+        "size_bytes": 24
+      },
+      "last_part": {
+        "id": "tree-022543:part:005716",
+        "section": "child-present",
+        "offset": 5839516,
+        "size_bytes": 4
+      }
+    },
+    {
+      "id": "tree-022544",
+      "source_path": "world/dungeon/guildanteroom_d.dg",
+      "extension": ".dg",
+      "source_sha256": "25c883388c9ed76d32e13bb3b7695de7ab30f5e6e335e7b023429bd5545ea80c",
+      "size_bytes": 848452,
+      "status": "decoded",
+      "semantic_status": "unknown",
+      "source_integrity_verified": true,
+      "variant": "DG",
+      "counts": {
+        "texture-names": 65,
+        "external-page-count": 2,
+        "render-vertices": 17214,
+        "render-triangles": 8162,
+        "auxiliary-vertices": 1190,
+        "auxiliary-triangles": 1502,
+        "nodes": 3,
+        "groups": 88,
+        "patches": 89,
+        "auxiliary-meshes": 3,
+        "max-depth": 1
+      },
+      "catalog_rows": 735,
+      "bytes_consumed": 848452,
+      "raw_catalog": {
+        "path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/catalogs/spatial-v2/tree-022544.raw.json",
+        "sha256": "96ac50778e7a8c518d4bb996979d74f60986d32581a5aa988c9d6e0f914afc8d"
+      },
+      "normalized_catalog": {
+        "path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/catalogs/spatial-v2/tree-022544.jsonl",
+        "sha256": "4fce7be31bbda9426cb81d5e2d08f5551de46d2fa9438ec8bed3fa026da845c7",
+        "rows": 735
+      },
+      "structured_round_trip_matches": true,
+      "read_write_read_matches": true,
+      "first_part": {
+        "id": "tree-022544:part:000000",
+        "section": "dungeon-header",
+        "offset": 0,
+        "size_bytes": 24
+      },
+      "last_part": {
+        "id": "tree-022544:part:000734",
+        "section": "child-present",
+        "offset": 848448,
+        "size_bytes": 4
+      }
+    },
+    {
+      "id": "tree-022545",
+      "source_path": "world/dungeon/GuildAnteroom_L.dg",
+      "extension": ".dg",
+      "source_sha256": "5c10d45254bb5dd0db74f967181b226054f422d2169b9c4da2e627dbe126241e",
+      "size_bytes": 1282660,
+      "status": "decoded",
+      "semantic_status": "unknown",
+      "source_integrity_verified": true,
+      "variant": "DG",
+      "counts": {
+        "texture-names": 53,
+        "external-page-count": 2,
+        "render-vertices": 26222,
+        "render-triangles": 13040,
+        "auxiliary-vertices": 1770,
+        "auxiliary-triangles": 1680,
+        "nodes": 11,
+        "groups": 227,
+        "patches": 227,
+        "auxiliary-meshes": 11,
+        "max-depth": 2
+      },
+      "catalog_rows": 1811,
+      "bytes_consumed": 1282660,
+      "raw_catalog": {
+        "path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/catalogs/spatial-v2/tree-022545.raw.json",
+        "sha256": "7436be703b68fccad1f1c9c30f0ac6c412eb259ad2767a301040a3d81d55b4d3"
+      },
+      "normalized_catalog": {
+        "path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/catalogs/spatial-v2/tree-022545.jsonl",
+        "sha256": "691722f7bdbebe6342077e28be1f828fa30dbfd6fcda0661a53fed37ff1fa4be",
+        "rows": 1811
+      },
+      "structured_round_trip_matches": true,
+      "read_write_read_matches": true,
+      "first_part": {
+        "id": "tree-022545:part:000000",
+        "section": "dungeon-header",
+        "offset": 0,
+        "size_bytes": 24
+      },
+      "last_part": {
+        "id": "tree-022545:part:001810",
+        "section": "child-present",
+        "offset": 1282656,
+        "size_bytes": 4
+      }
+    },
+    {
+      "id": "tree-022546",
+      "source_path": "world/dungeon/Login_eternity_territory_01.dg",
+      "extension": ".dg",
+      "source_sha256": "76d59dfa6c14c8d56a79a9dfe70d6d36afee53d13bea23cdf8eadbe4adb02d51",
+      "size_bytes": 1487878,
+      "status": "decoded",
+      "semantic_status": "unknown",
+      "source_integrity_verified": true,
+      "variant": "DG",
+      "counts": {
+        "texture-names": 28,
+        "external-page-count": 4,
+        "render-vertices": 31789,
+        "render-triangles": 12997,
+        "auxiliary-vertices": 0,
+        "auxiliary-triangles": 0,
+        "nodes": 27,
+        "groups": 62,
+        "patches": 65,
+        "auxiliary-meshes": 0,
+        "max-depth": 4
+      },
+      "catalog_rows": 778,
+      "bytes_consumed": 1487878,
+      "raw_catalog": {
+        "path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/catalogs/spatial-v2/tree-022546.raw.json",
+        "sha256": "4111d0aa56062126eab20a5185d844a5e0c540d412bbd73403510d89bbdbc8c2"
+      },
+      "normalized_catalog": {
+        "path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/catalogs/spatial-v2/tree-022546.jsonl",
+        "sha256": "ac51d44421acc39bbd87e3696d69a3f2bb1f385ae022f57e3514a49b2d639b07",
+        "rows": 778
+      },
+      "structured_round_trip_matches": true,
+      "read_write_read_matches": true,
+      "first_part": {
+        "id": "tree-022546:part:000000",
+        "section": "dungeon-header",
+        "offset": 0,
+        "size_bytes": 24
+      },
+      "last_part": {
+        "id": "tree-022546:part:000777",
+        "section": "child-present",
+        "offset": 1487874,
+        "size_bytes": 4
+      }
+    },
+    {
+      "id": "tree-022547",
+      "source_path": "world/dungeon/Login_eternity_territory_01.dg_pv",
+      "extension": ".dg_pv",
+      "source_sha256": "f1597e53b7d8428fc1e52db237e4aee7f4bb1d5b7b68d9f8d513063a46b226de",
+      "size_bytes": 2314974,
+      "status": "unknown",
+      "semantic_status": "unknown",
+      "source_integrity_verified": true,
+      "error": "Invalid table count 1073741824 at 8952"
+    },
+    {
+      "id": "tree-022549",
+      "source_path": "world/dungeon/L_A1_DUN2_1F.dg",
+      "extension": ".dg",
+      "source_sha256": "35e5d3662d1173eeba37314baf5d209930d4d9be2badee66003bc4de81ea967c",
+      "size_bytes": 2123156,
+      "status": "decoded",
+      "semantic_status": "unknown",
+      "source_integrity_verified": true,
+      "variant": "DG",
+      "counts": {
+        "texture-names": 68,
+        "external-page-count": 5,
+        "render-vertices": 43076,
+        "render-triangles": 20558,
+        "auxiliary-vertices": 4309,
+        "auxiliary-triangles": 3506,
+        "nodes": 44,
+        "groups": 476,
+        "patches": 479,
+        "auxiliary-meshes": 40,
+        "max-depth": 3
+      },
+      "catalog_rows": 4063,
+      "bytes_consumed": 2123156,
+      "raw_catalog": {
+        "path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/catalogs/spatial-v2/tree-022549.raw.json",
+        "sha256": "c4914553f2aa86b71137a27407af9b8f5f07eea288f6849693fb50c3573e8e1c"
+      },
+      "normalized_catalog": {
+        "path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/catalogs/spatial-v2/tree-022549.jsonl",
+        "sha256": "10cb003db5c89850335f05d25d73a5cc7f505d8a7a33afaf201a04a1c6306d35",
+        "rows": 4063
+      },
+      "structured_round_trip_matches": true,
+      "read_write_read_matches": true,
+      "first_part": {
+        "id": "tree-022549:part:000000",
+        "section": "dungeon-header",
+        "offset": 0,
+        "size_bytes": 24
+      },
+      "last_part": {
+        "id": "tree-022549:part:004062",
+        "section": "child-present",
+        "offset": 2123152,
+        "size_bytes": 4
+      }
+    },
+    {
+      "id": "tree-022550",
+      "source_path": "world/dungeon/L_A1_DUN2_2F.dg",
+      "extension": ".dg",
+      "source_sha256": "29b7268414c8d641f39ea821dc27b02ccf9b34b0c96ba6864bac7a1598fe3eee",
+      "size_bytes": 7441164,
+      "status": "decoded",
+      "semantic_status": "unknown",
+      "source_integrity_verified": true,
+      "variant": "DG",
+      "counts": {
+        "texture-names": 48,
+        "external-page-count": 9,
+        "render-vertices": 154793,
+        "render-triangles": 75795,
+        "auxiliary-vertices": 8253,
+        "auxiliary-triangles": 7651,
+        "nodes": 41,
+        "groups": 689,
+        "patches": 694,
+        "auxiliary-meshes": 37,
+        "max-depth": 3
+      },
+      "catalog_rows": 5499,
+      "bytes_consumed": 7441164,
+      "raw_catalog": {
+        "path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/catalogs/spatial-v2/tree-022550.raw.json",
+        "sha256": "294b195f295424c29db1e13857910f02104f69e6a896bc45fc7d1e62d39bb259"
+      },
+      "normalized_catalog": {
+        "path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/catalogs/spatial-v2/tree-022550.jsonl",
+        "sha256": "c79d517349b6b00bdf6eaa6e87e39376640f4e8e9195a1d6949319ccd433847a",
+        "rows": 5499
+      },
+      "structured_round_trip_matches": true,
+      "read_write_read_matches": true,
+      "first_part": {
+        "id": "tree-022550:part:000000",
+        "section": "dungeon-header",
+        "offset": 0,
+        "size_bytes": 24
+      },
+      "last_part": {
+        "id": "tree-022550:part:005498",
+        "section": "child-present",
+        "offset": 7441160,
+        "size_bytes": 4
+      }
+    },
+    {
+      "id": "tree-022551",
+      "source_path": "world/dungeon/L_A1_DUN2_2F.dg_pv",
+      "extension": ".dg_pv",
+      "source_sha256": "b5a6bbd7be7e67fa0a5decd52fa488c36078377fb15c6b079db67d3480f4fbae",
+      "size_bytes": 10919832,
+      "status": "unknown",
+      "semantic_status": "unknown",
+      "source_integrity_verified": true,
+      "error": "Invalid table count 1065353216 at 428060"
+    },
+    {
+      "id": "tree-022552",
+      "source_path": "world/dungeon/L_A1_DUN2_3F.dg",
+      "extension": ".dg",
+      "source_sha256": "1b112dbe6be2412553b531d903a680f0b8577ae8178efb465ba6683044e920d2",
+      "size_bytes": 2446506,
+      "status": "decoded",
+      "semantic_status": "unknown",
+      "source_integrity_verified": true,
+      "variant": "DG",
+      "counts": {
+        "texture-names": 79,
+        "external-page-count": 10,
+        "render-vertices": 50003,
+        "render-triangles": 23375,
+        "auxiliary-vertices": 3777,
+        "auxiliary-triangles": 2954,
+        "nodes": 68,
+        "groups": 775,
+        "patches": 780,
+        "auxiliary-meshes": 57,
+        "max-depth": 4
+      },
+      "catalog_rows": 6509,
+      "bytes_consumed": 2446506,
+      "raw_catalog": {
+        "path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/catalogs/spatial-v2/tree-022552.raw.json",
+        "sha256": "a85401c4977e4726e3b07ff02802772917023bee0f6d4bba568351f18ea858e4"
+      },
+      "normalized_catalog": {
+        "path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/catalogs/spatial-v2/tree-022552.jsonl",
+        "sha256": "00a12789469523f4522f54cbce7aa20fe74b41e876f4fba7e728beb2419f88c5",
+        "rows": 6509
+      },
+      "structured_round_trip_matches": true,
+      "read_write_read_matches": true,
+      "first_part": {
+        "id": "tree-022552:part:000000",
+        "section": "dungeon-header",
+        "offset": 0,
+        "size_bytes": 24
+      },
+      "last_part": {
+        "id": "tree-022552:part:006508",
+        "section": "child-present",
+        "offset": 2446502,
+        "size_bytes": 4
+      }
+    },
+    {
+      "id": "tree-022553",
+      "source_path": "world/dungeon/L_A2_Dun1_1F.dg",
+      "extension": ".dg",
+      "source_sha256": "6146d5fe9d0fed2f6e04d05ac0424a798e2d8588a3d6f9f56face77781070ccc",
+      "size_bytes": 2965226,
+      "status": "decoded",
+      "semantic_status": "unknown",
+      "source_integrity_verified": true,
+      "variant": "DG",
+      "counts": {
+        "texture-names": 82,
+        "external-page-count": 7,
+        "render-vertices": 60327,
+        "render-triangles": 28869,
+        "auxiliary-vertices": 5289,
+        "auxiliary-triangles": 4068,
+        "nodes": 83,
+        "groups": 988,
+        "patches": 989,
+        "auxiliary-meshes": 81,
+        "max-depth": 4
+      },
+      "catalog_rows": 8244,
+      "bytes_consumed": 2965226,
+      "raw_catalog": {
+        "path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/catalogs/spatial-v2/tree-022553.raw.json",
+        "sha256": "345e066e76720205501cdf204a5aa6ec85daac0eb695f88f0fe3dc04771c62cd"
+      },
+      "normalized_catalog": {
+        "path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/catalogs/spatial-v2/tree-022553.jsonl",
+        "sha256": "278b28108553be73a75fc0ba52ba34a7b5b0f0673a4d0e325458a6c322989d3c",
+        "rows": 8244
+      },
+      "structured_round_trip_matches": true,
+      "read_write_read_matches": true,
+      "first_part": {
+        "id": "tree-022553:part:000000",
+        "section": "dungeon-header",
+        "offset": 0,
+        "size_bytes": 24
+      },
+      "last_part": {
+        "id": "tree-022553:part:008243",
+        "section": "child-present",
+        "offset": 2965222,
+        "size_bytes": 4
+      }
+    },
+    {
+      "id": "tree-022554",
+      "source_path": "world/dungeon/L_A2_Dun1_2F.dg",
+      "extension": ".dg",
+      "source_sha256": "b59432c8a235b75b9b6c0ebe6f7e89917df1a5235b064ffa98cfffd61385a2df",
+      "size_bytes": 3520198,
+      "status": "decoded",
+      "semantic_status": "unknown",
+      "source_integrity_verified": true,
+      "variant": "DG",
+      "counts": {
+        "texture-names": 82,
+        "external-page-count": 8,
+        "render-vertices": 73065,
+        "render-triangles": 32771,
+        "auxiliary-vertices": 3882,
+        "auxiliary-triangles": 2854,
+        "nodes": 68,
+        "groups": 834,
+        "patches": 836,
+        "auxiliary-meshes": 59,
+        "max-depth": 4
+      },
+      "catalog_rows": 6918,
+      "bytes_consumed": 3520198,
+      "raw_catalog": {
+        "path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/catalogs/spatial-v2/tree-022554.raw.json",
+        "sha256": "84b1ed30d4d69468232b17e874102e8720ed7aaebfbb3a7841e3987c12992ecf"
+      },
+      "normalized_catalog": {
+        "path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/catalogs/spatial-v2/tree-022554.jsonl",
+        "sha256": "aeb342de38734b3e3a2da2a1c9e8e6ea20171d26e4d4efa3bc83f9b005a5a890",
+        "rows": 6918
+      },
+      "structured_round_trip_matches": true,
+      "read_write_read_matches": true,
+      "first_part": {
+        "id": "tree-022554:part:000000",
+        "section": "dungeon-header",
+        "offset": 0,
+        "size_bytes": 24
+      },
+      "last_part": {
+        "id": "tree-022554:part:006917",
+        "section": "child-present",
+        "offset": 3520194,
+        "size_bytes": 4
+      }
+    },
+    {
+      "id": "tree-022555",
+      "source_path": "world/dungeon/L_A2_DUN3_1F.dg",
+      "extension": ".dg",
+      "source_sha256": "73ab4493c6a331593e0910a22712bd9073c0af593767e5eca8e58857b608425a",
+      "size_bytes": 10808790,
+      "status": "decoded",
+      "semantic_status": "unknown",
+      "source_integrity_verified": true,
+      "variant": "DG",
+      "counts": {
+        "texture-names": 87,
+        "external-page-count": 15,
+        "render-vertices": 224754,
+        "render-triangles": 107688,
+        "auxiliary-vertices": 12641,
+        "auxiliary-triangles": 10635,
+        "nodes": 82,
+        "groups": 1340,
+        "patches": 1343,
+        "auxiliary-meshes": 80,
+        "max-depth": 4
+      },
+      "catalog_rows": 10708,
+      "bytes_consumed": 10808790,
+      "raw_catalog": {
+        "path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/catalogs/spatial-v2/tree-022555.raw.json",
+        "sha256": "271a8892c2a3376b05db05f019120f6aa972816cdda6b38aabd4cb13a77763cf"
+      },
+      "normalized_catalog": {
+        "path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/catalogs/spatial-v2/tree-022555.jsonl",
+        "sha256": "0b788c1e2ed37672a72dd5a0dfb3d0f25ecb3af5b52c4a19e366698383bb871f",
+        "rows": 10708
+      },
+      "structured_round_trip_matches": true,
+      "read_write_read_matches": true,
+      "first_part": {
+        "id": "tree-022555:part:000000",
+        "section": "dungeon-header",
+        "offset": 0,
+        "size_bytes": 24
+      },
+      "last_part": {
+        "id": "tree-022555:part:010707",
+        "section": "child-present",
+        "offset": 10808786,
+        "size_bytes": 4
+      }
+    },
+    {
+      "id": "tree-022556",
+      "source_path": "world/dungeon/L_B1_DUN2_3F.dg",
+      "extension": ".dg",
+      "source_sha256": "75d87811e0d2febc5e56b5df3aaa770abeb5ec8980c217f8ce9fdb81dabd8c94",
+      "size_bytes": 1638252,
+      "status": "decoded",
+      "semantic_status": "unknown",
+      "source_integrity_verified": true,
+      "variant": "DG",
+      "counts": {
+        "texture-names": 103,
+        "external-page-count": 11,
+        "render-vertices": 32806,
+        "render-triangles": 15646,
+        "auxiliary-vertices": 3301,
+        "auxiliary-triangles": 2528,
+        "nodes": 54,
+        "groups": 694,
+        "patches": 698,
+        "auxiliary-meshes": 50,
+        "max-depth": 4
+      },
+      "catalog_rows": 5779,
+      "bytes_consumed": 1638252,
+      "raw_catalog": {
+        "path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/catalogs/spatial-v2/tree-022556.raw.json",
+        "sha256": "881aecf85e330ac0f081de63599c427021e4d2cf6acbc8cec950eee9043cb8b6"
+      },
+      "normalized_catalog": {
+        "path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/catalogs/spatial-v2/tree-022556.jsonl",
+        "sha256": "3ed3a6ce560ab9b118c662e59fe7b07c7845df00a3d2f044e106d2be54359d73",
+        "rows": 5779
+      },
+      "structured_round_trip_matches": true,
+      "read_write_read_matches": true,
+      "first_part": {
+        "id": "tree-022556:part:000000",
+        "section": "dungeon-header",
+        "offset": 0,
+        "size_bytes": 24
+      },
+      "last_part": {
+        "id": "tree-022556:part:005778",
+        "section": "child-present",
+        "offset": 1638248,
+        "size_bytes": 4
+      }
+    },
+    {
+      "id": "tree-022557",
+      "source_path": "world/dungeon/L_L1_Church00_All.dg",
+      "extension": ".dg",
+      "source_sha256": "889ea11255dab6e580556b565067cc5fe7eab1adb5e51bfb333c312f48a2b075",
+      "size_bytes": 2398652,
+      "status": "decoded",
+      "semantic_status": "unknown",
+      "source_integrity_verified": true,
+      "variant": "DG",
+      "counts": {
+        "texture-names": 29,
+        "external-page-count": 3,
+        "render-vertices": 50122,
+        "render-triangles": 22470,
+        "auxiliary-vertices": 2448,
+        "auxiliary-triangles": 2470,
+        "nodes": 21,
+        "groups": 227,
+        "patches": 229,
+        "auxiliary-meshes": 18,
+        "max-depth": 2
+      },
+      "catalog_rows": 1935,
+      "bytes_consumed": 2398652,
+      "raw_catalog": {
+        "path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/catalogs/spatial-v2/tree-022557.raw.json",
+        "sha256": "8ce1122c7cc6fb8a81b89dd0660ee924c6085b2202b883894f858168cd19c762"
+      },
+      "normalized_catalog": {
+        "path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/catalogs/spatial-v2/tree-022557.jsonl",
+        "sha256": "20d49ebe91f2c38622ea8f28caec39cbdcd2d8f3bbcd1931c7f9b859d33ec7ed",
+        "rows": 1935
+      },
+      "structured_round_trip_matches": true,
+      "read_write_read_matches": true,
+      "first_part": {
+        "id": "tree-022557:part:000000",
+        "section": "dungeon-header",
+        "offset": 0,
+        "size_bytes": 24
+      },
+      "last_part": {
+        "id": "tree-022557:part:001934",
+        "section": "child-present",
+        "offset": 2398648,
+        "size_bytes": 4
+      }
+    },
+    {
+      "id": "tree-022558",
+      "source_path": "world/dungeon/L_R1_DUN2_1F.dg",
+      "extension": ".dg",
+      "source_sha256": "a4f2768ccd2902d3171a797f9cec9792c85a4227b45d1aeb3ec34b4fa9654f6e",
+      "size_bytes": 4225554,
+      "status": "decoded",
+      "semantic_status": "unknown",
+      "source_integrity_verified": true,
+      "variant": "DG",
+      "counts": {
+        "texture-names": 79,
+        "external-page-count": 10,
+        "render-vertices": 86925,
+        "render-triangles": 41785,
+        "auxiliary-vertices": 5637,
+        "auxiliary-triangles": 4454,
+        "nodes": 81,
+        "groups": 1340,
+        "patches": 1346,
+        "auxiliary-meshes": 68,
+        "max-depth": 4
+      },
+      "catalog_rows": 10656,
+      "bytes_consumed": 4225554,
+      "raw_catalog": {
+        "path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/catalogs/spatial-v2/tree-022558.raw.json",
+        "sha256": "33f0dcff4b5c0eb059311c7330416388d2f682125b6e7d18e2987ea1328a6d2a"
+      },
+      "normalized_catalog": {
+        "path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/catalogs/spatial-v2/tree-022558.jsonl",
+        "sha256": "71d6c7b9fd197ae985f954b16580db4d237937fdb4386bb31c523340dc763531",
+        "rows": 10656
+      },
+      "structured_round_trip_matches": true,
+      "read_write_read_matches": true,
+      "first_part": {
+        "id": "tree-022558:part:000000",
+        "section": "dungeon-header",
+        "offset": 0,
+        "size_bytes": 24
+      },
+      "last_part": {
+        "id": "tree-022558:part:010655",
+        "section": "child-present",
+        "offset": 4225550,
+        "size_bytes": 4
+      }
+    },
+    {
+      "id": "tree-022559",
+      "source_path": "world/dungeon/L_R1_DUN2_2F.dg",
+      "extension": ".dg",
+      "source_sha256": "f05336cb85f9926da1b309da852f34fa299453f38e85f9bab278d31580f1f2ba",
+      "size_bytes": 3380838,
+      "status": "decoded",
+      "semantic_status": "unknown",
+      "source_integrity_verified": true,
+      "variant": "DG",
+      "counts": {
+        "texture-names": 31,
+        "external-page-count": 13,
+        "render-vertices": 69854,
+        "render-triangles": 34232,
+        "auxiliary-vertices": 4189,
+        "auxiliary-triangles": 3927,
+        "nodes": 79,
+        "groups": 578,
+        "patches": 586,
+        "auxiliary-meshes": 64,
+        "max-depth": 4
+      },
+      "catalog_rows": 5246,
+      "bytes_consumed": 3380838,
+      "raw_catalog": {
+        "path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/catalogs/spatial-v2/tree-022559.raw.json",
+        "sha256": "c767f7bd7a8273927acc146812277bb8dbe8db380443594721f573bf92bef823"
+      },
+      "normalized_catalog": {
+        "path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/catalogs/spatial-v2/tree-022559.jsonl",
+        "sha256": "fc639ae1c3ebd514c64e3559fa8a38e86d728d1c5b8e01ae180ea3880e5db7e7",
+        "rows": 5246
+      },
+      "structured_round_trip_matches": true,
+      "read_write_read_matches": true,
+      "first_part": {
+        "id": "tree-022559:part:000000",
+        "section": "dungeon-header",
+        "offset": 0,
+        "size_bytes": 24
+      },
+      "last_part": {
+        "id": "tree-022559:part:005245",
+        "section": "child-present",
+        "offset": 3380834,
+        "size_bytes": 4
+      }
+    },
+    {
+      "id": "tree-022560",
+      "source_path": "world/dungeon/L_R1_DUN2_3F.dg",
+      "extension": ".dg",
+      "source_sha256": "5dd3a1d1e3349a46262fe1dacb2246a3e3bed1fe1a93192517e5af168e4db2ff",
+      "size_bytes": 2428862,
+      "status": "decoded",
+      "semantic_status": "unknown",
+      "source_integrity_verified": true,
+      "variant": "DG",
+      "counts": {
+        "texture-names": 56,
+        "external-page-count": 6,
+        "render-vertices": 49493,
+        "render-triangles": 24249,
+        "auxiliary-vertices": 4034,
+        "auxiliary-triangles": 3818,
+        "nodes": 61,
+        "groups": 671,
+        "patches": 674,
+        "auxiliary-meshes": 54,
+        "max-depth": 4
+      },
+      "catalog_rows": 5659,
+      "bytes_consumed": 2428862,
+      "raw_catalog": {
+        "path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/catalogs/spatial-v2/tree-022560.raw.json",
+        "sha256": "0ed50f9f34d143f6941a746da1ce1eeaff03681a1bfb48a544b18ccc813fe88c"
+      },
+      "normalized_catalog": {
+        "path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/catalogs/spatial-v2/tree-022560.jsonl",
+        "sha256": "3cd39ec525ef594e458270680476b4e17c34834874242e2d604f4ed6c9507564",
+        "rows": 5659
+      },
+      "structured_round_trip_matches": true,
+      "read_write_read_matches": true,
+      "first_part": {
+        "id": "tree-022560:part:000000",
+        "section": "dungeon-header",
+        "offset": 0,
+        "size_bytes": 24
+      },
+      "last_part": {
+        "id": "tree-022560:part:005658",
+        "section": "child-present",
+        "offset": 2428858,
+        "size_bytes": 4
+      }
+    },
+    {
+      "id": "tree-022561",
+      "source_path": "world/dungeon/L_R1_Fortress00.dg",
+      "extension": ".dg",
+      "source_sha256": "11a90961ab48915ec0339b4b8c683b897382623514e389a88ab5dd749ac42971",
+      "size_bytes": 4282898,
+      "status": "decoded",
+      "semantic_status": "unknown",
+      "source_integrity_verified": true,
+      "variant": "DG",
+      "counts": {
+        "texture-names": 31,
+        "external-page-count": 5,
+        "render-vertices": 89845,
+        "render-triangles": 43839,
+        "auxiliary-vertices": 2448,
+        "auxiliary-triangles": 2448,
+        "nodes": 52,
+        "groups": 457,
+        "patches": 460,
+        "auxiliary-meshes": 34,
+        "max-depth": 3
+      },
+      "catalog_rows": 3957,
+      "bytes_consumed": 4282898,
+      "raw_catalog": {
+        "path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/catalogs/spatial-v2/tree-022561.raw.json",
+        "sha256": "9989ada0be49fde5e00e3b87b72b2054ba9408da6bf63c433802f8f2c387b81b"
+      },
+      "normalized_catalog": {
+        "path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/catalogs/spatial-v2/tree-022561.jsonl",
+        "sha256": "4a89fe2b77b5ea69df90c149a28488cbc821d79c712952383e8ec246390ba914",
+        "rows": 3957
+      },
+      "structured_round_trip_matches": true,
+      "read_write_read_matches": true,
+      "first_part": {
+        "id": "tree-022561:part:000000",
+        "section": "dungeon-header",
+        "offset": 0,
+        "size_bytes": 24
+      },
+      "last_part": {
+        "id": "tree-022561:part:003956",
+        "section": "child-present",
+        "offset": 4282894,
+        "size_bytes": 4
+      }
+    },
+    {
+      "id": "tree-022562",
+      "source_path": "world/dungeon/L_R1_Fortress00.dg_pv",
+      "extension": ".dg_pv",
+      "source_sha256": "7b217fc2a520b7c7238a07b8abe50f9998d41424809c4dfcc3b8f35d27a61757",
+      "size_bytes": 6308990,
+      "status": "unknown",
+      "semantic_status": "unknown",
+      "source_integrity_verified": true,
+      "error": "Invalid table count 1065236013 at 43936"
+    },
+    {
+      "id": "tree-022563",
+      "source_path": "world/dungeon/L_R1_Fortress00_inner.dg",
+      "extension": ".dg",
+      "source_sha256": "6107408544a920fdb5328c02ca22d5b484045acfb3fce1de6a903b9d4c19db51",
+      "size_bytes": 1506718,
+      "status": "decoded",
+      "semantic_status": "unknown",
+      "source_integrity_verified": true,
+      "variant": "DG",
+      "counts": {
+        "texture-names": 32,
+        "external-page-count": 1,
+        "render-vertices": 31553,
+        "render-triangles": 15269,
+        "auxiliary-vertices": 937,
+        "auxiliary-triangles": 1092,
+        "nodes": 1,
+        "groups": 32,
+        "patches": 32,
+        "auxiliary-meshes": 1,
+        "max-depth": 0
+      },
+      "catalog_rows": 275,
+      "bytes_consumed": 1506718,
+      "raw_catalog": {
+        "path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/catalogs/spatial-v2/tree-022563.raw.json",
+        "sha256": "d65de09c044e1fcd1e6d2c2da1a3d0433abe00294a8cd1f3ce1db40d463d6694"
+      },
+      "normalized_catalog": {
+        "path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/catalogs/spatial-v2/tree-022563.jsonl",
+        "sha256": "910db68e8e48bd1c3ee44a3606c79c82979d60addd782ee908d1f93db65f78ee",
+        "rows": 275
+      },
+      "structured_round_trip_matches": true,
+      "read_write_read_matches": true,
+      "first_part": {
+        "id": "tree-022563:part:000000",
+        "section": "dungeon-header",
+        "offset": 0,
+        "size_bytes": 24
+      },
+      "last_part": {
+        "id": "tree-022563:part:000274",
+        "section": "child-present",
+        "offset": 1506714,
+        "size_bytes": 4
+      }
+    },
+    {
+      "id": "tree-022564",
+      "source_path": "world/dungeon/prison_01.dg",
+      "extension": ".dg",
+      "source_sha256": "f760a188e25fc2d22b212b1827309e3789efd45701a54371f131b5063e8f3625",
+      "size_bytes": 823734,
+      "status": "decoded",
+      "semantic_status": "unknown",
+      "source_integrity_verified": true,
+      "variant": "DG",
+      "counts": {
+        "texture-names": 21,
+        "external-page-count": 1,
+        "render-vertices": 17299,
+        "render-triangles": 7921,
+        "auxiliary-vertices": 470,
+        "auxiliary-triangles": 430,
+        "nodes": 5,
+        "groups": 44,
+        "patches": 44,
+        "auxiliary-meshes": 5,
+        "max-depth": 1
+      },
+      "catalog_rows": 408,
+      "bytes_consumed": 823734,
+      "raw_catalog": {
+        "path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/catalogs/spatial-v2/tree-022564.raw.json",
+        "sha256": "d87252560924a356b7b8cff48ac0dc149dc4c9f2245609e4a05011c02d99e184"
+      },
+      "normalized_catalog": {
+        "path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/catalogs/spatial-v2/tree-022564.jsonl",
+        "sha256": "0d72d66562994da27b2c086a4705de53dee65939345274d07a138efbd3556c54",
+        "rows": 408
+      },
+      "structured_round_trip_matches": true,
+      "read_write_read_matches": true,
+      "first_part": {
+        "id": "tree-022564:part:000000",
+        "section": "dungeon-header",
+        "offset": 0,
+        "size_bytes": 24
+      },
+      "last_part": {
+        "id": "tree-022564:part:000407",
+        "section": "child-present",
+        "offset": 823730,
+        "size_bytes": 4
+      }
+    },
+    {
+      "id": "tree-022565",
+      "source_path": "world/dungeon/R1_Dun1_1F.dg",
+      "extension": ".dg",
+      "source_sha256": "0205ad77076ce947489b833d0847b26ebb0dbc9bebe1da9dde403f259f07aadc",
+      "size_bytes": 3921352,
+      "status": "decoded",
+      "semantic_status": "unknown",
+      "source_integrity_verified": true,
+      "variant": "DG",
+      "counts": {
+        "texture-names": 64,
+        "external-page-count": 6,
+        "render-vertices": 80643,
+        "render-triangles": 37703,
+        "auxiliary-vertices": 6676,
+        "auxiliary-triangles": 5819,
+        "nodes": 34,
+        "groups": 587,
+        "patches": 589,
+        "auxiliary-meshes": 29,
+        "max-depth": 3
+      },
+      "catalog_rows": 4677,
+      "bytes_consumed": 3921352,
+      "raw_catalog": {
+        "path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/catalogs/spatial-v2/tree-022565.raw.json",
+        "sha256": "979252afd5d74c43d37eef580c0ee0f62cb62e199b6933569ba1bbec6df99dc8"
+      },
+      "normalized_catalog": {
+        "path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/catalogs/spatial-v2/tree-022565.jsonl",
+        "sha256": "9eaf26fbcd916230628f225d7699e99bb537a8c5ed25ba62f414c7ce59d181c7",
+        "rows": 4677
+      },
+      "structured_round_trip_matches": true,
+      "read_write_read_matches": true,
+      "first_part": {
+        "id": "tree-022565:part:000000",
+        "section": "dungeon-header",
+        "offset": 0,
+        "size_bytes": 24
+      },
+      "last_part": {
+        "id": "tree-022565:part:004676",
+        "section": "child-present",
+        "offset": 3921348,
+        "size_bytes": 4
+      }
+    },
+    {
+      "id": "tree-022566",
+      "source_path": "world/dungeon/R1_Dun1_2F.dg",
+      "extension": ".dg",
+      "source_sha256": "4e4dc58f40a36b79eb70d22af7ebef68dba5945b5096d8c2cbabbf50d17237a6",
+      "size_bytes": 357948,
+      "status": "decoded",
+      "semantic_status": "unknown",
+      "source_integrity_verified": true,
+      "variant": "DG",
+      "counts": {
+        "texture-names": 38,
+        "external-page-count": 2,
+        "render-vertices": 7122,
+        "render-triangles": 3438,
+        "auxiliary-vertices": 601,
+        "auxiliary-triangles": 436,
+        "nodes": 11,
+        "groups": 159,
+        "patches": 159,
+        "auxiliary-meshes": 10,
+        "max-depth": 2
+      },
+      "catalog_rows": 1316,
+      "bytes_consumed": 357948,
+      "raw_catalog": {
+        "path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/catalogs/spatial-v2/tree-022566.raw.json",
+        "sha256": "75051ac05ee815666bda7b16f3d886fcd6b597b99c99011bcc8839922fdbd858"
+      },
+      "normalized_catalog": {
+        "path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/catalogs/spatial-v2/tree-022566.jsonl",
+        "sha256": "358a71e830b55f0335a0c8a0a7ff6f0abd8eb88096d2f351fdbd0742bc6acb8f",
+        "rows": 1316
+      },
+      "structured_round_trip_matches": true,
+      "read_write_read_matches": true,
+      "first_part": {
+        "id": "tree-022566:part:000000",
+        "section": "dungeon-header",
+        "offset": 0,
+        "size_bytes": 24
+      },
+      "last_part": {
+        "id": "tree-022566:part:001315",
+        "section": "child-present",
+        "offset": 357944,
+        "size_bytes": 4
+      }
+    },
+    {
+      "id": "tree-022567",
+      "source_path": "world/dungeon/R1_DUN3.dg",
+      "extension": ".dg",
+      "source_sha256": "594aaf5a2d337f0da1b0dbb9fe36ce12261e73d440263356a9751cce87ba6713",
+      "size_bytes": 6570500,
+      "status": "decoded",
+      "semantic_status": "unknown",
+      "source_integrity_verified": true,
+      "variant": "DG",
+      "counts": {
+        "texture-names": 157,
+        "external-page-count": 17,
+        "render-vertices": 134362,
+        "render-triangles": 64138,
+        "auxiliary-vertices": 10062,
+        "auxiliary-triangles": 11954,
+        "nodes": 99,
+        "groups": 1519,
+        "patches": 1525,
+        "auxiliary-meshes": 87,
+        "max-depth": 4
+      },
+      "catalog_rows": 12261,
+      "bytes_consumed": 6570500,
+      "raw_catalog": {
+        "path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/catalogs/spatial-v2/tree-022567.raw.json",
+        "sha256": "0464623f04f4d6ea6de40e2822fb1b90417eeead407180ef362f815a70788813"
+      },
+      "normalized_catalog": {
+        "path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/catalogs/spatial-v2/tree-022567.jsonl",
+        "sha256": "6dac01e793802b7377891d084af37c807cdd541aa287fbb1f1b21395a431e3d3",
+        "rows": 12261
+      },
+      "structured_round_trip_matches": true,
+      "read_write_read_matches": true,
+      "first_part": {
+        "id": "tree-022567:part:000000",
+        "section": "dungeon-header",
+        "offset": 0,
+        "size_bytes": 24
+      },
+      "last_part": {
+        "id": "tree-022567:part:012260",
+        "section": "child-present",
+        "offset": 6570496,
+        "size_bytes": 4
+      }
+    },
+    {
+      "id": "tree-022568",
+      "source_path": "world/dungeon/R1_DUN3.dg_pv",
+      "extension": ".dg_pv",
+      "source_sha256": "da2e01e25eae600d2d713d585f470c480500b2877c047867606baac625b42847",
+      "size_bytes": 9666432,
+      "status": "unknown",
+      "semantic_status": "unknown",
+      "source_integrity_verified": true,
+      "error": "Invalid table count -1082130432 at 50548"
+    },
+    {
+      "id": "tree-022570",
+      "source_path": "world/dungeon/r1_dun3_01.dg",
+      "extension": ".dg",
+      "source_sha256": "33bcfcf06983d883d49bbfef20238cfcfe11669adbf12e26e59bba6a9c8ae904",
+      "size_bytes": 1890330,
+      "status": "decoded",
+      "semantic_status": "unknown",
+      "source_integrity_verified": true,
+      "variant": "DG",
+      "counts": {
+        "texture-names": 82,
+        "external-page-count": 6,
+        "render-vertices": 37993,
+        "render-triangles": 18161,
+        "auxiliary-vertices": 3702,
+        "auxiliary-triangles": 4512,
+        "nodes": 49,
+        "groups": 595,
+        "patches": 598,
+        "auxiliary-meshes": 39,
+        "max-depth": 3
+      },
+      "catalog_rows": 4961,
+      "bytes_consumed": 1890330,
+      "raw_catalog": {
+        "path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/catalogs/spatial-v2/tree-022570.raw.json",
+        "sha256": "5b7662aa23109ceb38bc3e5ee27c4034b68619f3f8f1c3a0dd8f60b9a52c1c89"
+      },
+      "normalized_catalog": {
+        "path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/catalogs/spatial-v2/tree-022570.jsonl",
+        "sha256": "82a338793d454df0d47c07438cf5ab414ca4a2eaeaf93ca847741c381c8f1c74",
+        "rows": 4961
+      },
+      "structured_round_trip_matches": true,
+      "read_write_read_matches": true,
+      "first_part": {
+        "id": "tree-022570:part:000000",
+        "section": "dungeon-header",
+        "offset": 0,
+        "size_bytes": 24
+      },
+      "last_part": {
+        "id": "tree-022570:part:004960",
+        "section": "child-present",
+        "offset": 1890326,
+        "size_bytes": 4
+      }
+    },
+    {
+      "id": "tree-022571",
+      "source_path": "world/dungeon/r1_dun3_01.dg_pv",
+      "extension": ".dg_pv",
+      "source_sha256": "8f7524c6c72e154d41b44a34573a0c3738f112fe7ab2e18e45c01c8999ce11c8",
+      "size_bytes": 2762618,
+      "status": "unknown",
+      "semantic_status": "unknown",
+      "source_integrity_verified": true,
+      "error": "Invalid table count 1132554138 at 22684"
+    },
+    {
+      "id": "tree-022572",
+      "source_path": "world/dungeon/r1_dun3_02.dg",
+      "extension": ".dg",
+      "source_sha256": "c28527c269561cd87f5e256044b8d94725317cd5f17b9451a8248b96c3b64cd4",
+      "size_bytes": 2633850,
+      "status": "decoded",
+      "semantic_status": "unknown",
+      "source_integrity_verified": true,
+      "variant": "DG",
+      "counts": {
+        "texture-names": 131,
+        "external-page-count": 5,
+        "render-vertices": 54084,
+        "render-triangles": 25796,
+        "auxiliary-vertices": 2759,
+        "auxiliary-triangles": 3235,
+        "nodes": 27,
+        "groups": 519,
+        "patches": 521,
+        "auxiliary-meshes": 23,
+        "max-depth": 2
+      },
+      "catalog_rows": 4167,
+      "bytes_consumed": 2633850,
+      "raw_catalog": {
+        "path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/catalogs/spatial-v2/tree-022572.raw.json",
+        "sha256": "40a5f303b2f5b02bd74cd4d7cb372f376b4e0d888db31418357d04d4ee42e8c1"
+      },
+      "normalized_catalog": {
+        "path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/catalogs/spatial-v2/tree-022572.jsonl",
+        "sha256": "d4ecb31e728535f29277f6ec0194adaf1b9e0c7d0294a33ce21ae29415cc9750",
+        "rows": 4167
+      },
+      "structured_round_trip_matches": true,
+      "read_write_read_matches": true,
+      "first_part": {
+        "id": "tree-022572:part:000000",
+        "section": "dungeon-header",
+        "offset": 0,
+        "size_bytes": 24
+      },
+      "last_part": {
+        "id": "tree-022572:part:004166",
+        "section": "child-present",
+        "offset": 2633846,
+        "size_bytes": 4
+      }
+    },
+    {
+      "id": "tree-022573",
+      "source_path": "world/dungeon/r1_dun3_02.dg_pv",
+      "extension": ".dg_pv",
+      "source_sha256": "2017edcd9e128b6021cab15373a3d031ca8151b493e3129ed120250c995d5c7c",
+      "size_bytes": 3876206,
+      "status": "unknown",
+      "semantic_status": "unknown",
+      "source_integrity_verified": true,
+      "error": "Invalid table count 1065353216 at 34570"
+    },
+    {
+      "id": "tree-022574",
+      "source_path": "world/dungeon/r1_dun3_boss.dg",
+      "extension": ".dg",
+      "source_sha256": "469bed6c5b74b75bd60251d641ade7874cc647013e49f77cb2a041f1a0697c97",
+      "size_bytes": 483812,
+      "status": "decoded",
+      "semantic_status": "unknown",
+      "source_integrity_verified": true,
+      "variant": "DG",
+      "counts": {
+        "texture-names": 29,
+        "external-page-count": 1,
+        "render-vertices": 9792,
+        "render-triangles": 4198,
+        "auxiliary-vertices": 1010,
+        "auxiliary-triangles": 1142,
+        "nodes": 3,
+        "groups": 51,
+        "patches": 51,
+        "auxiliary-meshes": 3,
+        "max-depth": 1
+      },
+      "catalog_rows": 435,
+      "bytes_consumed": 483812,
+      "raw_catalog": {
+        "path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/catalogs/spatial-v2/tree-022574.raw.json",
+        "sha256": "805eeaed4cc793e9a433e8081e2ee794ef4305b97827a842dc81526f45d6824b"
+      },
+      "normalized_catalog": {
+        "path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/catalogs/spatial-v2/tree-022574.jsonl",
+        "sha256": "cfa804c0765aa29d9d16eddeee5390b458d6761c9418ec662ca4160f5ab766a6",
+        "rows": 435
+      },
+      "structured_round_trip_matches": true,
+      "read_write_read_matches": true,
+      "first_part": {
+        "id": "tree-022574:part:000000",
+        "section": "dungeon-header",
+        "offset": 0,
+        "size_bytes": 24
+      },
+      "last_part": {
+        "id": "tree-022574:part:000434",
+        "section": "child-present",
+        "offset": 483808,
+        "size_bytes": 4
+      }
+    },
+    {
+      "id": "tree-022575",
+      "source_path": "world/dungeon/r1_dun3_boss.dg_pv",
+      "extension": ".dg_pv",
+      "source_sha256": "d474073db704d8a865046af8941a84752d30eaedaf7f671f79f608f9ee07a338",
+      "size_bytes": 730152,
+      "status": "unknown",
+      "semantic_status": "unknown",
+      "source_integrity_verified": true,
+      "error": "Invalid table count -1508601089 at 7740"
+    },
+    {
+      "id": "tree-022576",
+      "source_path": "world/dungeon/R1_Trade.dg",
+      "extension": ".dg",
+      "source_sha256": "54f08f3409c76cf0e237336cf18301f9a81b5d5dc52f3a72321b697c1ace68dd",
+      "size_bytes": 441836,
+      "status": "decoded",
+      "semantic_status": "unknown",
+      "source_integrity_verified": true,
+      "variant": "DG",
+      "counts": {
+        "texture-names": 23,
+        "external-page-count": 2,
+        "render-vertices": 8882,
+        "render-triangles": 4330,
+        "auxiliary-vertices": 966,
+        "auxiliary-triangles": 1088,
+        "nodes": 3,
+        "groups": 34,
+        "patches": 34,
+        "auxiliary-meshes": 3,
+        "max-depth": 1
+      },
+      "catalog_rows": 310,
+      "bytes_consumed": 441836,
+      "raw_catalog": {
+        "path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/catalogs/spatial-v2/tree-022576.raw.json",
+        "sha256": "fffb0074b85030e5524c571c9683143383e1d82c6f7ca57d61d608f4d9257c38"
+      },
+      "normalized_catalog": {
+        "path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/catalogs/spatial-v2/tree-022576.jsonl",
+        "sha256": "2c938406a5fb6fa1e7364ffbe21d02d2107eb8e228febe5579f88a4f24505851",
+        "rows": 310
+      },
+      "structured_round_trip_matches": true,
+      "read_write_read_matches": true,
+      "first_part": {
+        "id": "tree-022576:part:000000",
+        "section": "dungeon-header",
+        "offset": 0,
+        "size_bytes": 24
+      },
+      "last_part": {
+        "id": "tree-022576:part:000309",
+        "section": "child-present",
+        "offset": 441832,
+        "size_bytes": 4
+      }
+    },
+    {
+      "id": "tree-022577",
+      "source_path": "world/dungeon/R1_Trade.dg_pv",
+      "extension": ".dg_pv",
+      "source_sha256": "15fafaa4d675621f7481878ace7bed94959e9dc01418352ba30540509962ee62",
+      "size_bytes": 642260,
+      "status": "unknown",
+      "semantic_status": "unknown",
+      "source_integrity_verified": true,
+      "error": "Invalid table count -1082130432 at 6208"
+    },
+    {
+      "id": "tree-022579",
+      "source_path": "world/dungeon/test000_01.dg",
+      "extension": ".dg",
+      "source_sha256": "cdf00979550b6e3955c7434c797eedcd1ae7ed289fb8eca061b65b10de0248d4",
+      "size_bytes": 2629536,
+      "status": "decoded",
+      "semantic_status": "unknown",
+      "source_integrity_verified": true,
+      "variant": "DG",
+      "counts": {
+        "texture-names": 131,
+        "external-page-count": 6,
+        "render-vertices": 54086,
+        "render-triangles": 25792,
+        "auxiliary-vertices": 2550,
+        "auxiliary-triangles": 2924,
+        "nodes": 27,
+        "groups": 518,
+        "patches": 520,
+        "auxiliary-meshes": 25,
+        "max-depth": 2
+      },
+      "catalog_rows": 4168,
+      "bytes_consumed": 2629536,
+      "raw_catalog": {
+        "path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/catalogs/spatial-v2/tree-022579.raw.json",
+        "sha256": "dd125a78ea980d8a90f2b403ea59ba4d105f47366a8d007b7ec55bee92c36b80"
+      },
+      "normalized_catalog": {
+        "path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/catalogs/spatial-v2/tree-022579.jsonl",
+        "sha256": "2f3ddb6b38af0f65c220ba5a5aa3623976acf32f43851af98f097651db9f5c5d",
+        "rows": 4168
+      },
+      "structured_round_trip_matches": true,
+      "read_write_read_matches": true,
+      "first_part": {
+        "id": "tree-022579:part:000000",
+        "section": "dungeon-header",
+        "offset": 0,
+        "size_bytes": 24
+      },
+      "last_part": {
+        "id": "tree-022579:part:004167",
+        "section": "child-present",
+        "offset": 2629532,
+        "size_bytes": 4
+      }
+    },
+    {
+      "id": "tree-022580",
+      "source_path": "world/dungeon/test000_01.dg_pv",
+      "extension": ".dg_pv",
+      "source_sha256": "ef1cf4d260f992ffbf75afbca54e35ccd4cf1697106a6fe1f6a43e01b338b126",
+      "size_bytes": 3876544,
+      "status": "unknown",
+      "semantic_status": "unknown",
+      "source_integrity_verified": true,
+      "error": "Invalid table count 1064774679 at 34320"
+    },
+    {
+      "id": "tree-022581",
+      "source_path": "world/dungeon/EV_worldcup2010.dg",
+      "extension": ".dg",
+      "source_sha256": "a73df642d7066df1128eb894b39e97c772eae46f9f8d48562e1bffe4caf15c53",
+      "size_bytes": 373280,
+      "status": "decoded",
+      "semantic_status": "unknown",
+      "source_integrity_verified": true,
+      "variant": "DG",
+      "counts": {
+        "texture-names": 41,
+        "external-page-count": 17,
+        "render-vertices": 7370,
+        "render-triangles": 3452,
+        "auxiliary-vertices": 416,
+        "auxiliary-triangles": 338,
+        "nodes": 43,
+        "groups": 310,
+        "patches": 319,
+        "auxiliary-meshes": 16,
+        "max-depth": 3
+      },
+      "catalog_rows": 2797,
+      "bytes_consumed": 373280,
+      "raw_catalog": {
+        "path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/catalogs/spatial-v2/tree-022581.raw.json",
+        "sha256": "db4794f94d9cd16c2370952e04a2dc433a447a1309a7aa3e3d1d20edb581dd20"
+      },
+      "normalized_catalog": {
+        "path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/catalogs/spatial-v2/tree-022581.jsonl",
+        "sha256": "f115ea643c83471adf37417b5a30176814517c6ae43eee7186aa8c6bf4114553",
+        "rows": 2797
+      },
+      "structured_round_trip_matches": true,
+      "read_write_read_matches": true,
+      "first_part": {
+        "id": "tree-022581:part:000000",
+        "section": "dungeon-header",
+        "offset": 0,
+        "size_bytes": 24
+      },
+      "last_part": {
+        "id": "tree-022581:part:002796",
+        "section": "child-present",
+        "offset": 373276,
+        "size_bytes": 4
+      }
+    },
+    {
+      "id": "tree-023558",
+      "source_path": "world/L_R1_Fortress00/dungeon/L_R1_Fortress00.dg",
+      "extension": ".dg",
+      "source_sha256": "81428e3d7ccd180a16e765476a08cc31f8b59185001f0a0ad1b183669bbcb4de",
+      "size_bytes": 4036078,
+      "status": "decoded",
+      "semantic_status": "unknown",
+      "source_integrity_verified": true,
+      "variant": "DG",
+      "counts": {
+        "texture-names": 31,
+        "external-page-count": 5,
+        "render-vertices": 84696,
+        "render-triangles": 41342,
+        "auxiliary-vertices": 2157,
+        "auxiliary-triangles": 2277,
+        "nodes": 50,
+        "groups": 430,
+        "patches": 433,
+        "auxiliary-meshes": 31,
+        "max-depth": 3
+      },
+      "catalog_rows": 3734,
+      "bytes_consumed": 4036078,
+      "raw_catalog": {
+        "path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/catalogs/spatial-v2/tree-023558.raw.json",
+        "sha256": "ef3961e86b0052babc004e387e377e00376099baeb39f1929e52aa7524045945"
+      },
+      "normalized_catalog": {
+        "path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/catalogs/spatial-v2/tree-023558.jsonl",
+        "sha256": "713714514a5da272723c01ba1958bcc2e15ed5cae84d7980ac5ccdb93b16a2bb",
+        "rows": 3734
+      },
+      "structured_round_trip_matches": true,
+      "read_write_read_matches": true,
+      "first_part": {
+        "id": "tree-023558:part:000000",
+        "section": "dungeon-header",
+        "offset": 0,
+        "size_bytes": 24
+      },
+      "last_part": {
+        "id": "tree-023558:part:003733",
+        "section": "child-present",
+        "offset": 4036074,
+        "size_bytes": 4
+      }
+    }
+  ]
+}

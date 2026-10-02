@@ -1,0 +1,304 @@
+{
+  "id": "EP45-A3-SPATIAL-LOADERS-001",
+  "baseline_id": "rebirth-evolution-ep45-98c7dd3a",
+  "executable_sha256": "98c7dd3a0589d5695e489d81b1acffdd456c633b47e913757b67e5f492d5ec48",
+  "image_base": "0x400000",
+  "observation_date": "2026-10-02",
+  "project_commit": "4b311208dd45c067541d3ed8f8fc1456c65e7e64",
+  "tool": {
+    "path": "tools/ep45-client/spatial_loaders.py",
+    "version": "1.0.0",
+    "sha256": "f9776b25e9d557572e94aa0c40c892031490d76c0ebc8a9ba769e308905546aa"
+  },
+  "dependency_hashes": {
+    "wld_loaders.py": "d86567a86e52f9d4fc3ac69518ea866164277618b64526bade305c7c6136259b",
+    "baseline.py": "c39e90cb971e22f30aa278035fdbd5e796ab045660b0df00d60a6b4a1f873efd",
+    "archive.py": "f44fe451716305359d19b0ff18acdc9ac79922adcbf450931661955028781dbb",
+    "sdata.py": "327a320793ba3c4a6c42a05d6dd23e42ab0075f3920f886485ef848b89e4479c"
+  },
+  "objdump_version": "GNU objdump (GNU Binutils) 2.47",
+  "address_mapping": "RVA = VA - PE image base; offsets use PE section mappings. Windows are inspection bounds, not asserted function boundaries.",
+  "windows": [
+    {
+      "id": "dungeon-loader",
+      "start_va": "0x5942c0",
+      "stop_va": "0x59459a",
+      "start_rva": "0x1942c0",
+      "file_offset": "0x1942c0",
+      "length": 730,
+      "source_bytes_sha256": "265ac4858ebf0209fbd49a724f0d908942f20c4d15ad0c75d2bc3f848b4fd766",
+      "disassembly_path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/analysis/spatial-loaders-v1/dungeon-loader.asm",
+      "disassembly_sha256": "b1454ea7d5a008759d21d02f9dc3de4a36506aeb0a7a2a8bd6df8db9bb928a91",
+      "reproduction_arguments": [
+        "objdump",
+        "-D",
+        "-Mintel",
+        "--start-address=0x5942c0",
+        "--stop-address=0x59459a",
+        ".client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/originals/game.exe"
+      ]
+    },
+    {
+      "id": "dungeon-node",
+      "start_va": "0x593f80",
+      "stop_va": "0x5941db",
+      "start_rva": "0x193f80",
+      "file_offset": "0x193f80",
+      "length": 603,
+      "source_bytes_sha256": "49fbe40be00a9dd5c5c6deec1dc3d4f388be2e85cc55d739716c7805516a3642",
+      "disassembly_path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/analysis/spatial-loaders-v1/dungeon-node.asm",
+      "disassembly_sha256": "5ade66703b1d5e34b288e6b3413e3d8c94c68a0988cb8dfe7b0f4449ba62d948",
+      "reproduction_arguments": [
+        "objdump",
+        "-D",
+        "-Mintel",
+        "--start-address=0x593f80",
+        "--stop-address=0x5941db",
+        ".client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/originals/game.exe"
+      ]
+    },
+    {
+      "id": "dungeon-group",
+      "start_va": "0x593de0",
+      "stop_va": "0x593ee3",
+      "start_rva": "0x193de0",
+      "file_offset": "0x193de0",
+      "length": 259,
+      "source_bytes_sha256": "80e47c8a6bad3ba3c51222f141278f7f2926255e71ab0a99bde5e2d38126d26d",
+      "disassembly_path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/analysis/spatial-loaders-v1/dungeon-group.asm",
+      "disassembly_sha256": "9a8486d511ace6474b7a96fc710320b2d93695b531346457c0a35431c3c04454",
+      "reproduction_arguments": [
+        "objdump",
+        "-D",
+        "-Mintel",
+        "--start-address=0x593de0",
+        "--stop-address=0x593ee3",
+        ".client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/originals/game.exe"
+      ]
+    },
+    {
+      "id": "dungeon-patch",
+      "start_va": "0x593980",
+      "stop_va": "0x593a6a",
+      "start_rva": "0x193980",
+      "file_offset": "0x193980",
+      "length": 234,
+      "source_bytes_sha256": "b39e58d7f889a4018faf4c4aea21324b4847730039db8d288b335e3e22307aad",
+      "disassembly_path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/analysis/spatial-loaders-v1/dungeon-patch.asm",
+      "disassembly_sha256": "6b644bfe69da1f37848a2425a8f94fb6d546f8568fd9ae512be4bf6be5d3b046",
+      "reproduction_arguments": [
+        "objdump",
+        "-D",
+        "-Mintel",
+        "--start-address=0x593980",
+        "--stop-address=0x593a6a",
+        ".client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/originals/game.exe"
+      ]
+    },
+    {
+      "id": "dungeon-auxiliary-mesh",
+      "start_va": "0x593160",
+      "stop_va": "0x593260",
+      "start_rva": "0x193160",
+      "file_offset": "0x193160",
+      "length": 256,
+      "source_bytes_sha256": "f6aeb3847bd1da8c331371b6ad10332ee4154f7e2bf7bb55bfc2730ca7ed973a",
+      "disassembly_path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/analysis/spatial-loaders-v1/dungeon-auxiliary-mesh.asm",
+      "disassembly_sha256": "9a3dc5ac8ef4ffb28bab68751c35e848411d0e10d51ef060213a1b7d44b17d42",
+      "reproduction_arguments": [
+        "objdump",
+        "-D",
+        "-Mintel",
+        "--start-address=0x593160",
+        "--stop-address=0x593260",
+        ".client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/originals/game.exe"
+      ]
+    },
+    {
+      "id": "dungeon-pages",
+      "start_va": "0x591f60",
+      "stop_va": "0x592130",
+      "start_rva": "0x191f60",
+      "file_offset": "0x191f60",
+      "length": 464,
+      "source_bytes_sha256": "418ca4243d6140145e6f5bdaa7572b1c59bb4859bceef1854d8671de185089b1",
+      "disassembly_path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/analysis/spatial-loaders-v1/dungeon-pages.asm",
+      "disassembly_sha256": "86d5c9b878ab348f9ce6e02610e8170e322f28bbcf22dc7d80360b63ed3ca0cf",
+      "reproduction_arguments": [
+        "objdump",
+        "-D",
+        "-Mintel",
+        "--start-address=0x591f60",
+        "--stop-address=0x592130",
+        ".client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/originals/game.exe"
+      ]
+    },
+    {
+      "id": "water-loader",
+      "start_va": "0x59ef20",
+      "stop_va": "0x59f130",
+      "start_rva": "0x19ef20",
+      "file_offset": "0x19ef20",
+      "length": 528,
+      "source_bytes_sha256": "7cfde423be5a90ce7cd176aba01c170c4d81301e9489c885d7725c43fbe043b9",
+      "disassembly_path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/analysis/spatial-loaders-v1/water-loader.asm",
+      "disassembly_sha256": "06777aec4626003db82f2b685352a888203f51cd607b480d4fa77188dff21b49",
+      "reproduction_arguments": [
+        "objdump",
+        "-D",
+        "-Mintel",
+        "--start-address=0x59ef20",
+        "--stop-address=0x59f130",
+        ".client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/originals/game.exe"
+      ]
+    },
+    {
+      "id": "water-parameters",
+      "start_va": "0x59ed40",
+      "stop_va": "0x59ef20",
+      "start_rva": "0x19ed40",
+      "file_offset": "0x19ed40",
+      "length": 480,
+      "source_bytes_sha256": "4a5727232313e496a994d7da1ff4b243624ce4caeb74a6d01ac8a75e136d0830",
+      "disassembly_path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/analysis/spatial-loaders-v1/water-parameters.asm",
+      "disassembly_sha256": "b815f8a235470c23b7767a4852fa459b002180e537a7421c5d63285c9b6d416e",
+      "reproduction_arguments": [
+        "objdump",
+        "-D",
+        "-Mintel",
+        "--start-address=0x59ed40",
+        "--stop-address=0x59ef20",
+        ".client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/originals/game.exe"
+      ]
+    },
+    {
+      "id": "texture-loader",
+      "start_va": "0x59e790",
+      "stop_va": "0x59e970",
+      "start_rva": "0x19e790",
+      "file_offset": "0x19e790",
+      "length": 480,
+      "source_bytes_sha256": "5e1ada36ff04b118c870dba87b83ee01dd873333631bb69fa0e15be014a10a9b",
+      "disassembly_path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/analysis/spatial-loaders-v1/texture-loader.asm",
+      "disassembly_sha256": "157f0af44fdac4e544e7b23553bd06be8433b4fed57847a6fe8a5e99546a5798",
+      "reproduction_arguments": [
+        "objdump",
+        "-D",
+        "-Mintel",
+        "--start-address=0x59e790",
+        "--stop-address=0x59e970",
+        ".client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/originals/game.exe"
+      ]
+    },
+    {
+      "id": "texture-buffer",
+      "start_va": "0x59add0",
+      "stop_va": "0x59af30",
+      "start_rva": "0x19add0",
+      "file_offset": "0x19add0",
+      "length": 352,
+      "source_bytes_sha256": "442ff15b67c2ef9d4dd698f697faddfbafba687001b232ae248943c7cc02d336",
+      "disassembly_path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/analysis/spatial-loaders-v1/texture-buffer.asm",
+      "disassembly_sha256": "d2d4d6f39e6bddd6f68e02aeadfb5560cf2f8846f9f79698d15321c3ea93d153",
+      "reproduction_arguments": [
+        "objdump",
+        "-D",
+        "-Mintel",
+        "--start-address=0x59add0",
+        "--stop-address=0x59af30",
+        ".client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/originals/game.exe"
+      ]
+    },
+    {
+      "id": "archive-file-lookup",
+      "start_va": "0x59aaa0",
+      "stop_va": "0x59abe0",
+      "start_rva": "0x19aaa0",
+      "file_offset": "0x19aaa0",
+      "length": 320,
+      "source_bytes_sha256": "7aa5a2ff0ce4c61f221868af5b7c75501c3e6b55d2519de43b575f9818f8b297",
+      "disassembly_path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/analysis/spatial-loaders-v1/archive-file-lookup.asm",
+      "disassembly_sha256": "fb526de4b6e34ce97127ff0ef2236ea372d07014c6268f09a76c63e5039170e4",
+      "reproduction_arguments": [
+        "objdump",
+        "-D",
+        "-Mintel",
+        "--start-address=0x59aaa0",
+        "--stop-address=0x59abe0",
+        ".client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/originals/game.exe"
+      ]
+    },
+    {
+      "id": "map-dependencies",
+      "start_va": "0x451db0",
+      "stop_va": "0x452960",
+      "start_rva": "0x51db0",
+      "file_offset": "0x51db0",
+      "length": 2992,
+      "source_bytes_sha256": "034be48b345131e6f2d8bf59c4f162633ee65a518ac04b2d2feb9691eb9f628b",
+      "disassembly_path": "/home/dsatin/Documents/shayia/Imgeneus/.client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/analysis/spatial-loaders-v1/map-dependencies.asm",
+      "disassembly_sha256": "593b6afe3a43fbf61831617d14ca08f9f203c6a6d71a816148fa9cf8f52edce7",
+      "reproduction_arguments": [
+        "objdump",
+        "-D",
+        "-Mintel",
+        "--start-address=0x451db0",
+        "--stop-address=0x452960",
+        ".client-ep45-cache/rebirth-evolution-ep45-98c7dd3a/originals/game.exe"
+      ]
+    }
+  ],
+  "strings": [
+    {
+      "id": "dungeon-page-pattern",
+      "start_va": "0x6bc9b0",
+      "start_rva": "0x2bc9b0",
+      "file_offset": "0x2bc9b0",
+      "length": 13,
+      "raw_hex": "25735c25735f4c25642e257300",
+      "text": "%s\\%s_L%d.%s",
+      "encoding_status": "ascii",
+      "language": "unknown",
+      "source_bytes_sha256": "b15cf2ba836ca929ed9525a8b588d0fd0da9973ed6f39e66c7a8ea8aff4d4a7b"
+    },
+    {
+      "id": "resource-path-pattern",
+      "start_va": "0x6bc9c0",
+      "start_rva": "0x2bc9c0",
+      "file_offset": "0x2bc9c0",
+      "length": 6,
+      "raw_hex": "25735c257300",
+      "text": "%s\\%s",
+      "encoding_status": "ascii",
+      "language": "unknown",
+      "source_bytes_sha256": "5e30ec52ff440718170074a0ed2fb2fff255c785fb488c7599954517896eea9e"
+    },
+    {
+      "id": "dungeon-texture-root",
+      "start_va": "0x6f8680",
+      "start_rva": "0x2f8680",
+      "file_offset": "0x2f8680",
+      "length": 20,
+      "raw_hex": "646174615c656e746974795c7465787475726500",
+      "text": "data\\entity\\texture",
+      "encoding_status": "ascii",
+      "language": "unknown",
+      "source_bytes_sha256": "aeb2fb268ced3ba450d82289235d819869b9cf4491b2472259c9a49cb931ed26"
+    },
+    {
+      "id": "water-root",
+      "start_va": "0x6ad6f4",
+      "start_rva": "0x2ad6f4",
+      "file_offset": "0x2ad6f4",
+      "length": 18,
+      "raw_hex": "646174612f656e746974792f776174657200",
+      "text": "data/entity/water",
+      "encoding_status": "ascii",
+      "language": "unknown",
+      "source_bytes_sha256": "075f12db421a08698fbd167b5a35c60e7c6d77845eca46b28a8e7e18b0219c7f"
+    }
+  ],
+  "status": "statically_validated",
+  "runtime_status": "unknown",
+  "interpretations_reference": "docs/client-ep45/schemas/spatial-resources.md"
+}

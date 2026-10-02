@@ -28,3 +28,13 @@ not source data from this client.
 Drop/respawn/AI/formula policies without client evidence belong in separate
 policy documents with configuration/tests. Observable compatibility does
 not recover original server code.
+
+Future map requirements also depend on `EP45-A3-SPATIAL-001`:
+[dungeon/water structures](../schemas/spatial-resources.md) and
+[integrity/gaps](../validation/phase-a3-spatial.md). Importers must preserve
+file-local tree/group/index relationships and every raw unknown field. The
+auxiliary meshes have no established authoritative collision role; water
+parameters have no established gameplay units. DDS candidates, DG_PV layouts,
+and missing page references require further extraction/validation before
+being used as backend contracts. These are dependencies for phase B, not
+implemented rules or evidence of original server behavior.
